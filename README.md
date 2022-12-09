@@ -19,7 +19,6 @@ This is the official codebase for **Training-Free Structured Diffusion Guidance 
     <br>
     <sup>1</sup>UCSB, <sup>2</sup>UCSC, <sup>3</sup>Google
     <br>
-    https://arxiv.org/
 
 ## Setup
 
@@ -69,12 +68,11 @@ We observe less missing objects in [Stable Diffusion v2](https://github.com/Stab
 Please feel free to reach out for a discussion.
 
 ## Comments
-Our codebase builds heavily on [Stable Diffusion](https://github.com/CompVis/stable-diffusion). 
+Our codebase builds heavily on [Stable Diffusion](https://github.com/CompVis/stable-diffusion). Thanks for open-sourcing!
 
 
 ## Citing our Paper
 
-If you find our code or paper useful for your research, please consider citing 
-
+If you find our code or paper useful for your research, please consider citing (Coming soon)
 ``` 
 ```
