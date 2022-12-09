@@ -7,6 +7,7 @@
 This is the official codebase for **Training-Free Structured Diffusion Guidance for Compositional Text-to-Image Synthesis**.
 
 [Training-Free Structured Diffusion Guidance for Compositional Text-to-Image Synthesis](https://weixi-feng.github.io/structure-diffusion-guidance/)
+  <br>
     [Weixi Feng](https://weixi-feng.github.io/) <sup>1</sup>,
     [Xuehai He](https://scholar.google.com/citations?user=kDzxOzUAAAAJ&) <sup>2</sup>,
     [Tsu-Jui Fu](https://tsujuifu.github.io/)<sup>1</sup>,
