@@ -1,4 +1,4 @@
-# Structured Diffusion Guidance
+# Structured Diffusion Guidance (ICLR 2023)
 ## We propose a method to fuse language structures into diffusion guidance for compositionality text-to-image generation.
 
 ### [Project Page](https://weixi-feng.github.io/structure-diffusion-guidance/) | [Paper](https://arxiv.org/) | [Google Colab](Coming Soon)
@@ -76,4 +76,10 @@ Our codebase builds heavily on [Stable Diffusion](https://github.com/CompVis/sta
 
 If you find our code or paper useful for your research, please consider citing (Coming soon)
 ``` 
+@article{feng2022training,
+  title={Training-Free Structured Diffusion Guidance for Compositional Text-to-Image Synthesis},
+  author={Feng, Weixi and He, Xuehai and Fu, Tsu-Jui and Jampani, Varun and Akula, Arjun and Narayana, Pradyumna and Basu, Sugato and Wang, Xin Eric and Wang, William Yang},
+  journal={ICLR},
+  year={2022}
+}
 ```
