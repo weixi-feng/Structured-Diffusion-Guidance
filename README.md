@@ -80,6 +80,6 @@ If you find our code or paper useful for your research, please consider citing (
   title={Training-Free Structured Diffusion Guidance for Compositional Text-to-Image Synthesis},
   author={Feng, Weixi and He, Xuehai and Fu, Tsu-Jui and Jampani, Varun and Akula, Arjun and Narayana, Pradyumna and Basu, Sugato and Wang, Xin Eric and Wang, William Yang},
   journal={ICLR},
-  year={2022}
+  year={2023}
 }
 ```
