@@ -1,7 +1,7 @@
 # Structured Diffusion Guidance (ICLR 2023)
 ## We propose a method to fuse language structures into diffusion guidance for compositionality text-to-image generation.
 
-### [Project Page](https://weixi-feng.github.io/structure-diffusion-guidance/) | [Paper](https://arxiv.org/) | [Google Colab](Coming Soon)
+### [Project Page](https://weixi-feng.github.io/structure-diffusion-guidance/) | [Paper](https://arxiv.org/abs/2212.05032) | [Google Colab](Coming Soon)
 <!-- [![][colab]][composable-demo] [![][huggingface]][huggingface-demo] -->
 
 This is the official codebase for **Training-Free Structured Diffusion Guidance for Compositional Text-to-Image Synthesis**.
