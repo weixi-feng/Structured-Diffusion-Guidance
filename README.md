@@ -1,7 +1,7 @@
 # Structured Diffusion Guidance (ICLR 2023)
 ## We propose a method to fuse language structures into diffusion guidance for compositionality text-to-image generation.
 
-### [Project Page](https://weixi-feng.github.io/structure-diffusion-guidance/) | [Paper](https://arxiv.org/) | [Google Colab](Coming Soon)
+### [Project Page](https://weixi-feng.github.io/structure-diffusion-guidance/) | [arxiv](https://arxiv.org/abs/2212.05032) | [OpenReview](https://openreview.net/forum?id=PUIqjT4rzq7)
 <!-- [![][colab]][composable-demo] [![][huggingface]][huggingface-demo] -->
 
 This is the official codebase for **Training-Free Structured Diffusion Guidance for Compositional Text-to-Image Synthesis**.
@@ -20,6 +20,9 @@ This is the official codebase for **Training-Free Structured Diffusion Guidance 
     <br>
     <sup>1</sup>UCSB, <sup>2</sup>UCSC, <sup>3</sup>Google
     <br>
+
+## Update:
+Apr. 4th: updated links, uploaded benchmarks and GLIP eval scripts, updated bibtex.
 
 ## Setup
 
@@ -68,18 +71,26 @@ The improvement is system-level instead of sample-level, and we are still lookin
 We observe less missing objects in [Stable Diffusion v2](https://github.com/Stability-AI/stablediffusion), and we are implementing our method on top of it as well. 
 Please feel free to reach out for a discussion.
 
+## Benchmarks
+CC-500.txt: Concept Conjunction of two objects with different colors (line1-446).
+ABC-6K.txt: ~6K attribute binding prompts collected and created from COCO captions. 
+
+## GLIP Eval
+For our GLIP eval, please first clone and setup your environment according to the official [GLIP](https://github.com/microsoft/GLIP) repo and download the model checkpoint(s). Then refer to our ```GLIP_eval/eval.py``` and you may need to modify line 59&82. We assumed that each image file name contains the text prompt. 
+
 ## Comments
 Our codebase builds heavily on [Stable Diffusion](https://github.com/CompVis/stable-diffusion). Thanks for open-sourcing!
 
 
 ## Citing our Paper
 
-If you find our code or paper useful for your research, please consider citing (Coming soon)
+If you find our code or paper useful for your research, please consider citing
 ``` 
-@article{feng2022training,
-  title={Training-Free Structured Diffusion Guidance for Compositional Text-to-Image Synthesis},
-  author={Feng, Weixi and He, Xuehai and Fu, Tsu-Jui and Jampani, Varun and Akula, Arjun and Narayana, Pradyumna and Basu, Sugato and Wang, Xin Eric and Wang, William Yang},
-  journal={ICLR},
-  year={2023}
+@inproceedings{feng2023trainingfree,
+title={Training-Free Structured Diffusion Guidance for Compositional Text-to-Image Synthesis},
+author={Weixi Feng and Xuehai He and Tsu-Jui Fu and Varun Jampani and Arjun Reddy Akula and Pradyumna Narayana and Sugato Basu and Xin Eric Wang and William Yang Wang},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=PUIqjT4rzq7}
 }
 ```

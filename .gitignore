@@ -1,3 +1,4 @@
 outputs
 *.egg-info
 src
+test.ipynb
