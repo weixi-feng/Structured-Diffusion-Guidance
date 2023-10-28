@@ -28,6 +28,10 @@ import pdb
 import json
 
 
+    
+
+
+
 def preprocess_prompts(prompts):
     if isinstance(prompts, (list, tuple)):
         return [p.lower().strip().strip(".").strip() for p in prompts]
@@ -270,7 +274,7 @@ def main():
     parser.add_argument(
         "--n_iter",
         type=int,
-        default=2,
+        default=1,
         help="sample this often",
     )
     parser.add_argument(
@@ -361,6 +365,11 @@ def main():
         action='store_true',
         help='If True, the attention maps will be saved as a .pth file with the name same as the image'
     )
+    parser.add_argument(
+        "--resume",
+        action='store_true',
+        help='resume generation',
+    )
 
     opt = parser.parse_args()
 
@@ -386,7 +395,6 @@ def main():
     os.makedirs(opt.outdir, exist_ok=True)
     outpath = opt.outdir
 
-
     batch_size = opt.n_samples
     n_rows = opt.n_rows if opt.n_rows > 0 else batch_size
     if not opt.from_file:
@@ -406,10 +414,20 @@ def main():
             except:
                 data = [batch_size * [d] for d in data]
 
+
+
+
     sample_path = os.path.join(outpath, "samples")
     os.makedirs(sample_path, exist_ok=True)
     base_count = len(os.listdir(sample_path))
     grid_count = len(os.listdir(outpath)) - 1
+
+    if opt.resume:
+        idx = len(os.listdir(sample_path))
+    else:
+        idx = 0
+    
+    start_idx = batch_size * idx
 
     start_code = None
     if opt.fixed_code:
@@ -423,6 +441,8 @@ def main():
                 all_samples = list()
                 for n in trange(opt.n_iter, desc="Sampling"):
                     for bid, prompts in enumerate(tqdm(data, desc="data")):
+                        if bid < start_idx:
+                            continue
                         prompts = preprocess_prompts(prompts)
 
                         uc = None
@@ -431,15 +451,19 @@ def main():
 
                         c = model.get_learned_conditioning(prompts)
 
-                        if opt.parser_type == 'constituency':
-                            doc = nlp(prompts[0])
-                            mytree = Tree.fromstring(str(doc.sentences[0].constituency))
-                            tokens = model.cond_stage_model.tokenizer.tokenize(prompts[0])
-                            nps, spans, noun_chunk = get_all_nps(mytree, prompts[0], tokens)
-                        elif opt.parser_type == 'scene_graph':
-                            nps, spans, noun_chunk = get_all_spans_from_scene_graph(prompts[0].split("\t")[0])
-                        else:
-                            raise NotImplementedError
+                        try:
+                            if opt.parser_type == 'constituency':
+                                doc = nlp(prompts[0])
+                                mytree = Tree.fromstring(str(doc.sentences[0].constituency))
+                                tokens = model.cond_stage_model.tokenizer.tokenize(prompts[0])
+                                nps, spans, noun_chunk = get_all_nps(mytree, prompts[0], tokens)
+                            elif opt.parser_type == 'scene_graph':
+                                nps, spans, noun_chunk = get_all_spans_from_scene_graph(prompts[0].split("\t")[0])
+                            else:
+                                raise NotImplementedError
+                        except:
+                            print(f"{prompts[0]} parsing failed")
+                            continue
                         
                         nps = [[np]*len(prompts) for np in nps]
                         
