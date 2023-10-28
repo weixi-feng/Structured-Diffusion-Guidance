@@ -468,7 +468,25 @@ def main():
 
                         prompts = preprocess_prompts(prompts)
 
-                        token_indices = find_noun(prompts)[0]
+                        # token_indices = find_noun(prompts)[0]
+                        try:
+                            if opt.parser_type == 'constituency':
+                                doc = nlp(prompts[0])
+                                mytree = Tree.fromstring(str(doc.sentences[0].constituency))
+                                # tokens = model.cond_stage_model.tokenizer.tokenize(prompts[0])
+                                tokens = None
+                                nps, spans, noun_chunk = get_all_nps(mytree, prompts[0], tokens, lowest_only=False)
+                                # we need noun_chunk for our implementaiton
+                                # print(mytree, nps, spans, noun_chunk)
+                            elif opt.parser_type == 'scene_graph':
+                                nps, spans, noun_chunk = get_all_spans_from_scene_graph(prompts[0].split("\t")[0])
+                            else:
+                                raise NotImplementedError
+                        except:
+                            print(f"{prompts[0]} parsing failed")
+                            continue
+                        token_indices = [chunk[-1] for _, chunk in noun_chunk]
+                        # print(token_indices)
 
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
@@ -477,7 +495,6 @@ def main():
                                      generator=generator,
                                      num_inference_steps=opt.ddim_steps,).images[0]
 
-                        raise
                                      # max_iter_to_alter=RunConfig.max_iter_to_alter,
                                      # thresholds={0: 0.05, 10: 0.5, 20: 0.8},
                                      # scale_factor=RunConfig.scale_factor,
