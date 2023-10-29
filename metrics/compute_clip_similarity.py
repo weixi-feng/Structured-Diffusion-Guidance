@@ -151,9 +151,16 @@ def run(config: EvalConfig):
     print(f"Running on {len(files)} prompts...")
 
     results_per_prompt = {}
+
+    gt_prompts = list()
+    with open('/home/zhlu6105/Projects/decompose/Structured-Diffusion-Guidance/ABC-6K.txt', 'r') as f:
+       gt_prompts = f.read().splitlines()
+       
     for img in track(files):
 
         prompt = img.replace('.jpg', '').split('-')[-1]
+        prompt_idx = int(img.split('-')[0])
+        gt_prompt = gt_prompts[prompt_idx]
         if config.truncate:
             prompt = prompt.split('|')[0]
 
@@ -164,6 +171,7 @@ def run(config: EvalConfig):
         # image_names = [p.name for p in image_paths]
         image_names = [img]
         queries = [preprocess(image).unsqueeze(0).to(device) for image in images]
+        prompt = gt_prompt
 
         with torch.no_grad():
 
