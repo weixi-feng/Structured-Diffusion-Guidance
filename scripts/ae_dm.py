@@ -486,12 +486,14 @@ def main():
                             print(f"{prompts[0]} parsing failed")
                             continue
                         token_indices = [chunk[-1] for _, chunk in noun_chunk]
-                        # print(token_indices)
+
+
 
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
                                      # attention_res=RunConfig.attention_res,
                                      guidance_scale=opt.scale,
+                                     noun_chunk = noun_chunk,
                                      generator=generator,
                                      num_inference_steps=opt.ddim_steps,).images[0]
 

@@ -13,7 +13,9 @@
 # limitations under the License.
 import inspect
 import math
+from os import stat
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
+import random
 
 import numpy as np
 import torch
@@ -32,8 +34,13 @@ from diffusers.pipelines.pipeline_utils import DiffusionPipeline
 from diffusers.pipelines.stable_diffusion import StableDiffusionPipelineOutput
 from diffusers.pipelines.stable_diffusion.safety_checker import StableDiffusionSafetyChecker
 
-
-
+from rich.progress import track
+import nltk
+from nltk.corpus import stopwords 
+from nltk.tokenize import word_tokenize, sent_tokenize
+nltk.download('brown')
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 logger = logging.get_logger(__name__)
 
 EXAMPLE_DOC_STRING = """
@@ -72,6 +79,15 @@ EXAMPLE_DOC_STRING = """
 """
 
 
+def find_noun(lines):
+    # is_noun = lambda pos: pos[:2] == 'NN'
+    lines = nltk.sent_tokenize([lines])[0]
+    is_noun = lambda pos: pos[:2] == 'NN'
+    tokenized = nltk.word_tokenize(lines)
+    idxs = [idx+1 for idx, (word, pos) in enumerate(nltk.pos_tag(tokenized)) if is_noun(pos)]
+    return idxs
+
+
 class AttentionStore:
     @staticmethod
     def get_empty_store():
@@ -82,6 +98,8 @@ class AttentionStore:
             if attn.shape[1] == np.prod(self.attn_res):
                 self.step_store[place_in_unet].append(attn)
 
+        # if is_cross:
+        #     print(self.cur_att_layer, self.num_att_layers, attn.shape, len(self.step_store[place_in_unet]))
         self.cur_att_layer += 1
         if self.cur_att_layer == self.num_att_layers:
             self.cur_att_layer = 0
@@ -126,52 +144,13 @@ class AttentionStore:
 
 
 
-class SubSteneceAttnProcessor:
-    def __init__(self, look_up_map: dict):
-        super().__init__() 
-        self.parent_attn = None
-        self.look_up_map = look_up_map
-
-    def __call__(self, attn: Attention, hidden_states, encoder_hidden_states=None, attention_mask=None):
-        batch_size, sequence_length, _ = hidden_states.shape
-        attention_mask = attn.prepare_attention_mask(attention_mask, sequence_length, batch_size)
-
-        query = attn.to_q(hidden_states)
-
-        is_cross = encoder_hidden_states is not None
-        encoder_hidden_states = encoder_hidden_states if encoder_hidden_states is not None else hidden_states
-        key = attn.to_k(encoder_hidden_states)
-        value = attn.to_v(encoder_hidden_states)
-
-        query = attn.head_to_batch_dim(query)
-        key = attn.head_to_batch_dim(key)
-        value = attn.head_to_batch_dim(value)
-
-        attention_probs = attn.get_attention_scores(query, key, attention_mask)
-
-        # modify attention_prob according to parent attn 
-
-        hidden_states = torch.bmm(attention_probs, value)
-        hidden_states = attn.batch_to_head_dim(hidden_states)
-
-        # linear proj
-        hidden_states = attn.to_out[0](hidden_states)
-        # dropout
-        hidden_states = attn.to_out[1](hidden_states)
-
-        return hidden_states
-
-    def set_parent_attn(self, parent_attn):
-        self.parent_attn = parent_attn
-
-
-
 
 class AttendExciteAttnProcessor:
-    def __init__(self, attnstore, place_in_unet):
+    def __init__(self, attnstore, place_in_unet, name):
         super().__init__()
         self.attnstore = attnstore
         self.place_in_unet = place_in_unet
+        self.name = name
 
     def __call__(self, attn: Attention, hidden_states, encoder_hidden_states=None, attention_mask=None):
         batch_size, sequence_length, _ = hidden_states.shape
@@ -192,6 +171,7 @@ class AttendExciteAttnProcessor:
 
         # only need to store attention maps during the Attend and Excite process
         if attention_probs.requires_grad:
+            # print(self.name)
             self.attnstore(attention_probs, is_cross, self.place_in_unet)
 
         hidden_states = torch.bmm(attention_probs, value)
@@ -201,8 +181,9 @@ class AttendExciteAttnProcessor:
         hidden_states = attn.to_out[0](hidden_states)
         # dropout
         hidden_states = attn.to_out[1](hidden_states)
-
+        
         return hidden_states
+    
 
 
 class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversionLoaderMixin):
@@ -620,6 +601,38 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         latents = latents * self.scheduler.init_noise_sigma
         return latents
 
+
+    @staticmethod 
+    def _look_up_in_master_prompt(master_prompt, sub_prompt, nouns, noun_chunk=None):
+        # to avoid having duplicated sub_prompt in master prompt, therefore, noun_chunk is always required
+        # if noun_chunk is not given, can run other sub string matching algorithm 
+
+        noun_idxs = list()
+        words = sub_prompt.split(" ")
+        current_idx = 0
+        for noun in nouns:
+            for idx, word in enumerate(words):
+                if current_idx >= idx:
+                    continue 
+                if noun == word:
+                    noun_idxs.append(idx+1)
+                    current_idx = idx
+
+        if noun_chunk:
+            # print(noun_chunk, sub_prompt)
+            assert (noun_chunk[-1] - noun_chunk[0]) == len(sub_prompt.split(' '))
+
+            idx_master = list() 
+            idx_sub = list()
+            for noun_idx in noun_idxs:
+                idx_sub.append(noun_idx)
+                idx_master.append(noun_idx + noun_chunk[0])
+
+            return idx_master, idx_sub
+
+        else:
+            raise NotImplemented
+
     @staticmethod
     def _compute_max_attention_per_index(
         attention_maps: torch.Tensor,
@@ -651,11 +664,12 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         attention_maps = self.attention_store.aggregate_attention(
             from_where=("up", "down", "mid"),
         )
+        # print(attention_maps.shape)
         max_attention_per_index = self._compute_max_attention_per_index(
             attention_maps=attention_maps,
             indices=indices,
         )
-        return max_attention_per_index
+        return max_attention_per_index, attention_maps
 
     @staticmethod
     def _compute_loss(max_attention_per_index: List[torch.Tensor]) -> torch.Tensor:
@@ -667,7 +681,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
     @staticmethod
     def _update_latent(latents: torch.Tensor, loss: torch.Tensor, step_size: float) -> torch.Tensor:
         """Update the latent according to the computed loss."""
-        grad_cond = torch.autograd.grad(loss.requires_grad_(True), [latents], retain_graph=True)[0]
+        grad_cond = torch.autograd.grad(loss.requires_grad_(True), [latents], retain_graph=True, allow_unused=True)[0]
+        # grad_cond = torch.autograd.grad(loss.requires_grad_(True), [latents], retain_graph=True,)[0]
         latents = latents - step_size * grad_cond
         return latents
 
@@ -696,7 +711,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
             self.unet.zero_grad()
 
             # Get max activation value for each subject token
-            max_attention_per_index = self._aggregate_and_get_max_attention_per_token(
+            max_attention_per_index, _ = self._aggregate_and_get_max_attention_per_token(
                 indices=indices,
             )
 
@@ -718,7 +733,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         self.unet.zero_grad()
 
         # Get max activation value for each subject token
-        max_attention_per_index = self._aggregate_and_get_max_attention_per_token(
+        max_attention_per_index, _ = self._aggregate_and_get_max_attention_per_token(
             indices=indices,
         )
         loss = self._compute_loss(max_attention_per_index)
@@ -727,6 +742,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
 
     def register_attention_control(self):
         attn_procs = {}
+        self.attn_hocks = dict()
         cross_att_count = 0
         for name in self.unet.attn_processors.keys():
             # print(name)
@@ -740,10 +756,12 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                 continue
 
             cross_att_count += 1
-            attn_procs[name] = AttendExciteAttnProcessor(attnstore=self.attention_store, place_in_unet=place_in_unet)
+            attn_procs[name] = AttendExciteAttnProcessor(attnstore=self.attention_store, place_in_unet=place_in_unet, name=name)
+            self.attn_hocks[name] = attn_procs[name]
 
-        # print(type(self.unet), cross_att_count, len(attn_procs))
+        # print(type(self.unet), cross_att_count, len(attn_procs), len(self.attn_hocks))
         self.unet.set_attn_processor(attn_procs)
+        # print(type(self.unet), cross_att_count, len(attn_procs), len(self.attn_hocks))
         self.attention_store.num_att_layers = cross_att_count
 
     def get_indices(self, prompt: str) -> Dict[str, int]:
@@ -758,6 +776,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         self,
         prompt: Union[str, List[str]],
         token_indices: Union[List[int], List[List[int]]],
+        noun_chunks: Optional[list],
+        nouns: Optional[list],
         height: Optional[int] = None,
         width: Optional[int] = None,
         num_inference_steps: int = 50,
@@ -778,6 +798,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         thresholds: dict = {0: 0.05, 10: 0.5, 20: 0.8},
         scale_factor: int = 20,
         attn_res: Optional[Tuple[int]] = (16, 16),
+        weights: Optional[str] = "",
     ):
         r"""
         The call function to the pipeline for generation.
@@ -883,8 +904,32 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # corresponds to doing no classifier free guidance.
         do_classifier_free_guidance = guidance_scale > 1.0
 
+
+        if '|' in prompt:
+            prompt = [x.strip() for x in prompt.split('|')]
+            # print(f"composing {prompt}...")
+
+            if not weights:
+                # specify weights for prompts (excluding the unconditional score)
+                print('using equal positive weights (conjunction) for all prompts...')
+                weights = torch.tensor([guidance_scale] * len(prompt), device=self.device).reshape(-1, 1, 1, 1)
+            else:
+                # set prompt weight for each
+                num_prompts = len(prompt) if isinstance(prompt, list) else 1
+                weights = [float(w.strip()) for w in weights.split("|")]
+                # guidance scale as the default
+                if len(weights) < num_prompts:
+                    weights.append(guidance_scale)
+                else:
+                    weights = weights[:num_prompts]
+                assert len(weights) == len(prompt), "weights specified are not equal to the number of prompts"
+                weights = torch.tensor(weights, device=self.device).reshape(-1, 1, 1, 1)
+        else:
+            weights = guidance_scale
+
+
         # 3. Encode input prompt
-        prompt_embeds, negative_prompt_embeds = self.encode_prompt(
+        text_embeddings, negative_prompt_embeds = self.encode_prompt(
             prompt,
             device,
             num_images_per_prompt,
@@ -893,11 +938,14 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
             prompt_embeds=prompt_embeds,
             negative_prompt_embeds=negative_prompt_embeds,
         )
+
         # For classifier free guidance, we need to do two forward passes.
         # Here we concatenate the unconditional and text embeddings into a single batch
         # to avoid doing two forward passes
         if do_classifier_free_guidance:
-            prompt_embeds = torch.cat([negative_prompt_embeds, prompt_embeds])
+            prompt_embeds = torch.cat([negative_prompt_embeds, text_embeddings])
+        else:
+            prompt_embeds = text_embeddings
 
         # 4. Prepare timesteps
         self.scheduler.set_timesteps(num_inference_steps, device=device)
@@ -907,6 +955,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         num_channels_latents = self.unet.config.in_channels
         latents = self.prepare_latents(
             batch_size * num_images_per_prompt,
+            # len(prompt) * num_images_per_prompt,
             num_channels_latents,
             height,
             width,
@@ -915,6 +964,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
             generator,
             latents,
         )
+
 
         # 6. Prepare extra step kwargs. TODO: Logic should ideally just be moved out of the pipeline
         extra_step_kwargs = self.prepare_extra_step_kwargs(generator, eta)
@@ -928,50 +978,64 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         scale_range = np.linspace(1.0, 0.5, len(self.scheduler.timesteps))
         step_size = scale_factor * np.sqrt(scale_range)
 
-        text_embeddings = (
-            prompt_embeds[batch_size * num_images_per_prompt :] if do_classifier_free_guidance else prompt_embeds
-        )
+        # text_embeddings = (
+        #     prompt_embeds[batch_size * num_images_per_prompt :] if do_classifier_free_guidance else prompt_embeds
+        # )
 
         if isinstance(token_indices[0], int):
             token_indices = [token_indices]
 
         indices = []
 
+        assert num_images_per_prompt == 1
         for ind in token_indices:
             indices = indices + [ind] * num_images_per_prompt
+        
+        for _, idxs in noun_chunks:
+            # indices.append([chunk[-1]])
+            indices.append(idxs)
+
+
 
         # 7. Denoising loop
         num_warmup_steps = len(timesteps) - num_inference_steps * self.scheduler.order
-        with self.progress_bar(total=num_inference_steps) as progress_bar:
-            for i, t in enumerate(timesteps):
-                # Attend and excite process
-                with torch.enable_grad():
-                    latents = latents.clone().detach().requires_grad_(True)
-                    updated_latents = []
-                    for latent, index, text_embedding in zip(latents, indices, text_embeddings):
-                        # Forward pass of denoising with text conditioning
-                        latent = latent.unsqueeze(0)
-                        text_embedding = text_embedding.unsqueeze(0)
 
-                        self.unet(
-                            latent,
-                            t,
-                            encoder_hidden_states=text_embedding,
-                            cross_attention_kwargs=cross_attention_kwargs,
-                        ).sample
-                        self.unet.zero_grad()
+        sub_prompts = [None] + [sub_prompt for sub_prompt, _ in noun_chunks]
+        sub_nouns = [None] + [sub_nouns for sub_nouns, _ in nouns]
+        
+        for i, t in track(enumerate(timesteps)):
+            # Attend and excite process
+            with torch.enable_grad():
+                updated_latents = [latents]
+                latents = latents.clone().detach().requires_grad_(True)
+                master_attention_map = None
+                for idx, (index, text_embedding, sub_prompt, sub_noun) in enumerate(zip(indices, text_embeddings, sub_prompts, sub_nouns)):
+                    is_master = (idx == 0)
+                    # Forward pass of denoising with text conditioning
+                    # latent = latent.unsqueeze(0)
+                    text_embedding = text_embedding.unsqueeze(0)
 
+                    self.unet(
+                        latents,
+                        t,
+                        encoder_hidden_states=text_embedding,
+                        cross_attention_kwargs=cross_attention_kwargs,
+                    ).sample
+                    self.unet.zero_grad()
+
+                    if is_master:
                         # Get max activation value for each subject token
-                        max_attention_per_index = self._aggregate_and_get_max_attention_per_token(
+                        max_attention_per_index, attn_map = self._aggregate_and_get_max_attention_per_token(
                             indices=index,
                         )
+                        master_attention_map = attn_map.detach()
 
                         loss = self._compute_loss(max_attention_per_index=max_attention_per_index)
 
                         # If this is an iterative refinement step, verify we have reached the desired threshold for all
                         if i in thresholds.keys() and loss > 1.0 - thresholds[i]:
-                            loss, latent, max_attention_per_index = self._perform_iterative_refinement_step(
-                                latents=latent,
+                            loss, latents, max_attention_per_index = self._perform_iterative_refinement_step(
+                                latents=latents,
                                 indices=index,
                                 loss=loss,
                                 threshold=thresholds[i],
@@ -979,51 +1043,110 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                                 step_size=step_size[i],
                                 t=t,
                             )
+                    else:
+                        # loss = 0
+                        # TODO: how to make sub sentence attn map get close to master attn map 
+                        _, attn_map = self._aggregate_and_get_max_attention_per_token(
+                            indices=index,
+                        )
 
-                        # Perform gradient update
-                        if i < max_iter_to_alter:
-                            if loss != 0:
-                                latent = self._update_latent(
-                                    latents=latent,
-                                    loss=loss,
-                                    step_size=step_size[i],
-                                )
-                            logger.info(f"Iteration {i} | Loss: {loss:0.4f}")
+                        # rough idea: to only compare the correspoding object attention map 
+                        # note that, noun_chunk is in such format: [start, end] where start is not included in subsentence
+                        
+                        # step one find all noun in subsentence 
+                        master_prompt = prompt[0]
+                        # to exclude the first index as it is not needed 
+                        master_idxs, sub_idxs = self._look_up_in_master_prompt(master_prompt, sub_prompt, sub_noun, index) 
+                        # print(master_idxs, sub_idxs, master_prompt, "|", sub_prompt)
 
-                        updated_latents.append(latent)
+                        losses = list() 
+                        for master_idx, sub_idx in zip(master_idxs, sub_idxs):
+                            master_attn = master_attention_map[:, :, master_idx]
+                            sub_attn = attn_map[:, :, sub_idx]
 
-                    latents = torch.cat(updated_latents, dim=0)
+                            loss = torch.nn.functional.l1_loss(sub_attn, master_attn) 
+                            losses.append(loss)
 
-                # expand the latents if we are doing classifier free guidance
-                latent_model_input = torch.cat([latents] * 2) if do_classifier_free_guidance else latents
-                latent_model_input = self.scheduler.scale_model_input(latent_model_input, t)
+                        loss = torch.stack(losses, dim=0).mean()
+                        # loss = 0
 
-                # predict the noise residual
-                noise_pred = self.unet(
-                    latent_model_input,
-                    t,
-                    encoder_hidden_states=prompt_embeds,
-                    cross_attention_kwargs=cross_attention_kwargs,
-                ).sample
+                    # Perform gradient update
+                    if i < max_iter_to_alter:
+                        if loss != 0:
+                            latents = self._update_latent(
+                                latents=latents,
+                                loss=loss,
+                                step_size=step_size[i],
+                            )
+                        logger.info(f"Iteration {i} | Loss: {loss:0.4f}")
 
-                # perform guidance
-                if do_classifier_free_guidance:
-                    noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
-                    noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond)
 
-                # compute the previous noisy sample x_t -> x_t-1
-                latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
 
-                # call the callback, if provided
-                if i == len(timesteps) - 1 or ((i + 1) > num_warmup_steps and (i + 1) % self.scheduler.order == 0):
-                    progress_bar.update()
-                    if callback is not None and i % callback_steps == 0:
-                        callback(i, t, latents)
+                    updated_latents.append(latents)
+
+                latents = torch.cat(updated_latents, dim=0)
+
+                # latents = latents[:1]
+
+                with torch.set_grad_enabled(False):
+                    # expand the latents if we are doing classifier free guidance
+                    # latent_model_input = torch.cat([latents]*2) if do_classifier_free_guidance else latents
+                    latent_model_input = latents
+                    latent_model_input = self.scheduler.scale_model_input(latent_model_input, t)
+
+                    prompt_embeds = torch.cat([negative_prompt_embeds[0].unsqueeze(dim=0), text_embeddings]) if do_classifier_free_guidance else text_embeddings
+                    # print(latent_model_input.shape, prompt_embeds.shape)
+
+
+                    # predict the noise residual
+
+                    all_noise_pred = list()
+                    for input_latent, cond_embed in zip(latent_model_input, prompt_embeds):
+                        noise_pred = self.unet(
+                            input_latent.unsqueeze(dim=0),
+                            t,
+                            encoder_hidden_states=cond_embed.unsqueeze(dim=0),
+                            cross_attention_kwargs=cross_attention_kwargs,
+                        ).sample
+                        all_noise_pred.append(noise_pred)
+
+
+                    cfg_noise = list()
+                    if do_classifier_free_guidance:
+                        noise_pred_uncond = all_noise_pred[0]
+                        noise_pred_cond = torch.cat(all_noise_pred[1:], dim=0)
+                        noise_pred = noise_pred_uncond + (weights * (noise_pred_cond - noise_pred_uncond)).sum(dim=0, keepdims=True)
+                        # noise_pred = noise_pred_uncond + (weights[:1] * (noise_pred_cond[1:2] - noise_pred_uncond))
+                        # master 
+                        cfg_noise.append(noise_pred)
+
+                        # sub 
+                        # the first one is master
+                        # for noise_pred_cond_sub in noise_pred_cond[1:]:
+                        #     noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_cond_sub - noise_pred_uncond)
+                        #     cfg_noise.append(noise_pred)
+
+                    # noise_pred = torch.cat(cfg_noise, dim=0)
+
+                    # compute the previous noisy sample x_t -> x_t-1
+                    # print(noise_pred.shape, latents.shape)
+                    latents = self.scheduler.step(noise_pred, t, latents[:1], **extra_step_kwargs).prev_sample
+
+                    # latents = torch.cat([latents] * len(prompt))
+
+
+                    # call the callback, if provided
+                    if i == len(timesteps) - 1 or ((i + 1) > num_warmup_steps and (i + 1) % self.scheduler.order == 0):
+                        # progress_bar.update()
+                        if callback is not None and i % callback_steps == 0:
+                            callback(i, t, latents)
+
 
         # 8. Post-processing
         if not output_type == "latent":
             image = self.vae.decode(latents / self.vae.config.scaling_factor, return_dict=False)[0]
-            image, has_nsfw_concept = self.run_safety_checker(image, device, prompt_embeds.dtype)
+            # image, has_nsfw_concept = self.run_safety_checker(image, device, prompt_embeds.dtype)
+            has_nsfw_concept = None
         else:
             image = latents
             has_nsfw_concept = None

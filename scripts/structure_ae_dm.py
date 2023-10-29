@@ -31,6 +31,7 @@ from diffusers import LMSDiscreteScheduler, DDIMScheduler, DDPMScheduler, PNDMSc
 from composable_stable_diffusion.pipeline_composable_stable_diffusion import \
     ComposableStableDiffusionPipeline
 
+from pipeline_attend_and_excite_structure import StableDiffusionAttendAndExcitePipeline
 
 
 def preprocess_prompts(prompts):
@@ -48,34 +49,47 @@ def get_all_nps(tree, full_sent, tokens=None, highest_only=False, lowest_only=Fa
 
     idx_map = get_token_alignment_map(tree, tokens)
 
+    
     def get_sub_nps(tree, left, right):
-        if isinstance(tree, str) or len(tree.leaves()) == 1:
-            return []
         sub_nps = []
+        sub_nouns = []
+        if isinstance(tree, str) or len(tree.leaves()) == 1:
+            return sub_nps, sub_nouns
+
         n_leaves = len(tree.leaves())
         n_subtree_leaves = [len(t.leaves()) for t in tree]
         offset = np.cumsum([0] + n_subtree_leaves)[:len(n_subtree_leaves)]
         assert right - left == n_leaves
         if tree.label() == 'NP' and n_leaves > 1:
             sub_nps.append([" ".join(tree.leaves()), (int(min(idx_map[left])), int(min(idx_map[right])))])
+            sub_nouns.append([[subtree.leaves()[0] for subtree in tree if subtree.label()[:2] == "NN"], (int(min(idx_map[left])), int(min(idx_map[right])))])
             if highest_only and sub_nps[-1][0] != full_sent: return sub_nps
         for i, subtree in enumerate(tree):
-            sub_nps += get_sub_nps(subtree, left=left+offset[i], right=left+offset[i]+n_subtree_leaves[i])
-        return sub_nps
+            # sub_nps += get_sub_nps(subtree, left=left+offset[i], right=left+offset[i]+n_subtree_leaves[i])
+            partial_sub_nps, partial_sub_nouns = get_sub_nps(subtree, left=left+offset[i], right=left+offset[i]+n_subtree_leaves[i])
+            sub_nps += partial_sub_nps
+            sub_nouns += partial_sub_nouns
+        return sub_nps, sub_nouns
     
-    all_nps = get_sub_nps(tree, left=start, right=end)
-    lowest_nps = []
-    for i in range(len(all_nps)):
-        span = all_nps[i][1]
-        lowest = True
-        for j in range(len(all_nps)):
-            if i == j: continue
-            span2 = all_nps[j][1]
-            if span2[0] >= span[0] and span2[1] <= span[1]:
-                lowest = False
-                break
-        if lowest:
-            lowest_nps.append(all_nps[i])
+    all_nps, all_nouns = get_sub_nps(tree, left=start, right=end)
+
+    def find_lowest(all):
+        lowest = []
+        for i in range(len(all)):
+            span = all[i][1]
+            is_lowest = True
+            for j in range(len(all)):
+                if i == j: continue
+                span2 = all[j][1]
+                if span2[0] >= span[0] and span2[1] <= span[1]:
+                    is_lowest = False
+                    break
+            if is_lowest:
+                lowest.append(all[i])
+        return lowest
+
+    lowest_nps = find_lowest(all_nps)
+    lowest_nouns = find_lowest(all_nouns)
 
     if lowest_only:
         all_nps = lowest_nps
@@ -89,7 +103,7 @@ def get_all_nps(tree, full_sent, tokens=None, highest_only=False, lowest_only=Fa
         all_nps = [full_sent] + all_nps
         spans = [(min(idx_map[start]), min(idx_map[end]))] + spans
 
-    return all_nps, spans, lowest_nps
+    return all_nps, spans, lowest_nps, lowest_nouns
 
 
 def get_token_alignment_map(tree, tokens):
@@ -372,12 +386,6 @@ def main():
         help='resume generation',
     )
 
-    parser.add_argument(
-        "--local_only",
-        action='store_true',
-        help='resume generation',
-    )
-
 
     opt = parser.parse_args()
 
@@ -393,10 +401,13 @@ def main():
 
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
+    # pipe = ComposableStableDiffusionPipeline.from_pretrained(
+    #         "CompVis/stable-diffusion-v1-4"
+    # ).to(device)
 
-    pipe = ComposableStableDiffusionPipeline.from_pretrained(
-            "CompVis/stable-diffusion-v1-4"
-    ).to(device)
+    pipe = StableDiffusionAttendAndExcitePipeline.from_pretrained(
+            "CompVis/stable-diffusion-v1-4").to(device)
+
     generator = torch.Generator("cuda").manual_seed(opt.seed)
 
 
@@ -466,9 +477,10 @@ def main():
                             if opt.parser_type == 'constituency':
                                 doc = nlp(prompts[0])
                                 mytree = Tree.fromstring(str(doc.sentences[0].constituency))
+
                                 # tokens = model.cond_stage_model.tokenizer.tokenize(prompts[0])
                                 tokens = None
-                                nps, spans, noun_chunk = get_all_nps(mytree, prompts[0], tokens, lowest_only=True)
+                                nps, spans, noun_chunk, nouns = get_all_nps(mytree, prompts[0], tokens, lowest_only=True)
                                 # we need noun_chunk for our implementaiton
                                 # print(mytree, nps, spans, noun_chunk)
                             elif opt.parser_type == 'scene_graph':
@@ -477,8 +489,8 @@ def main():
                                 raise NotImplementedError
                         except:
                             print(f"{prompts[0]} parsing failed")
+                            raise
                             continue
-
                         
                         nps = [[np]*len(prompts) for np in nps]
                         
@@ -493,17 +505,26 @@ def main():
                         #     v_c = [c[0]] + align_sequence(c[0], c[1:], spans[1:])
                         #     c = {'k': k_c, 'v': v_c}
                         prompts_list = [i[0] for i in nps]
-                        # prompts = " | ".join(prompts_list[1:]) 
-                        if opt.local_only:
-                            prompts = " | ".join(prompts_list[1:]) 
-                        else:
-                            prompts = " | ".join(prompts_list) 
- 
+                        prompts = " | ".join(prompts_list) 
                         # prompts = [prompts]
                         # weights = [opt.scale] * len(nps) 
-                        weights = None
-                        image = pipe(prompts, guidance_scale=opt.scale, num_inference_steps=opt.ddim_steps, 
-                                     weights=weights, generator=generator).images[0]
+                        token_indices = [chunk[-1] for _, chunk in noun_chunk]
+                        # image = pipe(prompts, guidance_scale=opt.scale, num_inference_steps=opt.ddim_steps, 
+                        #              weights=weights, generator=generator).images[0]
+                        token_indices = [token_indices]
+                        print(prompts)
+
+                        image = pipe(prompt=prompts,
+                                     token_indices=token_indices,
+                                     noun_chunks = noun_chunk,
+                                     nouns = nouns,
+                                     # attention_res=RunConfig.attention_res,
+                                     guidance_scale=opt.scale,
+                                     generator=generator,
+                                     num_inference_steps=opt.ddim_steps,).images[0]
+
+                        print(image)
+
                         x_checked_image_torch = [image]
                         # shape = [opt.C, opt.H // opt.f, opt.W // opt.f]
                         # samples_ddim, intermediates = sampler.sample(S=opt.ddim_steps,
