@@ -524,6 +524,7 @@ def main():
                         # x_checked_image = x_samples_ddim
 
                         # x_checked_image_torch = torch.from_numpy(x_checked_image).permute(0, 3, 1, 2)
+                        print(prompts)
 
                         if not opt.skip_save:
                             for sid, img in enumerate(x_checked_image_torch):
@@ -533,7 +534,7 @@ def main():
                                     count = bid * opt.n_samples + sid
                                     safe_filename = f"{n}-{count}-" + (filenames[count][:-4])[:150] + ".jpg"
                                 except:
-                                    safe_filename = f"{base_count:05}-{n}-{prompts[0]}"[:100] + ".jpg"
+                                    safe_filename = f"{base_count:05}-{n}-{prompts}"[:100] + ".jpg"
                                 img.save(os.path.join(sample_path, f"{safe_filename}"))
                                 
                                 if opt.save_attn_maps:

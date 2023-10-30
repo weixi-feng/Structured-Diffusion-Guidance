@@ -161,6 +161,7 @@ def run(config: EvalConfig):
         prompt = img.replace('.jpg', '').split('-')[-1]
         prompt_idx = int(img.split('-')[0])
         gt_prompt = gt_prompts[prompt_idx]
+        # print(prompt, ' | ', gt_prompt, " | ", prompt_idx, " | ", img)
         if config.truncate:
             prompt = prompt.split('|')[0]
 

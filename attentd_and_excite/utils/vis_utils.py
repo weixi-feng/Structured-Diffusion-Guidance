@@ -32,7 +32,7 @@ def show_cross_attention(prompt: str,
             image = ptp_utils.text_under_image(image, decoder(int(tokens[i])))
             images.append(image)
 
-    ptp_utils.view_images(np.stack(images, axis=0))
+    img = ptp_utils.view_images(np.stack(images, axis=0), display_image=False)
 
 
 def show_image_relevance(image_relevance, image: Image.Image, relevnace_res=16):

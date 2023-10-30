@@ -226,7 +226,8 @@ def aggregate_attention(attention_store: AttentionStore,
     attention_maps = attention_store.get_average_attention()
     num_pixels = res ** 2
     for location in from_where:
-        for item in attention_maps[f"{location}_{'cross' if is_cross else 'self'}"]:
+        # for item in attention_maps[f"{location}_{'cross' if is_cross else 'self'}"]:
+        for item in attention_maps[f"{location}"]:
             if item.shape[1] == num_pixels:
                 cross_maps = item.reshape(1, -1, res, res, item.shape[-1])[select]
                 out.append(cross_maps)

@@ -20,6 +20,9 @@ from structured_stable_diffusion.util import instantiate_from_config
 from structured_stable_diffusion.models.diffusion.ddim import DDIMSampler
 from structured_stable_diffusion.models.diffusion.plms import PLMSSampler
 
+
+
+from attentd_and_excite.utils import vis_utils
 import sng_parser
 import stanza
 from nltk.tree import Tree
@@ -512,7 +515,6 @@ def main():
                         # image = pipe(prompts, guidance_scale=opt.scale, num_inference_steps=opt.ddim_steps, 
                         #              weights=weights, generator=generator).images[0]
                         token_indices = [token_indices]
-                        print(prompts)
 
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
@@ -523,7 +525,15 @@ def main():
                                      generator=generator,
                                      num_inference_steps=opt.ddim_steps,).images[0]
 
-                        print(image)
+
+                        attn_img = vis_utils.show_cross_attention(attention_store=pipe.attention_store,
+                                   prompt=prompt,
+                                   tokenizer=pipe.tokenizer,
+                                   res=16,
+                                   from_where=("up", "down", "mid"),
+                                   indices_to_alter=token_indices,
+                                   orig_image=None)
+                        print(attn_img)
 
                         x_checked_image_torch = [image]
                         # shape = [opt.C, opt.H // opt.f, opt.W // opt.f]
@@ -554,7 +564,7 @@ def main():
                                     count = bid * opt.n_samples + sid
                                     safe_filename = f"{n}-{count}-" + (filenames[count][:-4])[:150] + ".jpg"
                                 except:
-                                    safe_filename = f"{base_count:05}-{n}-{prompts[0]}"[:100] + ".jpg"
+                                    safe_filename = f"{base_count:05}-{n}-{prompts}"[:100] + ".jpg"
                                 img.save(os.path.join(sample_path, f"{safe_filename}"))
                                 
                                 if opt.save_attn_maps:

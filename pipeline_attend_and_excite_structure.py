@@ -954,8 +954,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # 5. Prepare latent variables
         num_channels_latents = self.unet.config.in_channels
         latents = self.prepare_latents(
-            batch_size * num_images_per_prompt,
-            # len(prompt) * num_images_per_prompt,
+            # batch_size * num_images_per_prompt,
+            len(prompt)* num_images_per_prompt,
             num_channels_latents,
             height,
             width,
@@ -1002,144 +1002,156 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
 
         sub_prompts = [None] + [sub_prompt for sub_prompt, _ in noun_chunks]
         sub_nouns = [None] + [sub_nouns for sub_nouns, _ in nouns]
+        # latents = latents[:1]
         
-        for i, t in track(enumerate(timesteps)):
-            # Attend and excite process
-            with torch.enable_grad():
-                updated_latents = [latents]
-                latents = latents.clone().detach().requires_grad_(True)
-                master_attention_map = None
-                for idx, (index, text_embedding, sub_prompt, sub_noun) in enumerate(zip(indices, text_embeddings, sub_prompts, sub_nouns)):
-                    is_master = (idx == 0)
-                    # Forward pass of denoising with text conditioning
-                    # latent = latent.unsqueeze(0)
-                    text_embedding = text_embedding.unsqueeze(0)
+        with self.progress_bar(total=num_inference_steps) as progress_bar:
+            for i, t in enumerate(timesteps):
+                # Attend and excite process
+                updated_latents = []
+                with torch.enable_grad():
+                    latents = latents.clone().detach().requires_grad_(True)
+                    master_attention_map = None
+                    for idx, (latent, index, text_embedding, sub_prompt, sub_noun) in enumerate(zip(latents, indices, text_embeddings, sub_prompts, sub_nouns)):
+                        is_master = (idx == 0)
+                        # Forward pass of denoising with text conditioning
+                        latent = latent.unsqueeze(0)
+                        text_embedding = text_embedding.unsqueeze(0)
 
-                    self.unet(
-                        latents,
-                        t,
-                        encoder_hidden_states=text_embedding,
-                        cross_attention_kwargs=cross_attention_kwargs,
-                    ).sample
-                    self.unet.zero_grad()
-
-                    if is_master:
-                        # Get max activation value for each subject token
-                        max_attention_per_index, attn_map = self._aggregate_and_get_max_attention_per_token(
-                            indices=index,
-                        )
-                        master_attention_map = attn_map.detach()
-
-                        loss = self._compute_loss(max_attention_per_index=max_attention_per_index)
-
-                        # If this is an iterative refinement step, verify we have reached the desired threshold for all
-                        if i in thresholds.keys() and loss > 1.0 - thresholds[i]:
-                            loss, latents, max_attention_per_index = self._perform_iterative_refinement_step(
-                                latents=latents,
-                                indices=index,
-                                loss=loss,
-                                threshold=thresholds[i],
-                                text_embeddings=text_embedding,
-                                step_size=step_size[i],
-                                t=t,
-                            )
-                    else:
-                        # loss = 0
-                        # TODO: how to make sub sentence attn map get close to master attn map 
-                        _, attn_map = self._aggregate_and_get_max_attention_per_token(
-                            indices=index,
-                        )
-
-                        # rough idea: to only compare the correspoding object attention map 
-                        # note that, noun_chunk is in such format: [start, end] where start is not included in subsentence
-                        
-                        # step one find all noun in subsentence 
-                        master_prompt = prompt[0]
-                        # to exclude the first index as it is not needed 
-                        master_idxs, sub_idxs = self._look_up_in_master_prompt(master_prompt, sub_prompt, sub_noun, index) 
-                        # print(master_idxs, sub_idxs, master_prompt, "|", sub_prompt)
-
-                        losses = list() 
-                        for master_idx, sub_idx in zip(master_idxs, sub_idxs):
-                            master_attn = master_attention_map[:, :, master_idx]
-                            sub_attn = attn_map[:, :, sub_idx]
-
-                            loss = torch.nn.functional.l1_loss(sub_attn, master_attn) 
-                            losses.append(loss)
-
-                        loss = torch.stack(losses, dim=0).mean()
-                        # loss = 0
-
-                    # Perform gradient update
-                    if i < max_iter_to_alter:
-                        if loss != 0:
-                            latents = self._update_latent(
-                                latents=latents,
-                                loss=loss,
-                                step_size=step_size[i],
-                            )
-                        logger.info(f"Iteration {i} | Loss: {loss:0.4f}")
-
-
-
-                    updated_latents.append(latents)
-
-                latents = torch.cat(updated_latents, dim=0)
-
-                # latents = latents[:1]
-
-                with torch.set_grad_enabled(False):
-                    # expand the latents if we are doing classifier free guidance
-                    # latent_model_input = torch.cat([latents]*2) if do_classifier_free_guidance else latents
-                    latent_model_input = latents
-                    latent_model_input = self.scheduler.scale_model_input(latent_model_input, t)
-
-                    prompt_embeds = torch.cat([negative_prompt_embeds[0].unsqueeze(dim=0), text_embeddings]) if do_classifier_free_guidance else text_embeddings
-                    # print(latent_model_input.shape, prompt_embeds.shape)
-
-
-                    # predict the noise residual
-
-                    all_noise_pred = list()
-                    for input_latent, cond_embed in zip(latent_model_input, prompt_embeds):
-                        noise_pred = self.unet(
-                            input_latent.unsqueeze(dim=0),
+                        self.unet(
+                            latent,
                             t,
-                            encoder_hidden_states=cond_embed.unsqueeze(dim=0),
+                            encoder_hidden_states=text_embedding,
                             cross_attention_kwargs=cross_attention_kwargs,
                         ).sample
-                        all_noise_pred.append(noise_pred)
+                        self.unet.zero_grad()
+
+                        if is_master:
+                            # Get max activation value for each subject token
+                            max_attention_per_index, attn_map = self._aggregate_and_get_max_attention_per_token(
+                                indices=index,
+                            )
+                            # print(attn_map.shape)
+                            # to_save = attn_map.detach().cpu().numpy() 
+                            # np.save(f'./attn_map/{str(i)}.npy', to_save)
+                            master_attention_map = attn_map.detach()
+
+                            loss = self._compute_loss(max_attention_per_index=max_attention_per_index)
+
+                            # If this is an iterative refinement step, verify we have reached the desired threshold for all
+                            if i in thresholds.keys() and loss > 1.0 - thresholds[i]:
+                                loss, latent, max_attention_per_index = self._perform_iterative_refinement_step(
+                                    latents=latent,
+                                    indices=index,
+                                    loss=loss,
+                                    threshold=thresholds[i],
+                                    text_embeddings=text_embedding,
+                                    step_size=step_size[i],
+                                    t=t,
+                                )
+                        else:
+                            # loss = 0
+                            # TODO: how to make sub sentence attn map get close to master attn map 
+                            _, attn_map = self._aggregate_and_get_max_attention_per_token(
+                                indices=index,
+                            )
+
+                            # rough idea: to only compare the correspoding object attention map 
+                            # note that, noun_chunk is in such format: [start, end] where start is not included in subsentence
+                            
+                            # step one find all noun in subsentence 
+                            master_prompt = prompt[0]
+                            # to exclude the first index as it is not needed 
+                            master_idxs, sub_idxs = self._look_up_in_master_prompt(master_prompt, sub_prompt, sub_noun, index) 
+                            # print(master_idxs, sub_idxs, master_prompt, "|", sub_prompt)
+
+                            losses = list() 
+                            for master_idx, sub_idx in zip(master_idxs, sub_idxs):
+                                master_attn = master_attention_map[:, :, master_idx]
+                                sub_attn = attn_map[:, :, sub_idx]
+
+                                loss = torch.nn.functional.l1_loss(sub_attn, master_attn) 
+                                losses.append(loss)
+
+                            loss = torch.stack(losses, dim=0).mean()
+                            # loss = 0
+
+                        # Perform gradient update
+                        if i < max_iter_to_alter:
+                            if loss != 0:
+                                latent = self._update_latent(
+                                    latents=latent,
+                                    loss=loss,
+                                    step_size=step_size[i],
+                                )
+                            logger.info(f"Iteration {i} | Loss: {loss:0.4f}")
 
 
-                    cfg_noise = list()
-                    if do_classifier_free_guidance:
-                        noise_pred_uncond = all_noise_pred[0]
-                        noise_pred_cond = torch.cat(all_noise_pred[1:], dim=0)
-                        noise_pred = noise_pred_uncond + (weights * (noise_pred_cond - noise_pred_uncond)).sum(dim=0, keepdims=True)
-                        # noise_pred = noise_pred_uncond + (weights[:1] * (noise_pred_cond[1:2] - noise_pred_uncond))
-                        # master 
-                        cfg_noise.append(noise_pred)
 
-                        # sub 
-                        # the first one is master
-                        # for noise_pred_cond_sub in noise_pred_cond[1:]:
-                        #     noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_cond_sub - noise_pred_uncond)
-                        #     cfg_noise.append(noise_pred)
+                        updated_latents.append(latent)
 
-                    # noise_pred = torch.cat(cfg_noise, dim=0)
+                    latents = torch.cat(updated_latents, dim=0)
+                    
 
-                    # compute the previous noisy sample x_t -> x_t-1
-                    # print(noise_pred.shape, latents.shape)
-                    latents = self.scheduler.step(noise_pred, t, latents[:1], **extra_step_kwargs).prev_sample
+                    with torch.set_grad_enabled(False):
 
-                    # latents = torch.cat([latents] * len(prompt))
+                        # prompt_embeds = torch.cat([negative_prompt_embeds[0].unsqueeze(dim=0), text_embeddings]) if do_classifier_free_guidance else text_embeddings
+                        # print(latent_model_input.shape, prompt_embeds.shape)
 
 
-                    # call the callback, if provided
-                    if i == len(timesteps) - 1 or ((i + 1) > num_warmup_steps and (i + 1) % self.scheduler.order == 0):
-                        # progress_bar.update()
-                        if callback is not None and i % callback_steps == 0:
-                            callback(i, t, latents)
+                        # predict the noise residual
+
+                        all_noise_pred = list()
+                        for input_latent, cond_embed in zip(latents, text_embeddings):
+                            # expand the latents if we are doing classifier free guidance
+                            latent_model_input = torch.cat([input_latent.unsqueeze(dim=0)]*2) if do_classifier_free_guidance else input_latent.unsqueeze(dim=0)
+                            latent_model_input = self.scheduler.scale_model_input(latent_model_input, t)
+
+                            cond_embed = torch.cat([negative_prompt_embeds[:1], cond_embed.unsqueeze(dim=0)])
+
+                            noise_pred = self.unet(
+                                latent_model_input,
+                                t,
+                                encoder_hidden_states=cond_embed,
+                                cross_attention_kwargs=cross_attention_kwargs,
+                            ).sample
+                            all_noise_pred.append(noise_pred)
+
+
+                        all_noise_pred = torch.stack(all_noise_pred, dim=0)
+                        # why avg not work?
+                        avg_noise_uncond = all_noise_pred[:, :1].mean(dim=0)
+                        # print(avg_noise_uncond.shape, all_noise_pred.shape)
+                        cfg_noise = list()
+
+                        if do_classifier_free_guidance:
+
+                            # avg the uncond 
+                            # noise_pred = avg_noise_uncond + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
+                            noise_pred = all_noise_pred[0, :1] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
+                            # master 
+                            cfg_noise.append(noise_pred)
+
+                            # sub 
+                            # the first one is master
+                            single_noise_pred = all_noise_pred[:, 0] + (weights * (all_noise_pred[:, 0] - all_noise_pred[:, 1]))
+                            single_noise_pred = single_noise_pred[1:]
+                            
+                            noise_pred = torch.cat([noise_pred, single_noise_pred])
+
+
+                        # noise_pred = torch.cat(cfg_noise, dim=0)
+
+                        # compute the previous noisy sample x_t -> x_t-1
+                        # print(noise_pred.shape, latents.shape)
+                        latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
+
+                        # latents = torch.cat([latents] * len(prompt))
+
+                        # call the callback, if provided
+                        if i == len(timesteps) - 1 or ((i + 1) > num_warmup_steps and (i + 1) % self.scheduler.order == 0):
+                            progress_bar.update()
+                            if callback is not None and i % callback_steps == 0:
+                                callback(i, t, latents)
 
 
         # 8. Post-processing
