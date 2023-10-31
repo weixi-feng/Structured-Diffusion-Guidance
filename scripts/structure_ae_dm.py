@@ -26,7 +26,7 @@ from attentd_and_excite.utils import vis_utils
 import sng_parser
 import stanza
 from nltk.tree import Tree
-nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,constituency')
+nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,constituency', use_gpu=False)
 import pdb
 import json
 
@@ -430,10 +430,11 @@ def main():
 
     config = OmegaConf.load(f"{opt.config}")
 
-    if opt.device is not None:
+    if opt.device is None:
         device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     else:
         device = torch.device(f"cuda:{str(opt.device)}")
+    print(device)
 
     # pipe = ComposableStableDiffusionPipeline.from_pretrained(
     #         "CompVis/stable-diffusion-v1-4"
@@ -457,8 +458,10 @@ def main():
         assert prompt is not None
         data = [batch_size * [prompt]]
         opt.from_file = ""
+        sample_path = os.path.join(outpath, "samples")
     else:
         print(f"reading prompts from {opt.from_file}")
+        sample_path = os.path.join(outpath, opt.from_file)
         with open(opt.from_file, "r") as f:
             data = f.read().splitlines()
             try:
@@ -472,7 +475,6 @@ def main():
 
 
 
-    sample_path = os.path.join(outpath, "samples")
     os.makedirs(sample_path, exist_ok=True)
     base_count = len(os.listdir(sample_path))
     grid_count = len(os.listdir(outpath)) - 1
@@ -541,6 +543,21 @@ def main():
                         #     c = {'k': k_c, 'v': v_c}
                         prompts_list = [i[0] for i in nps]
                         file_name = prompts[0]
+
+                        full_prompt = prompts_list[0] 
+                        sub_prompts = prompts_list[1:] 
+
+                        concate_list = list() 
+                        noun_list = list() 
+                        for p, n in zip(sub_prompts, nouns):
+                            print(n)
+                            if len(n[0]) != 0:
+                                concate_list.append(p)
+                                noun_list.append(n)
+
+                        prompts_list = [full_prompt] + concate_list
+                        print(prompts_list, noun_list)
+
                         prompts = " | ".join(prompts_list) 
                         # prompts = [prompts]
                         # weights = [opt.scale] * len(nps) 
@@ -548,11 +565,10 @@ def main():
                         # image = pipe(prompts, guidance_scale=opt.scale, num_inference_steps=opt.ddim_steps, 
                         #              weights=weights, generator=generator).images[0]
                         token_indices = [token_indices]
-
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
                                      noun_chunks = noun_chunk,
-                                     nouns = nouns,
+                                     nouns = noun_list,
                                      # attention_res=RunConfig.attention_res,
                                      guidance_scale=opt.scale,
                                      generator=generator,
