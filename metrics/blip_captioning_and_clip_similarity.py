@@ -39,7 +39,7 @@ def run(config: EvalConfig):
     print("Done.")
 
     print("Loading BLIP model...")
-    blip_model, vis_processors, _ = load_model_and_preprocess(name="blip_caption", model_type="large_coco",
+    blip_model, vis_processors, _ = load_model_and_preprocess(name="blip_caption", model_type="base_coco",
                                                               is_eval=True, device=device)
     print("Done.")
 
@@ -67,7 +67,7 @@ def run(config: EvalConfig):
         # image_names = [p.name for p in image_paths]
         image_names = [img]
         # print(prompt, '|',  gt_prompt)
-        prompt = gt_prompt
+        # prompt = gt_prompt
         with torch.no_grad():
             # extract prompt embeddings
             prompt_features = get_embedding_for_prompt(model, prompt, templates=imagenet_templates)

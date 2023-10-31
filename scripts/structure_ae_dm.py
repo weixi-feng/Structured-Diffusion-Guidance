@@ -52,6 +52,23 @@ def get_all_nps(tree, full_sent, tokens=None, highest_only=False, lowest_only=Fa
 
     idx_map = get_token_alignment_map(tree, tokens)
 
+    def find_sub_noun(tree,):
+
+        # print('--fin_sub_noun_start---')
+        # print(tree, ) 
+        ret = list()
+        if type(tree) == str:
+            return ret
+        if tree.label()[:2] == "NN":
+            # return [tree.leaves()[0]]
+            ret.append(tree.leaves()[0])
+        else:
+            # if len(tree.leaves()) > 1:
+            for subtree in tree:
+                ret += find_sub_noun(subtree)
+        # print(ret) 
+        # print('--fin_sub_noun_end---')
+        return ret
     
     def get_sub_nps(tree, left, right):
         sub_nps = []
@@ -65,7 +82,11 @@ def get_all_nps(tree, full_sent, tokens=None, highest_only=False, lowest_only=Fa
         assert right - left == n_leaves
         if tree.label() == 'NP' and n_leaves > 1:
             sub_nps.append([" ".join(tree.leaves()), (int(min(idx_map[left])), int(min(idx_map[right])))])
-            sub_nouns.append([[subtree.leaves()[0] for subtree in tree if subtree.label()[:2] == "NN"], (int(min(idx_map[left])), int(min(idx_map[right])))])
+            # sub_nouns.append([[subtree.leaves()[0] for subtree in tree if subtree.label()[:2] == "NN"], (int(min(idx_map[left])), int(min(idx_map[right])))])
+            sub_nouns.append([find_sub_noun(tree), (int(min(idx_map[left])), int(min(idx_map[right])))])
+            # print(tree)
+            # print(sub_nouns,  " | ", sub_nps)
+            # print('----')
             if highest_only and sub_nps[-1][0] != full_sent: return sub_nps
         for i, subtree in enumerate(tree):
             # sub_nps += get_sub_nps(subtree, left=left+offset[i], right=left+offset[i]+n_subtree_leaves[i])
@@ -469,6 +490,7 @@ def main():
                         if bid < start_idx:
                             continue
                         prompts = preprocess_prompts(prompts)
+                        file_name = prompts[0]
 
                         # uc = None
                         # if opt.scale != 1.0:
@@ -508,6 +530,7 @@ def main():
                         #     v_c = [c[0]] + align_sequence(c[0], c[1:], spans[1:])
                         #     c = {'k': k_c, 'v': v_c}
                         prompts_list = [i[0] for i in nps]
+                        file_name = prompts[0]
                         prompts = " | ".join(prompts_list) 
                         # prompts = [prompts]
                         # weights = [opt.scale] * len(nps) 
@@ -515,6 +538,8 @@ def main():
                         # image = pipe(prompts, guidance_scale=opt.scale, num_inference_steps=opt.ddim_steps, 
                         #              weights=weights, generator=generator).images[0]
                         token_indices = [token_indices]
+                        print(nouns)
+                        print('-----')
 
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
@@ -526,14 +551,14 @@ def main():
                                      num_inference_steps=opt.ddim_steps,).images[0]
 
 
-                        attn_img = vis_utils.show_cross_attention(attention_store=pipe.attention_store,
-                                   prompt=prompt,
-                                   tokenizer=pipe.tokenizer,
-                                   res=16,
-                                   from_where=("up", "down", "mid"),
-                                   indices_to_alter=token_indices,
-                                   orig_image=None)
-                        print(attn_img)
+                        # attn_img = vis_utils.show_cross_attention(attention_store=pipe.attention_store,
+                        #            prompt=prompt,
+                        #            tokenizer=pipe.tokenizer,
+                        #            res=16,
+                        #            from_where=("up", "down", "mid"),
+                        #            indices_to_alter=token_indices,
+                        #            orig_image=None)
+                        # print(attn_img)
 
                         x_checked_image_torch = [image]
                         # shape = [opt.C, opt.H // opt.f, opt.W // opt.f]
@@ -564,7 +589,9 @@ def main():
                                     count = bid * opt.n_samples + sid
                                     safe_filename = f"{n}-{count}-" + (filenames[count][:-4])[:150] + ".jpg"
                                 except:
-                                    safe_filename = f"{base_count:05}-{n}-{prompts}"[:100] + ".jpg"
+                                    safe_filename = f"{base_count:05}-{n}-{file_name}"[:100] + ".jpg"
+
+
                                 img.save(os.path.join(sample_path, f"{safe_filename}"))
                                 
                                 if opt.save_attn_maps:
