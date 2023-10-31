@@ -553,12 +553,13 @@ def main():
                         for p, n in zip(sub_prompts, nouns):
                             if len(n[0]) != 0:
                                 concate_list.append(p)
-                                noun_list.append(n[0])
-                                chunk.append(n[-1])
+                                noun_list.append(n)
+                                chunk.append([p, n[-1]])
 
                         prompts_list = [full_prompt] + concate_list
-                        print(prompts_list, noun_list, chunk)
-
+#                         print(noun_chunk)
+#                         print(chunk)
+# 
                         prompts = " | ".join(prompts_list) 
                         # prompts = [prompts]
                         # weights = [opt.scale] * len(nps) 
