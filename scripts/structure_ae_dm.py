@@ -597,7 +597,7 @@ def main():
                                      # attention_res=RunConfig.attention_res,
                                      guidance_scale=opt.scale,
                                      generator=generator,
-                                     num_inference_steps=opt.ddim_steps,)#.images[0]
+                                     num_inference_steps=opt.ddim_steps,).images[0]
 
 
                         # attn_img = vis_utils.show_cross_attention(attention_store=pipe.attention_store,
