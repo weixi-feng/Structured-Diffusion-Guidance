@@ -410,6 +410,13 @@ def main():
         help='resume generation',
     )
 
+    parser.add_argument(
+        "--device",
+        type=str,
+        default=None,
+        help='device to run, default is None',
+    )
+
 
     opt = parser.parse_args()
 
@@ -423,7 +430,10 @@ def main():
 
     config = OmegaConf.load(f"{opt.config}")
 
-    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+    if opt.device is not None:
+        device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+    else:
+        device = torch.device(opt.device)
 
     # pipe = ComposableStableDiffusionPipeline.from_pretrained(
     #         "CompVis/stable-diffusion-v1-4"
@@ -538,8 +548,6 @@ def main():
                         # image = pipe(prompts, guidance_scale=opt.scale, num_inference_steps=opt.ddim_steps, 
                         #              weights=weights, generator=generator).images[0]
                         token_indices = [token_indices]
-                        print(nouns)
-                        print('-----')
 
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
