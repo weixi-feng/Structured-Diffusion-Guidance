@@ -1002,7 +1002,6 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
 
         sub_prompts = [None] + [sub_prompt for sub_prompt, _ in noun_chunks]
         sub_nouns = [None] + [sub_nouns for sub_nouns, _ in nouns]
-        raise
         # latents = latents[:1]
         
         with self.progress_bar(total=num_inference_steps) as progress_bar:
@@ -1062,14 +1061,9 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             # step one find all noun in subsentence 
                             master_prompt = prompt[0]
                             # to exclude the first index as it is not needed 
-                            print('-------------')
-                            print(master_prompt,"|", sub_prompt, "|",sub_noun, "|",index)
                             master_idxs, sub_idxs = self._look_up_in_master_prompt(master_prompt, sub_prompt, sub_noun, index) 
                             # print(master_idxs, sub_idxs, master_prompt, "|", sub_prompt)
                             losses = list() 
-                            print(master_idxs, sub_idxs)
-                            print('-------------')
-                            raise
                             for master_idx, sub_idx in zip(master_idxs, sub_idxs):
                                 master_attn = master_attention_map[:, :, master_idx]
                                 sub_attn = attn_map[:, :, sub_idx]
