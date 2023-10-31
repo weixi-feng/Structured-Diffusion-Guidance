@@ -412,7 +412,7 @@ def main():
 
     parser.add_argument(
         "--device",
-        type=str,
+        type=int,
         default=None,
         help='device to run, default is None',
     )
@@ -433,7 +433,7 @@ def main():
     if opt.device is not None:
         device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
     else:
-        device = torch.device(opt.device)
+        device = torch.device(f"cuda:{str(opt.device)}")
 
     # pipe = ComposableStableDiffusionPipeline.from_pretrained(
     #         "CompVis/stable-diffusion-v1-4"
