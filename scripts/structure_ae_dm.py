@@ -598,7 +598,6 @@ def main():
                                      guidance_scale=opt.scale,
                                      generator=generator,
                                      num_inference_steps=opt.ddim_steps,)#.images[0]
-                        continue
 
 
                         # attn_img = vis_utils.show_cross_attention(attention_store=pipe.attention_store,
