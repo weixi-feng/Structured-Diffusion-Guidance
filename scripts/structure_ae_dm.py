@@ -549,14 +549,15 @@ def main():
 
                         concate_list = list() 
                         noun_list = list() 
+                        chunk = list()
                         for p, n in zip(sub_prompts, nouns):
-                            print(n)
                             if len(n[0]) != 0:
                                 concate_list.append(p)
-                                noun_list.append(n)
+                                noun_list.append(n[0])
+                                chunk.append(n[-1])
 
                         prompts_list = [full_prompt] + concate_list
-                        print(prompts_list, noun_list)
+                        print(prompts_list, noun_list, chunk)
 
                         prompts = " | ".join(prompts_list) 
                         # prompts = [prompts]
@@ -567,7 +568,7 @@ def main():
                         token_indices = [token_indices]
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
-                                     noun_chunks = noun_chunk,
+                                     noun_chunks = chunk,
                                      nouns = noun_list,
                                      # attention_res=RunConfig.attention_res,
                                      guidance_scale=opt.scale,
