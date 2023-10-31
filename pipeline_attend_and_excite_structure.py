@@ -612,7 +612,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         current_idx = 0
         for noun in nouns:
             for idx, word in enumerate(words):
-                if current_idx >= idx:
+                if current_idx > idx:
                     continue 
                 if noun == word:
                     noun_idxs.append(idx+1)
@@ -627,7 +627,13 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
             for noun_idx in noun_idxs:
                 idx_sub.append(noun_idx)
                 idx_master.append(noun_idx + noun_chunk[0])
-
+            
+            token_a = master_prompt.split(' ')
+            token_b = sub_prompt.split(' ')
+            for a, b in zip(idx_master, idx_sub):
+                assert token_a[a-1] == token_b[b-1]
+            assert len(idx_master) == len(idx_sub)
+            assert len(idx_master) != 0
             return idx_master, idx_sub
 
         else:
@@ -1064,6 +1070,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             master_idxs, sub_idxs = self._look_up_in_master_prompt(master_prompt, sub_prompt, sub_noun, index) 
                             # print(master_idxs, sub_idxs, master_prompt, "|", sub_prompt)
                             losses = list() 
+                            print(master_prompt, sub_prompt, sub_noun, index, master_idxs, sub_idxs)
                             for master_idx, sub_idx in zip(master_idxs, sub_idxs):
                                 master_attn = master_attention_map[:, :, master_idx]
                                 sub_attn = attn_map[:, :, sub_idx]
