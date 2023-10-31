@@ -371,6 +371,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                 return_tensors="pt",
             )
             text_input_ids = text_inputs.input_ids
+            # print(text_input_ids, prompt)
             untruncated_ids = self.tokenizer(prompt, padding="longest", return_tensors="pt").input_ids
 
             if untruncated_ids.shape[-1] >= text_input_ids.shape[-1] and not torch.equal(
@@ -601,44 +602,44 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         latents = latents * self.scheduler.init_noise_sigma
         return latents
 
+    
 
-    @staticmethod 
-    def _look_up_in_master_prompt(master_prompt, sub_prompt, nouns, noun_chunk=None):
-        # to avoid having duplicated sub_prompt in master prompt, therefore, noun_chunk is always required
-        # if noun_chunk is not given, can run other sub string matching algorithm 
+    def test_idx(self, master_prompt, master_idx, sub_idx, nps, noun):
+        assert len(master_idx) == len(sub_idx) 
+        assert len(master_idx) != 0
+        assert len(sub_idx) == len(noun)
 
-        noun_idxs = list()
-        words = sub_prompt.split(" ")
-        current_idx = 0
-        for noun in nouns:
+        tokenized_np = self.tokenizer(nps[0]).input_ids
+        for idx, (word, _) in zip(sub_idx, noun):
+            # assert word == tokenized_np[idx-1]
+            assert word == self.tokenizer.decode(tokenized_np[idx], skip_special_token=True)
+
+        tokenized_master = self.tokenizer(master_prompt).input_ids
+        for idx, (word, _) in zip(master_idx, noun):
+            assert word == self.tokenizer.decode(tokenized_master[idx], skip_special_tokens=True)
+
+
+
+
+
+    def _look_up_in_master_prompt(self, nps, noun):
+
+        idx_master = [idx for _, (_, idx) in noun]
+        
+        words = word_tokenize(nps[0])
+
+        idx_np = list()
+        current_idx = -1
+        for (n, _) in noun:
             for idx, word in enumerate(words):
-                if current_idx > idx:
-                    continue 
-                if noun == word:
-                    noun_idxs.append(idx+1)
+                if current_idx >= idx:
+                    continue
+                if n == word:
+                    idx_np.append(idx+1)
                     current_idx = idx
+        return idx_master, idx_np
 
-        if noun_chunk:
-            # print(noun_chunk, sub_prompt)
-            assert (noun_chunk[-1] - noun_chunk[0]) == len(sub_prompt.split(' '))
 
-            idx_master = list() 
-            idx_sub = list()
-            for noun_idx in noun_idxs:
-                idx_sub.append(noun_idx)
-                idx_master.append(noun_idx + noun_chunk[0])
-            
-            token_a = master_prompt.split(' ')
-            token_b = sub_prompt.split(' ')
-            print(token_a, token_b, nouns, noun_chunk)
-            for a, b in zip(idx_master, idx_sub):
-                assert token_a[a-1] == token_b[b-1]
-            assert len(idx_master) == len(idx_sub)
-            assert len(idx_master) != 0
-            return idx_master, idx_sub
-
-        else:
-            raise NotImplemented
 
     @staticmethod
     def _compute_max_attention_per_index(
@@ -783,7 +784,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         self,
         prompt: Union[str, List[str]],
         token_indices: Union[List[int], List[List[int]]],
-        noun_chunks: Optional[list],
+        noun_phrase: Optional[list],
         nouns: Optional[list],
         height: Optional[int] = None,
         width: Optional[int] = None,
@@ -989,26 +990,29 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         #     prompt_embeds[batch_size * num_images_per_prompt :] if do_classifier_free_guidance else prompt_embeds
         # )
 
-        if isinstance(token_indices[0], int):
-            token_indices = [token_indices]
+        # if isinstance(token_indices[0], int):
+        #     token_indices = [token_indices]
 
         indices = []
 
         assert num_images_per_prompt == 1
-        for ind in token_indices:
-            indices = indices + [ind] * num_images_per_prompt
-        
-        for _, idxs in noun_chunks:
-            # indices.append([chunk[-1]])
-            indices.append(idxs)
+        # for ind in token_indices:
+        #     indices = indices + [ind] * num_images_per_prompt
+        # 
+        # for _, idxs in noun_phrase:
+        #     # indices.append([chunk[-1]])
+        #     indices.append(idxs)
 
 
 
         # 7. Denoising loop
         num_warmup_steps = len(timesteps) - num_inference_steps * self.scheduler.order
+        # sub_prompts = [None] + [sub_prompt for sub_prompt, _ in noun_phrase]
+        # sub_nouns = [None] + [sub_nouns for sub_nouns, _ in nouns]
 
-        sub_prompts = [None] + [sub_prompt for sub_prompt, _ in noun_chunks]
-        sub_nouns = [None] + [sub_nouns for sub_nouns, _ in nouns]
+        noun_phrase = [(None, None)] + noun_phrase
+        nouns = [(None, None)] + nouns
+        # print(sub_nouns, nouns)
         # latents = latents[:1]
         
         with self.progress_bar(total=num_inference_steps) as progress_bar:
@@ -1018,7 +1022,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                 with torch.enable_grad():
                     latents = latents.clone().detach().requires_grad_(True)
                     master_attention_map = None
-                    for idx, (latent, index, text_embedding, sub_prompt, sub_noun) in enumerate(zip(latents, indices, text_embeddings, sub_prompts, sub_nouns)):
+                    for idx, (latent, text_embedding, nps, noun) in enumerate(zip(latents, text_embeddings, noun_phrase, nouns)):
                         is_master = (idx == 0)
                         # Forward pass of denoising with text conditioning
                         latent = latent.unsqueeze(0)
@@ -1035,11 +1039,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                         if is_master:
                             # Get max activation value for each subject token
                             max_attention_per_index, attn_map = self._aggregate_and_get_max_attention_per_token(
-                                indices=index,
+                                indices=token_indices,
                             )
-                            # print(attn_map.shape)
-                            # to_save = attn_map.detach().cpu().numpy() 
-                            # np.save(f'./attn_map/{str(i)}.npy', to_save)
                             master_attention_map = attn_map.detach()
 
                             loss = self._compute_loss(max_attention_per_index=max_attention_per_index)
@@ -1048,7 +1049,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             if i in thresholds.keys() and loss > 1.0 - thresholds[i]:
                                 loss, latent, max_attention_per_index = self._perform_iterative_refinement_step(
                                     latents=latent,
-                                    indices=index,
+                                    indices=token_indices,
                                     loss=loss,
                                     threshold=thresholds[i],
                                     text_embeddings=text_embedding,
@@ -1058,20 +1059,25 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                         else:
                             # loss = 0
                             # TODO: how to make sub sentence attn map get close to master attn map 
-                            _, attn_map = self._aggregate_and_get_max_attention_per_token(
-                                indices=index,
-                            )
+                            attn_map = self.attention_store.aggregate_attention(
+                                                        from_where=("up", "down", "mid"),
+                                                        )
 
                             # rough idea: to only compare the correspoding object attention map 
                             # note that, noun_chunk is in such format: [start, end] where start is not included in subsentence
+                            master_prompt = prompt[0]
                             
                             # step one find all noun in subsentence 
-                            master_prompt = prompt[0]
                             # to exclude the first index as it is not needed 
-                            master_idxs, sub_idxs = self._look_up_in_master_prompt(master_prompt, sub_prompt, sub_noun, index) 
-                            # print(master_idxs, sub_idxs, master_prompt, "|", sub_prompt)
+                            # print(master_prompt, sub_prompt, sub_noun, index)
+                            # master_idxs, sub_idxs = self._look_up_in_master_prompt(master_prompt, sub_prompt, sub_noun, index) 
+                            # print(noun, nps)
+                            master_idxs, sub_idxs = self._look_up_in_master_prompt(nps, noun) 
+
+                            # self.test_idx(master_prompt, master_idxs, sub_idxs, nps, noun)
+
                             losses = list() 
-                            # print(master_prompt, sub_prompt, sub_noun, index, master_idxs, sub_idxs)
+
                             for master_idx, sub_idx in zip(master_idxs, sub_idxs):
                                 master_attn = master_attention_map[:, :, master_idx]
                                 sub_attn = attn_map[:, :, sub_idx]
@@ -1079,8 +1085,10 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                                 loss = torch.nn.functional.l1_loss(sub_attn, master_attn) 
                                 
                                 losses.append(loss)
-
-                            loss = torch.stack(losses, dim=0).mean()
+                            if len(losses) != 0:
+                                loss = torch.stack(losses, dim=0).mean()
+                            else:
+                                loss = 0
                             # loss = 0
 
                         # Perform gradient update
@@ -1138,22 +1146,15 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             noise_pred = all_noise_pred[0, :1] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
                             # master 
                             cfg_noise.append(noise_pred)
-
                             # sub 
                             # the first one is master
                             single_noise_pred = all_noise_pred[:, 0] + (weights * (all_noise_pred[:, 0] - all_noise_pred[:, 1]))
                             single_noise_pred = single_noise_pred[1:]
-                            
                             noise_pred = torch.cat([noise_pred, single_noise_pred])
-
-
-                        # noise_pred = torch.cat(cfg_noise, dim=0)
 
                         # compute the previous noisy sample x_t -> x_t-1
                         # print(noise_pred.shape, latents.shape)
                         latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
-
-                        # latents = torch.cat([latents] * len(prompt))
 
                         # call the callback, if provided
                         if i == len(timesteps) - 1 or ((i + 1) > num_warmup_steps and (i + 1) % self.scheduler.order == 0):

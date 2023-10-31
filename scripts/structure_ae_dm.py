@@ -46,7 +46,20 @@ def preprocess_prompts(prompts):
         raise NotImplementedError
 
 
-def get_all_nps(tree, full_sent, tokens=None, highest_only=False, lowest_only=False):
+def group_nouns(noun_phrase, nouns):
+
+    group_nouns = list()
+    for _, (start, end) in noun_phrase:
+        sub_nouns = list()
+        for noun, (s, e) in nouns:
+            if start <= s and end >= e:
+                sub_nouns.append([noun[0], (s, e)])
+        group_nouns.append(sub_nouns)
+    return group_nouns
+
+
+
+def get_all_nps_alter(tree, full_sent, tokens=None, highest_only=False, lowest_only=False):
     start = 0
     end = len(tree.leaves())
 
@@ -73,24 +86,36 @@ def get_all_nps(tree, full_sent, tokens=None, highest_only=False, lowest_only=Fa
     def get_sub_nps(tree, left, right):
         sub_nps = []
         sub_nouns = []
-        if isinstance(tree, str) or len(tree.leaves()) == 1:
+        # if isinstance(tree, str) or len(tree.leaves()) == 1:
+        # print(tree, tree.height())
+        if isinstance(tree, str) or tree.height() == 2:
+            if tree.label()[:2] == "NN":
+                sub_nouns.append([[" ".join(tree.leaves())], (int(min(idx_map[left])), int(min(idx_map[right])))])
             return sub_nps, sub_nouns
 
         n_leaves = len(tree.leaves())
+        # print('---start----')
+        # print(tree)
+        # print('----end----')
         n_subtree_leaves = [len(t.leaves()) for t in tree]
         offset = np.cumsum([0] + n_subtree_leaves)[:len(n_subtree_leaves)]
         assert right - left == n_leaves
-        if tree.label() == 'NP' and n_leaves > 1:
+        if tree.label() == 'NP' and n_leaves >= 1:
             sub_nps.append([" ".join(tree.leaves()), (int(min(idx_map[left])), int(min(idx_map[right])))])
-            # sub_nouns.append([[subtree.leaves()[0] for subtree in tree if subtree.label()[:2] == "NN"], (int(min(idx_map[left])), int(min(idx_map[right])))])
             sub_nouns.append([find_sub_noun(tree), (int(min(idx_map[left])), int(min(idx_map[right])))])
-            # print(tree)
-            # print(sub_nouns,  " | ", sub_nps)
+            # print(tree, sub_nps,)
             # print('----')
+            # for sub in tree:
+            #     print(sub) 
+            # print('-----')
             if highest_only and sub_nps[-1][0] != full_sent: return sub_nps
         for i, subtree in enumerate(tree):
             # sub_nps += get_sub_nps(subtree, left=left+offset[i], right=left+offset[i]+n_subtree_leaves[i])
+
             partial_sub_nps, partial_sub_nouns = get_sub_nps(subtree, left=left+offset[i], right=left+offset[i]+n_subtree_leaves[i])
+            # if tree.label() == 'NP':
+            #     print(subtree, partial_sub_nps, partial_sub_nouns)
+            # print(subtree, partial_sub_nps, partial_sub_nouns)
             sub_nps += partial_sub_nps
             sub_nouns += partial_sub_nouns
         return sub_nps, sub_nouns
@@ -99,6 +124,7 @@ def get_all_nps(tree, full_sent, tokens=None, highest_only=False, lowest_only=Fa
 
     def find_lowest(all):
         lowest = []
+        seen = list()
         for i in range(len(all)):
             span = all[i][1]
             is_lowest = True
@@ -106,14 +132,23 @@ def get_all_nps(tree, full_sent, tokens=None, highest_only=False, lowest_only=Fa
                 if i == j: continue
                 span2 = all[j][1]
                 if span2[0] >= span[0] and span2[1] <= span[1]:
-                    is_lowest = False
-                    break
+                    if span[1] - span[0] != 1:
+                        is_lowest = False
+                        break
+                    else:
+                        for a, b in seen:
+                            if a== span[0] and b == span[1]:
+                                is_lowest = False
+                        
+                        if is_lowest:
+                            seen.append([span[0], span[1]])
             if is_lowest:
                 lowest.append(all[i])
         return lowest
 
     lowest_nps = find_lowest(all_nps)
     lowest_nouns = find_lowest(all_nouns)
+    # print(all_nouns, '|', lowest_nouns)
 
     if lowest_only:
         all_nps = lowest_nps
@@ -517,7 +552,7 @@ def main():
 
                                 # tokens = model.cond_stage_model.tokenizer.tokenize(prompts[0])
                                 tokens = None
-                                nps, spans, noun_chunk, nouns = get_all_nps(mytree, prompts[0], tokens, lowest_only=True)
+                                nps, spans, noun_chunk, nouns = get_all_nps_alter(mytree, prompts[0], tokens, lowest_only=True)
                                 # we need noun_chunk for our implementaiton
                                 # print(mytree, nps, spans, noun_chunk)
                             elif opt.parser_type == 'scene_graph':
@@ -527,7 +562,6 @@ def main():
                         except:
                             print(f"{prompts[0]} parsing failed")
                             raise
-                            continue
                         
                         nps = [[np]*len(prompts) for np in nps]
                         
@@ -544,37 +578,27 @@ def main():
                         prompts_list = [i[0] for i in nps]
                         file_name = prompts[0]
 
-                        full_prompt = prompts_list[0] 
-                        sub_prompts = prompts_list[1:] 
+                        token_indices = [chunk[-1] for _, chunk in nouns]
+                        noun_phrase =  noun_chunk
 
-                        concate_list = list() 
-                        noun_list = list() 
-                        chunk = list()
-                        for p, n in zip(sub_prompts, nouns):
-                            if len(n[0]) != 0:
-                                concate_list.append(p)
-                                noun_list.append(n)
-                                chunk.append([p, n[-1]])
-
-                        prompts_list = [full_prompt] + concate_list
-#                         print(noun_chunk)
-#                         print(chunk)
-# 
+                        noun_list = list()
+                        for n, se in nouns:
+                            if len(n) != 0:
+                                noun_list.append([n, se])
+                        nouns = noun_list
                         prompts = " | ".join(prompts_list) 
-                        # prompts = [prompts]
-                        # weights = [opt.scale] * len(nps) 
-                        token_indices = [chunk[-1] for _, chunk in noun_chunk]
-                        # image = pipe(prompts, guidance_scale=opt.scale, num_inference_steps=opt.ddim_steps, 
-                        #              weights=weights, generator=generator).images[0]
-                        token_indices = [token_indices]
+                        # print(prompts, token_indices, noun_phrase, nouns)
+                        print(prompts, noun_phrase, nouns)
+                        nouns = group_nouns(noun_phrase, nouns)
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
-                                     noun_chunks = chunk,
-                                     nouns = noun_list,
+                                     noun_phrase = noun_phrase,
+                                     nouns = nouns,
                                      # attention_res=RunConfig.attention_res,
                                      guidance_scale=opt.scale,
                                      generator=generator,
-                                     num_inference_steps=opt.ddim_steps,).images[0]
+                                     num_inference_steps=opt.ddim_steps,)#.images[0]
+                        continue
 
 
                         # attn_img = vis_utils.show_cross_attention(attention_store=pipe.attention_store,
