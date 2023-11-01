@@ -45,8 +45,9 @@ if __name__ == '__main__':
     parser = ArgumentParser()
     parser.add_argument("--image_dir", type=str, required=True)
     parser.add_argument("--output_dir", type=str, required=True)
+    parser.add_argument("--gt_caption_dir", type=str, required=True)
     parser.add_argument("--thresh", type=float, default=0.5)
-    parser.add_argument("--dataset", type=str)
+    # parser.add_argument("--dataset", type=str)
     args = parser.parse_args()
 
     image_dir = args.image_dir
@@ -77,7 +78,18 @@ if __name__ == '__main__':
 
     grounding_results = {}
     blockPrint()
+
+    captions = list()
+    with open(args.gt_caption_dir, 'r') as f:
+        captions = f.read().splitlines()
+
+    print(captions[0], len(captions))
+    raise
+
     for file in tqdm(image_names):
+        prompt = file.replace('.jpg', '').split('-')[-1]
+        prompt_idx = int(file.split('-')[0])
+
         image = load(os.path.join(image_dir, file))
         caption = os.path.splitext(file.split("-")[-1])[0] # NOTE
         result, top_predictions = glip_demo.run_on_web_image(image, caption, args.thresh)

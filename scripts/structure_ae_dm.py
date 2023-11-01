@@ -35,6 +35,7 @@ from composable_stable_diffusion.pipeline_composable_stable_diffusion import \
     ComposableStableDiffusionPipeline
 
 from pipeline_attend_and_excite_structure import StableDiffusionAttendAndExcitePipeline
+# from diffusers import StableDiffusionAttendAndExcitePipeline
 
 
 def preprocess_prompts(prompts):
@@ -475,8 +476,10 @@ def main():
     #         "CompVis/stable-diffusion-v1-4"
     # ).to(device)
 
+    # scheduler = PNDMScheduler()
     pipe = StableDiffusionAttendAndExcitePipeline.from_pretrained(
-            "CompVis/stable-diffusion-v1-4").to(device)
+            "CompVis/stable-diffusion-v1-4", 
+            ).to(device)
 
     generator = torch.Generator("cuda").manual_seed(opt.seed)
 
@@ -582,14 +585,16 @@ def main():
                         noun_phrase =  noun_chunk
 
                         noun_list = list()
-                        for n, se in nouns:
-                            if len(n) != 0:
-                                noun_list.append([n, se])
+                        for m, se in nouns:
+                            if len(m) != 0:
+                                noun_list.append([m, se])
                         nouns = noun_list
-                        prompts = " | ".join(prompts_list) 
+                        # prompts = " | ".join(prompts_list) 
                         # print(prompts, token_indices, noun_phrase, nouns)
-                        print(prompts, noun_phrase, nouns)
                         nouns = group_nouns(noun_phrase, nouns)
+                        # nouns = []
+                        # noun_phrase = []
+                        print(prompts, token_indices)
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
                                      noun_phrase = noun_phrase,
@@ -598,8 +603,7 @@ def main():
                                      guidance_scale=opt.scale,
                                      generator=generator,
                                      num_inference_steps=opt.ddim_steps,).images[0]
-
-
+                        
                         # attn_img = vis_utils.show_cross_attention(attention_store=pipe.attention_store,
                         #            prompt=prompt,
                         #            tokenizer=pipe.tokenizer,

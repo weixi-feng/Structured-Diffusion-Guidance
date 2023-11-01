@@ -677,7 +677,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
             attention_maps=attention_maps,
             indices=indices,
         )
-        return max_attention_per_index, attention_maps
+        return max_attention_per_index
 
     @staticmethod
     def _compute_loss(max_attention_per_index: List[torch.Tensor]) -> torch.Tensor:
@@ -719,7 +719,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
             self.unet.zero_grad()
 
             # Get max activation value for each subject token
-            max_attention_per_index, _ = self._aggregate_and_get_max_attention_per_token(
+            max_attention_per_index = self._aggregate_and_get_max_attention_per_token(
                 indices=indices,
             )
 
@@ -741,7 +741,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         self.unet.zero_grad()
 
         # Get max activation value for each subject token
-        max_attention_per_index, _ = self._aggregate_and_get_max_attention_per_token(
+        max_attention_per_index = self._aggregate_and_get_max_attention_per_token(
             indices=indices,
         )
         loss = self._compute_loss(max_attention_per_index)
@@ -934,8 +934,13 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                 weights = torch.tensor(weights, device=self.device).reshape(-1, 1, 1, 1)
         else:
             weights = guidance_scale
+        
 
 
+        # get noun phrases 
+        sub_prompts = [p for p, _ in noun_phrase]
+        prompt += sub_prompts
+        
         # 3. Encode input prompt
         text_embeddings, negative_prompt_embeds = self.encode_prompt(
             prompt,
@@ -962,30 +967,30 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # 5. Prepare latent variables
         num_channels_latents = self.unet.config.in_channels
         latents = self.prepare_latents(
-            # batch_size * num_images_per_prompt,
-            len(prompt)* num_images_per_prompt,
-            num_channels_latents,
-            height,
-            width,
-            prompt_embeds.dtype,
-            device,
-            generator,
-            latents,
-        )
-
-
+             # batch_size * num_images_per_prompt,
+             len(prompt)* num_images_per_prompt,
+             num_channels_latents,
+             height,
+             width,
+             prompt_embeds.dtype,
+             device,
+             generator,
+             latents,
+         )
+ 
+ 
         # 6. Prepare extra step kwargs. TODO: Logic should ideally just be moved out of the pipeline
         extra_step_kwargs = self.prepare_extra_step_kwargs(generator, eta)
-
+ 
         if attn_res is None:
             attn_res = int(np.ceil(width / 32)), int(np.ceil(height / 32))
         self.attention_store = AttentionStore(attn_res)
         self.register_attention_control()
-
+ 
         # default config for step size from original repo
         scale_range = np.linspace(1.0, 0.5, len(self.scheduler.timesteps))
         step_size = scale_factor * np.sqrt(scale_range)
-
+ 
         assert num_images_per_prompt == 1
 
 
@@ -997,6 +1002,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # print(sub_nouns, nouns)
         # latents = latents[:1]
         
+        print(latents.shape, text_embeddings.shape, noun_phrase, nouns)
         with self.progress_bar(total=num_inference_steps) as progress_bar:
             for i, t in enumerate(timesteps):
                 # Attend and excite process
@@ -1006,10 +1012,9 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                     master_attention_map = None
                     for idx, (latent, text_embedding, nps, noun) in enumerate(zip(latents, text_embeddings, noun_phrase, nouns)):
                         is_master = (idx == 0)
-                        # Forward pass of denoising with text conditioning
-                        latent = latent.unsqueeze(0)
+                        
                         text_embedding = text_embedding.unsqueeze(0)
-
+                        latent = latent.unsqueeze(0)
                         self.unet(
                             latent,
                             t,
@@ -1017,13 +1022,13 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             cross_attention_kwargs=cross_attention_kwargs,
                         ).sample
                         self.unet.zero_grad()
-
+                        master_attention_map = None
                         if is_master:
                             # Get max activation value for each subject token
-                            max_attention_per_index, attn_map = self._aggregate_and_get_max_attention_per_token(
+                            max_attention_per_index = self._aggregate_and_get_max_attention_per_token(
                                 indices=token_indices,
                             )
-                            master_attention_map = attn_map.detach()
+                            master_attention_maps = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),).detach()
 
                             loss = self._compute_loss(max_attention_per_index=max_attention_per_index)
 
@@ -1056,16 +1061,17 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             # self.test_idx(master_prompt, master_idxs, sub_idxs, nps, noun)
 
                             losses = list() 
+                            loss = 0
 
-                            for master_idx, sub_idx in zip(master_idxs, sub_idxs):
-                                master_attn = master_attention_map[:, :, master_idx]
-                                sub_attn = attn_map[:, :, sub_idx]
-                                loss = torch.nn.functional.l1_loss(sub_attn, master_attn) 
-                                losses.append(loss)
-                            if len(losses) != 0:
-                                loss = torch.stack(losses, dim=0).mean()
-                            else:
-                                loss = 0
+                            # for master_idx, sub_idx in zip(master_idxs, sub_idxs):
+                            #     master_attn = master_attention_map[:, :, master_idx]
+                            #     sub_attn = attn_map[:, :, sub_idx]
+                            #     loss = torch.nn.functional.l1_loss(sub_attn, master_attn) 
+                            #     losses.append(loss)
+                            # if len(losses) != 0:
+                            #     loss = torch.stack(losses, dim=0).mean()
+                            # else:
+                            #     loss = 0
                             # loss = 0
 
                         # Perform gradient update
@@ -1083,6 +1089,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                         updated_latents.append(latent)
 
                     latents = torch.cat(updated_latents, dim=0)
+                    # print("ssss", latents.shape, text_embeddings.shape)
                     
 
                     with torch.set_grad_enabled(False):
@@ -1106,32 +1113,31 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
 
                         all_noise_pred = torch.stack(all_noise_pred, dim=0)
                         # why avg not work?
-                        avg_noise_uncond = all_noise_pred[:, :1].mean(dim=0)
+                        avg_noise_uncond = all_noise_pred[:, 0].sum(dim=0)
                         # print(avg_noise_uncond.shape, all_noise_pred.shape)
-                        cfg_noise = list()
 
                         if do_classifier_free_guidance:
 
                             # avg the uncond 
                             # noise_pred = avg_noise_uncond + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
-                            noise_pred = all_noise_pred[0, :1] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
-                            # master 
-                            cfg_noise.append(noise_pred)
-                            # sub 
+                            noise_pred = all_noise_pred[0, 0] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
                             # the first one is master
-                            single_noise_pred = all_noise_pred[:, 0] + (weights * (all_noise_pred[:, 0] - all_noise_pred[:, 1]))
+                            # single_noise_pred = all_noise_pred[:, 0] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0]))
+                            single_noise_pred = avg_noise_uncond + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0]))
                             single_noise_pred = single_noise_pred[1:]
                             noise_pred = torch.cat([noise_pred, single_noise_pred])
+                            # noise_pred = single_noise_pred
 
                         # compute the previous noisy sample x_t -> x_t-1
                         # print(noise_pred.shape, latents.shape)
                         latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
+                        # print(latents.shape)
 
-                        # call the callback, if provided
-                        if i == len(timesteps) - 1 or ((i + 1) > num_warmup_steps and (i + 1) % self.scheduler.order == 0):
-                            progress_bar.update()
-                            if callback is not None and i % callback_steps == 0:
-                                callback(i, t, latents)
+                    # call the callback, if provided
+                    if i == len(timesteps) - 1 or ((i + 1) > num_warmup_steps and (i + 1) % self.scheduler.order == 0):
+                        progress_bar.update()
+                        if callback is not None and i % callback_steps == 0:
+                            callback(i, t, latents)
 
 
         # 8. Post-processing

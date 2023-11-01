@@ -125,9 +125,10 @@ def get_all_nps(tree, full_sent, tokens=None, highest_only=False, lowest_only=Fa
 @dataclass
 class EvalConfig:
     # exp_name: str = "default"
-    output_path: Path = Path("./outputs/")
+    # output_path: Path = Path("./outputs/")
     metrics_save_path: Path = Path("./metrics/")
     input_dir: Path = Path("./input_dir") 
+    gt_dir: Path = None
     eval_partial: bool = False
     truncate: bool = False
 
@@ -146,14 +147,13 @@ def run(config: EvalConfig):
     model.eval()
     print("Done.")
 
-    prompts = [p.name for p in config.output_path.glob("*") if p.is_dir()]
+    # prompts = [p.name for p in config.output_path.glob("*") if p.is_dir()]
     files = os.listdir(config.input_dir)
-    print(f"Running on {len(files)} prompts...")
 
     results_per_prompt = {}
 
     gt_prompts = list()
-    with open('/home/zhlu6105/Projects/decompose/Structured-Diffusion-Guidance/ABC-6K.txt', 'r') as f:
+    with open(config.gt_dir, 'r') as f:
        gt_prompts = f.read().splitlines()
        
     for img in track(files):

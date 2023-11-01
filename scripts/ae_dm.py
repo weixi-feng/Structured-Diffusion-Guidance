@@ -494,7 +494,7 @@ def main():
                         token_indices = [chunk[-1] for _, chunk in noun_chunk]
 
 
-                        print(token_indices)
+                        print(prompts, token_indices)
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
                                      # attention_res=RunConfig.attention_res,
