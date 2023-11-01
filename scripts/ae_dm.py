@@ -24,13 +24,13 @@ from nltk.tree import Tree
 import nltk
 nlp = stanza.Pipeline(lang='en', processors='tokenize,pos,constituency')
 
-from diffusers import LMSDiscreteScheduler, DDIMScheduler, DDPMScheduler, PNDMScheduler
+from diffusers import LMSDiscreteScheduler, DDIMScheduler, DDPMScheduler, PNDMScheduler, UniPCMultistepScheduler
 from composable_stable_diffusion.pipeline_composable_stable_diffusion import \
     ComposableStableDiffusionPipeline
 
 # from attentd_and_excite.pipeline_attend_and_excite import AttendAndExcitePipeline 
-# from diffusers import StableDiffusionAttendAndExcitePipeline
-from pipeline_attend_and_excite_structure import StableDiffusionAttendAndExcitePipeline
+from diffusers import StableDiffusionAttendAndExcitePipeline
+# from pipeline_attend_and_excite_structure import StableDiffusionAttendAndExcitePipeline
 
 
 from attentd_and_excite.utils import ptp_utils, vis_utils
@@ -403,8 +403,14 @@ def main():
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
 
+    
+    # scheduler = PNDMScheduler()
+    
+
     pipe = StableDiffusionAttendAndExcitePipeline.from_pretrained(
-            "CompVis/stable-diffusion-v1-4").to(device)
+            "CompVis/stable-diffusion-v1-4", ).to(device)
+
+    print(type(pipe.scheduler))
 
     generator = torch.Generator("cuda").manual_seed(opt.seed)
 
@@ -488,12 +494,12 @@ def main():
                         token_indices = [chunk[-1] for _, chunk in noun_chunk]
 
 
-
+                        print(token_indices)
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
                                      # attention_res=RunConfig.attention_res,
                                      guidance_scale=opt.scale,
-                                     noun_chunk = noun_chunk,
+                                     # noun_chunk = noun_chunk,
                                      generator=generator,
                                      num_inference_steps=opt.ddim_steps,).images[0]
 
