@@ -986,29 +986,11 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         scale_range = np.linspace(1.0, 0.5, len(self.scheduler.timesteps))
         step_size = scale_factor * np.sqrt(scale_range)
 
-        # text_embeddings = (
-        #     prompt_embeds[batch_size * num_images_per_prompt :] if do_classifier_free_guidance else prompt_embeds
-        # )
-
-        # if isinstance(token_indices[0], int):
-        #     token_indices = [token_indices]
-
-        indices = []
-
         assert num_images_per_prompt == 1
-        # for ind in token_indices:
-        #     indices = indices + [ind] * num_images_per_prompt
-        # 
-        # for _, idxs in noun_phrase:
-        #     # indices.append([chunk[-1]])
-        #     indices.append(idxs)
-
 
 
         # 7. Denoising loop
         num_warmup_steps = len(timesteps) - num_inference_steps * self.scheduler.order
-        # sub_prompts = [None] + [sub_prompt for sub_prompt, _ in noun_phrase]
-        # sub_nouns = [None] + [sub_nouns for sub_nouns, _ in nouns]
 
         noun_phrase = [(None, None)] + noun_phrase
         nouns = [(None, None)] + nouns
@@ -1063,10 +1045,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                                                         from_where=("up", "down", "mid"),
                                                         )
 
-                            # rough idea: to only compare the correspoding object attention map 
-                            # note that, noun_chunk is in such format: [start, end] where start is not included in subsentence
                             master_prompt = prompt[0]
-                            
                             # step one find all noun in subsentence 
                             # to exclude the first index as it is not needed 
                             # print(master_prompt, sub_prompt, sub_noun, index)
@@ -1081,9 +1060,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             for master_idx, sub_idx in zip(master_idxs, sub_idxs):
                                 master_attn = master_attention_map[:, :, master_idx]
                                 sub_attn = attn_map[:, :, sub_idx]
-
                                 loss = torch.nn.functional.l1_loss(sub_attn, master_attn) 
-                                
                                 losses.append(loss)
                             if len(losses) != 0:
                                 loss = torch.stack(losses, dim=0).mean()
@@ -1109,12 +1086,6 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                     
 
                     with torch.set_grad_enabled(False):
-
-                        # prompt_embeds = torch.cat([negative_prompt_embeds[0].unsqueeze(dim=0), text_embeddings]) if do_classifier_free_guidance else text_embeddings
-                        # print(latent_model_input.shape, prompt_embeds.shape)
-
-
-                        # predict the noise residual
 
                         all_noise_pred = list()
                         for input_latent, cond_embed in zip(latents, text_embeddings):
