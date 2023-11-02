@@ -502,6 +502,7 @@ def main():
                         # prompts = [prompts]
                         # weights = [opt.scale] * len(nps) 
                         weights = None
+                        print(prompts)
                         image = pipe(prompts, guidance_scale=opt.scale, num_inference_steps=opt.ddim_steps, 
                                      weights=weights, generator=generator).images[0]
                         x_checked_image_torch = [image]

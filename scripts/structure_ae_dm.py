@@ -589,11 +589,9 @@ def main():
                             if len(m) != 0:
                                 noun_list.append([m, se])
                         nouns = noun_list
-                        # prompts = " | ".join(prompts_list) 
-                        # print(prompts, token_indices, noun_phrase, nouns)
                         nouns = group_nouns(noun_phrase, nouns)
-                        # nouns = []
-                        # noun_phrase = []
+                        nouns = []
+                        noun_phrase = []
                         print(prompts, token_indices)
                         image = pipe(prompt=prompts,
                                      token_indices=token_indices,
