@@ -980,7 +980,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
              latents,
          )
 
-        # latents = torch.cat([latents] * len(prompt))
+        latents = torch.cat([latents] * len(prompt))
  
  
         # 6. Prepare extra step kwargs. TODO: Logic should ideally just be moved out of the pipeline
@@ -1016,12 +1016,12 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         with self.progress_bar(total=num_inference_steps) as progress_bar:
             for i, t in enumerate(timesteps):
                 updated_latents = list()
+                master_attention_map = None
                 for idx, (text_embedding, nps, noun) in enumerate(zip(text_embeddings, noun_phrase, nouns)):
-                    master_attention_map = None
                     is_master = (idx == 0)
                     text_embedding = text_embedding.unsqueeze(0)
                     with torch.enable_grad():
-                        latents_to_update = latents.clone().detach().requires_grad_(True)
+                        latents_to_update = latents.clone().detach().requires_grad_(True)[idx:idx+1]
                         
                         # latent = latent.unsqueeze(0)
                         self.unet(
@@ -1038,7 +1038,6 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             max_attention_per_index = self._aggregate_and_get_max_attention_per_token(
                                 indices=token_indices,
                             )
-                            master_attention_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),).detach().requires_grad_(False)
                             loss = self._compute_loss(max_attention_per_index=max_attention_per_index)
 
                             # If this is an iterative refinement step, verify we have reached the desired threshold for all
@@ -1079,67 +1078,47 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                                     step_size=step_size[i],
                                 )
                             logger.info(f"Iteration {i} | Loss: {loss:0.4f}")
+                        if is_master:
+                            self.unet(
+                                latents_to_update,
+                                t,
+                                encoder_hidden_states=text_embedding,
+                                cross_attention_kwargs=cross_attention_kwargs,
+                            ).sample
+                            master_attention_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),).detach().requires_grad_(False)
+
                         updated_latents.append(latents_to_update)
 
                 latents = torch.cat(updated_latents, dim=0)
-                latents_to_scale = torch.cat([updated_latents[0], *updated_latents])
 
                 # expand the latents if we are doing classifier free guidance
-                scaled_latents = self.scheduler.scale_model_input(latents_to_scale, t)
+                scaled_latents = self.scheduler.scale_model_input(latents, t)
 
-                                all_noise_pred = list()
-                for pidx in range(len(prompt)+1):
+                all_noise_pred = list()
+                for pidx in range(len(prompt)):
+                    cond = torch.cat([negative_prompt_embeds[:1], text_embeddings[pidx:pidx+1]])
+                    input_latent = torch.cat([scaled_latents[pidx:pidx+1]]*2)
                     noise_pred = self.unet(
-                        scaled_latents[pidx:pidx+1],
+                        input_latent,
                         t,
-                        encoder_hidden_states=conds[pidx:pidx+1],
+                        encoder_hidden_states=cond,
                         cross_attention_kwargs=cross_attention_kwargs,
                     ).sample
                     all_noise_pred.append(noise_pred)
+
+                all_noise_pred = torch.stack(all_noise_pred, dim=0)
+
                 if do_classifier_free_guidance:
-                    noise_uncond = all_noise_pred[0] 
-                    noise_conds = all_noise_pred[1:]
-                    noise_pred = noise_uncond
-                    for noise in noise_conds:
-                        noise_pred += 7.5 * (noise - noise_uncond)
+                    single_pred = all_noise_pred[:, 0] + weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])
 
+                    # compose 
+                    compose = all_noise_pred[0, 0] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
 
-
-                # perform guidance
-                # if do_classifier_free_guidance:
-                #     noise_pred = noise_pred_uncond + guidance_scale * (noise_pred_text - noise_pred_uncond)
-
-
-                # latents_to_scale = torch.cat([updated_latents[0], *updated_latents])
-                # scaled_latents = self.scheduler.scale_model_input(latents_to_scale, t)
-                # all_noise_pred = list()
-                # # with torch.set_grad_enabled(False):
-                # for pidx in range(len(prompt)+1):
-                #     noise_pred = self.unet(
-                #         scaled_latents[pidx:pidx+1],
-                #         t,
-                #         encoder_hidden_states=conds[pidx:pidx+1],
-                #         cross_attention_kwargs=cross_attention_kwargs,
-                #     ).sample
-                #     all_noise_pred.append(noise_pred)
-
-
-                # # all_noise_pred = torch.stack(all_noise_pred, dim=0)
-
-                # if do_classifier_free_guidance:
-                #     noise_uncond = all_noise_pred[0] 
-                #     noise_conds = all_noise_pred[1:]
-
-                #     noise_pred = noise_uncond
-                #     for noise in noise_conds:
-                #         noise_pred += 7.5 * (noise - noise_uncond)
-
-
-                # noise_pred = all_noise_pred[0,] + (weights * (all_noise_pred[1:, 0] - all_noise_pred[0])).sum(dim=0, keepdims=True)
+                    noise_pred = torch.cat([compose, single_pred[1:]])
 
             # compute the previous noisy sample x_t -> x_t-1
-                # print(noise_pred.shape, latents.shape)
                 latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
+
 
                 # call the callback, if provided
                 if i == len(timesteps) - 1 or ((i + 1) > num_warmup_steps and (i + 1) % self.scheduler.order == 0):
