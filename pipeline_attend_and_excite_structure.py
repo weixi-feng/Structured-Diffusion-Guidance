@@ -1130,7 +1130,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # 8. Post-processing
         if not output_type == "latent":
             with torch.set_grad_enabled(False):
-                image = self.vae.decode(latents / self.vae.config.scaling_factor, return_dict=False)[0]
+                image = self.vae.decode(latents[:1] / self.vae.config.scaling_factor, return_dict=False)[0]
                 # image, has_nsfw_concept = self.run_safety_checker(image, device, prompt_embeds.dtype)
             has_nsfw_concept = None
         else:
