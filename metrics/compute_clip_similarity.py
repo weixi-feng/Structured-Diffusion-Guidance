@@ -129,8 +129,8 @@ class EvalConfig:
     metrics_save_path: Path = Path("./metrics/")
     input_dir: Path = Path("./input_dir") 
     gt_dir: Path = None
-    eval_partial: bool = False
-    truncate: bool = False
+    eval_partial: bool = True
+    truncate: bool = True
 
     def __post_init__(self):
         self.metrics_save_path.mkdir(parents=True, exist_ok=True)
@@ -153,14 +153,15 @@ def run(config: EvalConfig):
     results_per_prompt = {}
 
     gt_prompts = list()
-    with open(config.gt_dir, 'r') as f:
-       gt_prompts = f.read().splitlines()
+    if config.gt_dir is not None:
+        with open(config.gt_dir, 'r') as f:
+           gt_prompts = f.read().splitlines()
        
     for img in track(files):
 
         prompt = img.replace('.jpg', '').split('-')[-1]
         prompt_idx = int(img.split('-')[0])
-        gt_prompt = gt_prompts[prompt_idx]
+        gt_prompt = gt_prompts[prompt_idx] if config.gt_dir is not None else None
         # print(prompt, ' | ', gt_prompt, " | ", prompt_idx, " | ", img)
         if config.truncate:
             prompt = prompt.split('|')[0]
@@ -172,7 +173,7 @@ def run(config: EvalConfig):
         # image_names = [p.name for p in image_paths]
         image_names = [img]
         queries = [preprocess(image).unsqueeze(0).to(device) for image in images]
-        prompt = gt_prompt
+        prompt = gt_prompt if gt_prompt else prompt
 
         with torch.no_grad():
 
