@@ -444,7 +444,7 @@ def main():
 
 
 
-    sample_path = os.path.join(outpath, )
+    sample_path = os.path.join(outpath, 'sample')
     os.makedirs(sample_path, exist_ok=True)
     base_count = len(os.listdir(sample_path))
     grid_count = len(os.listdir(outpath)) - 1
