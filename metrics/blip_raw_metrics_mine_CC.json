@@ -1,0 +1,6470 @@
+{
+    "a bathroom has gold tile and a silver box on the wall": {
+        "captions": [
+            "a white bath tub sitting next to a white sink"
+        ],
+        "image_names": [
+            "00481-0-a bathroom has gold tile and a silver box on the wall.jpg"
+        ],
+        "text_similarities": [
+            0.6315199136734009
+        ]
+    },
+    "a bathroom has silver tile and a gold box on the wall": {
+        "captions": [
+            "a close up of a tiled wall in a bathroom"
+        ],
+        "image_names": [
+            "00482-0-a bathroom has silver tile and a gold box on the wall.jpg"
+        ],
+        "text_similarities": [
+            0.7798658609390259
+        ]
+    },
+    "a bathroom with a large tub layered in small green tile": {
+        "captions": [
+            "a bathroom with a green tile wall and a claw foot tub"
+        ],
+        "image_names": [
+            "00579-0-a bathroom with a large tub layered in small green tile.jpg"
+        ],
+        "text_similarities": [
+            0.9165731072425842
+        ]
+    },
+    "a bathroom with a small tub layered in large green tile": {
+        "captions": [
+            "a bath tub sitting next to a window in a bathroom"
+        ],
+        "image_names": [
+            "00580-0-a bathroom with a small tub layered in large green tile.jpg"
+        ],
+        "text_similarities": [
+            0.6971191167831421
+        ]
+    },
+    "a black apple and a green backpack": {
+        "captions": [
+            "a green backpack with an apple painted on it"
+        ],
+        "image_names": [
+            "00439-0-a black apple and a green backpack.jpg"
+        ],
+        "text_similarities": [
+            0.8746049404144287
+        ]
+    },
+    "a black background with a large yellow circle": {
+        "captions": [
+            "a black background with a lot of yellow circles"
+        ],
+        "image_names": [
+            "00459-0-a black background with a large yellow circle.jpg"
+        ],
+        "text_similarities": [
+            0.8934015035629272
+        ]
+    },
+    "a black background with a large yellow circle and a small red square": {
+        "captions": [
+            "a yellow and black pig painted on a black surface"
+        ],
+        "image_names": [
+            "00463-0-a black background with a large yellow circle and a small red square.jpg"
+        ],
+        "text_similarities": [
+            0.6637055277824402
+        ]
+    },
+    "a black background with a large yellow square": {
+        "captions": [
+            "a piece of paper with yellow and black squares on it"
+        ],
+        "image_names": [
+            "00461-0-a black background with a large yellow square.jpg"
+        ],
+        "text_similarities": [
+            0.8156084418296814
+        ]
+    },
+    "a blue apple and a green backpack": {
+        "captions": [
+            "a green backpack with an apple on it"
+        ],
+        "image_names": [
+            "00365-0-a blue apple and a green backpack.jpg"
+        ],
+        "text_similarities": [
+            0.8540443778038025
+        ]
+    },
+    "a blue apple and a green boat": {
+        "captions": [
+            "an apple sitting on top of a boat in the water"
+        ],
+        "image_names": [
+            "00303-0-a blue apple and a green boat.jpg"
+        ],
+        "text_similarities": [
+            0.745944082736969
+        ]
+    },
+    "a blue apple and a green bowl": {
+        "captions": [
+            "a green bowl with two apples in it"
+        ],
+        "image_names": [
+            "00233-0-a blue apple and a green bowl.jpg"
+        ],
+        "text_similarities": [
+            0.8494845628738403
+        ]
+    },
+    "a blue apple and a green cup": {
+        "captions": [
+            "a green cup with a straw next to an apple"
+        ],
+        "image_names": [
+            "00419-0-a blue apple and a green cup.jpg"
+        ],
+        "text_similarities": [
+            0.8587437868118286
+        ]
+    },
+    "a blue apple and a green vase": {
+        "captions": [
+            "a purple and green apple next to a green vase"
+        ],
+        "image_names": [
+            "00347-0-a blue apple and a green vase.jpg"
+        ],
+        "text_similarities": [
+            0.8448761105537415
+        ]
+    },
+    "a blue backpack and a brown bear": {
+        "captions": [
+            "a woman with a blue backpack and a brown bear"
+        ],
+        "image_names": [
+            "00344-0-a blue backpack and a brown bear.jpg"
+        ],
+        "text_similarities": [
+            0.912208616733551
+        ]
+    },
+    "a blue backpack and a brown cat": {
+        "captions": [
+            "a cat with a blue briefcase on its back"
+        ],
+        "image_names": [
+            "00110-0-a blue backpack and a brown cat.jpg"
+        ],
+        "text_similarities": [
+            0.8318191170692444
+        ]
+    },
+    "a blue backpack and a brown cow": {
+        "captions": [
+            "a brown cow with a blue tag in its ear"
+        ],
+        "image_names": [
+            "00326-0-a blue backpack and a brown cow.jpg"
+        ],
+        "text_similarities": [
+            0.741266131401062
+        ]
+    },
+    "a blue backpack and a brown elephant": {
+        "captions": [
+            "an elephant with a blue backpack on its back"
+        ],
+        "image_names": [
+            "00282-0-a blue backpack and a brown elephant.jpg"
+        ],
+        "text_similarities": [
+            0.8769150376319885
+        ]
+    },
+    "a blue backpack and a brown giraffe": {
+        "captions": [
+            "a boy with a backpack and a giraffe in the background"
+        ],
+        "image_names": [
+            "00370-0-a blue backpack and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.7893368005752563
+        ]
+    },
+    "a blue backpack and a brown horse": {
+        "captions": [
+            "a brown horse with a blue backpack standing in a field"
+        ],
+        "image_names": [
+            "00276-0-a blue backpack and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.8289777636528015
+        ]
+    },
+    "a blue backpack and a brown sheep": {
+        "captions": [
+            "a person with a blue backpack and a black sheep"
+        ],
+        "image_names": [
+            "00368-0-a blue backpack and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.8958315849304199
+        ]
+    },
+    "a blue backpack and a gold clock": {
+        "captions": [
+            "a blue backpack sitting next to a gold clock"
+        ],
+        "image_names": [
+            "00366-0-a blue backpack and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.9527795314788818
+        ]
+    },
+    "a blue backpack and a green banana": {
+        "captions": [
+            "a blue backpack and a banana hanging on a wall"
+        ],
+        "image_names": [
+            "00360-0-a blue backpack and a green banana.jpg"
+        ],
+        "text_similarities": [
+            0.8324116468429565
+        ]
+    },
+    "a blue backpack and a red book": {
+        "captions": [
+            "a blue backpack sitting on top of a couch next to a red book"
+        ],
+        "image_names": [
+            "00328-0-a blue backpack and a red book.jpg"
+        ],
+        "text_similarities": [
+            0.8738908767700195
+        ]
+    },
+    "a blue backpack and a red car": {
+        "captions": [
+            "a blue backpack sitting next to a red car"
+        ],
+        "image_names": [
+            "00406-0-a blue backpack and a red car.jpg"
+        ],
+        "text_similarities": [
+            0.9500558972358704
+        ]
+    },
+    "a blue backpack and a red chair": {
+        "captions": [
+            "a blue backpack sitting on top of a red chair"
+        ],
+        "image_names": [
+            "00352-0-a blue backpack and a red chair.jpg"
+        ],
+        "text_similarities": [
+            0.9516209959983826
+        ]
+    },
+    "a blue backpack and a red suitcase": {
+        "captions": [
+            "a red suitcase and a blue backpack sitting next to each other"
+        ],
+        "image_names": [
+            "00137-0-a blue backpack and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9409785866737366
+        ]
+    },
+    "a blue backpack and a red train": {
+        "captions": [
+            "a blue backpack sitting on a train track"
+        ],
+        "image_names": [
+            "00392-0-a blue backpack and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.8379260301589966
+        ]
+    },
+    "a blue backpack and a yellow cat": {
+        "captions": [
+            "a yellow cat sitting next to a blue backpack"
+        ],
+        "image_names": [
+            "00112-0-a blue backpack and a yellow cat.jpg"
+        ],
+        "text_similarities": [
+            0.9302735924720764
+        ]
+    },
+    "a blue banana and a green boat": {
+        "captions": [
+            "a green boat with a blue gourd sitting on top of it"
+        ],
+        "image_names": [
+            "00403-0-a blue banana and a green boat.jpg"
+        ],
+        "text_similarities": [
+            0.8097902536392212
+        ]
+    },
+    "a blue banana and a green bowl": {
+        "captions": [
+            "two bananas and a green apple in a blue bowl"
+        ],
+        "image_names": [
+            "00229-0-a blue banana and a green bowl.jpg"
+        ],
+        "text_similarities": [
+            0.7472175359725952
+        ]
+    },
+    "a blue banana and a green cake": {
+        "captions": [
+            "a piece of cake with green frosting and a banana"
+        ],
+        "image_names": [
+            "00213-0-a blue banana and a green cake.jpg"
+        ],
+        "text_similarities": [
+            0.7557926177978516
+        ]
+    },
+    "a blue banana and a green vase": {
+        "captions": [
+            "a painting of a blue vase and a green vase"
+        ],
+        "image_names": [
+            "00343-0-a blue banana and a green vase.jpg"
+        ],
+        "text_similarities": [
+            0.8449234962463379
+        ]
+    },
+    "a blue bear and a brown boat": {
+        "captions": [
+            "a blue bear statue sitting on top of a boat"
+        ],
+        "image_names": [
+            "00431-0-a blue bear and a brown boat.jpg"
+        ],
+        "text_similarities": [
+            0.8547472953796387
+        ]
+    },
+    "a blue bear and a brown cup": {
+        "captions": [
+            "a brown teddy bear holding a cup of coffee"
+        ],
+        "image_names": [
+            "00275-0-a blue bear and a brown cup.jpg"
+        ],
+        "text_similarities": [
+            0.783846914768219
+        ]
+    },
+    "a blue bear and a brown vase": {
+        "captions": [
+            "a blue teddy bear leaning against a brown vase"
+        ],
+        "image_names": [
+            "00395-0-a blue bear and a brown vase.jpg"
+        ],
+        "text_similarities": [
+            0.9123697280883789
+        ]
+    },
+    "a blue bench and a green boat": {
+        "captions": [
+            "a green boat sitting on top of a lake next to a blue bench"
+        ],
+        "image_names": [
+            "00029-0-a blue bench and a green boat.jpg"
+        ],
+        "text_similarities": [
+            0.9039068222045898
+        ]
+    },
+    "a blue bench and a green book": {
+        "captions": [
+            "a blue bench with a book on top of it"
+        ],
+        "image_names": [
+            "00101-0-a blue bench and a green book.jpg"
+        ],
+        "text_similarities": [
+            0.8548532128334045
+        ]
+    },
+    "a blue bench and a green bowl": {
+        "captions": [
+            "a green bowl sitting on top of a wooden bench"
+        ],
+        "image_names": [
+            "00321-0-a blue bench and a green bowl.jpg"
+        ],
+        "text_similarities": [
+            0.803780734539032
+        ]
+    },
+    "a blue bench and a green cake": {
+        "captions": [
+            "a piece of cake sitting on top of a table"
+        ],
+        "image_names": [
+            "00323-0-a blue bench and a green cake.jpg"
+        ],
+        "text_similarities": [
+            0.6228933334350586
+        ]
+    },
+    "a blue bench and a green car": {
+        "captions": [
+            "a blue and green trash can sitting on the side of a road"
+        ],
+        "image_names": [
+            "00003-0-a blue bench and a green car.jpg"
+        ],
+        "text_similarities": [
+            0.7424262166023254
+        ]
+    },
+    "a blue bench and a green chair": {
+        "captions": [
+            "a blue bench sitting in front of a green bush"
+        ],
+        "image_names": [
+            "00149-0-a blue bench and a green chair.jpg"
+        ],
+        "text_similarities": [
+            0.8876901865005493
+        ]
+    },
+    "a blue bird and a brown bear": {
+        "captions": [
+            "a bear and a blue bird on a fence"
+        ],
+        "image_names": [
+            "00433-0-a blue bird and a brown bear.jpg"
+        ],
+        "text_similarities": [
+            0.7866768836975098
+        ]
+    },
+    "a blue bird and a brown boat": {
+        "captions": [
+            "a painting of a bird sitting on top of a boat"
+        ],
+        "image_names": [
+            "00205-0-a blue bird and a brown boat.jpg"
+        ],
+        "text_similarities": [
+            0.7556836605072021
+        ]
+    },
+    "a blue bird and a brown bowl": {
+        "captions": [
+            "a painting of a blue bird on a yellow background"
+        ],
+        "image_names": [
+            "00159-0-a blue bird and a brown bowl.jpg"
+        ],
+        "text_similarities": [
+            0.6312462687492371
+        ]
+    },
+    "a blue bird and a brown car": {
+        "captions": [
+            "a blue bird sitting on top of a toy car"
+        ],
+        "image_names": [
+            "00185-0-a blue bird and a brown car.jpg"
+        ],
+        "text_similarities": [
+            0.8022312521934509
+        ]
+    },
+    "a blue bird and a brown chair": {
+        "captions": [
+            "a blue bird sitting on top of a wooden chair"
+        ],
+        "image_names": [
+            "00239-0-a blue bird and a brown chair.jpg"
+        ],
+        "text_similarities": [
+            0.8651134967803955
+        ]
+    },
+    "a blue boat and a brown cat": {
+        "captions": [
+            "a close up of a cat with a boat in the background"
+        ],
+        "image_names": [
+            "00400-0-a blue boat and a brown cat.jpg"
+        ],
+        "text_similarities": [
+            0.7459752559661865
+        ]
+    },
+    "a blue boat and a brown clock": {
+        "captions": [
+            "a clock on the side of a building next to a blue boat"
+        ],
+        "image_names": [
+            "00152-0-a blue boat and a brown clock.jpg"
+        ],
+        "text_similarities": [
+            0.792016327381134
+        ]
+    },
+    "a blue boat and a brown cow": {
+        "captions": [
+            "a brown cow standing next to a blue boat"
+        ],
+        "image_names": [
+            "00162-0-a blue boat and a brown cow.jpg"
+        ],
+        "text_similarities": [
+            0.9351397752761841
+        ]
+    },
+    "a blue boat and a brown dog": {
+        "captions": [
+            "a dog sitting in a blue boat on the water"
+        ],
+        "image_names": [
+            "00220-0-a blue boat and a brown dog.jpg"
+        ],
+        "text_similarities": [
+            0.8515242338180542
+        ]
+    },
+    "a blue boat and a gold clock": {
+        "captions": [
+            "a clock that is on top of a boat"
+        ],
+        "image_names": [
+            "00150-0-a blue boat and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.712226152420044
+        ]
+    },
+    "a blue boat and a red book": {
+        "captions": [
+            "an open book sitting on top of a table next to a boat"
+        ],
+        "image_names": [
+            "00424-0-a blue boat and a red book.jpg"
+        ],
+        "text_similarities": [
+            0.726638913154602
+        ]
+    },
+    "a blue boat and a red car": {
+        "captions": [
+            "a red and blue toy car sitting on top of a wooden bench"
+        ],
+        "image_names": [
+            "00046-0-a blue boat and a red car.jpg"
+        ],
+        "text_similarities": [
+            0.7021990418434143
+        ]
+    },
+    "a blue boat and a red cow": {
+        "captions": [
+            "a cow standing next to a boat in a body of water"
+        ],
+        "image_names": [
+            "00164-0-a blue boat and a red cow.jpg"
+        ],
+        "text_similarities": [
+            0.7283127903938293
+        ]
+    },
+    "a blue boat and a red suitcase": {
+        "captions": [
+            "a red suitcase next to a blue boat"
+        ],
+        "image_names": [
+            "00388-0-a blue boat and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9631145000457764
+        ]
+    },
+    "a blue boat and a yellow dog": {
+        "captions": [
+            "a dog sitting in a blue boat on the water"
+        ],
+        "image_names": [
+            "00222-0-a blue boat and a yellow dog.jpg"
+        ],
+        "text_similarities": [
+            0.8022794127464294
+        ]
+    },
+    "a blue book and a red bowl": {
+        "captions": [
+            "a red bowl sitting on top of an open book"
+        ],
+        "image_names": [
+            "00281-0-a blue book and a red bowl.jpg"
+        ],
+        "text_similarities": [
+            0.8343366384506226
+        ]
+    },
+    "a blue book and a red cake": {
+        "captions": [
+            "an open book on a table next to a bowl of food"
+        ],
+        "image_names": [
+            "00373-0-a blue book and a red cake.jpg"
+        ],
+        "text_similarities": [
+            0.6261029839515686
+        ]
+    },
+    "a blue book and a red cup": {
+        "captions": [
+            "a cup of coffee and a book on a table"
+        ],
+        "image_names": [
+            "00315-0-a blue book and a red cup.jpg"
+        ],
+        "text_similarities": [
+            0.6675635576248169
+        ]
+    },
+    "a blue book and a red suitcase": {
+        "captions": [
+            "a red suitcase sitting on top of a pile of books"
+        ],
+        "image_names": [
+            "00210-0-a blue book and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.7863774299621582
+        ]
+    },
+    "a blue bowl and a brown cat": {
+        "captions": [
+            "a cat sitting next to a blue bowl"
+        ],
+        "image_names": [
+            "00066-0-a blue bowl and a brown cat.jpg"
+        ],
+        "text_similarities": [
+            0.896659255027771
+        ]
+    },
+    "a blue bowl and a brown elephant": {
+        "captions": [
+            "an elephant standing next to a blue bowl"
+        ],
+        "image_names": [
+            "00350-0-a blue bowl and a brown elephant.jpg"
+        ],
+        "text_similarities": [
+            0.901639461517334
+        ]
+    },
+    "a blue bowl and a brown horse": {
+        "captions": [
+            "a close up of a horse near a bowl"
+        ],
+        "image_names": [
+            "00390-0-a blue bowl and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.76213139295578
+        ]
+    },
+    "a blue bowl and a green vase": {
+        "captions": [
+            "a painting of a blue bowl and a green pitcher"
+        ],
+        "image_names": [
+            "00130-0-a blue bowl and a green vase.jpg"
+        ],
+        "text_similarities": [
+            0.900259256362915
+        ]
+    },
+    "a blue bowl and a red car": {
+        "captions": [
+            "a red car parked next to a black bowl"
+        ],
+        "image_names": [
+            "00296-0-a blue bowl and a red car.jpg"
+        ],
+        "text_similarities": [
+            0.8139708638191223
+        ]
+    },
+    "a blue bowl and a red chair": {
+        "captions": [
+            "a painting of a blue bowl on a red chair"
+        ],
+        "image_names": [
+            "00304-0-a blue bowl and a red chair.jpg"
+        ],
+        "text_similarities": [
+            0.9372684359550476
+        ]
+    },
+    "a blue bowl and a red cup": {
+        "captions": [
+            "a painting of a blue and red bowl"
+        ],
+        "image_names": [
+            "00050-0-a blue bowl and a red cup.jpg"
+        ],
+        "text_similarities": [
+            0.8381401896476746
+        ]
+    },
+    "a blue bowl and a red train": {
+        "captions": [
+            "a blue bowl sitting on top of a white table"
+        ],
+        "image_names": [
+            "00382-0-a blue bowl and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.7706719636917114
+        ]
+    },
+    "a blue bowl and a red vase": {
+        "captions": [
+            "a painting of a blue and red bowl"
+        ],
+        "image_names": [
+            "00133-0-a blue bowl and a red vase.jpg"
+        ],
+        "text_similarities": [
+            0.854908287525177
+        ]
+    },
+    "a blue bowl and a yellow cat": {
+        "captions": [
+            "a painting of two cats sitting next to each other"
+        ],
+        "image_names": [
+            "00068-0-a blue bowl and a yellow cat.jpg"
+        ],
+        "text_similarities": [
+            0.6099308133125305
+        ]
+    },
+    "a blue cake and a brown cow": {
+        "captions": [
+            "a blue and yellow cake sitting on top of a table"
+        ],
+        "image_names": [
+            "00306-0-a blue cake and a brown cow.jpg"
+        ],
+        "text_similarities": [
+            0.7052521705627441
+        ]
+    },
+    "a blue cake and a brown giraffe": {
+        "captions": [
+            "a giraffe standing next to a tall blue cake"
+        ],
+        "image_names": [
+            "00298-0-a blue cake and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.8792365789413452
+        ]
+    },
+    "a blue cake and a gold clock": {
+        "captions": [
+            "a blue cake with a clock on top of it"
+        ],
+        "image_names": [
+            "00300-0-a blue cake and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.866585910320282
+        ]
+    },
+    "a blue cake and a red suitcase": {
+        "captions": [
+            "a blue cake sitting on top of a red suitcase"
+        ],
+        "image_names": [
+            "00336-0-a blue cake and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9378611445426941
+        ]
+    },
+    "a blue car and a brown cow": {
+        "captions": [
+            "a cow standing next to a toy car"
+        ],
+        "image_names": [
+            "00038-0-a blue car and a brown cow.jpg"
+        ],
+        "text_similarities": [
+            0.7487479448318481
+        ]
+    },
+    "a blue car and a brown giraffe": {
+        "captions": [
+            "a toy giraffe standing next to a toy car"
+        ],
+        "image_names": [
+            "00218-0-a blue car and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.7500441670417786
+        ]
+    },
+    "a blue car and a red cup": {
+        "captions": [
+            "a red and blue cup sitting on the side of a road"
+        ],
+        "image_names": [
+            "00405-0-a blue car and a red cup.jpg"
+        ],
+        "text_similarities": [
+            0.7879816293716431
+        ]
+    },
+    "a blue car and a red horse": {
+        "captions": [
+            "a blue car with a red horse on it"
+        ],
+        "image_names": [
+            "00121-0-a blue car and a red horse.jpg"
+        ],
+        "text_similarities": [
+            0.9568386673927307
+        ]
+    },
+    "a blue car and a red suitcase": {
+        "captions": [
+            "a red suitcase and a blue car in the grass"
+        ],
+        "image_names": [
+            "00261-0-a blue car and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8848370313644409
+        ]
+    },
+    "a blue car and a red train": {
+        "captions": [
+            "a red and blue train passing each other on the tracks"
+        ],
+        "image_names": [
+            "00250-0-a blue car and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.8587955236434937
+        ]
+    },
+    "a blue cat and a brown chair": {
+        "captions": [
+            "a blue cat is sitting in a basket"
+        ],
+        "image_names": [
+            "00181-0-a blue cat and a brown chair.jpg"
+        ],
+        "text_similarities": [
+            0.7864956855773926
+        ]
+    },
+    "a blue cat and a brown cup": {
+        "captions": [
+            "a painting of a cat holding a cup"
+        ],
+        "image_names": [
+            "00187-0-a blue cat and a brown cup.jpg"
+        ],
+        "text_similarities": [
+            0.6973886489868164
+        ]
+    },
+    "a blue cat and a brown suitcase": {
+        "captions": [
+            "a blue cat sitting on top of a piece of luggage"
+        ],
+        "image_names": [
+            "00227-0-a blue cat and a brown suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8413448333740234
+        ]
+    },
+    "a blue chair and a red cup": {
+        "captions": [
+            "a red cup of coffee next to a blue plastic chair"
+        ],
+        "image_names": [
+            "00271-0-a blue chair and a red cup.jpg"
+        ],
+        "text_similarities": [
+            0.9247443675994873
+        ]
+    },
+    "a blue chair and a red vase": {
+        "captions": [
+            "a red and a blue chair sitting on a sidewalk"
+        ],
+        "image_names": [
+            "00123-0-a blue chair and a red vase.jpg"
+        ],
+        "text_similarities": [
+            0.8330549597740173
+        ]
+    },
+    "a blue clock and a gold vase": {
+        "captions": [
+            "a blue and green clock on a blue background"
+        ],
+        "image_names": [
+            "00033-0-a blue clock and a gold vase.jpg"
+        ],
+        "text_similarities": [
+            0.6642934083938599
+        ]
+    },
+    "a blue cow and a brown cup": {
+        "captions": [
+            "a blue bear statue next to a cup of coffee"
+        ],
+        "image_names": [
+            "00409-0-a blue cow and a brown cup.jpg"
+        ],
+        "text_similarities": [
+            0.7859722375869751
+        ]
+    },
+    "a blue cow and a brown horse": {
+        "captions": [
+            "a couple of horses standing next to each other on a field"
+        ],
+        "image_names": [
+            "00071-0-a blue cow and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.7325488328933716
+        ]
+    },
+    "a blue cow and a brown vase": {
+        "captions": [
+            "a cow with a tag on its ear next to a cup"
+        ],
+        "image_names": [
+            "00285-0-a blue cow and a brown vase.jpg"
+        ],
+        "text_similarities": [
+            0.7135337591171265
+        ]
+    },
+    "a blue cup and a brown elephant": {
+        "captions": [
+            "an elephant drinking from a blue cup with a straw"
+        ],
+        "image_names": [
+            "00426-0-a blue cup and a brown elephant.jpg"
+        ],
+        "text_similarities": [
+            0.8626217246055603
+        ]
+    },
+    "a blue cup and a brown horse": {
+        "captions": [
+            "a close up of a horse with a cup of coffee"
+        ],
+        "image_names": [
+            "00354-0-a blue cup and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.7561857104301453
+        ]
+    },
+    "a blue cup and a brown sheep": {
+        "captions": [
+            "a sheep standing next to a blue bucket"
+        ],
+        "image_names": [
+            "00376-0-a blue cup and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7922444343566895
+        ]
+    },
+    "a blue cup and a green cell phone": {
+        "captions": [
+            "a cell phone with ear buds attached to it"
+        ],
+        "image_names": [
+            "00440-0-a blue cup and a green cell phone.jpg"
+        ],
+        "text_similarities": [
+            0.6341546773910522
+        ]
+    },
+    "a blue cup and a green vase": {
+        "captions": [
+            "a green vase sitting next to a blue vase"
+        ],
+        "image_names": [
+            "00190-0-a blue cup and a green vase.jpg"
+        ],
+        "text_similarities": [
+            0.924088716506958
+        ]
+    },
+    "a blue cup and a red suitcase": {
+        "captions": [
+            "a red suitcase with a blue cup sitting on top of it"
+        ],
+        "image_names": [
+            "00294-0-a blue cup and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9448063373565674
+        ]
+    },
+    "a blue cup and a red vase": {
+        "captions": [
+            "a painting of a blue cup with a straw in it"
+        ],
+        "image_names": [
+            "00193-0-a blue cup and a red vase.jpg"
+        ],
+        "text_similarities": [
+            0.8088256120681763
+        ]
+    },
+    "a blue cylinder and a red cube": {
+        "captions": [
+            "a red and blue cube sitting on top of a sidewalk"
+        ],
+        "image_names": [
+            "00443-0-a blue cylinder and a red cube.jpg"
+        ],
+        "text_similarities": [
+            0.7267003655433655
+        ]
+    },
+    "a blue dog and a brown horse": {
+        "captions": [
+            "a horse and a dog are sitting in the grass"
+        ],
+        "image_names": [
+            "00017-0-a blue dog and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.7331671714782715
+        ]
+    },
+    "a blue dog and a brown suitcase": {
+        "captions": [
+            "a blue dog sitting on top of a blue suitcase"
+        ],
+        "image_names": [
+            "00243-0-a blue dog and a brown suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8738341927528381
+        ]
+    },
+    "a blue elephant and a brown vase": {
+        "captions": [
+            "a blue and yellow vase with an elephant painted on it"
+        ],
+        "image_names": [
+            "00269-0-a blue elephant and a brown vase.jpg"
+        ],
+        "text_similarities": [
+            0.844190239906311
+        ]
+    },
+    "a blue giraffe and a brown vase": {
+        "captions": [
+            "a painting of a giraffe next to a vase"
+        ],
+        "image_names": [
+            "00415-0-a blue giraffe and a brown vase.jpg"
+        ],
+        "text_similarities": [
+            0.8143223524093628
+        ]
+    },
+    "a blue horse and a brown sheep": {
+        "captions": [
+            "a blue horse standing next to a brown sheep"
+        ],
+        "image_names": [
+            "00156-0-a blue horse and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.9411258697509766
+        ]
+    },
+    "a blue horse and a brown vase": {
+        "captions": [
+            "a horse with blue hair standing next to a green plant"
+        ],
+        "image_names": [
+            "00325-0-a blue horse and a brown vase.jpg"
+        ],
+        "text_similarities": [
+            0.7471237182617188
+        ]
+    },
+    "a blue sheep and a brown vase": {
+        "captions": [
+            "a blue sheep standing next to a brown vase"
+        ],
+        "image_names": [
+            "00357-0-a blue sheep and a brown vase.jpg"
+        ],
+        "text_similarities": [
+            0.9288544058799744
+        ]
+    },
+    "a blue suitcase and a red vase": {
+        "captions": [
+            "a red vase with flowers in it next to a blue suitcase"
+        ],
+        "image_names": [
+            "00375-0-a blue suitcase and a red vase.jpg"
+        ],
+        "text_similarities": [
+            0.9357345104217529
+        ]
+    },
+    "a blue train and a red vase": {
+        "captions": [
+            "a painting of a blue train with a red flower"
+        ],
+        "image_names": [
+            "00411-0-a blue train and a red vase.jpg"
+        ],
+        "text_similarities": [
+            0.8551487922668457
+        ]
+    },
+    "a blue wooden pyramid on top of a red plastic box": {
+        "captions": [
+            "a red tray with a blue pyramid sitting on top of it"
+        ],
+        "image_names": [
+            "00448-0-a blue wooden pyramid on top of a red plastic box.jpg"
+        ],
+        "text_similarities": [
+            0.847198486328125
+        ]
+    },
+    "a brown apple and a green bird": {
+        "captions": [
+            "a painting of a bird and an apple"
+        ],
+        "image_names": [
+            "00127-0-a brown apple and a green bird.jpg"
+        ],
+        "text_similarities": [
+            0.8008343577384949
+        ]
+    },
+    "a brown apple and a green elephant": {
+        "captions": [
+            "a picture of an apple and an elephant"
+        ],
+        "image_names": [
+            "00397-0-a brown apple and a green elephant.jpg"
+        ],
+        "text_similarities": [
+            0.8652485609054565
+        ]
+    },
+    "a brown apple and a green giraffe": {
+        "captions": [
+            "a giraffe holding an apple on a stick"
+        ],
+        "image_names": [
+            "00313-0-a brown apple and a green giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.8121987581253052
+        ]
+    },
+    "a brown apple and a green horse": {
+        "captions": [
+            "an apple with a green leaf sticking out of it"
+        ],
+        "image_names": [
+            "00341-0-a brown apple and a green horse.jpg"
+        ],
+        "text_similarities": [
+            0.7836950421333313
+        ]
+    },
+    "a brown apple and a green sheep": {
+        "captions": [
+            "a teddy bear sitting next to two apples"
+        ],
+        "image_names": [
+            "00291-0-a brown apple and a green sheep.jpg"
+        ],
+        "text_similarities": [
+            0.6742594838142395
+        ]
+    },
+    "a brown backpack and a blue bear": {
+        "captions": [
+            "a brown and blue backpack with a bear on it"
+        ],
+        "image_names": [
+            "00345-0-a brown backpack and a blue bear.jpg"
+        ],
+        "text_similarities": [
+            0.9271575808525085
+        ]
+    },
+    "a brown backpack and a blue cat": {
+        "captions": [
+            "a brown bag with a picture of a cat on it"
+        ],
+        "image_names": [
+            "00111-0-a brown backpack and a blue cat.jpg"
+        ],
+        "text_similarities": [
+            0.6779264211654663
+        ]
+    },
+    "a brown backpack and a blue cow": {
+        "captions": [
+            "a cow with a backpack on its back"
+        ],
+        "image_names": [
+            "00327-0-a brown backpack and a blue cow.jpg"
+        ],
+        "text_similarities": [
+            0.7760435342788696
+        ]
+    },
+    "a brown backpack and a blue elephant": {
+        "captions": [
+            "a young boy with a backpack looking at an elephant statue"
+        ],
+        "image_names": [
+            "00283-0-a brown backpack and a blue elephant.jpg"
+        ],
+        "text_similarities": [
+            0.6633169651031494
+        ]
+    },
+    "a brown backpack and a blue giraffe": {
+        "captions": [
+            "a brown backpack with a blue elephant on it"
+        ],
+        "image_names": [
+            "00371-0-a brown backpack and a blue giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.8837608695030212
+        ]
+    },
+    "a brown backpack and a blue horse": {
+        "captions": [
+            "a little girl with a backpack on her back standing next to a horse"
+        ],
+        "image_names": [
+            "00277-0-a brown backpack and a blue horse.jpg"
+        ],
+        "text_similarities": [
+            0.7770509719848633
+        ]
+    },
+    "a brown backpack and a blue sheep": {
+        "captions": [
+            "a young child wearing a backpack with a face on it"
+        ],
+        "image_names": [
+            "00369-0-a brown backpack and a blue sheep.jpg"
+        ],
+        "text_similarities": [
+            0.6248823404312134
+        ]
+    },
+    "a brown banana and a green bear": {
+        "captions": [
+            "a green teddy bear with a yellow banana"
+        ],
+        "image_names": [
+            "00399-0-a brown banana and a green bear.jpg"
+        ],
+        "text_similarities": [
+            0.7193039655685425
+        ]
+    },
+    "a brown banana and a green bird": {
+        "captions": [
+            "a small green bird perched on a branch"
+        ],
+        "image_names": [
+            "00107-0-a brown banana and a green bird.jpg"
+        ],
+        "text_similarities": [
+            0.7340244054794312
+        ]
+    },
+    "a brown banana and a green cow": {
+        "captions": [
+            "a paper cut out of a dog with a banana"
+        ],
+        "image_names": [
+            "00413-0-a brown banana and a green cow.jpg"
+        ],
+        "text_similarities": [
+            0.49436378479003906
+        ]
+    },
+    "a brown banana and a green dog": {
+        "captions": [
+            "a dog and a stuffed animal next to a banana"
+        ],
+        "image_names": [
+            "00333-0-a brown banana and a green dog.jpg"
+        ],
+        "text_similarities": [
+            0.5598369836807251
+        ]
+    },
+    "a brown banana and a green giraffe": {
+        "captions": [
+            "a banana with a small animal on top of it"
+        ],
+        "image_names": [
+            "00423-0-a brown banana and a green giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.6555672883987427
+        ]
+    },
+    "a brown banana and a green horse": {
+        "captions": [
+            "a painting of a person riding a horse"
+        ],
+        "image_names": [
+            "00335-0-a brown banana and a green horse.jpg"
+        ],
+        "text_similarities": [
+            0.6961082220077515
+        ]
+    },
+    "a brown banana and a green sheep": {
+        "captions": [
+            "a sheep is standing on top of a banana"
+        ],
+        "image_names": [
+            "00267-0-a brown banana and a green sheep.jpg"
+        ],
+        "text_similarities": [
+            0.6428720951080322
+        ]
+    },
+    "a brown bear and a blue boat": {
+        "captions": [
+            "a large brown bear standing on top of a boat"
+        ],
+        "image_names": [
+            "00430-0-a brown bear and a blue boat.jpg"
+        ],
+        "text_similarities": [
+            0.7831693887710571
+        ]
+    },
+    "a brown bear and a blue cup": {
+        "captions": [
+            "a brown bear walking next to a cup of coffee"
+        ],
+        "image_names": [
+            "00274-0-a brown bear and a blue cup.jpg"
+        ],
+        "text_similarities": [
+            0.8160570859909058
+        ]
+    },
+    "a brown bear and a blue vase": {
+        "captions": [
+            "a painting of a bear and a vase of flowers"
+        ],
+        "image_names": [
+            "00394-0-a brown bear and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.7943352460861206
+        ]
+    },
+    "a brown bear and a red book": {
+        "captions": [
+            "a brown bear standing on top of a pile of books"
+        ],
+        "image_names": [
+            "00330-0-a brown bear and a red book.jpg"
+        ],
+        "text_similarities": [
+            0.7313265800476074
+        ]
+    },
+    "a brown bear and a red train": {
+        "captions": [
+            "a brown bear standing next to a red train"
+        ],
+        "image_names": [
+            "00378-0-a brown bear and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.9396597743034363
+        ]
+    },
+    "a brown bench and a green bird": {
+        "captions": [
+            "a green bird sitting on top of a wooden bench"
+        ],
+        "image_names": [
+            "00095-0-a brown bench and a green bird.jpg"
+        ],
+        "text_similarities": [
+            0.8310385942459106
+        ]
+    },
+    "a brown bench and a green cat": {
+        "captions": [
+            "a black cat sitting on top of a white bench"
+        ],
+        "image_names": [
+            "00055-0-a brown bench and a green cat.jpg"
+        ],
+        "text_similarities": [
+            0.6803311109542847
+        ]
+    },
+    "a brown bench and a green clock": {
+        "captions": [
+            "a clock on a wall above a park bench"
+        ],
+        "image_names": [
+            "00203-0-a brown bench and a green clock.jpg"
+        ],
+        "text_similarities": [
+            0.6917701959609985
+        ]
+    },
+    "a brown bench and a green dog": {
+        "captions": [
+            "a stuffed dog is sitting on a bench"
+        ],
+        "image_names": [
+            "00013-0-a brown bench and a green dog.jpg"
+        ],
+        "text_similarities": [
+            0.7551039457321167
+        ]
+    },
+    "a brown bird and a blue bear": {
+        "captions": [
+            "a blue and brown bird standing next to a baby bird"
+        ],
+        "image_names": [
+            "00438-0-a brown bird and a blue bear.jpg"
+        ],
+        "text_similarities": [
+            0.8317403197288513
+        ]
+    },
+    "a brown bird and a blue boat": {
+        "captions": [
+            "a bird is standing in the water next to a boat"
+        ],
+        "image_names": [
+            "00204-0-a brown bird and a blue boat.jpg"
+        ],
+        "text_similarities": [
+            0.8044057488441467
+        ]
+    },
+    "a brown bird and a blue bowl": {
+        "captions": [
+            "a brown bird sitting on top of a blue bowl"
+        ],
+        "image_names": [
+            "00158-0-a brown bird and a blue bowl.jpg"
+        ],
+        "text_similarities": [
+            0.9240292310714722
+        ]
+    },
+    "a brown bird and a blue car": {
+        "captions": [
+            "a small bird sitting on the hood of a car"
+        ],
+        "image_names": [
+            "00184-0-a brown bird and a blue car.jpg"
+        ],
+        "text_similarities": [
+            0.719025194644928
+        ]
+    },
+    "a brown bird and a blue chair": {
+        "captions": [
+            "a bird sitting on top of a wooden bench"
+        ],
+        "image_names": [
+            "00238-0-a brown bird and a blue chair.jpg"
+        ],
+        "text_similarities": [
+            0.6744720935821533
+        ]
+    },
+    "a brown bird and a gold clock": {
+        "captions": [
+            "a painting of a bird next to a clock"
+        ],
+        "image_names": [
+            "00138-0-a brown bird and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.7546112537384033
+        ]
+    },
+    "a brown bird and a pink elephant": {
+        "captions": [
+            "a bird sitting on top of a pink elephant"
+        ],
+        "image_names": [
+            "00082-0-a brown bird and a pink elephant.jpg"
+        ],
+        "text_similarities": [
+            0.8804168105125427
+        ]
+    },
+    "a brown bird and a pink sheep": {
+        "captions": [
+            "a bird is perched on the back of a sheep"
+        ],
+        "image_names": [
+            "00102-0-a brown bird and a pink sheep.jpg"
+        ],
+        "text_similarities": [
+            0.785010576248169
+        ]
+    },
+    "a brown bird and a red boat": {
+        "captions": [
+            "a bird sitting on top of a red boat in the water"
+        ],
+        "image_names": [
+            "00206-0-a brown bird and a red boat.jpg"
+        ],
+        "text_similarities": [
+            0.8401708006858826
+        ]
+    },
+    "a brown bird and a red bowl": {
+        "captions": [
+            "a small bird perched on top of a red bowl"
+        ],
+        "image_names": [
+            "00160-0-a brown bird and a red bowl.jpg"
+        ],
+        "text_similarities": [
+            0.8371992111206055
+        ]
+    },
+    "a brown bird and a red car": {
+        "captions": [
+            "a red car parked on the side of the road"
+        ],
+        "image_names": [
+            "00182-0-a brown bird and a red car.jpg"
+        ],
+        "text_similarities": [
+            0.7680438756942749
+        ]
+    },
+    "a brown bird and a red cat": {
+        "captions": [
+            "a bird sitting on top of a cat next to a cat"
+        ],
+        "image_names": [
+            "00247-0-a brown bird and a red cat.jpg"
+        ],
+        "text_similarities": [
+            0.7499620914459229
+        ]
+    },
+    "a brown bird and a red chair": {
+        "captions": [
+            "a black bird sitting on top of a red chair"
+        ],
+        "image_names": [
+            "00236-0-a brown bird and a red chair.jpg"
+        ],
+        "text_similarities": [
+            0.8475956320762634
+        ]
+    },
+    "a brown bird and a red cow": {
+        "captions": [
+            "a bird is standing next to a cow"
+        ],
+        "image_names": [
+            "00145-0-a brown bird and a red cow.jpg"
+        ],
+        "text_similarities": [
+            0.809169590473175
+        ]
+    },
+    "a brown bird and a red elephant": {
+        "captions": [
+            "a bird sitting on top of an elephant's head"
+        ],
+        "image_names": [
+            "00085-0-a brown bird and a red elephant.jpg"
+        ],
+        "text_similarities": [
+            0.7607574462890625
+        ]
+    },
+    "a brown bird and a red giraffe": {
+        "captions": [
+            "a couple of giraffe standing next to each other"
+        ],
+        "image_names": [
+            "00041-0-a brown bird and a red giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.7171223759651184
+        ]
+    },
+    "a brown bird and a red sheep": {
+        "captions": [
+            "a couple of birds standing on top of a dirt field"
+        ],
+        "image_names": [
+            "00105-0-a brown bird and a red sheep.jpg"
+        ],
+        "text_similarities": [
+            0.6390702724456787
+        ]
+    },
+    "a brown bird and a yellow cat": {
+        "captions": [
+            "a cat sitting on top of a wooden post"
+        ],
+        "image_names": [
+            "00244-0-a brown bird and a yellow cat.jpg"
+        ],
+        "text_similarities": [
+            0.5957399606704712
+        ]
+    },
+    "a brown boat and a blue cat": {
+        "captions": [
+            "a couple of cats sitting on top of a boat"
+        ],
+        "image_names": [
+            "00401-0-a brown boat and a blue cat.jpg"
+        ],
+        "text_similarities": [
+            0.7386740446090698
+        ]
+    },
+    "a brown boat and a blue clock": {
+        "captions": [
+            "a clock mounted to the side of a blue wall"
+        ],
+        "image_names": [
+            "00153-0-a brown boat and a blue clock.jpg"
+        ],
+        "text_similarities": [
+            0.6848728656768799
+        ]
+    },
+    "a brown boat and a blue cow": {
+        "captions": [
+            "a painting of two cows on a boat"
+        ],
+        "image_names": [
+            "00163-0-a brown boat and a blue cow.jpg"
+        ],
+        "text_similarities": [
+            0.7525374889373779
+        ]
+    },
+    "a brown boat and a blue dog": {
+        "captions": [
+            "a dog standing on a dock next to a boat"
+        ],
+        "image_names": [
+            "00221-0-a brown boat and a blue dog.jpg"
+        ],
+        "text_similarities": [
+            0.7097610831260681
+        ]
+    },
+    "a brown book and a red cat": {
+        "captions": [
+            "two cats sitting on top of an open book"
+        ],
+        "image_names": [
+            "00167-0-a brown book and a red cat.jpg"
+        ],
+        "text_similarities": [
+            0.7288917303085327
+        ]
+    },
+    "a brown book and a red clock": {
+        "captions": [
+            "a clock that is on top of a book"
+        ],
+        "image_names": [
+            "00077-0-a brown book and a red clock.jpg"
+        ],
+        "text_similarities": [
+            0.7592310309410095
+        ]
+    },
+    "a brown book and a red cow": {
+        "captions": [
+            "a book with a red cow cut out of it"
+        ],
+        "image_names": [
+            "00279-0-a brown book and a red cow.jpg"
+        ],
+        "text_similarities": [
+            0.8591185212135315
+        ]
+    },
+    "a brown book and a red dog": {
+        "captions": [
+            "a brown dog laying on top of a couch next to a book"
+        ],
+        "image_names": [
+            "00257-0-a brown book and a red dog.jpg"
+        ],
+        "text_similarities": [
+            0.7331039905548096
+        ]
+    },
+    "a brown book and a red giraffe": {
+        "captions": [
+            "a stuffed giraffe sitting next to an open book"
+        ],
+        "image_names": [
+            "00319-0-a brown book and a red giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.7906010746955872
+        ]
+    },
+    "a brown book and a red horse": {
+        "captions": [
+            "a glass of tea next to an open book"
+        ],
+        "image_names": [
+            "00293-0-a brown book and a red horse.jpg"
+        ],
+        "text_similarities": [
+            0.7092639207839966
+        ]
+    },
+    "a brown book and a red sheep": {
+        "captions": [
+            "a stuffed animal sitting next to an open book"
+        ],
+        "image_names": [
+            "00421-0-a brown book and a red sheep.jpg"
+        ],
+        "text_similarities": [
+            0.741312563419342
+        ]
+    },
+    "a brown bowl and a blue cat": {
+        "captions": [
+            "a cat sitting next to a bowl on a table"
+        ],
+        "image_names": [
+            "00067-0-a brown bowl and a blue cat.jpg"
+        ],
+        "text_similarities": [
+            0.7403639554977417
+        ]
+    },
+    "a brown bowl and a blue elephant": {
+        "captions": [
+            "a blue elephant figurine sitting on top of a bowl"
+        ],
+        "image_names": [
+            "00351-0-a brown bowl and a blue elephant.jpg"
+        ],
+        "text_similarities": [
+            0.8157196044921875
+        ]
+    },
+    "a brown bowl and a blue horse": {
+        "captions": [
+            "a bowl with a horse painted on it"
+        ],
+        "image_names": [
+            "00391-0-a brown bowl and a blue horse.jpg"
+        ],
+        "text_similarities": [
+            0.7634144425392151
+        ]
+    },
+    "a brown cake and a blue cow": {
+        "captions": [
+            "a piece of cake on a plate next to a cow figurine"
+        ],
+        "image_names": [
+            "00307-0-a brown cake and a blue cow.jpg"
+        ],
+        "text_similarities": [
+            0.7675216794013977
+        ]
+    },
+    "a brown cake and a blue giraffe": {
+        "captions": [
+            "a piece of cake with a bear on top of it"
+        ],
+        "image_names": [
+            "00299-0-a brown cake and a blue giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.6988852024078369
+        ]
+    },
+    "a brown car and a blue cow": {
+        "captions": [
+            "a couple of cows standing next to a car"
+        ],
+        "image_names": [
+            "00039-0-a brown car and a blue cow.jpg"
+        ],
+        "text_similarities": [
+            0.7645739316940308
+        ]
+    },
+    "a brown car and a blue giraffe": {
+        "captions": [
+            "a blue stuffed animal sitting next to a car"
+        ],
+        "image_names": [
+            "00219-0-a brown car and a blue giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.7121224403381348
+        ]
+    },
+    "a brown car and a red cat": {
+        "captions": [
+            "a cat is sitting next to a car"
+        ],
+        "image_names": [
+            "00087-0-a brown car and a red cat.jpg"
+        ],
+        "text_similarities": [
+            0.7314245104789734
+        ]
+    },
+    "a brown car and a red clock": {
+        "captions": [
+            "a car with a mickey mouse clock on top of it"
+        ],
+        "image_names": [
+            "00007-0-a brown car and a red clock.jpg"
+        ],
+        "text_similarities": [
+            0.6408547163009644
+        ]
+    },
+    "a brown car and a red cow": {
+        "captions": [
+            "a red car parked next to a brown cow"
+        ],
+        "image_names": [
+            "00037-0-a brown car and a red cow.jpg"
+        ],
+        "text_similarities": [
+            0.9292445182800293
+        ]
+    },
+    "a brown car and a red dog": {
+        "captions": [
+            "a brown dog standing next to a brown car"
+        ],
+        "image_names": [
+            "00253-0-a brown car and a red dog.jpg"
+        ],
+        "text_similarities": [
+            0.8677243590354919
+        ]
+    },
+    "a brown car and a red elephant": {
+        "captions": [
+            "an elephant standing next to a car on a road"
+        ],
+        "image_names": [
+            "00009-0-a brown car and a red elephant.jpg"
+        ],
+        "text_similarities": [
+            0.731640100479126
+        ]
+    },
+    "a brown car and a red giraffe": {
+        "captions": [
+            "a giraffe sticking its head out of a car window"
+        ],
+        "image_names": [
+            "00217-0-a brown car and a red giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.6707194447517395
+        ]
+    },
+    "a brown car and a red horse": {
+        "captions": [
+            "a horse standing next to a car on a road"
+        ],
+        "image_names": [
+            "00119-0-a brown car and a red horse.jpg"
+        ],
+        "text_similarities": [
+            0.7084895372390747
+        ]
+    },
+    "a brown car and a red sheep": {
+        "captions": [
+            "a pair of sheep on the back of a car"
+        ],
+        "image_names": [
+            "00059-0-a brown car and a red sheep.jpg"
+        ],
+        "text_similarities": [
+            0.710442304611206
+        ]
+    },
+    "a brown cat and a blue chair": {
+        "captions": [
+            "a cat sitting on the ground next to a blue chair"
+        ],
+        "image_names": [
+            "00180-0-a brown cat and a blue chair.jpg"
+        ],
+        "text_similarities": [
+            0.8601623177528381
+        ]
+    },
+    "a brown cat and a blue cup": {
+        "captions": [
+            "a cat sitting on top of a blue cup"
+        ],
+        "image_names": [
+            "00186-0-a brown cat and a blue cup.jpg"
+        ],
+        "text_similarities": [
+            0.8394817113876343
+        ]
+    },
+    "a brown cat and a blue suitcase": {
+        "captions": [
+            "a cat sitting on the ground next to a blue suitcase"
+        ],
+        "image_names": [
+            "00226-0-a brown cat and a blue suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8575357794761658
+        ]
+    },
+    "a brown cat and a gold clock": {
+        "captions": [
+            "a cat looking out of a window with a clock in the background"
+        ],
+        "image_names": [
+            "00358-0-a brown cat and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.6531471610069275
+        ]
+    },
+    "a brown cat and a pink sheep": {
+        "captions": [
+            "a cat standing next to a pink sheep"
+        ],
+        "image_names": [
+            "00174-0-a brown cat and a pink sheep.jpg"
+        ],
+        "text_similarities": [
+            0.884817898273468
+        ]
+    },
+    "a brown cat and a red chair": {
+        "captions": [
+            "a blurry image of a cat sitting on a chair"
+        ],
+        "image_names": [
+            "00178-0-a brown cat and a red chair.jpg"
+        ],
+        "text_similarities": [
+            0.6779491901397705
+        ]
+    },
+    "a brown cat and a red cup": {
+        "captions": [
+            "a cat laying on the ground next to a red cup"
+        ],
+        "image_names": [
+            "00188-0-a brown cat and a red cup.jpg"
+        ],
+        "text_similarities": [
+            0.8490458130836487
+        ]
+    },
+    "a brown cat and a red suitcase": {
+        "captions": [
+            "a cat sitting on top of a red suitcase"
+        ],
+        "image_names": [
+            "00224-0-a brown cat and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8344804048538208
+        ]
+    },
+    "a brown cat and a yellow dog": {
+        "captions": [
+            "a close up of a cat and a toy dog"
+        ],
+        "image_names": [
+            "00065-0-a brown cat and a yellow dog.jpg"
+        ],
+        "text_similarities": [
+            0.7151591777801514
+        ]
+    },
+    "a brown cat and a yellow sheep": {
+        "captions": [
+            "a close up of a cat and a sheep"
+        ],
+        "image_names": [
+            "00177-0-a brown cat and a yellow sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7718123197555542
+        ]
+    },
+    "a brown chair and a red clock": {
+        "captions": [
+            "a clock on the wall above a chair"
+        ],
+        "image_names": [
+            "00081-0-a brown chair and a red clock.jpg"
+        ],
+        "text_similarities": [
+            0.7049648761749268
+        ]
+    },
+    "a brown chair and a red dog": {
+        "captions": [
+            "a dog with a frisbee in its mouth"
+        ],
+        "image_names": [
+            "00021-0-a brown chair and a red dog.jpg"
+        ],
+        "text_similarities": [
+            0.5285841822624207
+        ]
+    },
+    "a brown chair and a red elephant": {
+        "captions": [
+            "an elephant painted on the side of a building"
+        ],
+        "image_names": [
+            "00363-0-a brown chair and a red elephant.jpg"
+        ],
+        "text_similarities": [
+            0.5600866079330444
+        ]
+    },
+    "a brown chair and a red giraffe": {
+        "captions": [
+            "a giraffe standing on top of a red door"
+        ],
+        "image_names": [
+            "00265-0-a brown chair and a red giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.6929658651351929
+        ]
+    },
+    "a brown chair and a red sheep": {
+        "captions": [
+            "a sheep is sitting in a red chair"
+        ],
+        "image_names": [
+            "00429-0-a brown chair and a red sheep.jpg"
+        ],
+        "text_similarities": [
+            0.8451064825057983
+        ]
+    },
+    "a brown clock and a gold giraffe": {
+        "captions": [
+            "a clock with a dog on the side of it"
+        ],
+        "image_names": [
+            "00317-0-a brown clock and a gold giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.6334151029586792
+        ]
+    },
+    "a brown cow and a blue cup": {
+        "captions": [
+            "a cow with a blue bucket on its head"
+        ],
+        "image_names": [
+            "00408-0-a brown cow and a blue cup.jpg"
+        ],
+        "text_similarities": [
+            0.8109021186828613
+        ]
+    },
+    "a brown cow and a blue horse": {
+        "captions": [
+            "a couple of cows standing on top of a grass covered field"
+        ],
+        "image_names": [
+            "00070-0-a brown cow and a blue horse.jpg"
+        ],
+        "text_similarities": [
+            0.6358399987220764
+        ]
+    },
+    "a brown cow and a blue vase": {
+        "captions": [
+            "a painting of a cow with a blue vase"
+        ],
+        "image_names": [
+            "00284-0-a brown cow and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.8763852119445801
+        ]
+    },
+    "a brown cow and a pink sheep": {
+        "captions": [
+            "a brown cow standing next to a pink cow on a lush green field"
+        ],
+        "image_names": [
+            "00042-0-a brown cow and a pink sheep.jpg"
+        ],
+        "text_similarities": [
+            0.8380886912345886
+        ]
+    },
+    "a brown cow and a red dog": {
+        "captions": [
+            "a brown dog laying next to a brown and white cow"
+        ],
+        "image_names": [
+            "00093-0-a brown cow and a red dog.jpg"
+        ],
+        "text_similarities": [
+            0.779436469078064
+        ]
+    },
+    "a brown cow and a red horse": {
+        "captions": [
+            "a couple of brown cows standing on top of a lush green field"
+        ],
+        "image_names": [
+            "00073-0-a brown cow and a red horse.jpg"
+        ],
+        "text_similarities": [
+            0.6978447437286377
+        ]
+    },
+    "a brown cow and a red sheep": {
+        "captions": [
+            "a couple of cows standing on top of a lush green field"
+        ],
+        "image_names": [
+            "00045-0-a brown cow and a red sheep.jpg"
+        ],
+        "text_similarities": [
+            0.6763058304786682
+        ]
+    },
+    "a brown cow and a red suitcase": {
+        "captions": [
+            "a brown cow standing next to a red suitcase"
+        ],
+        "image_names": [
+            "00416-0-a brown cow and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.954748272895813
+        ]
+    },
+    "a brown cow and a yellow dog": {
+        "captions": [
+            "a brown cow standing next to a dog on a lush green field"
+        ],
+        "image_names": [
+            "00090-0-a brown cow and a yellow dog.jpg"
+        ],
+        "text_similarities": [
+            0.735843300819397
+        ]
+    },
+    "a brown cup and a blue elephant": {
+        "captions": [
+            "an elephant statue with a cup of coffee"
+        ],
+        "image_names": [
+            "00427-0-a brown cup and a blue elephant.jpg"
+        ],
+        "text_similarities": [
+            0.7357256412506104
+        ]
+    },
+    "a brown cup and a blue horse": {
+        "captions": [
+            "a painting of a cat sitting in a coffee cup"
+        ],
+        "image_names": [
+            "00355-0-a brown cup and a blue horse.jpg"
+        ],
+        "text_similarities": [
+            0.6235194206237793
+        ]
+    },
+    "a brown cup and a blue sheep": {
+        "captions": [
+            "a painting of a blue sheep holding a cup of coffee"
+        ],
+        "image_names": [
+            "00377-0-a brown cup and a blue sheep.jpg"
+        ],
+        "text_similarities": [
+            0.8252151012420654
+        ]
+    },
+    "a brown dog and a blue horse": {
+        "captions": [
+            "a brown dog standing next to a blue horse on top of a lush green field"
+        ],
+        "image_names": [
+            "00016-0-a brown dog and a blue horse.jpg"
+        ],
+        "text_similarities": [
+            0.7591204643249512
+        ]
+    },
+    "a brown dog and a blue suitcase": {
+        "captions": [
+            "a brown dog sitting next to a blue suitcase"
+        ],
+        "image_names": [
+            "00242-0-a brown dog and a blue suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9393221735954285
+        ]
+    },
+    "a brown dog and a pink sheep": {
+        "captions": [
+            "a dog sitting next to a stuffed sheep"
+        ],
+        "image_names": [
+            "00114-0-a brown dog and a pink sheep.jpg"
+        ],
+        "text_similarities": [
+            0.6937222480773926
+        ]
+    },
+    "a brown dog and a red suitcase": {
+        "captions": [
+            "a brown dog laying on top of a red suitcase"
+        ],
+        "image_names": [
+            "00240-0-a brown dog and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8796353340148926
+        ]
+    },
+    "a brown dog and a yellow horse": {
+        "captions": [
+            "a brown dog standing next to a brown dog with a yellow frisbee in its mouth"
+        ],
+        "image_names": [
+            "00019-0-a brown dog and a yellow horse.jpg"
+        ],
+        "text_similarities": [
+            0.6810357570648193
+        ]
+    },
+    "a brown dog and a yellow sheep": {
+        "captions": [
+            "a brown dog sitting next to a yellow dog"
+        ],
+        "image_names": [
+            "00117-0-a brown dog and a yellow sheep.jpg"
+        ],
+        "text_similarities": [
+            0.8223429918289185
+        ]
+    },
+    "a brown elephant and a blue vase": {
+        "captions": [
+            "a painting of an elephant sticking its trunk into a blue vase"
+        ],
+        "image_names": [
+            "00268-0-a brown elephant and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.8494198322296143
+        ]
+    },
+    "a brown elephant and a pink giraffe": {
+        "captions": [
+            "an elephant and a giraffe made out of felt"
+        ],
+        "image_names": [
+            "00195-0-a brown elephant and a pink giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.7357372045516968
+        ]
+    },
+    "a brown elephant and a red suitcase": {
+        "captions": [
+            "an elephant with tusks carrying a red suitcase"
+        ],
+        "image_names": [
+            "00338-0-a brown elephant and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8662635087966919
+        ]
+    },
+    "a brown giraffe and a blue vase": {
+        "captions": [
+            "a painting of a giraffe sticking its head out of a vase"
+        ],
+        "image_names": [
+            "00414-0-a brown giraffe and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.7850319743156433
+        ]
+    },
+    "a brown giraffe and a red suitcase": {
+        "captions": [
+            "a giraffe standing next to a red suitcase"
+        ],
+        "image_names": [
+            "00272-0-a brown giraffe and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9133759140968323
+        ]
+    },
+    "a brown giraffe and a red train": {
+        "captions": [
+            "a red train with giraffes riding on it"
+        ],
+        "image_names": [
+            "00386-0-a brown giraffe and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.8666201829910278
+        ]
+    },
+    "a brown horse and a blue sheep": {
+        "captions": [
+            "a brown horse standing next to a blue sheep"
+        ],
+        "image_names": [
+            "00157-0-a brown horse and a blue sheep.jpg"
+        ],
+        "text_similarities": [
+            0.9474692940711975
+        ]
+    },
+    "a brown horse and a blue vase": {
+        "captions": [
+            "a brown horse with a blue frisbee in its mouth"
+        ],
+        "image_names": [
+            "00324-0-a brown horse and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.7240005731582642
+        ]
+    },
+    "a brown horse and a pink sheep": {
+        "captions": [
+            "a brown horse with a pink ear tag next to a brown horse with a pink ear tag"
+        ],
+        "image_names": [
+            "00154-0-a brown horse and a pink sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7787735462188721
+        ]
+    },
+    "a brown sheep and a blue vase": {
+        "captions": [
+            "a sheep standing on top of a blue vase"
+        ],
+        "image_names": [
+            "00356-0-a brown sheep and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.8614062070846558
+        ]
+    },
+    "a brown silver table and a wooden cellphone and another device": {
+        "captions": [
+            "a cell phone sitting on top of a wooden table"
+        ],
+        "image_names": [
+            "00546-0-a brown silver table and a wooden cellphone and another device.jpg"
+        ],
+        "text_similarities": [
+            0.8084679841995239
+        ]
+    },
+    "a brown trash bin to the left of a blue recycling bin": {
+        "captions": [
+            "three trash cans are lined up against a brick wall"
+        ],
+        "image_names": [
+            "00473-0-a brown trash bin to the left of a blue recycling bin.jpg"
+        ],
+        "text_similarities": [
+            0.7088396549224854
+        ]
+    },
+    "a brown wooden table and a silver cellphone and another device": {
+        "captions": [
+            "a cell phone sitting on top of a wooden table"
+        ],
+        "image_names": [
+            "00545-0-a brown wooden table and a silver cellphone and another device.jpg"
+        ],
+        "text_similarities": [
+            0.8314267992973328
+        ]
+    },
+    "a cat is perched upon a stone bench that sits on a wooden patio": {
+        "captions": [
+            "a cat laying on the ground next to a wooden bench"
+        ],
+        "image_names": [
+            "00490-0-a cat is perched upon a stone bench that sits on a wooden patio.jpg"
+        ],
+        "text_similarities": [
+            0.7833342552185059
+        ]
+    },
+    "a cat is perched upon a wooden bench that sits on a stone patio": {
+        "captions": [
+            "an orange and white cat sitting next to a wooden bench"
+        ],
+        "image_names": [
+            "00489-0-a cat is perched upon a wooden bench that sits on a stone patio.jpg"
+        ],
+        "text_similarities": [
+            0.68412184715271
+        ]
+    },
+    "a circular brown trash bin in front of a brick wall": {
+        "captions": [
+            "a brown trash can sitting in front of a brick wall"
+        ],
+        "image_names": [
+            "00474-0-a circular brown trash bin in front of a brick wall.jpg"
+        ],
+        "text_similarities": [
+            0.8713664412498474
+        ]
+    },
+    "a five eleven sign and a pole with two signs": {
+        "captions": [
+            "a street sign that is on the side of a road"
+        ],
+        "image_names": [
+            "00600-0-a five eleven sign and a pole with two signs.jpg"
+        ],
+        "text_similarities": [
+            0.7660033702850342
+        ]
+    },
+    "a gold backpack and a blue clock": {
+        "captions": [
+            "a clock on a wall with roman numerals"
+        ],
+        "image_names": [
+            "00367-0-a gold backpack and a blue clock.jpg"
+        ],
+        "text_similarities": [
+            0.5455580949783325
+        ]
+    },
+    "a gold bench and a green clock": {
+        "captions": [
+            "a green table with a clock on top of it"
+        ],
+        "image_names": [
+            "00201-0-a gold bench and a green clock.jpg"
+        ],
+        "text_similarities": [
+            0.7411970496177673
+        ]
+    },
+    "a gold bird and a brown clock": {
+        "captions": [
+            "a clock with roman numerals and a bird on it"
+        ],
+        "image_names": [
+            "00139-0-a gold bird and a brown clock.jpg"
+        ],
+        "text_similarities": [
+            0.7328972816467285
+        ]
+    },
+    "a gold bird and a red clock": {
+        "captions": [
+            "a gold bird sitting on top of a red clock"
+        ],
+        "image_names": [
+            "00141-0-a gold bird and a red clock.jpg"
+        ],
+        "text_similarities": [
+            0.9287608861923218
+        ]
+    },
+    "a gold boat and a blue clock": {
+        "captions": [
+            "a clock that is sitting on a table"
+        ],
+        "image_names": [
+            "00151-0-a gold boat and a blue clock.jpg"
+        ],
+        "text_similarities": [
+            0.6144274473190308
+        ]
+    },
+    "a gold book and a red clock": {
+        "captions": [
+            "an open book with a red pen on top of it"
+        ],
+        "image_names": [
+            "00075-0-a gold book and a red clock.jpg"
+        ],
+        "text_similarities": [
+            0.7108640670776367
+        ]
+    },
+    "a gold cake and a blue clock": {
+        "captions": [
+            "a blue and white cake with gold decorations"
+        ],
+        "image_names": [
+            "00301-0-a gold cake and a blue clock.jpg"
+        ],
+        "text_similarities": [
+            0.7048167586326599
+        ]
+    },
+    "a gold car and a red clock": {
+        "captions": [
+            "a close up of a clock with a golden object on it"
+        ],
+        "image_names": [
+            "00005-0-a gold car and a red clock.jpg"
+        ],
+        "text_similarities": [
+            0.7143906354904175
+        ]
+    },
+    "a gold cat and a brown clock": {
+        "captions": [
+            "a clock with a picture of a cat on it"
+        ],
+        "image_names": [
+            "00359-0-a gold cat and a brown clock.jpg"
+        ],
+        "text_similarities": [
+            0.7110936641693115
+        ]
+    },
+    "a gold chair and a red clock": {
+        "captions": [
+            "a golden clock with a chair and a knife"
+        ],
+        "image_names": [
+            "00079-0-a gold chair and a red clock.jpg"
+        ],
+        "text_similarities": [
+            0.7756834030151367
+        ]
+    },
+    "a gold clock and a blue vase": {
+        "captions": [
+            "a clock on a shelf with a potted plant"
+        ],
+        "image_names": [
+            "00032-0-a gold clock and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.6806434988975525
+        ]
+    },
+    "a gold clock and a brown giraffe": {
+        "captions": [
+            "a gold clock with a lizard on top of it"
+        ],
+        "image_names": [
+            "00316-0-a gold clock and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.7910587787628174
+        ]
+    },
+    "a gold clock and a green vase": {
+        "captions": [
+            "a green vase with a clock inside of it"
+        ],
+        "image_names": [
+            "00034-0-a gold clock and a green vase.jpg"
+        ],
+        "text_similarities": [
+            0.8320794105529785
+        ]
+    },
+    "a gold clock and a red suitcase": {
+        "captions": [
+            "a red and gold clock sitting on top of a red box"
+        ],
+        "image_names": [
+            "00286-0-a gold clock and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8055088520050049
+        ]
+    },
+    "a gold clock and a red train": {
+        "captions": [
+            "a red and white clock with a red car on it"
+        ],
+        "image_names": [
+            "00196-0-a gold clock and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.71064692735672
+        ]
+    },
+    "a gold clock and a yellow train": {
+        "captions": [
+            "a clock that is on the side of a building"
+        ],
+        "image_names": [
+            "00198-0-a gold clock and a yellow train.jpg"
+        ],
+        "text_similarities": [
+            0.5801429748535156
+        ]
+    },
+    "a gold colored dog lays nears some barrels on a wooden deck": {
+        "captions": [
+            "a dog sitting on a wooden floor next to barrels"
+        ],
+        "image_names": [
+            "00507-0-a gold colored dog lays nears some barrels on a wooden deck.jpg"
+        ],
+        "text_similarities": [
+            0.7705556154251099
+        ]
+    },
+    "a green apple and a black backpack": {
+        "captions": [
+            "a backpack with a green apple on it"
+        ],
+        "image_names": [
+            "00434-0-a green apple and a black backpack.jpg"
+        ],
+        "text_similarities": [
+            0.9023503065109253
+        ]
+    },
+    "a green apple and a blue backpack": {
+        "captions": [
+            "a painting of a backpack and an apple"
+        ],
+        "image_names": [
+            "00364-0-a green apple and a blue backpack.jpg"
+        ],
+        "text_similarities": [
+            0.7741901874542236
+        ]
+    },
+    "a green apple and a blue boat": {
+        "captions": [
+            "a painting of a boat and an apple"
+        ],
+        "image_names": [
+            "00302-0-a green apple and a blue boat.jpg"
+        ],
+        "text_similarities": [
+            0.7732012271881104
+        ]
+    },
+    "a green apple and a blue bowl": {
+        "captions": [
+            "a painting of a green apple in a blue bowl"
+        ],
+        "image_names": [
+            "00232-0-a green apple and a blue bowl.jpg"
+        ],
+        "text_similarities": [
+            0.9420115947723389
+        ]
+    },
+    "a green apple and a blue cup": {
+        "captions": [
+            "a painting of an apple in a blue vase"
+        ],
+        "image_names": [
+            "00418-0-a green apple and a blue cup.jpg"
+        ],
+        "text_similarities": [
+            0.769254207611084
+        ]
+    },
+    "a green apple and a blue vase": {
+        "captions": [
+            "a green apple sitting on top of a blue vase"
+        ],
+        "image_names": [
+            "00346-0-a green apple and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.9370653033256531
+        ]
+    },
+    "a green apple and a brown bird": {
+        "captions": [
+            "a small bird standing next to an apple"
+        ],
+        "image_names": [
+            "00126-0-a green apple and a brown bird.jpg"
+        ],
+        "text_similarities": [
+            0.8255343437194824
+        ]
+    },
+    "a green apple and a brown elephant": {
+        "captions": [
+            "a stuffed elephant next to a green apple"
+        ],
+        "image_names": [
+            "00396-0-a green apple and a brown elephant.jpg"
+        ],
+        "text_similarities": [
+            0.9150872230529785
+        ]
+    },
+    "a green apple and a brown giraffe": {
+        "captions": [
+            "a group of giraffe standing next to each other"
+        ],
+        "image_names": [
+            "00312-0-a green apple and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.6928482055664062
+        ]
+    },
+    "a green apple and a brown horse": {
+        "captions": [
+            "a horse with a green apple in the background"
+        ],
+        "image_names": [
+            "00340-0-a green apple and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.8895295262336731
+        ]
+    },
+    "a green apple and a brown sheep": {
+        "captions": [
+            "a sheep with a green apple in its mouth"
+        ],
+        "image_names": [
+            "00290-0-a green apple and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.8455774784088135
+        ]
+    },
+    "a green apple and a red banana": {
+        "captions": [
+            "a couple of green apples sitting next to each other"
+        ],
+        "image_names": [
+            "00173-0-a green apple and a red banana.jpg"
+        ],
+        "text_similarities": [
+            0.7632483243942261
+        ]
+    },
+    "a green apple and a red bird": {
+        "captions": [
+            "a red bird standing next to a green apple"
+        ],
+        "image_names": [
+            "00128-0-a green apple and a red bird.jpg"
+        ],
+        "text_similarities": [
+            0.9451862573623657
+        ]
+    },
+    "a green apple and a red book": {
+        "captions": [
+            "a green apple sitting next to a red book"
+        ],
+        "image_names": [
+            "00288-0-a green apple and a red book.jpg"
+        ],
+        "text_similarities": [
+            0.9508443474769592
+        ]
+    },
+    "a green apple and a red bowl": {
+        "captions": [
+            "a painting of a green apple in a bowl"
+        ],
+        "image_names": [
+            "00234-0-a green apple and a red bowl.jpg"
+        ],
+        "text_similarities": [
+            0.8768724203109741
+        ]
+    },
+    "a green apple and a red car": {
+        "captions": [
+            "two green apples sitting on top of a red car"
+        ],
+        "image_names": [
+            "00310-0-a green apple and a red car.jpg"
+        ],
+        "text_similarities": [
+            0.9046889543533325
+        ]
+    },
+    "a green apple and a red suitcase": {
+        "captions": [
+            "a green apple sitting on top of a red suitcase"
+        ],
+        "image_names": [
+            "00380-0-a green apple and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9330970048904419
+        ]
+    },
+    "a green apple and a red train": {
+        "captions": [
+            "a close up of a train on a train track"
+        ],
+        "image_names": [
+            "00384-0-a green apple and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.6012877225875854
+        ]
+    },
+    "a green apple and a yellow banana": {
+        "captions": [
+            "a banana and an apple on a table"
+        ],
+        "image_names": [
+            "00170-0-a green apple and a yellow banana.jpg"
+        ],
+        "text_similarities": [
+            0.8366806507110596
+        ]
+    },
+    "a green backpack and a blue banana": {
+        "captions": [
+            "a green backpack with a banana on a wooden floor"
+        ],
+        "image_names": [
+            "00361-0-a green backpack and a blue banana.jpg"
+        ],
+        "text_similarities": [
+            0.7314250469207764
+        ]
+    },
+    "a green banana and a blue boat": {
+        "captions": [
+            "a banana hanging on a blue wall next to a boat"
+        ],
+        "image_names": [
+            "00402-0-a green banana and a blue boat.jpg"
+        ],
+        "text_similarities": [
+            0.5829014778137207
+        ]
+    },
+    "a green banana and a blue bowl": {
+        "captions": [
+            "a painting of a blue bowl with a banana in it"
+        ],
+        "image_names": [
+            "00228-0-a green banana and a blue bowl.jpg"
+        ],
+        "text_similarities": [
+            0.7335233688354492
+        ]
+    },
+    "a green banana and a blue cake": {
+        "captions": [
+            "a multi layer cake with a bunch of bananas on top of it"
+        ],
+        "image_names": [
+            "00212-0-a green banana and a blue cake.jpg"
+        ],
+        "text_similarities": [
+            0.5652828216552734
+        ]
+    },
+    "a green banana and a blue vase": {
+        "captions": [
+            "a blue vase sitting next to two bananas"
+        ],
+        "image_names": [
+            "00342-0-a green banana and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.7041162848472595
+        ]
+    },
+    "a green banana and a brown bear": {
+        "captions": [
+            "a brown bear standing next to a large banana"
+        ],
+        "image_names": [
+            "00398-0-a green banana and a brown bear.jpg"
+        ],
+        "text_similarities": [
+            0.6524206399917603
+        ]
+    },
+    "a green banana and a brown bird": {
+        "captions": [
+            "a bird sitting on top of a bunch of bananas"
+        ],
+        "image_names": [
+            "00106-0-a green banana and a brown bird.jpg"
+        ],
+        "text_similarities": [
+            0.6342980265617371
+        ]
+    },
+    "a green banana and a brown cow": {
+        "captions": [
+            "a brown cow with a green banana in its mouth"
+        ],
+        "image_names": [
+            "00412-0-a green banana and a brown cow.jpg"
+        ],
+        "text_similarities": [
+            0.8242889642715454
+        ]
+    },
+    "a green banana and a brown dog": {
+        "captions": [
+            "two pictures of a dog with bananas in his mouth"
+        ],
+        "image_names": [
+            "00332-0-a green banana and a brown dog.jpg"
+        ],
+        "text_similarities": [
+            0.5838230848312378
+        ]
+    },
+    "a green banana and a brown giraffe": {
+        "captions": [
+            "a couple of bananas sitting on top of a towel"
+        ],
+        "image_names": [
+            "00422-0-a green banana and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.5075414776802063
+        ]
+    },
+    "a green banana and a brown horse": {
+        "captions": [
+            "a brown horse standing next to a lush green forest"
+        ],
+        "image_names": [
+            "00334-0-a green banana and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.7819948196411133
+        ]
+    },
+    "a green banana and a brown sheep": {
+        "captions": [
+            "a sheep with a banana on its back"
+        ],
+        "image_names": [
+            "00266-0-a green banana and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.6869287490844727
+        ]
+    },
+    "a green banana and a pink cake": {
+        "captions": [
+            "a pink cupcake next to a bunch of bananas"
+        ],
+        "image_names": [
+            "00214-0-a green banana and a pink cake.jpg"
+        ],
+        "text_similarities": [
+            0.6289569139480591
+        ]
+    },
+    "a green banana and a red bird": {
+        "captions": [
+            "a red bird standing next to a bunch of bananas"
+        ],
+        "image_names": [
+            "00108-0-a green banana and a red bird.jpg"
+        ],
+        "text_similarities": [
+            0.6629248857498169
+        ]
+    },
+    "a green banana and a red bowl": {
+        "captions": [
+            "a painting of a banana in a red bowl"
+        ],
+        "image_names": [
+            "00230-0-a green banana and a red bowl.jpg"
+        ],
+        "text_similarities": [
+            0.6844425797462463
+        ]
+    },
+    "a green banana and a red suitcase": {
+        "captions": [
+            "a red case sitting next to a bunch of bananas"
+        ],
+        "image_names": [
+            "00348-0-a green banana and a red suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.6489383578300476
+        ]
+    },
+    "a green banana and a red train": {
+        "captions": [
+            "a couple of bananas hanging on a wall next to a red train"
+        ],
+        "image_names": [
+            "00308-0-a green banana and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.6320281028747559
+        ]
+    },
+    "a green bench and a blue boat": {
+        "captions": [
+            "a green bench sitting on the side of a road"
+        ],
+        "image_names": [
+            "00028-0-a green bench and a blue boat.jpg"
+        ],
+        "text_similarities": [
+            0.7669689655303955
+        ]
+    },
+    "a green bench and a blue book": {
+        "captions": [
+            "a green park bench with a book on it"
+        ],
+        "image_names": [
+            "00100-0-a green bench and a blue book.jpg"
+        ],
+        "text_similarities": [
+            0.7926462888717651
+        ]
+    },
+    "a green bench and a blue bowl": {
+        "captions": [
+            "a blue bowl sitting on top of a wooden bench"
+        ],
+        "image_names": [
+            "00320-0-a green bench and a blue bowl.jpg"
+        ],
+        "text_similarities": [
+            0.8375885486602783
+        ]
+    },
+    "a green bench and a blue cake": {
+        "captions": [
+            "a close up of a piece of cake on a table"
+        ],
+        "image_names": [
+            "00322-0-a green bench and a blue cake.jpg"
+        ],
+        "text_similarities": [
+            0.5732085704803467
+        ]
+    },
+    "a green bench and a blue car": {
+        "captions": [
+            "a close up of a park bench with grass growing on it"
+        ],
+        "image_names": [
+            "00002-0-a green bench and a blue car.jpg"
+        ],
+        "text_similarities": [
+            0.5996733903884888
+        ]
+    },
+    "a green bench and a blue chair": {
+        "captions": [
+            "a bench sitting in front of a green wall"
+        ],
+        "image_names": [
+            "00148-0-a green bench and a blue chair.jpg"
+        ],
+        "text_similarities": [
+            0.7919390201568604
+        ]
+    },
+    "a green bench and a brown bird": {
+        "captions": [
+            "a bird sitting on top of a green bench"
+        ],
+        "image_names": [
+            "00094-0-a green bench and a brown bird.jpg"
+        ],
+        "text_similarities": [
+            0.8490222096443176
+        ]
+    },
+    "a green bench and a brown cat": {
+        "captions": [
+            "a painting of a cat sitting on a bench"
+        ],
+        "image_names": [
+            "00054-0-a green bench and a brown cat.jpg"
+        ],
+        "text_similarities": [
+            0.723732054233551
+        ]
+    },
+    "a green bench and a brown clock": {
+        "captions": [
+            "a green bench and a white clock on a brown wall"
+        ],
+        "image_names": [
+            "00202-0-a green bench and a brown clock.jpg"
+        ],
+        "text_similarities": [
+            0.8856714963912964
+        ]
+    },
+    "a green bench and a brown dog": {
+        "captions": [
+            "a brown dog laying on top of a green bench"
+        ],
+        "image_names": [
+            "00012-0-a green bench and a brown dog.jpg"
+        ],
+        "text_similarities": [
+            0.8895716667175293
+        ]
+    },
+    "a green bench and a gold clock": {
+        "captions": [
+            "a green bench with a clock on it"
+        ],
+        "image_names": [
+            "00200-0-a green bench and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.8598589301109314
+        ]
+    },
+    "a green bench and a red bird": {
+        "captions": [
+            "a red bird sitting on top of a green bench"
+        ],
+        "image_names": [
+            "00096-0-a green bench and a red bird.jpg"
+        ],
+        "text_similarities": [
+            0.9165981411933899
+        ]
+    },
+    "a green bench and a red boat": {
+        "captions": [
+            "a green bench and a red boat on the grass"
+        ],
+        "image_names": [
+            "00030-0-a green bench and a red boat.jpg"
+        ],
+        "text_similarities": [
+            0.9139349460601807
+        ]
+    },
+    "a green bench and a red book": {
+        "captions": [
+            "a green bench with a red book on top of it"
+        ],
+        "image_names": [
+            "00098-0-a green bench and a red book.jpg"
+        ],
+        "text_similarities": [
+            0.9622064232826233
+        ]
+    },
+    "a green bench and a red car": {
+        "captions": [
+            "a green bench with a red car painted on it"
+        ],
+        "image_names": [
+            "00000-0-a green bench and a red car.jpg"
+        ],
+        "text_similarities": [
+            0.9560627341270447
+        ]
+    },
+    "a green bench and a red chair": {
+        "captions": [
+            "a couple of green and red chairs sitting next to each other"
+        ],
+        "image_names": [
+            "00146-0-a green bench and a red chair.jpg"
+        ],
+        "text_similarities": [
+            0.8733423352241516
+        ]
+    },
+    "a green bench and a red train": {
+        "captions": [
+            "a green bench in front of a red train"
+        ],
+        "image_names": [
+            "00024-0-a green bench and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.9613268971443176
+        ]
+    },
+    "a green bench and a yellow cat": {
+        "captions": [
+            "a cat sitting on top of a green bench"
+        ],
+        "image_names": [
+            "00056-0-a green bench and a yellow cat.jpg"
+        ],
+        "text_similarities": [
+            0.8254436254501343
+        ]
+    },
+    "a green bench and a yellow dog": {
+        "captions": [
+            "a yellow dog sitting next to a green bench"
+        ],
+        "image_names": [
+            "00014-0-a green bench and a yellow dog.jpg"
+        ],
+        "text_similarities": [
+            0.9434946775436401
+        ]
+    },
+    "a green bench and a yellow train": {
+        "captions": [
+            "a green bench sitting in front of a train"
+        ],
+        "image_names": [
+            "00026-0-a green bench and a yellow train.jpg"
+        ],
+        "text_similarities": [
+            0.8725646734237671
+        ]
+    },
+    "a green bowl and a blue vase": {
+        "captions": [
+            "a green bowl sitting on top of a table next to a blue glass"
+        ],
+        "image_names": [
+            "00131-0-a green bowl and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.8805530667304993
+        ]
+    },
+    "a green chair and a red vase": {
+        "captions": [
+            "a green chair with a red cup on top of it"
+        ],
+        "image_names": [
+            "00125-0-a green chair and a red vase.jpg"
+        ],
+        "text_similarities": [
+            0.8705637454986572
+        ]
+    },
+    "a green clock and a gold vase": {
+        "captions": [
+            "a green clock with gold numbers and a golden vase"
+        ],
+        "image_names": [
+            "00035-0-a green clock and a gold vase.jpg"
+        ],
+        "text_similarities": [
+            0.9101290702819824
+        ]
+    },
+    "a green cup and a blue cell phone": {
+        "captions": [
+            "a cup of coffee sitting on top of a tablet"
+        ],
+        "image_names": [
+            "00435-0-a green cup and a blue cell phone.jpg"
+        ],
+        "text_similarities": [
+            0.5943578481674194
+        ]
+    },
+    "a green cup and a blue vase": {
+        "captions": [
+            "a green cup with a blue lid sitting on a wooden table"
+        ],
+        "image_names": [
+            "00191-0-a green cup and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.8092273473739624
+        ]
+    },
+    "a green pepper to the left of a red pepper": {
+        "captions": [
+            "three green and red peppers on a black surface"
+        ],
+        "image_names": [
+            "00472-0-a green pepper to the left of a red pepper.jpg"
+        ],
+        "text_similarities": [
+            0.7935324907302856
+        ]
+    },
+    "a green plastic chair sitting next to a wooden bench": {
+        "captions": [
+            "a green chair sitting on top of a cement floor"
+        ],
+        "image_names": [
+            "00503-0-a green plastic chair sitting next to a wooden bench.jpg"
+        ],
+        "text_similarities": [
+            0.8279352188110352
+        ]
+    },
+    "a green pyramid in front of a blue box": {
+        "captions": [
+            "a green pyramid with water droplets on it"
+        ],
+        "image_names": [
+            "00467-0-a green pyramid in front of a blue box.jpg"
+        ],
+        "text_similarities": [
+            0.7739440202713013
+        ]
+    },
+    "a green wooden chair sitting next to a plastic bench": {
+        "captions": [
+            "a green bench sitting next to a brick wall"
+        ],
+        "image_names": [
+            "00504-0-a green wooden chair sitting next to a plastic bench.jpg"
+        ],
+        "text_similarities": [
+            0.7756783366203308
+        ]
+    },
+    "a helicopter and large plane fly through the air over the ocean and a small boat": {
+        "captions": [
+            "a helicopter flying over a large body of water"
+        ],
+        "image_names": [
+            "00582-0-a helicopter and large plane fly through the air over the ocean and a small boat.jpg"
+        ],
+        "text_similarities": [
+            0.8414807915687561
+        ]
+    },
+    "a helicopter and small plane fly through the air over the ocean and a large boat": {
+        "captions": [
+            "a helicopter flying over a boat in the ocean"
+        ],
+        "image_names": [
+            "00581-0-a helicopter and small plane fly through the air over the ocean and a large boat.jpg"
+        ],
+        "text_similarities": [
+            0.9215161800384521
+        ]
+    },
+    "a laptop resting on a silver table near a wooden kettle": {
+        "captions": [
+            "a tea pot with a tea kettle on top of it"
+        ],
+        "image_names": [
+            "00526-0-a laptop resting on a silver table near a wooden kettle.jpg"
+        ],
+        "text_similarities": [
+            0.6953243613243103
+        ]
+    },
+    "a laptop resting on a wooden table near a silver kettle": {
+        "captions": [
+            "a laptop computer sitting on top of a wooden table"
+        ],
+        "image_names": [
+            "00525-0-a laptop resting on a wooden table near a silver kettle.jpg"
+        ],
+        "text_similarities": [
+            0.7940253019332886
+        ]
+    },
+    "a large bathroom , toilet and sink with a small window": {
+        "captions": [
+            "a bathroom scene with a toilet and a window"
+        ],
+        "image_names": [
+            "00560-0-a large bathroom , toilet and sink with a small window.jpg"
+        ],
+        "text_similarities": [
+            0.9155076742172241
+        ]
+    },
+    "a large bathroom with a small mirror and single sink vanity": {
+        "captions": [
+            "a bathroom vanity with a mirror above it"
+        ],
+        "image_names": [
+            "00554-0-a large bathroom with a small mirror and single sink vanity.jpg"
+        ],
+        "text_similarities": [
+            0.9219928979873657
+        ]
+    },
+    "a large blue box with three small yellow boxes on it": {
+        "captions": [
+            "a blue box with yellow sticky notes in it"
+        ],
+        "image_names": [
+            "00456-0-a large blue box with three small yellow boxes on it.jpg"
+        ],
+        "text_similarities": [
+            0.8782312870025635
+        ]
+    },
+    "a large brick building with a small clock on it": {
+        "captions": [
+            "a clock on the side of a brick wall"
+        ],
+        "image_names": [
+            "00563-0-a large brick building with a small clock on it.jpg"
+        ],
+        "text_similarities": [
+            0.8282821178436279
+        ]
+    },
+    "a large garage space with a bunch of small jars in it": {
+        "captions": [
+            "a shelf filled with lots of different types of beans"
+        ],
+        "image_names": [
+            "00572-0-a large garage space with a bunch of small jars in it.jpg"
+        ],
+        "text_similarities": [
+            0.6148611307144165
+        ]
+    },
+    "a large kitten is lying on the seat of a small motorcycle": {
+        "captions": [
+            "a small kitten sitting next to a motorcycle"
+        ],
+        "image_names": [
+            "00578-0-a large kitten is lying on the seat of a small motorcycle.jpg"
+        ],
+        "text_similarities": [
+            0.8501656651496887
+        ]
+    },
+    "a large kitten sits in a small bowl": {
+        "captions": [
+            "a small kitten sitting in a wooden bowl"
+        ],
+        "image_names": [
+            "00574-0-a large kitten sits in a small bowl.jpg"
+        ],
+        "text_similarities": [
+            0.8301150798797607
+        ]
+    },
+    "a large mirror behind a sink and toilet in a small bathroom": {
+        "captions": [
+            "a bathroom with a toilet, sink and mirror"
+        ],
+        "image_names": [
+            "00583-0-a large mirror behind a sink and toilet in a small bathroom.jpg"
+        ],
+        "text_similarities": [
+            0.8440760374069214
+        ]
+    },
+    "a large plant is in the corner of a small bathroom": {
+        "captions": [
+            "a potted plant sitting on top of a white toilet"
+        ],
+        "image_names": [
+            "00557-0-a large plant is in the corner of a small bathroom.jpg"
+        ],
+        "text_similarities": [
+            0.7134523391723633
+        ]
+    },
+    "a large screen tv in a small bedroom": {
+        "captions": [
+            "a bed room with a neatly made bed and a flat screen tv"
+        ],
+        "image_names": [
+            "00585-0-a large screen tv in a small bedroom.jpg"
+        ],
+        "text_similarities": [
+            0.8782707452774048
+        ]
+    },
+    "a large tall building with a small bird flying over the top": {
+        "captions": [
+            "a bird flying in front of a tall building"
+        ],
+        "image_names": [
+            "00589-0-a large tall building with a small bird flying over the top.jpg"
+        ],
+        "text_similarities": [
+            0.9311495423316956
+        ]
+    },
+    "a large vehicle taxis a small jet down a runway": {
+        "captions": [
+            "a blue and yellow taxi plane on a runway"
+        ],
+        "image_names": [
+            "00556-0-a large vehicle taxis a small jet down a runway.jpg"
+        ],
+        "text_similarities": [
+            0.7786672115325928
+        ]
+    },
+    "a large white cat on a small bowl": {
+        "captions": [
+            "a white cat sitting in a bowl on top of a table"
+        ],
+        "image_names": [
+            "00552-0-a large white cat on a small bowl.jpg"
+        ],
+        "text_similarities": [
+            0.8996187448501587
+        ]
+    },
+    "a large yellow and black car driving around the bend of a road between small hill formations": {
+        "captions": [
+            "a yellow car driving down a mountain road"
+        ],
+        "image_names": [
+            "00562-0-a large yellow and black car driving around the bend of a road between small hill formations.jpg"
+        ],
+        "text_similarities": [
+            0.8455334901809692
+        ]
+    },
+    "a large yellow sphere behind a small purple pyramid": {
+        "captions": [
+            "a yellow ball sitting in front of a purple triangle"
+        ],
+        "image_names": [
+            "00468-0-a large yellow sphere behind a small purple pyramid.jpg"
+        ],
+        "text_similarities": [
+            0.8401577472686768
+        ]
+    },
+    "a large yellow triangle above a green square and red rectangle": {
+        "captions": [
+            "a red and yellow triangle on a green background"
+        ],
+        "image_names": [
+            "00465-0-a large yellow triangle above a green square and red rectangle.jpg"
+        ],
+        "text_similarities": [
+            0.854438304901123
+        ]
+    },
+    "a living room area features a large window, a white couch, a small table and a large area ru": {
+        "captions": [
+            "a living room filled with furniture and a flat screen tv"
+        ],
+        "image_names": [
+            "00575-0-a living room area features a large window, a white couch, a small table and a large area ru.jpg"
+        ],
+        "text_similarities": [
+            0.7967719435691833
+        ]
+    },
+    "a living room area features a small window , a white couch , a large table and a large area ": {
+        "captions": [
+            "a living room with a couch and a table"
+        ],
+        "image_names": [
+            "00576-0-a living room area features a small window , a white couch , a large table and a large area .jpg"
+        ],
+        "text_similarities": [
+            0.85228431224823
+        ]
+    },
+    "a living room with a stone fireplace, mission style furniture, and wooden blinds": {
+        "captions": [
+            "a living room filled with furniture and a fire place"
+        ],
+        "image_names": [
+            "00541-0-a living room with a stone fireplace, mission style furniture, and wooden blinds.jpg"
+        ],
+        "text_similarities": [
+            0.7972912192344666
+        ]
+    },
+    "a living room with a wooden fireplace , mission style furniture , and stone blinds": {
+        "captions": [
+            "a living room filled with furniture and a fire place"
+        ],
+        "image_names": [
+            "00542-0-a living room with a wooden fireplace , mission style furniture , and stone blinds.jpg"
+        ],
+        "text_similarities": [
+            0.7798428535461426
+        ]
+    },
+    "a metallic blue sphere to the left of a brown cardboard box": {
+        "captions": [
+            "a blue ball sitting in a cardboard box"
+        ],
+        "image_names": [
+            "00469-0-a metallic blue sphere to the left of a brown cardboard box.jpg"
+        ],
+        "text_similarities": [
+            0.8442142009735107
+        ]
+    },
+    "a metallic blue sphere to the left of a yellow box made of felt": {
+        "captions": [
+            "a blue ball sitting on top of a table next to a yellow object"
+        ],
+        "image_names": [
+            "00447-0-a metallic blue sphere to the left of a yellow box made of felt.jpg"
+        ],
+        "text_similarities": [
+            0.7808387279510498
+        ]
+    },
+    "a pink banana and a green cake": {
+        "captions": [
+            "a cake with a banana on top of it"
+        ],
+        "image_names": [
+            "00215-0-a pink banana and a green cake.jpg"
+        ],
+        "text_similarities": [
+            0.6175723671913147
+        ]
+    },
+    "a pink bird and a brown elephant": {
+        "captions": [
+            "a pink bird standing next to an elephant"
+        ],
+        "image_names": [
+            "00083-0-a pink bird and a brown elephant.jpg"
+        ],
+        "text_similarities": [
+            0.9078115820884705
+        ]
+    },
+    "a pink bird and a brown sheep": {
+        "captions": [
+            "a couple of birds standing on top of a wooden fence"
+        ],
+        "image_names": [
+            "00103-0-a pink bird and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.5937511324882507
+        ]
+    },
+    "a pink car and a red elephant": {
+        "captions": [
+            "a pink truck with an elephant sticking its trunk out"
+        ],
+        "image_names": [
+            "00011-0-a pink car and a red elephant.jpg"
+        ],
+        "text_similarities": [
+            0.8527700901031494
+        ]
+    },
+    "a pink car and a red sheep": {
+        "captions": [
+            "a pink toy car with a sheep on top of it"
+        ],
+        "image_names": [
+            "00061-0-a pink car and a red sheep.jpg"
+        ],
+        "text_similarities": [
+            0.8489282727241516
+        ]
+    },
+    "a pink cat and a brown sheep": {
+        "captions": [
+            "a cat laying on the ground next to a stuffed animal"
+        ],
+        "image_names": [
+            "00175-0-a pink cat and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.6012380123138428
+        ]
+    },
+    "a pink cow and a brown sheep": {
+        "captions": [
+            "a couple of cows that are standing in the grass"
+        ],
+        "image_names": [
+            "00043-0-a pink cow and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7250356674194336
+        ]
+    },
+    "a pink dog and a brown sheep": {
+        "captions": [
+            "a small white dog with a pink teddy bear"
+        ],
+        "image_names": [
+            "00115-0-a pink dog and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7523317337036133
+        ]
+    },
+    "a pink elephant and a brown giraffe": {
+        "captions": [
+            "a pink elephant and a giraffe standing next to each other"
+        ],
+        "image_names": [
+            "00194-0-a pink elephant and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.9523669481277466
+        ]
+    },
+    "a pink horse and a brown sheep": {
+        "captions": [
+            "a horse and two sheep standing in a field"
+        ],
+        "image_names": [
+            "00155-0-a pink horse and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7447943091392517
+        ]
+    },
+    "a plastic box full of powdered donuts on a wooden table": {
+        "captions": [
+            "a bunch of doughnuts that are on a table"
+        ],
+        "image_names": [
+            "00517-0-a plastic box full of powdered donuts on a wooden table.jpg"
+        ],
+        "text_similarities": [
+            0.7813870906829834
+        ]
+    },
+    "a plastic fork and dish on wooden slats": {
+        "captions": [
+            "a white plate topped with a wooden fork and knife"
+        ],
+        "image_names": [
+            "00497-0-a plastic fork and dish on wooden slats.jpg"
+        ],
+        "text_similarities": [
+            0.8246038556098938
+        ]
+    },
+    "a plastic fork and lid sit on a wooden bench": {
+        "captions": [
+            "a green plastic plate and fork sitting on the ground"
+        ],
+        "image_names": [
+            "00493-0-a plastic fork and lid sit on a wooden bench.jpg"
+        ],
+        "text_similarities": [
+            0.7725609540939331
+        ]
+    },
+    "a plastic surface holds an opened beverage can , an open book , a meal and wooden fork on a ": {
+        "captions": [
+            "a yellow and blue notebook sitting on top of a wooden table"
+        ],
+        "image_names": [
+            "00544-0-a plastic surface holds an opened beverage can , an open book , a meal and wooden fork on a .jpg"
+        ],
+        "text_similarities": [
+            0.5125473141670227
+        ]
+    },
+    "a red apple and a green banana": {
+        "captions": [
+            "two apples and a banana on a table"
+        ],
+        "image_names": [
+            "00172-0-a red apple and a green banana.jpg"
+        ],
+        "text_similarities": [
+            0.7563934326171875
+        ]
+    },
+    "a red apple and a green bird": {
+        "captions": [
+            "a green bird sitting on top of a wooden pole next to an apple"
+        ],
+        "image_names": [
+            "00129-0-a red apple and a green bird.jpg"
+        ],
+        "text_similarities": [
+            0.7816942930221558
+        ]
+    },
+    "a red apple and a green book": {
+        "captions": [
+            "two apples sitting on top of a plastic tray"
+        ],
+        "image_names": [
+            "00289-0-a red apple and a green book.jpg"
+        ],
+        "text_similarities": [
+            0.6360381245613098
+        ]
+    },
+    "a red apple and a green bowl": {
+        "captions": [
+            "a green bowl with a red apple in it"
+        ],
+        "image_names": [
+            "00235-0-a red apple and a green bowl.jpg"
+        ],
+        "text_similarities": [
+            0.9414633512496948
+        ]
+    },
+    "a red apple and a green car": {
+        "captions": [
+            "an apple sitting on the hood of a green car"
+        ],
+        "image_names": [
+            "00311-0-a red apple and a green car.jpg"
+        ],
+        "text_similarities": [
+            0.8331986665725708
+        ]
+    },
+    "a red apple and a green suitcase": {
+        "captions": [
+            "an apple sitting on top of a green suitcase"
+        ],
+        "image_names": [
+            "00381-0-a red apple and a green suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8592973351478577
+        ]
+    },
+    "a red apple and a green train": {
+        "captions": [
+            "a red apple sitting on top of a wooden pole"
+        ],
+        "image_names": [
+            "00385-0-a red apple and a green train.jpg"
+        ],
+        "text_similarities": [
+            0.7122501730918884
+        ]
+    },
+    "a red apple and yellow bananas": {
+        "captions": [
+            "a red apple sitting next to a yellow banana"
+        ],
+        "image_names": [
+            "00444-0-a red apple and yellow bananas.jpg"
+        ],
+        "text_similarities": [
+            0.9056333303451538
+        ]
+    },
+    "a red backpack and a blue book": {
+        "captions": [
+            "a red backpack sitting on top of a book shelf"
+        ],
+        "image_names": [
+            "00329-0-a red backpack and a blue book.jpg"
+        ],
+        "text_similarities": [
+            0.8043005466461182
+        ]
+    },
+    "a red backpack and a blue car": {
+        "captions": [
+            "a man with a red backpack standing next to a blue car"
+        ],
+        "image_names": [
+            "00407-0-a red backpack and a blue car.jpg"
+        ],
+        "text_similarities": [
+            0.8870658874511719
+        ]
+    },
+    "a red backpack and a blue chair": {
+        "captions": [
+            "a red backpack and a blue plastic lawn chair"
+        ],
+        "image_names": [
+            "00353-0-a red backpack and a blue chair.jpg"
+        ],
+        "text_similarities": [
+            0.9294787049293518
+        ]
+    },
+    "a red backpack and a blue suitcase": {
+        "captions": [
+            "a woman with a red backpack and a blue suitcase"
+        ],
+        "image_names": [
+            "00136-0-a red backpack and a blue suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9190493226051331
+        ]
+    },
+    "a red backpack and a blue train": {
+        "captions": [
+            "a blue and red backpack sitting on top of a train track"
+        ],
+        "image_names": [
+            "00393-0-a red backpack and a blue train.jpg"
+        ],
+        "text_similarities": [
+            0.8280074000358582
+        ]
+    },
+    "a red banana and a green bird": {
+        "captions": [
+            "a bird sitting on a branch next to a picture of a bird"
+        ],
+        "image_names": [
+            "00109-0-a red banana and a green bird.jpg"
+        ],
+        "text_similarities": [
+            0.5775935053825378
+        ]
+    },
+    "a red banana and a green bowl": {
+        "captions": [
+            "a couple of bananas sitting on top of a green plate"
+        ],
+        "image_names": [
+            "00231-0-a red banana and a green bowl.jpg"
+        ],
+        "text_similarities": [
+            0.5771130323410034
+        ]
+    },
+    "a red banana and a green suitcase": {
+        "captions": [
+            "a banana sitting on top of a green suitcase"
+        ],
+        "image_names": [
+            "00349-0-a red banana and a green suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.663848876953125
+        ]
+    },
+    "a red banana and a green train": {
+        "captions": [
+            "a red hot chili sitting on top of a green container"
+        ],
+        "image_names": [
+            "00309-0-a red banana and a green train.jpg"
+        ],
+        "text_similarities": [
+            0.6654118895530701
+        ]
+    },
+    "a red bear and a brown book": {
+        "captions": [
+            "a brown teddy bear sitting next to a red book"
+        ],
+        "image_names": [
+            "00331-0-a red bear and a brown book.jpg"
+        ],
+        "text_similarities": [
+            0.8744205832481384
+        ]
+    },
+    "a red bear and a brown train": {
+        "captions": [
+            "a painting of a bear on a train"
+        ],
+        "image_names": [
+            "00379-0-a red bear and a brown train.jpg"
+        ],
+        "text_similarities": [
+            0.7181501388549805
+        ]
+    },
+    "a red bench and a green bird": {
+        "captions": [
+            "a yellow and green bird sitting on a red bench"
+        ],
+        "image_names": [
+            "00097-0-a red bench and a green bird.jpg"
+        ],
+        "text_similarities": [
+            0.8637464046478271
+        ]
+    },
+    "a red bench and a green boat": {
+        "captions": [
+            "a red and green boat sitting on top of a body of water"
+        ],
+        "image_names": [
+            "00031-0-a red bench and a green boat.jpg"
+        ],
+        "text_similarities": [
+            0.806054949760437
+        ]
+    },
+    "a red bench and a green book": {
+        "captions": [
+            "a red bench sitting on top of a lush green field"
+        ],
+        "image_names": [
+            "00099-0-a red bench and a green book.jpg"
+        ],
+        "text_similarities": [
+            0.7806557416915894
+        ]
+    },
+    "a red bench and a green car": {
+        "captions": [
+            "a green car parked next to a red bench"
+        ],
+        "image_names": [
+            "00001-0-a red bench and a green car.jpg"
+        ],
+        "text_similarities": [
+            0.9412935376167297
+        ]
+    },
+    "a red bench and a green chair": {
+        "captions": [
+            "a red and green bench sitting in front of a building"
+        ],
+        "image_names": [
+            "00147-0-a red bench and a green chair.jpg"
+        ],
+        "text_similarities": [
+            0.8848010301589966
+        ]
+    },
+    "a red bench and a green train": {
+        "captions": [
+            "a red bench sitting next to a green car"
+        ],
+        "image_names": [
+            "00025-0-a red bench and a green train.jpg"
+        ],
+        "text_similarities": [
+            0.8798319101333618
+        ]
+    },
+    "a red bird and a brown boat": {
+        "captions": [
+            "a close up of a red bird on a boat"
+        ],
+        "image_names": [
+            "00207-0-a red bird and a brown boat.jpg"
+        ],
+        "text_similarities": [
+            0.8298625946044922
+        ]
+    },
+    "a red bird and a brown bowl": {
+        "captions": [
+            "a red bird perched on top of a wooden pole"
+        ],
+        "image_names": [
+            "00161-0-a red bird and a brown bowl.jpg"
+        ],
+        "text_similarities": [
+            0.7057362794876099
+        ]
+    },
+    "a red bird and a brown car": {
+        "captions": [
+            "a red bird standing on the side of a road"
+        ],
+        "image_names": [
+            "00183-0-a red bird and a brown car.jpg"
+        ],
+        "text_similarities": [
+            0.8071597814559937
+        ]
+    },
+    "a red bird and a brown cat": {
+        "captions": [
+            "a red bird and a black cat sitting on a ledge"
+        ],
+        "image_names": [
+            "00246-0-a red bird and a brown cat.jpg"
+        ],
+        "text_similarities": [
+            0.8154222965240479
+        ]
+    },
+    "a red bird and a brown chair": {
+        "captions": [
+            "a red bird sitting on top of a red chair"
+        ],
+        "image_names": [
+            "00237-0-a red bird and a brown chair.jpg"
+        ],
+        "text_similarities": [
+            0.8941404223442078
+        ]
+    },
+    "a red bird and a brown cow": {
+        "captions": [
+            "a large red cow standing on top of a lush green field"
+        ],
+        "image_names": [
+            "00143-0-a red bird and a brown cow.jpg"
+        ],
+        "text_similarities": [
+            0.6597586870193481
+        ]
+    },
+    "a red bird and a brown elephant": {
+        "captions": [
+            "a red bird perched on top of a human's head"
+        ],
+        "image_names": [
+            "00084-0-a red bird and a brown elephant.jpg"
+        ],
+        "text_similarities": [
+            0.7082319855690002
+        ]
+    },
+    "a red bird and a brown giraffe": {
+        "captions": [
+            "a giraffe standing next to a red bird on top of a wooden post"
+        ],
+        "image_names": [
+            "00040-0-a red bird and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.809038519859314
+        ]
+    },
+    "a red bird and a brown sheep": {
+        "captions": [
+            "a bird and a sheep standing on top of a hill"
+        ],
+        "image_names": [
+            "00104-0-a red bird and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7481215596199036
+        ]
+    },
+    "a red bird and a gold clock": {
+        "captions": [
+            "a clock with a red bird on it"
+        ],
+        "image_names": [
+            "00140-0-a red bird and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.8390297889709473
+        ]
+    },
+    "a red block to the left of a blue pyramid": {
+        "captions": [
+            "a red, white, and blue painting with lines"
+        ],
+        "image_names": [
+            "00457-0-a red block to the left of a blue pyramid.jpg"
+        ],
+        "text_similarities": [
+            0.6223469376564026
+        ]
+    },
+    "a red boat and a blue book": {
+        "captions": [
+            "a red boat floating on top of a lake next to a blue book"
+        ],
+        "image_names": [
+            "00425-0-a red boat and a blue book.jpg"
+        ],
+        "text_similarities": [
+            0.8850774168968201
+        ]
+    },
+    "a red boat and a blue car": {
+        "captions": [
+            "a red and blue boat sitting on top of a lush green field"
+        ],
+        "image_names": [
+            "00047-0-a red boat and a blue car.jpg"
+        ],
+        "text_similarities": [
+            0.7526189088821411
+        ]
+    },
+    "a red boat and a blue cow": {
+        "captions": [
+            "a cow is sitting in a red boat"
+        ],
+        "image_names": [
+            "00165-0-a red boat and a blue cow.jpg"
+        ],
+        "text_similarities": [
+            0.8391714692115784
+        ]
+    },
+    "a red boat and a blue suitcase": {
+        "captions": [
+            "a red and blue boat sitting on the shore of a lake"
+        ],
+        "image_names": [
+            "00389-0-a red boat and a blue suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.7917360663414001
+        ]
+    },
+    "a red book and a blue bowl": {
+        "captions": [
+            "a painting of a blue bowl next to a red book"
+        ],
+        "image_names": [
+            "00280-0-a red book and a blue bowl.jpg"
+        ],
+        "text_similarities": [
+            0.9533074498176575
+        ]
+    },
+    "a red book and a blue cake": {
+        "captions": [
+            "a cake shaped like a red couch with a blue umbrella on top of it"
+        ],
+        "image_names": [
+            "00372-0-a red book and a blue cake.jpg"
+        ],
+        "text_similarities": [
+            0.7925776243209839
+        ]
+    },
+    "a red book and a blue cup": {
+        "captions": [
+            "an open book with a blue cup on top of it"
+        ],
+        "image_names": [
+            "00314-0-a red book and a blue cup.jpg"
+        ],
+        "text_similarities": [
+            0.8405252695083618
+        ]
+    },
+    "a red book and a blue suitcase": {
+        "captions": [
+            "an open book sitting next to a blue suitcase"
+        ],
+        "image_names": [
+            "00211-0-a red book and a blue suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8381715416908264
+        ]
+    },
+    "a red book and a brown cat": {
+        "captions": [
+            "a cat laying on a table next to a red book"
+        ],
+        "image_names": [
+            "00166-0-a red book and a brown cat.jpg"
+        ],
+        "text_similarities": [
+            0.8087462186813354
+        ]
+    },
+    "a red book and a brown clock": {
+        "captions": [
+            "a red alarm clock sitting on top of an open book"
+        ],
+        "image_names": [
+            "00076-0-a red book and a brown clock.jpg"
+        ],
+        "text_similarities": [
+            0.8264948725700378
+        ]
+    },
+    "a red book and a brown cow": {
+        "captions": [
+            "a red book sitting on top of a table next to a cow"
+        ],
+        "image_names": [
+            "00278-0-a red book and a brown cow.jpg"
+        ],
+        "text_similarities": [
+            0.8518139123916626
+        ]
+    },
+    "a red book and a brown dog": {
+        "captions": [
+            "a dog is sitting next to a red bag"
+        ],
+        "image_names": [
+            "00256-0-a red book and a brown dog.jpg"
+        ],
+        "text_similarities": [
+            0.7611134052276611
+        ]
+    },
+    "a red book and a brown giraffe": {
+        "captions": [
+            "a stuffed giraffe sitting on top of an open book"
+        ],
+        "image_names": [
+            "00318-0-a red book and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.7765048742294312
+        ]
+    },
+    "a red book and a brown horse": {
+        "captions": [
+            "a horse with a book in its mouth"
+        ],
+        "image_names": [
+            "00292-0-a red book and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.7609112858772278
+        ]
+    },
+    "a red book and a brown sheep": {
+        "captions": [
+            "a stuffed animal is peeking out of a red book"
+        ],
+        "image_names": [
+            "00420-0-a red book and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.8064903616905212
+        ]
+    },
+    "a red book and a gold clock": {
+        "captions": [
+            "a pen sitting on top of an open book"
+        ],
+        "image_names": [
+            "00074-0-a red book and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.6371503472328186
+        ]
+    },
+    "a red book and a yellow cat": {
+        "captions": [
+            "an orange cat sitting behind an open book"
+        ],
+        "image_names": [
+            "00168-0-a red book and a yellow cat.jpg"
+        ],
+        "text_similarities": [
+            0.778560996055603
+        ]
+    },
+    "a red book and a yellow dog": {
+        "captions": [
+            "a dog is standing in front of a book"
+        ],
+        "image_names": [
+            "00258-0-a red book and a yellow dog.jpg"
+        ],
+        "text_similarities": [
+            0.7274419665336609
+        ]
+    },
+    "a red book and a yellow vase": {
+        "captions": [
+            "a vase of yellow flowers next to a red book"
+        ],
+        "image_names": [
+            "00441-0-a red book and a yellow vase.jpg"
+        ],
+        "text_similarities": [
+            0.9260444045066833
+        ]
+    },
+    "a red bowl and a blue car": {
+        "captions": [
+            "a red and blue bowl sitting on top of a wooden table"
+        ],
+        "image_names": [
+            "00297-0-a red bowl and a blue car.jpg"
+        ],
+        "text_similarities": [
+            0.7987900972366333
+        ]
+    },
+    "a red bowl and a blue chair": {
+        "captions": [
+            "a red and blue bowl sitting on top of a table"
+        ],
+        "image_names": [
+            "00305-0-a red bowl and a blue chair.jpg"
+        ],
+        "text_similarities": [
+            0.8693201541900635
+        ]
+    },
+    "a red bowl and a blue cup": {
+        "captions": [
+            "a red bowl sitting on top of a counter"
+        ],
+        "image_names": [
+            "00051-0-a red bowl and a blue cup.jpg"
+        ],
+        "text_similarities": [
+            0.7845856547355652
+        ]
+    },
+    "a red bowl and a blue train": {
+        "captions": [
+            "a painting of a red bowl on a train track"
+        ],
+        "image_names": [
+            "00383-0-a red bowl and a blue train.jpg"
+        ],
+        "text_similarities": [
+            0.7340640425682068
+        ]
+    },
+    "a red bowl and a blue vase": {
+        "captions": [
+            "a painting of a red bowl and blue bowls"
+        ],
+        "image_names": [
+            "00132-0-a red bowl and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.8860747218132019
+        ]
+    },
+    "a red box next to a blue box": {
+        "captions": [
+            "a red and a blue box on a green wall"
+        ],
+        "image_names": [
+            "00454-0-a red box next to a blue box.jpg"
+        ],
+        "text_similarities": [
+            0.8460536599159241
+        ]
+    },
+    "a red box to the right of a green sphere": {
+        "captions": [
+            "a red traffic light with a green ball in it"
+        ],
+        "image_names": [
+            "00453-0-a red box to the right of a green sphere.jpg"
+        ],
+        "text_similarities": [
+            0.8067102432250977
+        ]
+    },
+    "a red cake and a blue suitcase": {
+        "captions": [
+            "a piece of red velvet cake on a plate"
+        ],
+        "image_names": [
+            "00337-0-a red cake and a blue suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.6856650710105896
+        ]
+    },
+    "a red car and a blue cup": {
+        "captions": [
+            "a red car with a cup on top of it"
+        ],
+        "image_names": [
+            "00404-0-a red car and a blue cup.jpg"
+        ],
+        "text_similarities": [
+            0.8724199533462524
+        ]
+    },
+    "a red car and a blue horse": {
+        "captions": [
+            "a blue horse standing next to a red car"
+        ],
+        "image_names": [
+            "00120-0-a red car and a blue horse.jpg"
+        ],
+        "text_similarities": [
+            0.9365050792694092
+        ]
+    },
+    "a red car and a blue suitcase": {
+        "captions": [
+            "a red car and a blue suitcase on the street"
+        ],
+        "image_names": [
+            "00260-0-a red car and a blue suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.960355281829834
+        ]
+    },
+    "a red car and a blue train": {
+        "captions": [
+            "a painting of a red bus driving down a road"
+        ],
+        "image_names": [
+            "00251-0-a red car and a blue train.jpg"
+        ],
+        "text_similarities": [
+            0.7550524473190308
+        ]
+    },
+    "a red car and a brown cat": {
+        "captions": [
+            "a red car parked next to a black cat"
+        ],
+        "image_names": [
+            "00086-0-a red car and a brown cat.jpg"
+        ],
+        "text_similarities": [
+            0.877289891242981
+        ]
+    },
+    "a red car and a brown clock": {
+        "captions": [
+            "a red car parked next to a clock on a wall"
+        ],
+        "image_names": [
+            "00006-0-a red car and a brown clock.jpg"
+        ],
+        "text_similarities": [
+            0.8813523650169373
+        ]
+    },
+    "a red car and a brown cow": {
+        "captions": [
+            "a brown cow standing next to a red car"
+        ],
+        "image_names": [
+            "00036-0-a red car and a brown cow.jpg"
+        ],
+        "text_similarities": [
+            0.9249372482299805
+        ]
+    },
+    "a red car and a brown dog": {
+        "captions": [
+            "a dog is sitting in a toy car"
+        ],
+        "image_names": [
+            "00252-0-a red car and a brown dog.jpg"
+        ],
+        "text_similarities": [
+            0.6928869485855103
+        ]
+    },
+    "a red car and a brown elephant": {
+        "captions": [
+            "an elephant standing next to a red sports car"
+        ],
+        "image_names": [
+            "00008-0-a red car and a brown elephant.jpg"
+        ],
+        "text_similarities": [
+            0.8606318235397339
+        ]
+    },
+    "a red car and a brown giraffe": {
+        "captions": [
+            "a giraffe standing next to a red car"
+        ],
+        "image_names": [
+            "00216-0-a red car and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.9019055366516113
+        ]
+    },
+    "a red car and a brown horse": {
+        "captions": [
+            "a red horse standing next to a white car"
+        ],
+        "image_names": [
+            "00118-0-a red car and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.8370932340621948
+        ]
+    },
+    "a red car and a brown sheep": {
+        "captions": [
+            "a toy car and a sheep in a field"
+        ],
+        "image_names": [
+            "00058-0-a red car and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7436283826828003
+        ]
+    },
+    "a red car and a gold clock": {
+        "captions": [
+            "a red car with a clock on top of it"
+        ],
+        "image_names": [
+            "00004-0-a red car and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.8564174175262451
+        ]
+    },
+    "a red car and a pink elephant": {
+        "captions": [
+            "a red car parked in front of a pink elephant statue"
+        ],
+        "image_names": [
+            "00010-0-a red car and a pink elephant.jpg"
+        ],
+        "text_similarities": [
+            0.9066577553749084
+        ]
+    },
+    "a red car and a pink sheep": {
+        "captions": [
+            "a red toy car with a pink blanket on top of it"
+        ],
+        "image_names": [
+            "00060-0-a red car and a pink sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7923226356506348
+        ]
+    },
+    "a red car and a white sheep": {
+        "captions": [
+            "a sheep is standing in front of a red car"
+        ],
+        "image_names": [
+            "00432-0-a red car and a white sheep.jpg"
+        ],
+        "text_similarities": [
+            0.9058605432510376
+        ]
+    },
+    "a red car and a yellow cat": {
+        "captions": [
+            "a cat sitting on a ledge next to a parked car"
+        ],
+        "image_names": [
+            "00088-0-a red car and a yellow cat.jpg"
+        ],
+        "text_similarities": [
+            0.6396300792694092
+        ]
+    },
+    "a red car and a yellow dog": {
+        "captions": [
+            "a couple of dogs standing next to a red car"
+        ],
+        "image_names": [
+            "00254-0-a red car and a yellow dog.jpg"
+        ],
+        "text_similarities": [
+            0.8528464436531067
+        ]
+    },
+    "a red car and a yellow train": {
+        "captions": [
+            "a yellow and red truck parked next to each other"
+        ],
+        "image_names": [
+            "00248-0-a red car and a yellow train.jpg"
+        ],
+        "text_similarities": [
+            0.8339806795120239
+        ]
+    },
+    "a red cat and a brown chair": {
+        "captions": [
+            "a cat standing on top of a red chair"
+        ],
+        "image_names": [
+            "00179-0-a red cat and a brown chair.jpg"
+        ],
+        "text_similarities": [
+            0.7980003356933594
+        ]
+    },
+    "a red cat and a brown cup": {
+        "captions": [
+            "a close up of a cat near a cup of coffee"
+        ],
+        "image_names": [
+            "00189-0-a red cat and a brown cup.jpg"
+        ],
+        "text_similarities": [
+            0.7414544820785522
+        ]
+    },
+    "a red cat and a brown suitcase": {
+        "captions": [
+            "an orange and white cat sitting on top of a suitcase"
+        ],
+        "image_names": [
+            "00225-0-a red cat and a brown suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.6877414584159851
+        ]
+    },
+    "a red chair and a blue cup": {
+        "captions": [
+            "a red chair and a blue cup on a table"
+        ],
+        "image_names": [
+            "00270-0-a red chair and a blue cup.jpg"
+        ],
+        "text_similarities": [
+            0.9654947519302368
+        ]
+    },
+    "a red chair and a blue vase": {
+        "captions": [
+            "a painting of a red chair and a blue vase"
+        ],
+        "image_names": [
+            "00122-0-a red chair and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.9620083570480347
+        ]
+    },
+    "a red chair and a brown clock": {
+        "captions": [
+            "a red chair and a clock on a wall"
+        ],
+        "image_names": [
+            "00080-0-a red chair and a brown clock.jpg"
+        ],
+        "text_similarities": [
+            0.9053515791893005
+        ]
+    },
+    "a red chair and a brown dog": {
+        "captions": [
+            "a brown dog sitting on top of a red chair"
+        ],
+        "image_names": [
+            "00020-0-a red chair and a brown dog.jpg"
+        ],
+        "text_similarities": [
+            0.9071557521820068
+        ]
+    },
+    "a red chair and a brown elephant": {
+        "captions": [
+            "a small elephant standing next to a red chair"
+        ],
+        "image_names": [
+            "00362-0-a red chair and a brown elephant.jpg"
+        ],
+        "text_similarities": [
+            0.8971760272979736
+        ]
+    },
+    "a red chair and a brown giraffe": {
+        "captions": [
+            "a giraffe standing next to a red chair"
+        ],
+        "image_names": [
+            "00264-0-a red chair and a brown giraffe.jpg"
+        ],
+        "text_similarities": [
+            0.9049738645553589
+        ]
+    },
+    "a red chair and a brown sheep": {
+        "captions": [
+            "a toy sheep sitting in a red chair"
+        ],
+        "image_names": [
+            "00428-0-a red chair and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.8573546409606934
+        ]
+    },
+    "a red chair and a gold clock": {
+        "captions": [
+            "a red chair with a clock on a pedestal"
+        ],
+        "image_names": [
+            "00078-0-a red chair and a gold clock.jpg"
+        ],
+        "text_similarities": [
+            0.8724293112754822
+        ]
+    },
+    "a red chair and a green vase": {
+        "captions": [
+            "a red chair and a green vase sitting in the grass"
+        ],
+        "image_names": [
+            "00124-0-a red chair and a green vase.jpg"
+        ],
+        "text_similarities": [
+            0.8882243633270264
+        ]
+    },
+    "a red chair and a yellow dog": {
+        "captions": [
+            "a dog standing next to a red chair"
+        ],
+        "image_names": [
+            "00022-0-a red chair and a yellow dog.jpg"
+        ],
+        "text_similarities": [
+            0.8364301919937134
+        ]
+    },
+    "a red circle on top of a blue square": {
+        "captions": [
+            "a painting of a blue and yellow circle on a red background"
+        ],
+        "image_names": [
+            "00451-0-a red circle on top of a blue square.jpg"
+        ],
+        "text_similarities": [
+            0.7191675901412964
+        ]
+    },
+    "a red clock and a gold suitcase": {
+        "captions": [
+            "a red suitcase sitting next to some gold bars"
+        ],
+        "image_names": [
+            "00287-0-a red clock and a gold suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8414983749389648
+        ]
+    },
+    "a red clock and a gold train": {
+        "captions": [
+            "a toy train sitting next to a red clock"
+        ],
+        "image_names": [
+            "00197-0-a red clock and a gold train.jpg"
+        ],
+        "text_similarities": [
+            0.8697965145111084
+        ]
+    },
+    "a red cow and a brown dog": {
+        "captions": [
+            "a close up of a dog with its tongue out"
+        ],
+        "image_names": [
+            "00092-0-a red cow and a brown dog.jpg"
+        ],
+        "text_similarities": [
+            0.5114431381225586
+        ]
+    },
+    "a red cow and a brown horse": {
+        "captions": [
+            "a brown cow standing on top of a lush green field"
+        ],
+        "image_names": [
+            "00072-0-a red cow and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.6735347509384155
+        ]
+    },
+    "a red cow and a brown sheep": {
+        "captions": [
+            "a herd of cattle standing on top of a lush green field"
+        ],
+        "image_names": [
+            "00044-0-a red cow and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.6302647590637207
+        ]
+    },
+    "a red cow and a brown suitcase": {
+        "captions": [
+            "a painting of a cow holding a sign"
+        ],
+        "image_names": [
+            "00417-0-a red cow and a brown suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.6473923921585083
+        ]
+    },
+    "a red cube on top of a blue cube": {
+        "captions": [
+            "a red cube sitting on top of a white surface"
+        ],
+        "image_names": [
+            "00449-0-a red cube on top of a blue cube.jpg"
+        ],
+        "text_similarities": [
+            0.8335413336753845
+        ]
+    },
+    "a red cup and a blue suitcase": {
+        "captions": [
+            "a red cup sitting next to a blue suitcase"
+        ],
+        "image_names": [
+            "00295-0-a red cup and a blue suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9518471360206604
+        ]
+    },
+    "a red cup and a blue vase": {
+        "captions": [
+            "a painting of a blue cup and a red cup"
+        ],
+        "image_names": [
+            "00192-0-a red cup and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.8980355262756348
+        ]
+    },
+    "a red cylinder and a blue cube": {
+        "captions": [
+            "a red box with a blue block on top of it"
+        ],
+        "image_names": [
+            "00442-0-a red cylinder and a blue cube.jpg"
+        ],
+        "text_similarities": [
+            0.7966081500053406
+        ]
+    },
+    "a red dog and a brown suitcase": {
+        "captions": [
+            "a red dog standing next to a red suitcase"
+        ],
+        "image_names": [
+            "00241-0-a red dog and a brown suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.9074544906616211
+        ]
+    },
+    "a red elephant and a brown suitcase": {
+        "captions": [
+            "a red suitcase with an elephant painted on it"
+        ],
+        "image_names": [
+            "00339-0-a red elephant and a brown suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.8815329670906067
+        ]
+    },
+    "a red giraffe and a brown suitcase": {
+        "captions": [
+            "a giraffe head sticking out of an open suitcase"
+        ],
+        "image_names": [
+            "00273-0-a red giraffe and a brown suitcase.jpg"
+        ],
+        "text_similarities": [
+            0.7628352642059326
+        ]
+    },
+    "a red giraffe and a brown train": {
+        "captions": [
+            "a toy giraffe standing next to a toy train"
+        ],
+        "image_names": [
+            "00387-0-a red giraffe and a brown train.jpg"
+        ],
+        "text_similarities": [
+            0.7856703996658325
+        ]
+    },
+    "a red sphere on top of a yellow box": {
+        "captions": [
+            "a red ball sitting on top of a blue box"
+        ],
+        "image_names": [
+            "00455-0-a red sphere on top of a yellow box.jpg"
+        ],
+        "text_similarities": [
+            0.813599169254303
+        ]
+    },
+    "a red suitcase and a blue vase": {
+        "captions": [
+            "a painting of a green vase with flowers in it"
+        ],
+        "image_names": [
+            "00374-0-a red suitcase and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.6014374494552612
+        ]
+    },
+    "a red swirl above a black dashed line": {
+        "captions": [
+            "a red and white painting with black lines"
+        ],
+        "image_names": [
+            "00471-0-a red swirl above a black dashed line.jpg"
+        ],
+        "text_similarities": [
+            0.7897918820381165
+        ]
+    },
+    "a red train and a blue vase": {
+        "captions": [
+            "a painting of a red train with a blue vase"
+        ],
+        "image_names": [
+            "00410-0-a red train and a blue vase.jpg"
+        ],
+        "text_similarities": [
+            0.9391617774963379
+        ]
+    },
+    "a shiny , gold vase holds a colorful bouquet of flowers beside an elegant looking chair , in": {
+        "captions": [
+            "a gold chair with a vase of flowers on it"
+        ],
+        "image_names": [
+            "00550-0-a shiny , gold vase holds a colorful bouquet of flowers beside an elegant looking chair , in.jpg"
+        ],
+        "text_similarities": [
+            0.883086085319519
+        ]
+    },
+    "a shiny silver metal microwave near wooden cabinets": {
+        "captions": [
+            "a silver microwave oven sitting on top of a cabinet"
+        ],
+        "image_names": [
+            "00529-0-a shiny silver metal microwave near wooden cabinets.jpg"
+        ],
+        "text_similarities": [
+            0.8997244238853455
+        ]
+    },
+    "a shiny wooden metal microwave near silver cabinets": {
+        "captions": [
+            "a microwave built into a shelf in a kitchen"
+        ],
+        "image_names": [
+            "00530-0-a shiny wooden metal microwave near silver cabinets.jpg"
+        ],
+        "text_similarities": [
+            0.8107246160507202
+        ]
+    },
+    "a shiny, silver vase holds a colorful bouquet of flowers beside an elegant looking chair, in": {
+        "captions": [
+            "a gold vase filled with lots of colorful flowers"
+        ],
+        "image_names": [
+            "00549-0-a shiny, silver vase holds a colorful bouquet of flowers beside an elegant looking chair, in.jpg"
+        ],
+        "text_similarities": [
+            0.7579165697097778
+        ]
+    },
+    "a silver stove sits next to a counter on a wooden floor": {
+        "captions": [
+            "a stove top oven sitting inside of a kitchen"
+        ],
+        "image_names": [
+            "00519-0-a silver stove sits next to a counter on a wooden floor.jpg"
+        ],
+        "text_similarities": [
+            0.7846276164054871
+        ]
+    },
+    "a silver table with a black and wooden blender": {
+        "captions": [
+            "a blender sitting on top of a wooden table"
+        ],
+        "image_names": [
+            "00532-0-a silver table with a black and wooden blender.jpg"
+        ],
+        "text_similarities": [
+            0.7223802804946899
+        ]
+    },
+    "a skateboarder jumps over a silver dome with stone domes in front of it and bicycler behind ": {
+        "captions": [
+            "a man flying through the air while riding a skateboard"
+        ],
+        "image_names": [
+            "00514-0-a skateboarder jumps over a silver dome with stone domes in front of it and bicycler behind .jpg"
+        ],
+        "text_similarities": [
+            0.6843985319137573
+        ]
+    },
+    "a skateboarder jumps over a stone dome with silver domes in front of it and bicycler behind ": {
+        "captions": [
+            "a man riding a bike down a street next to a fountain"
+        ],
+        "image_names": [
+            "00513-0-a skateboarder jumps over a stone dome with silver domes in front of it and bicycler behind .jpg"
+        ],
+        "text_similarities": [
+            0.5900905728340149
+        ]
+    },
+    "a small bathroom with a large mirror and single sink vanity": {
+        "captions": [
+            "a bathroom vanity with a mirror above it"
+        ],
+        "image_names": [
+            "00553-0-a small bathroom with a large mirror and single sink vanity.jpg"
+        ],
+        "text_similarities": [
+            0.9269297122955322
+        ]
+    },
+    "a small bathroom, toilet and sink with a large window": {
+        "captions": [
+            "a white toilet sitting next to a window in a bathroom"
+        ],
+        "image_names": [
+            "00559-0-a small bathroom, toilet and sink with a large window.jpg"
+        ],
+        "text_similarities": [
+            0.8644858598709106
+        ]
+    },
+    "a small brick building with a large clock on it": {
+        "captions": [
+            "a red brick building with a green door"
+        ],
+        "image_names": [
+            "00564-0-a small brick building with a large clock on it.jpg"
+        ],
+        "text_similarities": [
+            0.7246904969215393
+        ]
+    },
+    "a small garage space with a bunch of large jars in it": {
+        "captions": [
+            "a shelf filled with lots of orange and yellow containers"
+        ],
+        "image_names": [
+            "00571-0-a small garage space with a bunch of large jars in it.jpg"
+        ],
+        "text_similarities": [
+            0.5650164484977722
+        ]
+    },
+    "a small kitten is lying on the seat of a large motorcycle": {
+        "captions": [
+            "a small kitten sitting on top of a wooden chair"
+        ],
+        "image_names": [
+            "00577-0-a small kitten is lying on the seat of a large motorcycle.jpg"
+        ],
+        "text_similarities": [
+            0.6903406381607056
+        ]
+    },
+    "a small kitten sits in a large bowl": {
+        "captions": [
+            "a small kitten is sitting in a bowl"
+        ],
+        "image_names": [
+            "00573-0-a small kitten sits in a large bowl.jpg"
+        ],
+        "text_similarities": [
+            0.9348376989364624
+        ]
+    },
+    "a small mirror behind a sink and toilet in a large bathroom": {
+        "captions": [
+            "a white sink sitting under a bathroom mirror"
+        ],
+        "image_names": [
+            "00584-0-a small mirror behind a sink and toilet in a large bathroom.jpg"
+        ],
+        "text_similarities": [
+            0.8853374719619751
+        ]
+    },
+    "a small plant is in the corner of a large bathroom": {
+        "captions": [
+            "a white toilet sitting next to a green plant"
+        ],
+        "image_names": [
+            "00558-0-a small plant is in the corner of a large bathroom.jpg"
+        ],
+        "text_similarities": [
+            0.7425369620323181
+        ]
+    },
+    "a small screen tv in a large bedroom": {
+        "captions": [
+            "a bed room with a bed a dresser and a tv"
+        ],
+        "image_names": [
+            "00586-0-a small screen tv in a large bedroom.jpg"
+        ],
+        "text_similarities": [
+            0.8417342305183411
+        ]
+    },
+    "a small silver laptop on a wooden table": {
+        "captions": [
+            "an apple laptop sitting on top of a wooden table"
+        ],
+        "image_names": [
+            "00535-0-a small silver laptop on a wooden table.jpg"
+        ],
+        "text_similarities": [
+            0.8252048492431641
+        ]
+    },
+    "a small tall building with a large bird flying over the top": {
+        "captions": [
+            "a painting of a tall building with birds flying around it"
+        ],
+        "image_names": [
+            "00590-0-a small tall building with a large bird flying over the top.jpg"
+        ],
+        "text_similarities": [
+            0.860435962677002
+        ]
+    },
+    "a small vehicle taxis a large jet down a runway": {
+        "captions": [
+            "a jet airliner sitting on top of an airport runway"
+        ],
+        "image_names": [
+            "00555-0-a small vehicle taxis a large jet down a runway.jpg"
+        ],
+        "text_similarities": [
+            0.8348796367645264
+        ]
+    },
+    "a small white cat on a large bowl": {
+        "captions": [
+            "a white cat sitting in a white bowl"
+        ],
+        "image_names": [
+            "00551-0-a small white cat on a large bowl.jpg"
+        ],
+        "text_similarities": [
+            0.91082763671875
+        ]
+    },
+    "a small white toilet in a tiny bathroom": {
+        "captions": [
+            "a white toilet sitting in a bathroom next to a shower"
+        ],
+        "image_names": [
+            "00568-0-a small white toilet in a tiny bathroom.jpg"
+        ],
+        "text_similarities": [
+            0.8943662643432617
+        ]
+    },
+    "a small wooden laptop on a silver table": {
+        "captions": [
+            "a close up of a cell phone on a table"
+        ],
+        "image_names": [
+            "00536-0-a small wooden laptop on a silver table.jpg"
+        ],
+        "text_similarities": [
+            0.6837598085403442
+        ]
+    },
+    "a small yellow and black car driving around the bend of a road between large hill formations": {
+        "captions": [
+            "a yellow van driving down a road next to a lush green hillside"
+        ],
+        "image_names": [
+            "00561-0-a small yellow and black car driving around the bend of a road between large hill formations.jpg"
+        ],
+        "text_similarities": [
+            0.7803746461868286
+        ]
+    },
+    "a square silver clock that reads 10:33 with a wooden arch in front of it": {
+        "captions": [
+            "a square clock mounted on a brown wall"
+        ],
+        "image_names": [
+            "00540-0-a square silver clock that reads 10:33 with a wooden arch in front of it.jpg"
+        ],
+        "text_similarities": [
+            0.7918705344200134
+        ]
+    },
+    "a square wooden clock that reads 10:33 with a silver arch in front of it": {
+        "captions": [
+            "a square clock mounted on a wall"
+        ],
+        "image_names": [
+            "00539-0-a square wooden clock that reads 10:33 with a silver arch in front of it.jpg"
+        ],
+        "text_similarities": [
+            0.827556848526001
+        ]
+    },
+    "a stack of three red cubes with a blue sphere on the right and two green cones on the left": {
+        "captions": [
+            "a toy car made out of plastic blocks"
+        ],
+        "image_names": [
+            "00446-0-a stack of three red cubes with a blue sphere on the right and two green cones on the left.jpg"
+        ],
+        "text_similarities": [
+            0.3478851616382599
+        ]
+    },
+    "a stone bench near a tree and a wooden wall": {
+        "captions": [
+            "a stone wall with a plaque on it in the grass"
+        ],
+        "image_names": [
+            "00502-0-a stone bench near a tree and a wooden wall.jpg"
+        ],
+        "text_similarities": [
+            0.7116823792457581
+        ]
+    },
+    "a stone bench on a wooden path with a green foliage background": {
+        "captions": [
+            "a wooden bench sitting on top of a lush green field"
+        ],
+        "image_names": [
+            "00492-0-a stone bench on a wooden path with a green foliage background.jpg"
+        ],
+        "text_similarities": [
+            0.6809757947921753
+        ]
+    },
+    "a stone building with a wooden bench placed near it": {
+        "captions": [
+            "a bench sitting in front of a stone wall"
+        ],
+        "image_names": [
+            "00487-0-a stone building with a wooden bench placed near it.jpg"
+        ],
+        "text_similarities": [
+            0.8233883380889893
+        ]
+    },
+    "a stone statue of an elderly woman sits upon a wooden bench": {
+        "captions": [
+            "a close up of a statue of a woman"
+        ],
+        "image_names": [
+            "00499-0-a stone statue of an elderly woman sits upon a wooden bench.jpg"
+        ],
+        "text_similarities": [
+            0.6429753303527832
+        ]
+    },
+    "a stone wooden with a clock on top": {
+        "captions": [
+            "a clock that is sitting on a rock"
+        ],
+        "image_names": [
+            "00548-0-a stone wooden with a clock on top.jpg"
+        ],
+        "text_similarities": [
+            0.813383162021637
+        ]
+    },
+    "a table topped with plastic combs and wooden display cases": {
+        "captions": [
+            "a table topped with a red and yellow comb of hair"
+        ],
+        "image_names": [
+            "00528-0-a table topped with plastic combs and wooden display cases.jpg"
+        ],
+        "text_similarities": [
+            0.7206548452377319
+        ]
+    },
+    "a table topped with wooden combs and plastic display cases": {
+        "captions": [
+            "a glass case with a model of a boat in it"
+        ],
+        "image_names": [
+            "00527-0-a table topped with wooden combs and plastic display cases.jpg"
+        ],
+        "text_similarities": [
+            0.6495329141616821
+        ]
+    },
+    "a tiled shower , molded wooden bathtub , shelf , mirror , plastic vanity , lamp , and sink m": {
+        "captions": [
+            "a white bath tub sitting next to a wall"
+        ],
+        "image_names": [
+            "00480-0-a tiled shower , molded wooden bathtub , shelf , mirror , plastic vanity , lamp , and sink m.jpg"
+        ],
+        "text_similarities": [
+            0.6746312975883484
+        ]
+    },
+    "a tiled shower, molded plastic bathtub, shelf, mirror, wooden vanity, lamp, and sink make up": {
+        "captions": [
+            "a large white bath tub sitting inside of a bathroom"
+        ],
+        "image_names": [
+            "00479-0-a tiled shower, molded plastic bathtub, shelf, mirror, wooden vanity, lamp, and sink make up.jpg"
+        ],
+        "text_similarities": [
+            0.7678747177124023
+        ]
+    },
+    "a tiny white toilet in a small bathroom": {
+        "captions": [
+            "a white toilet sitting in a bathroom next to a mirror"
+        ],
+        "image_names": [
+            "00567-0-a tiny white toilet in a small bathroom.jpg"
+        ],
+        "text_similarities": [
+            0.87659752368927
+        ]
+    },
+    "a two eleven sign and a pole with five signs": {
+        "captions": [
+            "a black and white photo of a street sign"
+        ],
+        "image_names": [
+            "00601-0-a two eleven sign and a pole with five signs.jpg"
+        ],
+        "text_similarities": [
+            0.6808542609214783
+        ]
+    },
+    "a white background with a large blue circle": {
+        "captions": [
+            "a close up of a blue circle on a white background"
+        ],
+        "image_names": [
+            "00460-0-a white background with a large blue circle.jpg"
+        ],
+        "text_similarities": [
+            0.9262064695358276
+        ]
+    },
+    "a white background with a large blue circle and a small green square": {
+        "captions": [
+            "a circular object with a green center on a blue background"
+        ],
+        "image_names": [
+            "00464-0-a white background with a large blue circle and a small green square.jpg"
+        ],
+        "text_similarities": [
+            0.8448783159255981
+        ]
+    },
+    "a white background with a large blue square": {
+        "captions": [
+            "a person's hand on a blue square object"
+        ],
+        "image_names": [
+            "00462-0-a white background with a large blue square.jpg"
+        ],
+        "text_similarities": [
+            0.7520679235458374
+        ]
+    },
+    "a white car and a red sheep": {
+        "captions": [
+            "a white car with a red sheep on the front of it"
+        ],
+        "image_names": [
+            "00437-0-a white car and a red sheep.jpg"
+        ],
+        "text_similarities": [
+            0.9242412447929382
+        ]
+    },
+    "a white flag with a red circle next to a solid blue flag": {
+        "captions": [
+            "a red, white and blue frisbee laying on the sand"
+        ],
+        "image_names": [
+            "00450-0-a white flag with a red circle next to a solid blue flag.jpg"
+        ],
+        "text_similarities": [
+            0.6020143628120422
+        ]
+    },
+    "a white plastic fork and a container top left on a wooden bench": {
+        "captions": [
+            "a plastic container with a fork, knife, and spoon in it"
+        ],
+        "image_names": [
+            "00495-0-a white plastic fork and a container top left on a wooden bench.jpg"
+        ],
+        "text_similarities": [
+            0.7834978103637695
+        ]
+    },
+    "a white wooden fork and a container top left on a plastic bench": {
+        "captions": [
+            "a plastic bench with a tray on top of it"
+        ],
+        "image_names": [
+            "00496-0-a white wooden fork and a container top left on a plastic bench.jpg"
+        ],
+        "text_similarities": [
+            0.7343751788139343
+        ]
+    },
+    "a woman cooking with a large white bot and a cooking board with meat in it in a small kitche": {
+        "captions": [
+            "a woman in a kitchen preparing a sandwich"
+        ],
+        "image_names": [
+            "00565-0-a woman cooking with a large white bot and a cooking board with meat in it in a small kitche.jpg"
+        ],
+        "text_similarities": [
+            0.7509675621986389
+        ]
+    },
+    "a woman cooking with a small white bot and a cooking board with meat in it in a large kitche": {
+        "captions": [
+            "a woman in a chef's hat is preparing food"
+        ],
+        "image_names": [
+            "00566-0-a woman cooking with a small white bot and a cooking board with meat in it in a large kitche.jpg"
+        ],
+        "text_similarities": [
+            0.7340690493583679
+        ]
+    },
+    "a wooden bench near a tree and a stone wall": {
+        "captions": [
+            "a red chair sitting under a tree on top of a lush green field"
+        ],
+        "image_names": [
+            "00501-0-a wooden bench near a tree and a stone wall.jpg"
+        ],
+        "text_similarities": [
+            0.576733410358429
+        ]
+    },
+    "a wooden bench on a stone path with a green foliage background": {
+        "captions": [
+            "a wooden bench sitting on top of a lush green field"
+        ],
+        "image_names": [
+            "00491-0-a wooden bench on a stone path with a green foliage background.jpg"
+        ],
+        "text_similarities": [
+            0.7330366969108582
+        ]
+    },
+    "a wooden box full of powdered donuts on a plastic table": {
+        "captions": [
+            "a close up of a box of doughnuts covered in powdered sugar"
+        ],
+        "image_names": [
+            "00518-0-a wooden box full of powdered donuts on a plastic table.jpg"
+        ],
+        "text_similarities": [
+            0.7338616251945496
+        ]
+    },
+    "a wooden building with a stone bench placed near it": {
+        "captions": [
+            "a concrete bench sitting in front of a wall"
+        ],
+        "image_names": [
+            "00488-0-a wooden building with a stone bench placed near it.jpg"
+        ],
+        "text_similarities": [
+            0.7236205339431763
+        ]
+    },
+    "a wooden colored dog lays nears some barrels on a gold deck": {
+        "captions": [
+            "a brown and white dog standing on top of a wooden barrel"
+        ],
+        "image_names": [
+            "00508-0-a wooden colored dog lays nears some barrels on a gold deck.jpg"
+        ],
+        "text_similarities": [
+            0.6829906702041626
+        ]
+    },
+    "a wooden fork and dish on plastic slats": {
+        "captions": [
+            "a white spoon sitting on top of a wooden table"
+        ],
+        "image_names": [
+            "00498-0-a wooden fork and dish on plastic slats.jpg"
+        ],
+        "text_similarities": [
+            0.731452226638794
+        ]
+    },
+    "a wooden fork and lid sit on a plastic bench": {
+        "captions": [
+            "a wooden plate with a fork on a white bench"
+        ],
+        "image_names": [
+            "00494-0-a wooden fork and lid sit on a plastic bench.jpg"
+        ],
+        "text_similarities": [
+            0.8930007219314575
+        ]
+    },
+    "a wooden statue of an elderly woman sits upon a stone bench": {
+        "captions": [
+            "a statue of an old woman sitting in the grass"
+        ],
+        "image_names": [
+            "00500-0-a wooden statue of an elderly woman sits upon a stone bench.jpg"
+        ],
+        "text_similarities": [
+            0.7537714242935181
+        ]
+    },
+    "a wooden stone with a clock on top": {
+        "captions": [
+            "a small wooden clock sitting on top of a table"
+        ],
+        "image_names": [
+            "00547-0-a wooden stone with a clock on top.jpg"
+        ],
+        "text_similarities": [
+            0.8339767456054688
+        ]
+    },
+    "a wooden stove sits next to a counter on a silver floor": {
+        "captions": [
+            "a stove top oven sitting in a kitchen next to a drain"
+        ],
+        "image_names": [
+            "00520-0-a wooden stove sits next to a counter on a silver floor.jpg"
+        ],
+        "text_similarities": [
+            0.786536693572998
+        ]
+    },
+    "a wooden surface holds an opened beverage can, an open book, a meal and plastic fork on a gl": {
+        "captions": [
+            "a yellow piece of cloth hanging on a black wall"
+        ],
+        "image_names": [
+            "00543-0-a wooden surface holds an opened beverage can, an open book, a meal and plastic fork on a gl.jpg"
+        ],
+        "text_similarities": [
+            0.42428091168403625
+        ]
+    },
+    "a wooden table with a black and silver blender": {
+        "captions": [
+            "a wooden table with a glass on top of it"
+        ],
+        "image_names": [
+            "00531-0-a wooden table with a black and silver blender.jpg"
+        ],
+        "text_similarities": [
+            0.7540287375450134
+        ]
+    },
+    "a yellow apple and a green banana": {
+        "captions": [
+            "a banana and an apple on a purple surface"
+        ],
+        "image_names": [
+            "00171-0-a yellow apple and a green banana.jpg"
+        ],
+        "text_similarities": [
+            0.774362325668335
+        ]
+    },
+    "a yellow apple and red bananas": {
+        "captions": [
+            "a green apple with a bite taken out of it"
+        ],
+        "image_names": [
+            "00445-0-a yellow apple and red bananas.jpg"
+        ],
+        "text_similarities": [
+            0.7184969186782837
+        ]
+    },
+    "a yellow backpack and a blue cat": {
+        "captions": [
+            "a blue and yellow cat with a yellow backpack"
+        ],
+        "image_names": [
+            "00113-0-a yellow backpack and a blue cat.jpg"
+        ],
+        "text_similarities": [
+            0.9400898218154907
+        ]
+    },
+    "a yellow bench and a green cat": {
+        "captions": [
+            "a cat with green eyes sitting on a green chair"
+        ],
+        "image_names": [
+            "00057-0-a yellow bench and a green cat.jpg"
+        ],
+        "text_similarities": [
+            0.718148410320282
+        ]
+    },
+    "a yellow bench and a green dog": {
+        "captions": [
+            "a green dog sitting on top of a yellow bench"
+        ],
+        "image_names": [
+            "00015-0-a yellow bench and a green dog.jpg"
+        ],
+        "text_similarities": [
+            0.9086346626281738
+        ]
+    },
+    "a yellow bench and a green train": {
+        "captions": [
+            "a yellow bench with a green bag on it"
+        ],
+        "image_names": [
+            "00027-0-a yellow bench and a green train.jpg"
+        ],
+        "text_similarities": [
+            0.8750166893005371
+        ]
+    },
+    "a yellow bird and a brown cat": {
+        "captions": [
+            "a yellow bird sitting on top of a table next to a cat"
+        ],
+        "image_names": [
+            "00245-0-a yellow bird and a brown cat.jpg"
+        ],
+        "text_similarities": [
+            0.8238959908485413
+        ]
+    },
+    "a yellow boat and a blue dog": {
+        "captions": [
+            "a dog sitting in a yellow boat on the beach"
+        ],
+        "image_names": [
+            "00223-0-a yellow boat and a blue dog.jpg"
+        ],
+        "text_similarities": [
+            0.7916143536567688
+        ]
+    },
+    "a yellow book and a red cat": {
+        "captions": [
+            "a cat sitting on top of a table next to a pile of books"
+        ],
+        "image_names": [
+            "00169-0-a yellow book and a red cat.jpg"
+        ],
+        "text_similarities": [
+            0.6394968032836914
+        ]
+    },
+    "a yellow book and a red dog": {
+        "captions": [
+            "a dog with a book in his mouth"
+        ],
+        "image_names": [
+            "00259-0-a yellow book and a red dog.jpg"
+        ],
+        "text_similarities": [
+            0.6756085157394409
+        ]
+    },
+    "a yellow book and a red vase": {
+        "captions": [
+            "a yellow vase with yellow flowers and a book on a table"
+        ],
+        "image_names": [
+            "00436-0-a yellow book and a red vase.jpg"
+        ],
+        "text_similarities": [
+            0.8233543038368225
+        ]
+    },
+    "a yellow bowl and a blue cat": {
+        "captions": [
+            "a blue and yellow cat eating out of a yellow bowl"
+        ],
+        "image_names": [
+            "00069-0-a yellow bowl and a blue cat.jpg"
+        ],
+        "text_similarities": [
+            0.9022839069366455
+        ]
+    },
+    "a yellow box to the right of a blue sphere": {
+        "captions": [
+            "a blurry picture of a yellow and blue object"
+        ],
+        "image_names": [
+            "00452-0-a yellow box to the right of a blue sphere.jpg"
+        ],
+        "text_similarities": [
+            0.772051990032196
+        ]
+    },
+    "a yellow car and a red cat": {
+        "captions": [
+            "a cat laying on top of a toy car"
+        ],
+        "image_names": [
+            "00089-0-a yellow car and a red cat.jpg"
+        ],
+        "text_similarities": [
+            0.6345808506011963
+        ]
+    },
+    "a yellow car and a red dog": {
+        "captions": [
+            "a brown dog sitting on top of a yellow car"
+        ],
+        "image_names": [
+            "00255-0-a yellow car and a red dog.jpg"
+        ],
+        "text_similarities": [
+            0.7943205833435059
+        ]
+    },
+    "a yellow car and a red train": {
+        "captions": [
+            "a yellow car and a red train on a track"
+        ],
+        "image_names": [
+            "00249-0-a yellow car and a red train.jpg"
+        ],
+        "text_similarities": [
+            0.9492026567459106
+        ]
+    },
+    "a yellow cat and a brown dog": {
+        "captions": [
+            "a dog and a cat laying next to each other"
+        ],
+        "image_names": [
+            "00063-0-a yellow cat and a brown dog.jpg"
+        ],
+        "text_similarities": [
+            0.7297881841659546
+        ]
+    },
+    "a yellow cat and a brown sheep": {
+        "captions": [
+            "a yellow and white cat sitting on top of a stuffed animal"
+        ],
+        "image_names": [
+            "00176-0-a yellow cat and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.704322874546051
+        ]
+    },
+    "a yellow chair and a red dog": {
+        "captions": [
+            "a red dog sitting on a yellow chair"
+        ],
+        "image_names": [
+            "00023-0-a yellow chair and a red dog.jpg"
+        ],
+        "text_similarities": [
+            0.9294564723968506
+        ]
+    },
+    "a yellow clock and a gold train": {
+        "captions": [
+            "a clock with roman numerals on a wall"
+        ],
+        "image_names": [
+            "00199-0-a yellow clock and a gold train.jpg"
+        ],
+        "text_similarities": [
+            0.6300416588783264
+        ]
+    },
+    "a yellow cow and a brown dog": {
+        "captions": [
+            "a brown and yellow cow standing on top of a lush green field"
+        ],
+        "image_names": [
+            "00091-0-a yellow cow and a brown dog.jpg"
+        ],
+        "text_similarities": [
+            0.7329882383346558
+        ]
+    },
+    "a yellow dog and a brown horse": {
+        "captions": [
+            "a dog that is standing in the grass"
+        ],
+        "image_names": [
+            "00018-0-a yellow dog and a brown horse.jpg"
+        ],
+        "text_similarities": [
+            0.607388973236084
+        ]
+    },
+    "a yellow dog and a brown sheep": {
+        "captions": [
+            "a dog and two sheep standing in a field"
+        ],
+        "image_names": [
+            "00116-0-a yellow dog and a brown sheep.jpg"
+        ],
+        "text_similarities": [
+            0.7422226667404175
+        ]
+    },
+    "a yellow swirl next to a blue dashed line": {
+        "captions": [
+            "a blue and yellow background with wavy lines"
+        ],
+        "image_names": [
+            "00470-0-a yellow swirl next to a blue dashed line.jpg"
+        ],
+        "text_similarities": [
+            0.766088604927063
+        ]
+    },
+    "a zebra standing alone in the snow with a stone block wall and wooden fence behind it": {
+        "captions": [
+            "a zebra standing next to a stone wall"
+        ],
+        "image_names": [
+            "00509-0-a zebra standing alone in the snow with a stone block wall and wooden fence behind it.jpg"
+        ],
+        "text_similarities": [
+            0.7397980093955994
+        ]
+    },
+    "a zebra standing alone in the snow with a wooden block wall and stone fence behind it": {
+        "captions": [
+            "a zebra standing in the snow in front of a building"
+        ],
+        "image_names": [
+            "00510-0-a zebra standing alone in the snow with a wooden block wall and stone fence behind it.jpg"
+        ],
+        "text_similarities": [
+            0.8104989528656006
+        ]
+    },
+    "an old building has stone arches and wooden doors": {
+        "captions": [
+            "a stone building with three arched doors"
+        ],
+        "image_names": [
+            "00477-0-an old building has stone arches and wooden doors.jpg"
+        ],
+        "text_similarities": [
+            0.9182602763175964
+        ]
+    },
+    "an old building has wooden arches and stone doors": {
+        "captions": [
+            "an old building with wooden doors and windows"
+        ],
+        "image_names": [
+            "00478-0-an old building has wooden arches and stone doors.jpg"
+        ],
+        "text_similarities": [
+            0.8522859811782837
+        ]
+    },
+    "an outdoor patio area with a plastic bench , wooden chair and a black piece of luggage with ": {
+        "captions": [
+            "a white bench with an orange umbrella over it"
+        ],
+        "image_names": [
+            "00506-0-an outdoor patio area with a plastic bench , wooden chair and a black piece of luggage with .jpg"
+        ],
+        "text_similarities": [
+            0.6083275079727173
+        ]
+    },
+    "an outdoor patio area with a wooden bench, plastic chair and a black piece of luggage with a": {
+        "captions": [
+            "a white bench with two umbrellas on it"
+        ],
+        "image_names": [
+            "00505-0-an outdoor patio area with a wooden bench, plastic chair and a black piece of luggage with a.jpg"
+        ],
+        "text_similarities": [
+            0.6351233124732971
+        ]
+    },
+    "blue and plastic motorcycle parked on pavement under silver awning": {
+        "captions": [
+            "a blue motorcycle parked in front of a building"
+        ],
+        "image_names": [
+            "00486-0-blue and plastic motorcycle parked on pavement under silver awning.jpg"
+        ],
+        "text_similarities": [
+            0.8600674271583557
+        ]
+    },
+    "blue and silver motorcycle parked on pavement under plastic awning": {
+        "captions": [
+            "a blue motorcycle parked in front of a blue building"
+        ],
+        "image_names": [
+            "00485-0-blue and silver motorcycle parked on pavement under plastic awning.jpg"
+        ],
+        "text_similarities": [
+            0.8233790397644043
+        ]
+    },
+    "one adults and three child skiing on a snow covered ski slope": {
+        "captions": [
+            "a group of people riding skis on top of a snow covered slope"
+        ],
+        "image_names": [
+            "00595-0-one adults and three child skiing on a snow covered ski slope.jpg"
+        ],
+        "text_similarities": [
+            0.8817192912101746
+        ]
+    },
+    "one green and two grey parrot perched on a branch": {
+        "captions": [
+            "a green parrot perched on top of a tree branch"
+        ],
+        "image_names": [
+            "00599-0-one green and two grey parrot perched on a branch.jpg"
+        ],
+        "text_similarities": [
+            0.8437070846557617
+        ]
+    },
+    "person handles yellow vegetable in silver pot at the wooden counter": {
+        "captions": [
+            "a person pouring mustard into a metal bowl"
+        ],
+        "image_names": [
+            "00511-0-person handles yellow vegetable in silver pot at the wooden counter.jpg"
+        ],
+        "text_similarities": [
+            0.7097792029380798
+        ]
+    },
+    "person handles yellow vegetable in wooden pot at the silver counter": {
+        "captions": [
+            "a person holding a pickle in a pot on a stove"
+        ],
+        "image_names": [
+            "00512-0-person handles yellow vegetable in wooden pot at the silver counter.jpg"
+        ],
+        "text_similarities": [
+            0.6724235415458679
+        ]
+    },
+    "several silver hole punchers and other office supplies on a wooden table": {
+        "captions": [
+            "a close up of a metal object on a wooden table"
+        ],
+        "image_names": [
+            "00533-0-several silver hole punchers and other office supplies on a wooden table.jpg"
+        ],
+        "text_similarities": [
+            0.6713263988494873
+        ]
+    },
+    "several wooden hole punchers and other office supplies on a silver table": {
+        "captions": [
+            "a close up of a door handle on a wooden door"
+        ],
+        "image_names": [
+            "00534-0-several wooden hole punchers and other office supplies on a silver table.jpg"
+        ],
+        "text_similarities": [
+            0.5816006660461426
+        ]
+    },
+    "small silver laptop sitting on top of a wooden computer desk": {
+        "captions": [
+            "a laptop computer sitting on top of a wooden desk"
+        ],
+        "image_names": [
+            "00521-0-small silver laptop sitting on top of a wooden computer desk.jpg"
+        ],
+        "text_similarities": [
+            0.8723429441452026
+        ]
+    },
+    "small wooden laptop sitting on top of a silver computer desk": {
+        "captions": [
+            "an open laptop computer sitting on top of a bed"
+        ],
+        "image_names": [
+            "00522-0-small wooden laptop sitting on top of a silver computer desk.jpg"
+        ],
+        "text_similarities": [
+            0.7841997146606445
+        ]
+    },
+    "the large car is towing a small airplane": {
+        "captions": [
+            "toy cars and a toy airplane on a parking lot"
+        ],
+        "image_names": [
+            "00570-0-the large car is towing a small airplane.jpg"
+        ],
+        "text_similarities": [
+            0.755864143371582
+        ]
+    },
+    "the large kitchen has small cabinets and two stoves": {
+        "captions": [
+            "a kitchen with a refrigerator, stove, sink and microwave"
+        ],
+        "image_names": [
+            "00588-0-the large kitchen has small cabinets and two stoves.jpg"
+        ],
+        "text_similarities": [
+            0.896594226360321
+        ]
+    },
+    "the plastic kitchen has a small child 's wooden table in it": {
+        "captions": [
+            "two little girls sitting at a wooden table"
+        ],
+        "image_names": [
+            "00538-0-the plastic kitchen has a small child 's wooden table in it.jpg"
+        ],
+        "text_similarities": [
+            0.7004032135009766
+        ]
+    },
+    "the small car is towing a large airplane": {
+        "captions": [
+            "a white car driving down a road next to an airplane"
+        ],
+        "image_names": [
+            "00569-0-the small car is towing a large airplane.jpg"
+        ],
+        "text_similarities": [
+            0.825977087020874
+        ]
+    },
+    "the small kitchen has large cabinets and two stoves": {
+        "captions": [
+            "a kitchen with wooden cabinets and stainless steel appliances"
+        ],
+        "image_names": [
+            "00587-0-the small kitchen has large cabinets and two stoves.jpg"
+        ],
+        "text_similarities": [
+            0.872872531414032
+        ]
+    },
+    "the wooden kitchen has a small child's plastic table in it": {
+        "captions": [
+            "a small kitchen with a table and two benches"
+        ],
+        "image_names": [
+            "00537-0-the wooden kitchen has a small child's plastic table in it.jpg"
+        ],
+        "text_similarities": [
+            0.8358323574066162
+        ]
+    },
+    "this kitchen has silver cabinets and wooden and black appliances": {
+        "captions": [
+            "a stove top oven sitting inside of a kitchen"
+        ],
+        "image_names": [
+            "00484-0-this kitchen has silver cabinets and wooden and black appliances.jpg"
+        ],
+        "text_similarities": [
+            0.8106540441513062
+        ]
+    },
+    "this kitchen has wooden cabinets and silver and black appliances": {
+        "captions": [
+            "a large kitchen with a center island and wooden cabinets"
+        ],
+        "image_names": [
+            "00483-0-this kitchen has wooden cabinets and silver and black appliances.jpg"
+        ],
+        "text_similarities": [
+            0.8637191653251648
+        ]
+    },
+    "three adults and one child skiing on a snow covered ski slope": {
+        "captions": [
+            "a group of people riding skis down a snow covered slope"
+        ],
+        "image_names": [
+            "00594-0-three adults and one child skiing on a snow covered ski slope.jpg"
+        ],
+        "text_similarities": [
+            0.877798855304718
+        ]
+    },
+    "three giraffes one are bending over and you can not see their heads and two in the center is": {
+        "captions": [
+            "a group of giraffes standing in a field"
+        ],
+        "image_names": [
+            "00597-0-three giraffes one are bending over and you can not see their heads and two in the center is.jpg"
+        ],
+        "text_similarities": [
+            0.7958081960678101
+        ]
+    },
+    "three giraffes two are bending over and  you can not see their heads and one in the center i": {
+        "captions": [
+            "a group of giraffe standing next to each other"
+        ],
+        "image_names": [
+            "00596-0-three giraffes two are bending over and  you can not see their heads and one in the center i.jpg"
+        ],
+        "text_similarities": [
+            0.8221064805984497
+        ]
+    },
+    "three planes fly close through the sky with four trailing smoke behind them": {
+        "captions": [
+            "a long tail of smoke is seen in the sky"
+        ],
+        "image_names": [
+            "00593-0-three planes fly close through the sky with four trailing smoke behind them.jpg"
+        ],
+        "text_similarities": [
+            0.803553581237793
+        ]
+    },
+    "three small yellow boxes on a large blue box": {
+        "captions": [
+            "a blue box with yellow boxes on top of it"
+        ],
+        "image_names": [
+            "00458-0-three small yellow boxes on a large blue box.jpg"
+        ],
+        "text_similarities": [
+            0.9135231971740723
+        ]
+    },
+    "two back to back stone benches next to a shrub near a wooden walkway": {
+        "captions": [
+            "a concrete bench sitting in front of a hedge"
+        ],
+        "image_names": [
+            "00476-0-two back to back stone benches next to a shrub near a wooden walkway.jpg"
+        ],
+        "text_similarities": [
+            0.7410951256752014
+        ]
+    },
+    "two back to back wooden benches next to a shrub near a stone walkway": {
+        "captions": [
+            "a wooden bench sitting in front of a green wall"
+        ],
+        "image_names": [
+            "00475-0-two back to back wooden benches next to a shrub near a stone walkway.jpg"
+        ],
+        "text_similarities": [
+            0.7292755842208862
+        ]
+    },
+    "two green and one grey parrot perched on a branch": {
+        "captions": [
+            "two blue and green parrots sitting on a branch"
+        ],
+        "image_names": [
+            "00598-0-two green and one grey parrot perched on a branch.jpg"
+        ],
+        "text_similarities": [
+            0.8091844320297241
+        ]
+    },
+    "two large giraffes and a small giraffe standing in tall grass": {
+        "captions": [
+            "a couple of giraffe standing next to each other on a lush green field"
+        ],
+        "image_names": [
+            "00591-0-two large giraffes and a small giraffe standing in tall grass.jpg"
+        ],
+        "text_similarities": [
+            0.892723798751831
+        ]
+    },
+    "two plastic containers sitting on top of a wooden table": {
+        "captions": [
+            "a plastic container with a wooden lid and a plastic container with a lid"
+        ],
+        "image_names": [
+            "00523-0-two plastic containers sitting on top of a wooden table.jpg"
+        ],
+        "text_similarities": [
+            0.8681424856185913
+        ]
+    },
+    "two small circles to the left of a red triangle that is on a green rectangle": {
+        "captions": [
+            "a green plate sitting on top of a table"
+        ],
+        "image_names": [
+            "00466-0-two small circles to the left of a red triangle that is on a green rectangle.jpg"
+        ],
+        "text_similarities": [
+            0.6081041097640991
+        ]
+    },
+    "two small giraffes and a large giraffe standing in tall grassfour planes fly close through t": {
+        "captions": [
+            "a group of giraffes standing in a field"
+        ],
+        "image_names": [
+            "00592-0-two small giraffes and a large giraffe standing in tall grassfour planes fly close through t.jpg"
+        ],
+        "text_similarities": [
+            0.8103333115577698
+        ]
+    },
+    "two wooden containers sitting on top of a plastic table": {
+        "captions": [
+            "a wooden table topped with a blue suitcase"
+        ],
+        "image_names": [
+            "00524-0-two wooden containers sitting on top of a plastic table.jpg"
+        ],
+        "text_similarities": [
+            0.7283666729927063
+        ]
+    },
+    "vegetables on a plastic table in wooden bags": {
+        "captions": [
+            "a table topped with bags filled with lots of vegetables"
+        ],
+        "image_names": [
+            "00516-0-vegetables on a plastic table in wooden bags.jpg"
+        ],
+        "text_similarities": [
+            0.8467168807983398
+        ]
+    },
+    "vegetables on a wooden table in plastic bags": {
+        "captions": [
+            "a pile of vegetables sitting on top of a wooden table"
+        ],
+        "image_names": [
+            "00515-0-vegetables on a wooden table in plastic bags.jpg"
+        ],
+        "text_similarities": [
+            0.81105637550354
+        ]
+    }
+}

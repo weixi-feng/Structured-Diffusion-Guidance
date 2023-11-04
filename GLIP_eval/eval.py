@@ -83,8 +83,7 @@ if __name__ == '__main__':
     with open(args.gt_caption_dir, 'r') as f:
         captions = f.read().splitlines()
 
-    print(captions[0], len(captions))
-    raise
+    # print(captions[0], len(captions))
 
     for file in tqdm(image_names):
         prompt = file.replace('.jpg', '').split('-')[-1]

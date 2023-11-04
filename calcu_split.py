@@ -3,7 +3,7 @@ import os
 from collections import defaultdict
 import numpy as np
 
-src = './mine_method/'
+src = './mine_method_blip'
 clips_result = [os.path.join(src, f) for f in os.listdir(src)]
 
 clips_json = defaultdict(list)
