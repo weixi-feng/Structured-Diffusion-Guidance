@@ -409,7 +409,7 @@ def main():
     # scheduler = PNDMScheduler()
     
 
-    pipe = StableDiffusionAttendAndExcitePipeline.from_pretrained(
+    pipe = StableDiffusionPipeline.from_pretrained(
             "CompVis/stable-diffusion-v1-4", ).to(device)
 
     print(type(pipe.scheduler))
