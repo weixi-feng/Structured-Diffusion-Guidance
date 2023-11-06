@@ -1120,7 +1120,6 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
 
                     avg_noise = all_noise_pred[1:, 0].mean(dim=0, keepdims=True) 
                     compose = avg_noise + (weights * (all_noise_pred[1:, 1] - avg_noise)).sum(dim=0, keepdims=True)
-                    print(compose.shape, len(prompt))
                     noise_pred = torch.cat([single_pred[:1], compose.repeat(len(prompt)-1, 1,1,1)])
 
             # compute the previous noisy sample x_t -> x_t-1
@@ -1137,7 +1136,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # 8. Post-processing
         if not output_type == "latent":
             with torch.set_grad_enabled(False):
-                latents = latents[1].unsqueeze(dim=0)
+                latents = latents[1:].mean(dim=0).unsqueeze(dim=0)
                 image = self.vae.decode(latents / self.vae.config.scaling_factor, return_dict=False)[0]
                 # image, has_nsfw_concept = self.run_safety_checker(image, device, prompt_embeds.dtype)
             has_nsfw_concept = None
