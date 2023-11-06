@@ -1055,6 +1055,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             # loss = 0
                             # TODO: how to make sub sentence attn map get close to master attn map 
                             attn_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),)
+
                             losses = list() 
                             master_idxs, sub_idxs = look_up_idxs[idx-1]
                             # sub_attention_map.append(attn_map)
@@ -1112,9 +1113,15 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                     single_pred = all_noise_pred[:, 0] + weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])
 
                     # compose 
-                    compose = all_noise_pred[0, 0] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
+                    # compose = all_noise_pred[2, 0] + (weights * (all_noise_pred[1:, 1] - all_noise_pred[1:, 0])).sum(dim=0, keepdims=True)
 
-                    noise_pred = torch.cat([compose, single_pred[1:]])
+                    # noise_pred = torch.cat([compose, single_pred[1:]])
+                    noise_pred = single_pred
+
+                    avg_noise = all_noise_pred[1:, 0].mean(dim=0, keepdims=True) 
+                    compose = avg_noise + (weights * (all_noise_pred[1:, 1] - avg_noise)).sum(dim=0, keepdims=True)
+                    print(compose.shape, len(prompt))
+                    noise_pred = torch.cat([single_pred[:1], compose.repeat(len(prompt)-1, 1,1,1)])
 
             # compute the previous noisy sample x_t -> x_t-1
                 latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
@@ -1130,7 +1137,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # 8. Post-processing
         if not output_type == "latent":
             with torch.set_grad_enabled(False):
-                image = self.vae.decode(latents[:1] / self.vae.config.scaling_factor, return_dict=False)[0]
+                latents = latents[1].unsqueeze(dim=0)
+                image = self.vae.decode(latents / self.vae.config.scaling_factor, return_dict=False)[0]
                 # image, has_nsfw_concept = self.run_safety_checker(image, device, prompt_embeds.dtype)
             has_nsfw_concept = None
         else:
