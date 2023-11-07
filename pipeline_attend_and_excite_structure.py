@@ -148,11 +148,13 @@ class AttentionStore:
 
 
 class AttendExciteAttnProcessor:
-    def __init__(self, attnstore, place_in_unet, name):
+    def __init__(self, attnstore, place_in_unet, sub_prompt_features=None, look_up_idxs=None):
         super().__init__()
         self.attnstore = attnstore
         self.place_in_unet = place_in_unet
-        self.name = name
+        # self.name = name
+        self.sub_prompt_features = sub_prompt_features
+        self.look_up_idxs = look_up_idxs
 
     def __call__(self, attn: Attention, hidden_states, encoder_hidden_states=None, attention_mask=None):
         batch_size, sequence_length, _ = hidden_states.shape
@@ -176,6 +178,16 @@ class AttendExciteAttnProcessor:
             # print(self.name)
             self.attnstore(attention_probs, is_cross, self.place_in_unet)
 
+        if self.sub_prompt_features is not None and self.look_up_idxs is not None and is_cross:
+            for (master_idxs, sub_idxs), text_feat in zip(self.look_up_idxs, self.sub_prompt_features):
+                text_feat = text_feat.unsqueeze(dim=0)
+                sub_v = attn.to_v(text_feat) 
+                sub_v = attn.head_to_batch_dim(sub_v)
+                # print(value.shape, sub_v.shape, encoder_hidden_states.shape, text_feat.shape)
+                for master_idx, sub_idx in zip(master_idxs, sub_idxs):
+                    value[-1, master_idx, :] = sub_v[-1, sub_idx, :]
+
+        # accoding to the attention_probs to swap values
         hidden_states = torch.bmm(attention_probs, value)
         hidden_states = attn.batch_to_head_dim(hidden_states)
 
@@ -750,7 +762,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         logger.info(f"\t Finished with loss of: {loss}")
         return loss, latents, max_attention_per_index
 
-    def register_attention_control(self):
+    def register_attention_control(self, text_embeddings, look_up_idxs):
         attn_procs = {}
         self.attn_hocks = dict()
         cross_att_count = 0
@@ -766,12 +778,10 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                 continue
 
             cross_att_count += 1
-            attn_procs[name] = AttendExciteAttnProcessor(attnstore=self.attention_store, place_in_unet=place_in_unet, name=name)
+            attn_procs[name] = AttendExciteAttnProcessor(attnstore=self.attention_store, place_in_unet=place_in_unet, sub_prompt_features=text_embeddings, look_up_idxs=look_up_idxs)
             self.attn_hocks[name] = attn_procs[name]
 
-        # print(type(self.unet), cross_att_count, len(attn_procs), len(self.attn_hocks))
         self.unet.set_attn_processor(attn_procs)
-        # print(type(self.unet), cross_att_count, len(attn_procs), len(self.attn_hocks))
         self.attention_store.num_att_layers = cross_att_count
 
     def get_indices(self, prompt: str) -> Dict[str, int]:
@@ -986,10 +996,16 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # 6. Prepare extra step kwargs. TODO: Logic should ideally just be moved out of the pipeline
         extra_step_kwargs = self.prepare_extra_step_kwargs(generator, eta)
  
+        look_up_idxs = list()
+        for nps, noun in zip(noun_phrase, nouns):
+            master_idxs, sub_idxs = self._look_up_in_master_prompt(nps, noun) 
+            look_up_idxs.append((master_idxs, sub_idxs))
+
         if attn_res is None:
             attn_res = int(np.ceil(width / 32)), int(np.ceil(height / 32))
         self.attention_store = AttentionStore(attn_res)
-        self.register_attention_control()
+        self.register_attention_control(text_embeddings, look_up_idxs)
+
  
         # default config for step size from original repo
         scale_range = np.linspace(1.0, 0.5, len(self.scheduler.timesteps))
@@ -1002,16 +1018,18 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # 7. Denoising loop
         num_warmup_steps = len(timesteps) - num_inference_steps * self.scheduler.order
 
-        look_up_idxs = list()
-        for nps, noun in zip(noun_phrase, nouns):
-            master_idxs, sub_idxs = self._look_up_in_master_prompt(nps, noun) 
-            look_up_idxs.append((master_idxs, sub_idxs))
 
-        noun_phrase = [(None, None)] + noun_phrase
-        nouns = [(None, None)] + nouns
+        # noun_phrase = [(None, None)] + noun_phrase
+        # nouns = [(None, None)] + nouns
+
+        noun_phrase = [(None, None)] 
+        nouns = [(None, None)] #+ nouns
+        prompt = prompt[:1]
 
         # self.ex_attn_map = defaultdict(list)
         conds = torch.cat([negative_prompt_embeds[:1], text_embeddings])
+
+
 
         with self.progress_bar(total=num_inference_steps) as progress_bar:
             for i, t in enumerate(timesteps):
@@ -1061,6 +1079,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                             # sub_attention_map.append(attn_map)
 
                             loss = 0
+                            
                             for master_idx, sub_idx in zip(master_idxs, sub_idxs):
                                 master_attn = master_attention_map[:, :, master_idx].detach()
                                 sub_attn = attn_map[:, :, sub_idx]
@@ -1136,7 +1155,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # 8. Post-processing
         if not output_type == "latent":
             with torch.set_grad_enabled(False):
-                latents = latents[1:].mean(dim=0).unsqueeze(dim=0)
+                # latents = latents[1:].mean(dim=0).unsqueeze(dim=0)
+                latents = latents[0].unsqueeze(dim=0)
                 image = self.vae.decode(latents / self.vae.config.scaling_factor, return_dict=False)[0]
                 # image, has_nsfw_concept = self.run_safety_checker(image, device, prompt_embeds.dtype)
             has_nsfw_concept = None
