@@ -211,6 +211,7 @@ def run(config: EvalConfig):
             full_text_similarities = [(feat.float() @ full_text_features.T).item() for feat in images_features]
             partial_sim = list() 
             if config.eval_partial:
+                print(prompt_parts, prompt)
                 for partial_prompt in prompt_parts:
                     partial_feature = get_embedding_for_prompt(model, partial_prompt, templates=imagenet_templates)
                     partial_similarities = [(feat.float() @ partial_feature.T).item() for feat in images_features]
@@ -224,14 +225,15 @@ def run(config: EvalConfig):
                     'partial_text': partial_sim,
                     'image_names': image_names,
                 }
-            elif not config.eval_partial:
-                results_per_prompt[prompt] = {
-                    'full_text': full_text_similarities,
-                    # 'first_half': first_half_similarities,
-                    # 'second_half': second_half_similarities,
-                    'partial_text': partial_sim,
-                    'image_names': image_names,
-                }
+
+
+            results_per_prompt[prompt] = {
+                'full_text': full_text_similarities,
+                # 'first_half': first_half_similarities,
+                # 'second_half': second_half_similarities,
+                'partial_text': partial_sim,
+                'image_names': image_names,
+            }
 
     # aggregate results
     aggregated_results = {
@@ -253,7 +255,17 @@ def aggregate_by_min_half(d):
     return np.average(min_per_half_res)
 
 def aggregate_by_min_partial(d):
-    min_per_partial_res = [min(d[prompt]['partial_text']) for prompt in d]
+    min_per_partial_res = list() 
+    for prompt, v in d.items():
+        partial_text_sim = v['partial_text'] 
+        if len(partial_text_sim) == 0:
+            continue
+        else:
+            min_per_partial_res+=(min(partial_text_sim))
+
+    if len(min_per_partial_res) == 0:
+        return 0
+
     min_per_half_res = np.array(min_per_partial_res).flatten()
     return np.average(min_per_half_res)
 
@@ -263,6 +275,8 @@ def aggregate_by_partial(d):
     for prompt in d:
         for x in d[prompt]['partial_text']:
             temp.append(x)
+    if len(temp) == 0:
+        return 0
     min_per_half_res = np.array(temp).flatten()
     return np.average(min_per_half_res)
 
