@@ -13,6 +13,7 @@
 # limitations under the License.
 import inspect
 import math
+from operator import is_
 from os import stat
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 import random
@@ -90,6 +91,8 @@ def find_noun(lines):
     return idxs
 
 
+
+
 class AttentionStore:
     @staticmethod
     def get_empty_store():
@@ -155,6 +158,10 @@ class AttendExciteAttnProcessor:
         # self.name = name
         self.sub_prompt_features = sub_prompt_features
         self.look_up_idxs = look_up_idxs
+        self.attn_map = None
+
+    def reset_attn(self):
+        self.attn_map = None
 
     def __call__(self, attn: Attention, hidden_states, encoder_hidden_states=None, attention_mask=None):
         batch_size, sequence_length, _ = hidden_states.shape
@@ -173,19 +180,35 @@ class AttendExciteAttnProcessor:
 
         attention_probs = attn.get_attention_scores(query, key, attention_mask)
 
+        if self.attn_map is None:
+            self.attn_map = attention_probs.detach()
+        else:
+            attention_probs[-self.attn_map.shape[0]:] = self.attn_map
+
         # only need to store attention maps during the Attend and Excite process
         if attention_probs.requires_grad:
             # print(self.name)
             self.attnstore(attention_probs, is_cross, self.place_in_unet)
 
-        if self.sub_prompt_features is not None and self.look_up_idxs is not None and is_cross:
-            for (master_idxs, sub_idxs), text_feat in zip(self.look_up_idxs, self.sub_prompt_features):
-                text_feat = text_feat.unsqueeze(dim=0)
-                sub_v = attn.to_v(text_feat) 
-                sub_v = attn.head_to_batch_dim(sub_v)
-                # print(value.shape, sub_v.shape, encoder_hidden_states.shape, text_feat.shape)
-                for master_idx, sub_idx in zip(master_idxs, sub_idxs):
-                    value[-1, master_idx, :] = sub_v[-1, sub_idx, :]
+        # if self.sub_prompt_features is not None and self.look_up_idxs is not None and is_cross:
+        #     sub_v_heads = list()
+        #     for (master_idxs, sub_idxs), text_feat in zip(self.look_up_idxs, self.sub_prompt_features):
+        #         text_feat = text_feat.unsqueeze(dim=0)
+        #         sub_v = attn.to_v(text_feat) 
+        #         sub_v = attn.head_to_batch_dim(sub_v)
+        #         # print(value.shape, sub_v.shape, encoder_hidden_states.shape, text_feat.shape)
+        #         for master_idx, sub_idx in zip(master_idxs, sub_idxs):
+        #             value[-1, master_idx, :] = sub_v[-1, sub_idx, :]
+
+                # sub_v_heads.append(sub_v[-1, 0, :])
+
+            # sub_v_heads.append(value[-1, 0, :])
+            # head = torch.stack(sub_v_heads, dim=0) 
+            # head = head.mean(dim=0) 
+            # value[-1, 0, :] = head
+
+
+
 
         # accoding to the attention_probs to swap values
         hidden_states = torch.bmm(attention_probs, value)
@@ -653,6 +676,28 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                     current_idx = idx
         return idx_master, idx_np
 
+    def _attn_to_prob(self, attention_maps):
+
+        # attention_for_text = attention_maps[:, :, 1:-1]
+        attention_for_text = attention_maps
+        attention_for_text *= 100
+        attention_for_text = torch.nn.functional.softmax(attention_for_text, dim=-1)
+
+        return attention_for_text
+
+
+    def _compute_attn_loss(self, attn_map, sub_maps, look_up):
+
+        loss = list()
+        attn_prob = self._attn_to_prob(attn_map) 
+        for sub_map, (master_idxs, sub_idxs) in zip(sub_maps, look_up):
+            sub_prob = self._attn_to_prob(sub_map) 
+            for master, sub in zip(master_idxs, sub_idxs):
+                loss.append(torch.nn.functional.mse_loss(attn_prob[:, :, master], sub_prob[:, :, sub], reduction='sum'))
+
+        loss = torch.stack(loss).mean()
+        return loss
+
 
 
     @staticmethod
@@ -778,7 +823,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                 continue
 
             cross_att_count += 1
-            attn_procs[name] = AttendExciteAttnProcessor(attnstore=self.attention_store, place_in_unet=place_in_unet, sub_prompt_features=text_embeddings, look_up_idxs=look_up_idxs)
+            # print(text_embeddings.shape, len(look_up_idxs))
+            attn_procs[name] = AttendExciteAttnProcessor(attnstore=self.attention_store, place_in_unet=place_in_unet, sub_prompt_features=text_embeddings[1:], look_up_idxs=look_up_idxs)
             self.attn_hocks[name] = attn_procs[name]
 
         self.unet.set_attn_processor(attn_procs)
@@ -1019,27 +1065,36 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         num_warmup_steps = len(timesteps) - num_inference_steps * self.scheduler.order
 
 
-        # noun_phrase = [(None, None)] + noun_phrase
-        # nouns = [(None, None)] + nouns
+        noun_phrase = [(None, None)] + noun_phrase
+        nouns = [(None, None)] + nouns
 
-        noun_phrase = [(None, None)] 
-        nouns = [(None, None)] #+ nouns
-        prompt = prompt[:1]
+        # noun_phrase = [(None, None)] 
+        # nouns = [(None, None)] #+ nouns
+        # prompt = prompt[:1]
 
         # self.ex_attn_map = defaultdict(list)
         conds = torch.cat([negative_prompt_embeds[:1], text_embeddings])
 
-
+        self.attn_to_save = list()
 
         with self.progress_bar(total=num_inference_steps) as progress_bar:
+            sub_attention_map = list()
             for i, t in enumerate(timesteps):
                 updated_latents = list()
                 master_attention_map = None
                 for idx, (text_embedding, nps, noun) in enumerate(zip(text_embeddings, noun_phrase, nouns)):
                     is_master = (idx == 0)
                     text_embedding = text_embedding.unsqueeze(0)
+
+                    # reset all attention 
+
                     with torch.enable_grad():
                         latents_to_update = latents.clone().detach().requires_grad_(True)[idx:idx+1]
+
+                        if is_master:
+                            # reset atten
+                            for k, v in self.attn_hocks.items():
+                                v.reset_attn()
                         
                         # latent = latent.unsqueeze(0)
                         self.unet(
@@ -1057,6 +1112,16 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                                 indices=token_indices,
                             )
                             loss = self._compute_loss(max_attention_per_index=max_attention_per_index)
+                            attn_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),)
+                            # if len(sub_attention_map) != 0:
+                            #     loss_attn = self._compute_attn_loss(attn_map, sub_attention_map, look_up_idxs)
+                            # else:
+                            #     loss_attn = 0
+
+                            # sub_attention_map = list()
+
+                            # loss = loss + loss_attn
+
 
                             # If this is an iterative refinement step, verify we have reached the desired threshold for all
                             if i in thresholds.keys() and loss > 1.0 - thresholds[i]:
@@ -1069,26 +1134,39 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                                     step_size=step_size[i],
                                     t=t,
                                 )
+
+                            # reset atten
+                            for k, v in self.attn_hocks.items():
+                                v.reset_attn()
+                            self.unet(
+                                latents_to_update,
+                                t,
+                                encoder_hidden_states=text_embedding,
+                                cross_attention_kwargs=cross_attention_kwargs,
+                            ).sample
+                            master_attention_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),)#.detach().requires_grad_(False)
+                            # self.attn_to_save.append(self._attn_to_prob(master_attention_map.detach().to('cpu')))
+                            # self.attn_to_save.append(master_attention_map.detach().to('cpu'))
+
                         else:
                             # loss = 0
                             # TODO: how to make sub sentence attn map get close to master attn map 
-                            attn_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),)
+                            attn_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),)#.detach()#.requires_grad_(False)
 
-                            losses = list() 
-                            master_idxs, sub_idxs = look_up_idxs[idx-1]
-                            # sub_attention_map.append(attn_map)
-
-                            loss = 0
-                            
-                            for master_idx, sub_idx in zip(master_idxs, sub_idxs):
-                                master_attn = master_attention_map[:, :, master_idx].detach()
-                                sub_attn = attn_map[:, :, sub_idx]
-                                loss = torch.nn.functional.mse_loss(sub_attn, master_attn, reduction='sum') 
-                                losses.append(loss)
-                            if len(losses) != 0:
-                                loss = torch.stack(losses, dim=0).sum()
-
-                        
+                            loss = 0 
+                            # losses = list() 
+                            # master_idxs, sub_idxs = look_up_idxs[idx-1]
+                            # # sub_attention_map.append(attn_map)
+                            # # 
+                            # loss = 0
+                            # for master_idx, sub_idx in zip(master_idxs, sub_idxs):
+                            #     master_attn = master_attention_map[:, :, master_idx]#.detach()
+                            #     sub_attn = attn_map[:, :, sub_idx]
+                            #     loss = torch.nn.functional.l1_loss(sub_attn, master_attn, reduction='mean') 
+                            #     losses.append(loss)
+                            # if len(losses) != 0:
+                            #     loss = torch.stack(losses, dim=0).sum()
+                                                
                         # Perform gradient update
                         if i < max_iter_to_alter:
                             if loss != 0:
@@ -1098,16 +1176,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                                     step_size=step_size[i],
                                 )
                             logger.info(f"Iteration {i} | Loss: {loss:0.4f}")
-                        if is_master:
-                            self.unet(
-                                latents_to_update,
-                                t,
-                                encoder_hidden_states=text_embedding,
-                                cross_attention_kwargs=cross_attention_kwargs,
-                            ).sample
-                            master_attention_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),).detach().requires_grad_(False)
 
-                        updated_latents.append(latents_to_update)
+                    updated_latents.append(latents_to_update)
 
                 latents = torch.cat(updated_latents, dim=0)
 
@@ -1115,7 +1185,11 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                 scaled_latents = self.scheduler.scale_model_input(latents, t)
 
                 all_noise_pred = list()
+
                 for pidx in range(len(prompt)):
+                    if pidx == 0:
+                        for k, v in self.attn_hocks.items():
+                            v.reset_attn()
                     cond = torch.cat([negative_prompt_embeds[:1], text_embeddings[pidx:pidx+1]])
                     input_latent = torch.cat([scaled_latents[pidx:pidx+1]]*2)
                     noise_pred = self.unet(
@@ -1126,20 +1200,21 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                     ).sample
                     all_noise_pred.append(noise_pred)
 
+
                 all_noise_pred = torch.stack(all_noise_pred, dim=0)
 
                 if do_classifier_free_guidance:
                     single_pred = all_noise_pred[:, 0] + weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])
 
                     # compose 
-                    # compose = all_noise_pred[2, 0] + (weights * (all_noise_pred[1:, 1] - all_noise_pred[1:, 0])).sum(dim=0, keepdims=True)
+                    compose = all_noise_pred[0, 0] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
 
-                    # noise_pred = torch.cat([compose, single_pred[1:]])
-                    noise_pred = single_pred
+                    noise_pred = torch.cat([compose, single_pred[1:]])
+                    # noise_pred = single_pred
 
-                    avg_noise = all_noise_pred[1:, 0].mean(dim=0, keepdims=True) 
-                    compose = avg_noise + (weights * (all_noise_pred[1:, 1] - avg_noise)).sum(dim=0, keepdims=True)
-                    noise_pred = torch.cat([single_pred[:1], compose.repeat(len(prompt)-1, 1,1,1)])
+                    # avg_noise = all_noise_pred[1:, 0].mean(dim=0, keepdims=True) 
+                    # compose = avg_noise + (weights * (all_noise_pred[1:, 1] - avg_noise)).sum(dim=0, keepdims=True)
+                    # noise_pred = torch.cat([single_pred[:1], compose.repeat(len(prompt)-1, 1,1,1)])
 
             # compute the previous noisy sample x_t -> x_t-1
                 latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
