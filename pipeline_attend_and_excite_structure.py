@@ -159,9 +159,23 @@ class AttendExciteAttnProcessor:
         self.sub_prompt_features = sub_prompt_features
         self.look_up_idxs = look_up_idxs
         self.attn_map = None
+        self.enable = False
+        self.sub_feat= False
 
     def reset_attn(self):
         self.attn_map = None
+
+    def enable_record(self):
+        self.attn_map = None
+        self.enable = True
+    def disable_record(self):
+        self.enable = False
+
+    def enable_sub_feature(self):
+        self.sub_feat = True
+
+    def disable_sub_feature(self):
+        self.sub_feat = False
 
     def __call__(self, attn: Attention, hidden_states, encoder_hidden_states=None, attention_mask=None):
         batch_size, sequence_length, _ = hidden_states.shape
@@ -181,24 +195,27 @@ class AttendExciteAttnProcessor:
         attention_probs = attn.get_attention_scores(query, key, attention_mask)
 
         if self.attn_map is None:
-            self.attn_map = attention_probs.detach()
+            if self.enable:
+                self.attn_map = attention_probs.detach()
         else:
-            attention_probs[-self.attn_map.shape[0]:] = self.attn_map
+            # attention_probs[-self.attn_map.shape[0]:] = self.attn_map
+            attention_probs = self.attn_map
 
         # only need to store attention maps during the Attend and Excite process
         if attention_probs.requires_grad:
             # print(self.name)
             self.attnstore(attention_probs, is_cross, self.place_in_unet)
 
-        # if self.sub_prompt_features is not None and self.look_up_idxs is not None and is_cross:
-        #     sub_v_heads = list()
-        #     for (master_idxs, sub_idxs), text_feat in zip(self.look_up_idxs, self.sub_prompt_features):
-        #         text_feat = text_feat.unsqueeze(dim=0)
-        #         sub_v = attn.to_v(text_feat) 
-        #         sub_v = attn.head_to_batch_dim(sub_v)
-        #         # print(value.shape, sub_v.shape, encoder_hidden_states.shape, text_feat.shape)
-        #         for master_idx, sub_idx in zip(master_idxs, sub_idxs):
-        #             value[-1, master_idx, :] = sub_v[-1, sub_idx, :]
+        if self.sub_feat:
+            if self.sub_prompt_features is not None and self.look_up_idxs is not None and is_cross:
+                sub_v_heads = list()
+                for (master_idxs, sub_idxs), text_feat in zip(self.look_up_idxs, self.sub_prompt_features):
+                    text_feat = text_feat.unsqueeze(dim=0)
+                    sub_v = attn.to_v(text_feat) 
+                    sub_v = attn.head_to_batch_dim(sub_v)
+                    # print(value.shape, sub_v.shape, encoder_hidden_states.shape, text_feat.shape)
+                    for master_idx, sub_idx in zip(master_idxs, sub_idxs):
+                        value[-1, master_idx, :] = sub_v[-1, sub_idx, :]
 
                 # sub_v_heads.append(sub_v[-1, 0, :])
 
@@ -774,6 +791,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
             iteration += 1
 
             latents = latents.clone().detach().requires_grad_(True)
+            self.reset_all_attn()
+            self.disable_all_attn()
             self.unet(latents, t, encoder_hidden_states=text_embeddings).sample
             self.unet.zero_grad()
 
@@ -796,6 +815,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         # Run one more time but don't compute gradients and update the latents.
         # We just need to compute the new loss - the grad update will occur below
         latents = latents.clone().detach().requires_grad_(True)
+        self.reset_all_attn()
+        self.disable_all_attn()
         _ = self.unet(latents, t, encoder_hidden_states=text_embeddings).sample
         self.unet.zero_grad()
 
@@ -835,6 +856,27 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         ids = self.tokenizer(prompt).input_ids
         indices = {i: tok for tok, i in zip(self.tokenizer.convert_ids_to_tokens(ids), range(len(ids)))}
         return indices
+
+
+    def enable_all_attn(self):
+        for k, v in self.attn_hocks.items():
+            v.enable_record() 
+
+    def disable_all_attn(self):
+        for k, v in self.attn_hocks.items():
+            v.disable_record() 
+
+    def reset_all_attn(self):
+        for k, v in self.attn_hocks.items():
+            v.reset_attn() 
+
+    def enable_sub_feature(self):
+        for k, v in self.attn_hocks.items():
+            v.enable_sub_feature() 
+
+    def disable_sub_feature(self):
+        for k, v in self.attn_hocks.items():
+            v.disable_sub_feature() 
 
     @torch.no_grad()
     @replace_example_docstring(EXAMPLE_DOC_STRING)
@@ -1090,23 +1132,23 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
 
                     with torch.enable_grad():
                         latents_to_update = latents.clone().detach().requires_grad_(True)[idx:idx+1]
-
-                        if is_master:
-                            # reset atten
-                            for k, v in self.attn_hocks.items():
-                                v.reset_attn()
-                        
                         # latent = latent.unsqueeze(0)
-                        self.unet(
-                            latents_to_update,
-                            t,
-                            encoder_hidden_states=text_embedding,
-                            cross_attention_kwargs=cross_attention_kwargs,
-                        ).sample
-                        self.unet.zero_grad()
-
+                        
                         if is_master:
-                            
+                            self.disable_all_attn()
+                            self.reset_all_attn()
+                            self.enable_sub_feature()
+                            self.unet(
+                                latents_to_update,
+                                t,
+                                encoder_hidden_states=text_embedding,
+                                cross_attention_kwargs=cross_attention_kwargs,
+                            ).sample
+                            self.unet.zero_grad()
+
+                            self.disable_sub_feature()
+
+    
                             # Get max activation value for each subject token
                             max_attention_per_index = self._aggregate_and_get_max_attention_per_token(
                                 indices=token_indices,
@@ -1136,17 +1178,14 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                                 )
 
                             # reset atten
-                            for k, v in self.attn_hocks.items():
-                                v.reset_attn()
-                            self.unet(
-                                latents_to_update,
-                                t,
-                                encoder_hidden_states=text_embedding,
-                                cross_attention_kwargs=cross_attention_kwargs,
-                            ).sample
-                            master_attention_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),)#.detach().requires_grad_(False)
-                            # self.attn_to_save.append(self._attn_to_prob(master_attention_map.detach().to('cpu')))
-                            # self.attn_to_save.append(master_attention_map.detach().to('cpu'))
+                            # self.enable_all_attn()
+                            # self.unet(
+                            #     latents_to_update,
+                            #     t,
+                            #     encoder_hidden_states=text_embedding,
+                            #     cross_attention_kwargs=cross_attention_kwargs,
+                            # ).sample
+                            # master_attention_map = self.attention_store.aggregate_attention(from_where=("up", "down", "mid"),)#.detach().requires_grad_(False)
 
                         else:
                             # loss = 0
@@ -1187,11 +1226,14 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                 all_noise_pred = list()
 
                 for pidx in range(len(prompt)):
-                    if pidx == 0:
-                        for k, v in self.attn_hocks.items():
-                            v.reset_attn()
                     cond = torch.cat([negative_prompt_embeds[:1], text_embeddings[pidx:pidx+1]])
                     input_latent = torch.cat([scaled_latents[pidx:pidx+1]]*2)
+                    if pidx == 0:
+                        self.enable_all_attn()
+                        self.enable_sub_feature()
+                    else:
+                        self.disable_all_attn()
+                        self.disable_sub_feature()
                     noise_pred = self.unet(
                         input_latent,
                         t,
@@ -1207,14 +1249,12 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                     single_pred = all_noise_pred[:, 0] + weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])
 
                     # compose 
-                    compose = all_noise_pred[0, 0] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
-
-                    noise_pred = torch.cat([compose, single_pred[1:]])
-                    # noise_pred = single_pred
-
                     # avg_noise = all_noise_pred[1:, 0].mean(dim=0, keepdims=True) 
                     # compose = avg_noise + (weights * (all_noise_pred[1:, 1] - avg_noise)).sum(dim=0, keepdims=True)
+                    compose = all_noise_pred[0, 0] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
                     # noise_pred = torch.cat([single_pred[:1], compose.repeat(len(prompt)-1, 1,1,1)])
+                    noise_pred = torch.cat([compose, single_pred[1:]])
+                    # noise_pred = single_pred
 
             # compute the previous noisy sample x_t -> x_t-1
                 latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample

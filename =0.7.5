@@ -1,0 +1,55 @@
+Collecting test-tube
+  Downloading test_tube-0.7.5.tar.gz (21 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pandas>=0.20.3 (from test-tube)
+  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Requirement already satisfied: numpy>=1.13.3 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from test-tube) (1.24.4)
+Requirement already satisfied: imageio>=2.3.0 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from test-tube) (2.9.0)
+Requirement already satisfied: tensorboard>=1.15.0 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from test-tube) (2.14.0)
+Requirement already satisfied: torch>=1.1.0 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from test-tube) (1.11.0)
+Requirement already satisfied: future in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from test-tube) (0.18.3)
+Requirement already satisfied: pillow in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from imageio>=2.3.0->test-tube) (10.0.1)
+Collecting python-dateutil>=2.8.2 (from pandas>=0.20.3->test-tube)
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting pytz>=2020.1 (from pandas>=0.20.3->test-tube)
+  Using cached pytz-2023.3.post1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.1 (from pandas>=0.20.3->test-tube)
+  Using cached tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+Requirement already satisfied: absl-py>=0.4 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (2.0.0)
+Requirement already satisfied: grpcio>=1.48.2 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (1.59.2)
+Requirement already satisfied: google-auth<3,>=1.6.3 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (2.23.4)
+Requirement already satisfied: google-auth-oauthlib<1.1,>=0.5 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (1.0.0)
+Requirement already satisfied: markdown>=2.6.8 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (3.5.1)
+Requirement already satisfied: protobuf>=3.19.6 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (4.25.0)
+Requirement already satisfied: requests<3,>=2.21.0 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (2.31.0)
+Requirement already satisfied: setuptools>=41.0.0 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (68.0.0)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (3.0.1)
+Requirement already satisfied: wheel>=0.26 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from tensorboard>=1.15.0->test-tube) (0.41.2)
+Requirement already satisfied: typing_extensions in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from torch>=1.1.0->test-tube) (4.7.1)
+Requirement already satisfied: cachetools<6.0,>=2.0.0 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from google-auth<3,>=1.6.3->tensorboard>=1.15.0->test-tube) (5.3.2)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from google-auth<3,>=1.6.3->tensorboard>=1.15.0->test-tube) (0.3.0)
+Requirement already satisfied: rsa<5,>=3.1.4 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from google-auth<3,>=1.6.3->tensorboard>=1.15.0->test-tube) (4.9)
+Requirement already satisfied: requests-oauthlib>=0.7.0 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from google-auth-oauthlib<1.1,>=0.5->tensorboard>=1.15.0->test-tube) (1.3.1)
+Requirement already satisfied: importlib-metadata>=4.4 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from markdown>=2.6.8->tensorboard>=1.15.0->test-tube) (6.8.0)
+Requirement already satisfied: six>=1.5 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas>=0.20.3->test-tube) (1.16.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard>=1.15.0->test-tube) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard>=1.15.0->test-tube) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard>=1.15.0->test-tube) (1.26.18)
+Requirement already satisfied: certifi>=2017.4.17 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard>=1.15.0->test-tube) (2023.7.22)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from werkzeug>=1.0.1->tensorboard>=1.15.0->test-tube) (2.1.3)
+Requirement already satisfied: zipp>=0.5 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from importlib-metadata>=4.4->markdown>=2.6.8->tensorboard>=1.15.0->test-tube) (3.17.0)
+Requirement already satisfied: pyasn1<0.6.0,>=0.4.6 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard>=1.15.0->test-tube) (0.5.0)
+Requirement already satisfied: oauthlib>=3.0.0 in /home/zhuqiang/.conda/envs/structure_diffusion/lib/python3.8/site-packages (from requests-oauthlib>=0.7.0->google-auth-oauthlib<1.1,>=0.5->tensorboard>=1.15.0->test-tube) (3.2.2)
+Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 104.8 MB/s eta 0:00:00
+Using cached pytz-2023.3.post1-py2.py3-none-any.whl (502 kB)
+Building wheels for collected packages: test-tube
+  Building wheel for test-tube (setup.py): started
+  Building wheel for test-tube (setup.py): finished with status 'done'
+  Created wheel for test-tube: filename=test_tube-0.7.5-py3-none-any.whl size=25327 sha256=638627b061f95c2e407599f020e7054bfde7509914612fc64370180358682857
+  Stored in directory: /home/zhuqiang/.cache/pip/wheels/95/b0/3a/00ea66dbb0d9ce470ce1bdcb854a6fa030c279c316cb27ca9e
+Successfully built test-tube
+Installing collected packages: pytz, tzdata, python-dateutil, pandas, test-tube
+Successfully installed pandas-2.0.3 python-dateutil-2.8.2 pytz-2023.3.post1 test-tube-0.7.5 tzdata-2023.3

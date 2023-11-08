@@ -1,0 +1,983 @@
+{
+    "a bear": {
+        "full_text": [
+            0.3147518038749695
+        ],
+        "image_names": [
+            "00325-0-a bear.jpg"
+        ],
+        "partial_text": []
+    },
+    "a bird": {
+        "full_text": [
+            0.29607829451560974
+        ],
+        "image_names": [
+            "00128-0-a bird.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black apple": {
+        "full_text": [
+            0.329159140586853
+        ],
+        "image_names": [
+            "00326-0-a black apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black backpack": {
+        "full_text": [
+            0.31115591526031494
+        ],
+        "image_names": [
+            "00392-0-a black backpack.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black balloon": {
+        "full_text": [
+            0.37414348125457764
+        ],
+        "image_names": [
+            "00428-0-a black balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black bench": {
+        "full_text": [
+            0.3692789673805237
+        ],
+        "image_names": [
+            "00456-0-a black bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black bowl": {
+        "full_text": [
+            0.381510853767395
+        ],
+        "image_names": [
+            "00201-0-a black bowl.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black car": {
+        "full_text": [
+            0.26768064498901367
+        ],
+        "image_names": [
+            "00329-0-a black car.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black chair": {
+        "full_text": [
+            0.3141917586326599
+        ],
+        "image_names": [
+            "00149-0-a black chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black clock": {
+        "full_text": [
+            0.3040381073951721
+        ],
+        "image_names": [
+            "00318-0-a black clock.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black crown": {
+        "full_text": [
+            0.2631995677947998
+        ],
+        "image_names": [
+            "00060-0-a black crown.jpg"
+        ],
+        "partial_text": []
+    },
+    "a black suitcase": {
+        "full_text": [
+            0.3436269164085388
+        ],
+        "image_names": [
+            "00391-0-a black suitcase.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue apple": {
+        "full_text": [
+            0.31916356086730957
+        ],
+        "image_names": [
+            "00319-0-a blue apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue backpack": {
+        "full_text": [
+            0.3311060667037964
+        ],
+        "image_names": [
+            "00388-0-a blue backpack.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue balloon": {
+        "full_text": [
+            0.3701329827308655
+        ],
+        "image_names": [
+            "00313-0-a blue balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue bench": {
+        "full_text": [
+            0.3674648404121399
+        ],
+        "image_names": [
+            "00465-0-a blue bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue bow": {
+        "full_text": [
+            0.37574589252471924
+        ],
+        "image_names": [
+            "00399-0-a blue bow.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue bowl": {
+        "full_text": [
+            0.34141138195991516
+        ],
+        "image_names": [
+            "00271-0-a blue bowl.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue chair": {
+        "full_text": [
+            0.37370675802230835
+        ],
+        "image_names": [
+            "00359-0-a blue chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue clock": {
+        "full_text": [
+            0.33144721388816833
+        ],
+        "image_names": [
+            "00265-0-a blue clock.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue crown": {
+        "full_text": [
+            0.29668372869491577
+        ],
+        "image_names": [
+            "00061-0-a blue crown.jpg"
+        ],
+        "partial_text": []
+    },
+    "a blue suitcase": {
+        "full_text": [
+            0.3432732820510864
+        ],
+        "image_names": [
+            "00360-0-a blue suitcase.jpg"
+        ],
+        "partial_text": []
+    },
+    "a bow": {
+        "full_text": [
+            0.33112457394599915
+        ],
+        "image_names": [
+            "00430-0-a bow.jpg"
+        ],
+        "partial_text": []
+    },
+    "a brown backpack": {
+        "full_text": [
+            0.33295851945877075
+        ],
+        "image_names": [
+            "00240-0-a brown backpack.jpg"
+        ],
+        "partial_text": []
+    },
+    "a brown balloon": {
+        "full_text": [
+            0.3241679072380066
+        ],
+        "image_names": [
+            "00096-0-a brown balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a brown bench": {
+        "full_text": [
+            0.3550959825515747
+        ],
+        "image_names": [
+            "00077-0-a brown bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a brown bowl": {
+        "full_text": [
+            0.34332263469696045
+        ],
+        "image_names": [
+            "00431-0-a brown bowl.jpg"
+        ],
+        "partial_text": []
+    },
+    "a brown car": {
+        "full_text": [
+            0.32630932331085205
+        ],
+        "image_names": [
+            "00154-0-a brown car.jpg"
+        ],
+        "partial_text": []
+    },
+    "a brown chair": {
+        "full_text": [
+            0.30651426315307617
+        ],
+        "image_names": [
+            "00071-0-a brown chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a brown suitcase": {
+        "full_text": [
+            0.3198115825653076
+        ],
+        "image_names": [
+            "00233-0-a brown suitcase.jpg"
+        ],
+        "partial_text": []
+    },
+    "a cat": {
+        "full_text": [
+            0.29227498173713684
+        ],
+        "image_names": [
+            "00000-0-a cat.jpg"
+        ],
+        "partial_text": []
+    },
+    "a crown": {
+        "full_text": [
+            0.3364335000514984
+        ],
+        "image_names": [
+            "00036-0-a crown.jpg"
+        ],
+        "partial_text": []
+    },
+    "a dog": {
+        "full_text": [
+            0.2917340397834778
+        ],
+        "image_names": [
+            "00387-0-a dog.jpg"
+        ],
+        "partial_text": []
+    },
+    "a elephant": {
+        "full_text": [
+            0.30804094672203064
+        ],
+        "image_names": [
+            "00014-0-a elephant.jpg"
+        ],
+        "partial_text": []
+    },
+    "a frog": {
+        "full_text": [
+            0.3171015977859497
+        ],
+        "image_names": [
+            "00469-0-a frog.jpg"
+        ],
+        "partial_text": []
+    },
+    "a gray apple": {
+        "full_text": [
+            0.32909873127937317
+        ],
+        "image_names": [
+            "00324-0-a gray apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a gray backpack": {
+        "full_text": [
+            0.358004629611969
+        ],
+        "image_names": [
+            "00003-0-a gray backpack.jpg"
+        ],
+        "partial_text": []
+    },
+    "a gray bench": {
+        "full_text": [
+            0.3430314362049103
+        ],
+        "image_names": [
+            "00394-0-a gray bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a gray bowl": {
+        "full_text": [
+            0.30891361832618713
+        ],
+        "image_names": [
+            "00251-0-a gray bowl.jpg"
+        ],
+        "partial_text": []
+    },
+    "a gray chair": {
+        "full_text": [
+            0.31137192249298096
+        ],
+        "image_names": [
+            "00011-0-a gray chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a gray clock": {
+        "full_text": [
+            0.3144952356815338
+        ],
+        "image_names": [
+            "00217-0-a gray clock.jpg"
+        ],
+        "partial_text": []
+    },
+    "a gray crown": {
+        "full_text": [
+            0.34049075841903687
+        ],
+        "image_names": [
+            "00160-0-a gray crown.jpg"
+        ],
+        "partial_text": []
+    },
+    "a green apple": {
+        "full_text": [
+            0.3305995762348175
+        ],
+        "image_names": [
+            "00059-0-a green apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a green backpack": {
+        "full_text": [
+            0.34829264879226685
+        ],
+        "image_names": [
+            "00105-0-a green backpack.jpg"
+        ],
+        "partial_text": []
+    },
+    "a green balloon": {
+        "full_text": [
+            0.38092267513275146
+        ],
+        "image_names": [
+            "00108-0-a green balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a green bench": {
+        "full_text": [
+            0.3496857285499573
+        ],
+        "image_names": [
+            "00098-0-a green bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a green bowl": {
+        "full_text": [
+            0.35255905985832214
+        ],
+        "image_names": [
+            "00078-0-a green bowl.jpg"
+        ],
+        "partial_text": []
+    },
+    "a green clock": {
+        "full_text": [
+            0.36703068017959595
+        ],
+        "image_names": [
+            "00380-0-a green clock.jpg"
+        ],
+        "partial_text": []
+    },
+    "a horse": {
+        "full_text": [
+            0.3165758550167084
+        ],
+        "image_names": [
+            "00033-0-a horse.jpg"
+        ],
+        "partial_text": []
+    },
+    "a lion": {
+        "full_text": [
+            0.32134777307510376
+        ],
+        "image_names": [
+            "00169-0-a lion.jpg"
+        ],
+        "partial_text": []
+    },
+    "a monkey": {
+        "full_text": [
+            0.30902448296546936
+        ],
+        "image_names": [
+            "00442-0-a monkey.jpg"
+        ],
+        "partial_text": []
+    },
+    "a mouse": {
+        "full_text": [
+            0.33546900749206543
+        ],
+        "image_names": [
+            "00088-0-a mouse.jpg"
+        ],
+        "partial_text": []
+    },
+    "a orange apple": {
+        "full_text": [
+            0.29756811261177063
+        ],
+        "image_names": [
+            "00433-0-a orange apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a orange backpack": {
+        "full_text": [
+            0.3489117920398712
+        ],
+        "image_names": [
+            "00219-0-a orange backpack.jpg"
+        ],
+        "partial_text": []
+    },
+    "a orange balloon": {
+        "full_text": [
+            0.32765036821365356
+        ],
+        "image_names": [
+            "00107-0-a orange balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a orange bench": {
+        "full_text": [
+            0.382038950920105
+        ],
+        "image_names": [
+            "00480-0-a orange bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a orange car": {
+        "full_text": [
+            0.32862746715545654
+        ],
+        "image_names": [
+            "00025-0-a orange car.jpg"
+        ],
+        "partial_text": []
+    },
+    "a orange chair": {
+        "full_text": [
+            0.3240020275115967
+        ],
+        "image_names": [
+            "00097-0-a orange chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a orange glasses": {
+        "full_text": [
+            0.34779077768325806
+        ],
+        "image_names": [
+            "00114-0-a orange glasses.jpg"
+        ],
+        "partial_text": []
+    },
+    "a orange suitcase": {
+        "full_text": [
+            0.33267706632614136
+        ],
+        "image_names": [
+            "00292-0-a orange suitcase.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink apple": {
+        "full_text": [
+            0.314959853887558
+        ],
+        "image_names": [
+            "00412-0-a pink apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink backpack": {
+        "full_text": [
+            0.37099599838256836
+        ],
+        "image_names": [
+            "00124-0-a pink backpack.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink balloon": {
+        "full_text": [
+            0.36050575971603394
+        ],
+        "image_names": [
+            "00422-0-a pink balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink bench": {
+        "full_text": [
+            0.36186763644218445
+        ],
+        "image_names": [
+            "00440-0-a pink bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink bow": {
+        "full_text": [
+            0.3542484939098358
+        ],
+        "image_names": [
+            "00260-0-a pink bow.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink bowl": {
+        "full_text": [
+            0.38353288173675537
+        ],
+        "image_names": [
+            "00405-0-a pink bowl.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink car": {
+        "full_text": [
+            0.2142016887664795
+        ],
+        "image_names": [
+            "00470-0-a pink car.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink chair": {
+        "full_text": [
+            0.36848777532577515
+        ],
+        "image_names": [
+            "00492-0-a pink chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink crown": {
+        "full_text": [
+            0.37031567096710205
+        ],
+        "image_names": [
+            "00327-0-a pink crown.jpg"
+        ],
+        "partial_text": []
+    },
+    "a pink suitcase": {
+        "full_text": [
+            0.3891269564628601
+        ],
+        "image_names": [
+            "00452-0-a pink suitcase.jpg"
+        ],
+        "partial_text": []
+    },
+    "a purple apple": {
+        "full_text": [
+            0.3642001152038574
+        ],
+        "image_names": [
+            "00120-0-a purple apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a purple balloon": {
+        "full_text": [
+            0.3922405242919922
+        ],
+        "image_names": [
+            "00473-0-a purple balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a purple bench": {
+        "full_text": [
+            0.39768722653388977
+        ],
+        "image_names": [
+            "00137-0-a purple bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a purple bow": {
+        "full_text": [
+            0.38320642709732056
+        ],
+        "image_names": [
+            "00301-0-a purple bow.jpg"
+        ],
+        "partial_text": []
+    },
+    "a purple bowl": {
+        "full_text": [
+            0.3456278145313263
+        ],
+        "image_names": [
+            "00250-0-a purple bowl.jpg"
+        ],
+        "partial_text": []
+    },
+    "a purple car": {
+        "full_text": [
+            0.34830835461616516
+        ],
+        "image_names": [
+            "00484-0-a purple car.jpg"
+        ],
+        "partial_text": []
+    },
+    "a purple chair": {
+        "full_text": [
+            0.3862170875072479
+        ],
+        "image_names": [
+            "00008-0-a purple chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a rabbit": {
+        "full_text": [
+            0.29739469289779663
+        ],
+        "image_names": [
+            "00464-0-a rabbit.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red apple": {
+        "full_text": [
+            0.33460065722465515
+        ],
+        "image_names": [
+            "00006-0-a red apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red backpack": {
+        "full_text": [
+            0.34096312522888184
+        ],
+        "image_names": [
+            "00239-0-a red backpack.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red balloon": {
+        "full_text": [
+            0.3695732355117798
+        ],
+        "image_names": [
+            "00091-0-a red balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red bench": {
+        "full_text": [
+            0.3629356324672699
+        ],
+        "image_names": [
+            "00280-0-a red bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red bow": {
+        "full_text": [
+            0.3684670329093933
+        ],
+        "image_names": [
+            "00241-0-a red bow.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red car": {
+        "full_text": [
+            0.32054126262664795
+        ],
+        "image_names": [
+            "00229-0-a red car.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red chair": {
+        "full_text": [
+            0.36482322216033936
+        ],
+        "image_names": [
+            "00435-0-a red chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red crown": {
+        "full_text": [
+            0.31599029898643494
+        ],
+        "image_names": [
+            "00305-0-a red crown.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red glasses": {
+        "full_text": [
+            0.34660208225250244
+        ],
+        "image_names": [
+            "00031-0-a red glasses.jpg"
+        ],
+        "partial_text": []
+    },
+    "a red suitcase": {
+        "full_text": [
+            0.35505741834640503
+        ],
+        "image_names": [
+            "00115-0-a red suitcase.jpg"
+        ],
+        "partial_text": []
+    },
+    "a turtle": {
+        "full_text": [
+            0.30552971363067627
+        ],
+        "image_names": [
+            "00300-0-a turtle.jpg"
+        ],
+        "partial_text": []
+    },
+    "a white apple": {
+        "full_text": [
+            0.33840662240982056
+        ],
+        "image_names": [
+            "00147-0-a white apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a white balloon": {
+        "full_text": [
+            0.36050945520401
+        ],
+        "image_names": [
+            "00111-0-a white balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a white bench": {
+        "full_text": [
+            0.34704965353012085
+        ],
+        "image_names": [
+            "00170-0-a white bench.jpg"
+        ],
+        "partial_text": []
+    },
+    "a white bow": {
+        "full_text": [
+            0.3716040849685669
+        ],
+        "image_names": [
+            "00257-0-a white bow.jpg"
+        ],
+        "partial_text": []
+    },
+    "a white car": {
+        "full_text": [
+            0.29702073335647583
+        ],
+        "image_names": [
+            "00366-0-a white car.jpg"
+        ],
+        "partial_text": []
+    },
+    "a white chair": {
+        "full_text": [
+            0.35465651750564575
+        ],
+        "image_names": [
+            "00182-0-a white chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a white clock": {
+        "full_text": [
+            0.33254319429397583
+        ],
+        "image_names": [
+            "00350-0-a white clock.jpg"
+        ],
+        "partial_text": []
+    },
+    "a white glasses": {
+        "full_text": [
+            0.32992422580718994
+        ],
+        "image_names": [
+            "00209-0-a white glasses.jpg"
+        ],
+        "partial_text": []
+    },
+    "a white suitcase": {
+        "full_text": [
+            0.3289484977722168
+        ],
+        "image_names": [
+            "00141-0-a white suitcase.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow apple": {
+        "full_text": [
+            0.3151097893714905
+        ],
+        "image_names": [
+            "00356-0-a yellow apple.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow backpack": {
+        "full_text": [
+            0.3501253128051758
+        ],
+        "image_names": [
+            "00034-0-a yellow backpack.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow balloon": {
+        "full_text": [
+            0.3653128147125244
+        ],
+        "image_names": [
+            "00035-0-a yellow balloon.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow bow": {
+        "full_text": [
+            0.3842197060585022
+        ],
+        "image_names": [
+            "00230-0-a yellow bow.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow bowl": {
+        "full_text": [
+            0.37495678663253784
+        ],
+        "image_names": [
+            "00024-0-a yellow bowl.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow car": {
+        "full_text": [
+            0.33483365178108215
+        ],
+        "image_names": [
+            "00130-0-a yellow car.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow chair": {
+        "full_text": [
+            0.3283073306083679
+        ],
+        "image_names": [
+            "00398-0-a yellow chair.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow clock": {
+        "full_text": [
+            0.32054731249809265
+        ],
+        "image_names": [
+            "00497-0-a yellow clock.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow crown": {
+        "full_text": [
+            0.31841981410980225
+        ],
+        "image_names": [
+            "00417-0-a yellow crown.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow glasses": {
+        "full_text": [
+            0.34703800082206726
+        ],
+        "image_names": [
+            "00333-0-a yellow glasses.jpg"
+        ],
+        "partial_text": []
+    },
+    "a yellow suitcase": {
+        "full_text": [
+            0.3366812765598297
+        ],
+        "image_names": [
+            "00090-0-a yellow suitcase.jpg"
+        ],
+        "partial_text": []
+    }
+}

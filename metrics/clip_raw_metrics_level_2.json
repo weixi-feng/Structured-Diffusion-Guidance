@@ -1,0 +1,7842 @@
+{
+    "a bear , a bear": {
+        "full_text": [
+            0.2944594621658325
+        ],
+        "image_names": [
+            "00295-0-a bear , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2989768981933594
+            ],
+            [
+                0.2989768981933594
+            ]
+        ]
+    },
+    "a bear , a frog": {
+        "full_text": [
+            0.29705703258514404
+        ],
+        "image_names": [
+            "00210-0-a bear , a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3033961355686188
+            ],
+            [
+                0.1681598722934723
+            ]
+        ]
+    },
+    "a bear , a gray bowl": {
+        "full_text": [
+            0.3802320957183838
+        ],
+        "image_names": [
+            "00426-0-a bear , a gray bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2825261950492859
+            ],
+            [
+                0.3074491620063782
+            ]
+        ]
+    },
+    "a bear , a rabbit": {
+        "full_text": [
+            0.2857304513454437
+        ],
+        "image_names": [
+            "00304-0-a bear , a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32026419043540955
+            ],
+            [
+                0.2012009620666504
+            ]
+        ]
+    },
+    "a bear , a yellow backpack": {
+        "full_text": [
+            0.3196105360984802
+        ],
+        "image_names": [
+            "00369-0-a bear , a yellow backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28027665615081787
+            ],
+            [
+                0.26587992906570435
+            ]
+        ]
+    },
+    "a bear and a bird": {
+        "full_text": [
+            0.29567500948905945
+        ],
+        "image_names": [
+            "00314-0-a bear and a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3009244203567505
+            ],
+            [
+                0.18782511353492737
+            ]
+        ]
+    },
+    "a bear and a elephant": {
+        "full_text": [
+            0.3008438050746918
+        ],
+        "image_names": [
+            "00181-0-a bear and a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2742156982421875
+            ],
+            [
+                0.3071252405643463
+            ]
+        ]
+    },
+    "a bear and a gray apple": {
+        "full_text": [
+            0.389267235994339
+        ],
+        "image_names": [
+            "00046-0-a bear and a gray apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2729664146900177
+            ],
+            [
+                0.2815917134284973
+            ]
+        ]
+    },
+    "a bear and a green clock": {
+        "full_text": [
+            0.38600867986679077
+        ],
+        "image_names": [
+            "00444-0-a bear and a green clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.26036643981933594
+            ],
+            [
+                0.3246537446975708
+            ]
+        ]
+    },
+    "a bear and a lion": {
+        "full_text": [
+            0.29022130370140076
+        ],
+        "image_names": [
+            "00013-0-a bear and a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3133831322193146
+            ],
+            [
+                0.2804751992225647
+            ]
+        ]
+    },
+    "a bear and a rabbit": {
+        "full_text": [
+            0.2675589323043823
+        ],
+        "image_names": [
+            "00286-0-a bear and a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2793656289577484
+            ],
+            [
+                0.22229433059692383
+            ]
+        ]
+    },
+    "a bear and a yellow backpack": {
+        "full_text": [
+            0.2826298475265503
+        ],
+        "image_names": [
+            "00166-0-a bear and a yellow backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.19373276829719543
+            ],
+            [
+                0.31347179412841797
+            ]
+        ]
+    },
+    "a bear and a yellow car": {
+        "full_text": [
+            0.33793434500694275
+        ],
+        "image_names": [
+            "00191-0-a bear and a yellow car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2145240753889084
+            ],
+            [
+                0.3195329010486603
+            ]
+        ]
+    },
+    "a bear with a orange bowl": {
+        "full_text": [
+            0.38254767656326294
+        ],
+        "image_names": [
+            "00207-0-a bear with a orange bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29919153451919556
+            ],
+            [
+                0.2600501477718353
+            ]
+        ]
+    },
+    "a bear with a red balloon": {
+        "full_text": [
+            0.37224650382995605
+        ],
+        "image_names": [
+            "00016-0-a bear with a red balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.258870005607605
+            ],
+            [
+                0.3177075684070587
+            ]
+        ]
+    },
+    "a bear with a red bow": {
+        "full_text": [
+            0.30880552530288696
+        ],
+        "image_names": [
+            "00036-0-a bear with a red bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27114224433898926
+            ],
+            [
+                0.2424674928188324
+            ]
+        ]
+    },
+    "a bird , a frog": {
+        "full_text": [
+            0.30869001150131226
+        ],
+        "image_names": [
+            "00134-0-a bird , a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.25059717893600464
+            ],
+            [
+                0.30486980080604553
+            ]
+        ]
+    },
+    "a bird , a monkey": {
+        "full_text": [
+            0.28702858090400696
+        ],
+        "image_names": [
+            "00415-0-a bird , a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.21088126301765442
+            ],
+            [
+                0.3171195983886719
+            ]
+        ]
+    },
+    "a bird , a mouse": {
+        "full_text": [
+            0.31931358575820923
+        ],
+        "image_names": [
+            "00121-0-a bird , a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.26972484588623047
+            ],
+            [
+                0.27881738543510437
+            ]
+        ]
+    },
+    "a bird , a red bow": {
+        "full_text": [
+            0.33993467688560486
+        ],
+        "image_names": [
+            "00449-0-a bird , a red bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.24548763036727905
+            ],
+            [
+                0.34231191873550415
+            ]
+        ]
+    },
+    "a bird , a yellow car": {
+        "full_text": [
+            0.3858160078525543
+        ],
+        "image_names": [
+            "00225-0-a bird , a yellow car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3000493347644806
+            ],
+            [
+                0.31521618366241455
+            ]
+        ]
+    },
+    "a bird and a bear": {
+        "full_text": [
+            0.32626456022262573
+        ],
+        "image_names": [
+            "00031-0-a bird and a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2015959620475769
+            ],
+            [
+                0.3194364905357361
+            ]
+        ]
+    },
+    "a bird and a blue clock": {
+        "full_text": [
+            0.3741012215614319
+        ],
+        "image_names": [
+            "00083-0-a bird and a blue clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.25706711411476135
+            ],
+            [
+                0.30845731496810913
+            ]
+        ]
+    },
+    "a bird and a cat": {
+        "full_text": [
+            0.2704833149909973
+        ],
+        "image_names": [
+            "00119-0-a bird and a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2510732412338257
+            ],
+            [
+                0.30650198459625244
+            ]
+        ]
+    },
+    "a bird and a pink apple": {
+        "full_text": [
+            0.3770430386066437
+        ],
+        "image_names": [
+            "00375-0-a bird and a pink apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2793131470680237
+            ],
+            [
+                0.2921229600906372
+            ]
+        ]
+    },
+    "a bird and a pink bow": {
+        "full_text": [
+            0.38011637330055237
+        ],
+        "image_names": [
+            "00004-0-a bird and a pink bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2814483046531677
+            ],
+            [
+                0.3231440782546997
+            ]
+        ]
+    },
+    "a bird and a purple car": {
+        "full_text": [
+            0.3463899791240692
+        ],
+        "image_names": [
+            "00432-0-a bird and a purple car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.21655824780464172
+            ],
+            [
+                0.3590118885040283
+            ]
+        ]
+    },
+    "a bird and a white chair": {
+        "full_text": [
+            0.29537925124168396
+        ],
+        "image_names": [
+            "00213-0-a bird and a white chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20362091064453125
+            ],
+            [
+                0.3096957504749298
+            ]
+        ]
+    },
+    "a bird with a gray suitcase": {
+        "full_text": [
+            0.3318113684654236
+        ],
+        "image_names": [
+            "00245-0-a bird with a gray suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.257861465215683
+            ],
+            [
+                0.27206891775131226
+            ]
+        ]
+    },
+    "a bird with a green bow": {
+        "full_text": [
+            0.31924790143966675
+        ],
+        "image_names": [
+            "00214-0-a bird with a green bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.24531030654907227
+            ],
+            [
+                0.28121522068977356
+            ]
+        ]
+    },
+    "a bird with a horse": {
+        "full_text": [
+            0.26203805208206177
+        ],
+        "image_names": [
+            "00188-0-a bird with a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20055095851421356
+            ],
+            [
+                0.28889089822769165
+            ]
+        ]
+    },
+    "a bird with a mouse": {
+        "full_text": [
+            0.30040454864501953
+        ],
+        "image_names": [
+            "00206-0-a bird with a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3083551824092865
+            ],
+            [
+                0.24038396775722504
+            ]
+        ]
+    },
+    "a bird with a orange backpack": {
+        "full_text": [
+            0.2976240813732147
+        ],
+        "image_names": [
+            "00416-0-a bird with a orange backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.1835464984178543
+            ],
+            [
+                0.3337225615978241
+            ]
+        ]
+    },
+    "a black apple , a turtle": {
+        "full_text": [
+            0.32924431562423706
+        ],
+        "image_names": [
+            "00422-0-a black apple , a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3561462163925171
+            ],
+            [
+                0.237808957695961
+            ]
+        ]
+    },
+    "a black backpack and a cat": {
+        "full_text": [
+            0.38075995445251465
+        ],
+        "image_names": [
+            "00112-0-a black backpack and a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32203954458236694
+            ],
+            [
+                0.27040624618530273
+            ]
+        ]
+    },
+    "a black backpack with a gray backpack": {
+        "full_text": [
+            0.34181493520736694
+        ],
+        "image_names": [
+            "00326-0-a black backpack with a gray backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3421241044998169
+            ],
+            [
+                0.32276833057403564
+            ]
+        ]
+    },
+    "a black backpack with a rabbit": {
+        "full_text": [
+            0.3042193651199341
+        ],
+        "image_names": [
+            "00342-0-a black backpack with a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33001089096069336
+            ],
+            [
+                0.19319218397140503
+            ]
+        ]
+    },
+    "a black balloon and a green suitcase": {
+        "full_text": [
+            0.3168274760246277
+        ],
+        "image_names": [
+            "00283-0-a black balloon and a green suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27073991298675537
+            ],
+            [
+                0.24755465984344482
+            ]
+        ]
+    },
+    "a black balloon and a red apple": {
+        "full_text": [
+            0.3374072313308716
+        ],
+        "image_names": [
+            "00479-0-a black balloon and a red apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.23216275870800018
+            ],
+            [
+                0.33647483587265015
+            ]
+        ]
+    },
+    "a black bench , a green apple": {
+        "full_text": [
+            0.3358520269393921
+        ],
+        "image_names": [
+            "00269-0-a black bench , a green apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32405930757522583
+            ],
+            [
+                0.228401780128479
+            ]
+        ]
+    },
+    "a black bench with a gray bowl": {
+        "full_text": [
+            0.3546254634857178
+        ],
+        "image_names": [
+            "00312-0-a black bench with a gray bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35633599758148193
+            ],
+            [
+                0.2300642728805542
+            ]
+        ]
+    },
+    "a black bench with a green bench": {
+        "full_text": [
+            0.3473927080631256
+        ],
+        "image_names": [
+            "00203-0-a black bench with a green bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3449179530143738
+            ],
+            [
+                0.33030349016189575
+            ]
+        ]
+    },
+    "a black bench with a rabbit": {
+        "full_text": [
+            0.38122814893722534
+        ],
+        "image_names": [
+            "00194-0-a black bench with a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30637624859809875
+            ],
+            [
+                0.2760043144226074
+            ]
+        ]
+    },
+    "a black bowl , a cat": {
+        "full_text": [
+            0.3134285509586334
+        ],
+        "image_names": [
+            "00035-0-a black bowl , a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.36250758171081543
+            ],
+            [
+                0.20539431273937225
+            ]
+        ]
+    },
+    "a black car , a bear": {
+        "full_text": [
+            0.3488955795764923
+        ],
+        "image_names": [
+            "00055-0-a black car , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28002381324768066
+            ],
+            [
+                0.3005935847759247
+            ]
+        ]
+    },
+    "a black car , a green balloon": {
+        "full_text": [
+            0.27491557598114014
+        ],
+        "image_names": [
+            "00020-0-a black car , a green balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2442050278186798
+            ],
+            [
+                0.24125128984451294
+            ]
+        ]
+    },
+    "a black car and a purple chair": {
+        "full_text": [
+            0.26503679156303406
+        ],
+        "image_names": [
+            "00089-0-a black car and a purple chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2898959219455719
+            ],
+            [
+                0.17504332959651947
+            ]
+        ]
+    },
+    "a black car and a red apple": {
+        "full_text": [
+            0.37647902965545654
+        ],
+        "image_names": [
+            "00437-0-a black car and a red apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2691694498062134
+            ],
+            [
+                0.2808224558830261
+            ]
+        ]
+    },
+    "a black car and a yellow car": {
+        "full_text": [
+            0.30735278129577637
+        ],
+        "image_names": [
+            "00350-0-a black car and a yellow car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2463495433330536
+            ],
+            [
+                0.32243114709854126
+            ]
+        ]
+    },
+    "a black car with a red bow": {
+        "full_text": [
+            0.3502486050128937
+        ],
+        "image_names": [
+            "00473-0-a black car with a red bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2641831636428833
+            ],
+            [
+                0.29019248485565186
+            ]
+        ]
+    },
+    "a black chair , a white clock": {
+        "full_text": [
+            0.3019045293331146
+        ],
+        "image_names": [
+            "00284-0-a black chair , a white clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2206372320652008
+            ],
+            [
+                0.30182456970214844
+            ]
+        ]
+    },
+    "a black chair and a rabbit": {
+        "full_text": [
+            0.28534841537475586
+        ],
+        "image_names": [
+            "00378-0-a black chair and a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31678104400634766
+            ],
+            [
+                0.19381162524223328
+            ]
+        ]
+    },
+    "a black chair with a red backpack": {
+        "full_text": [
+            0.28611090779304504
+        ],
+        "image_names": [
+            "00409-0-a black chair with a red backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.19581253826618195
+            ],
+            [
+                0.34956568479537964
+            ]
+        ]
+    },
+    "a black clock and a horse": {
+        "full_text": [
+            0.2992830276489258
+        ],
+        "image_names": [
+            "00340-0-a black clock and a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32510003447532654
+            ],
+            [
+                0.19443340599536896
+            ]
+        ]
+    },
+    "a black clock with a dog": {
+        "full_text": [
+            0.35838592052459717
+        ],
+        "image_names": [
+            "00280-0-a black clock with a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3012687563896179
+            ],
+            [
+                0.23136243224143982
+            ]
+        ]
+    },
+    "a black crown , a bear": {
+        "full_text": [
+            0.295915424823761
+        ],
+        "image_names": [
+            "00498-0-a black crown , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20209084451198578
+            ],
+            [
+                0.3166652321815491
+            ]
+        ]
+    },
+    "a black crown , a elephant": {
+        "full_text": [
+            0.31056714057922363
+        ],
+        "image_names": [
+            "00472-0-a black crown , a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2021881639957428
+            ],
+            [
+                0.32667386531829834
+            ]
+        ]
+    },
+    "a black suitcase , a brown car": {
+        "full_text": [
+            0.330771803855896
+        ],
+        "image_names": [
+            "00082-0-a black suitcase , a brown car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3216147720813751
+            ],
+            [
+                0.23220962285995483
+            ]
+        ]
+    },
+    "a black suitcase , a gray apple": {
+        "full_text": [
+            0.330301970243454
+        ],
+        "image_names": [
+            "00465-0-a black suitcase , a gray apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32452571392059326
+            ],
+            [
+                0.19836333394050598
+            ]
+        ]
+    },
+    "a black suitcase with a frog": {
+        "full_text": [
+            0.35923275351524353
+        ],
+        "image_names": [
+            "00392-0-a black suitcase with a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2642553150653839
+            ],
+            [
+                0.2986130118370056
+            ]
+        ]
+    },
+    "a blue apple with a orange chair": {
+        "full_text": [
+            0.2778076231479645
+        ],
+        "image_names": [
+            "00362-0-a blue apple with a orange chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29514437913894653
+            ],
+            [
+                0.18977834284305573
+            ]
+        ]
+    },
+    "a blue apple with a yellow bow": {
+        "full_text": [
+            0.3301244378089905
+        ],
+        "image_names": [
+            "00428-0-a blue apple with a yellow bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30051037669181824
+            ],
+            [
+                0.2601146697998047
+            ]
+        ]
+    },
+    "a blue balloon , a bird": {
+        "full_text": [
+            0.3459240198135376
+        ],
+        "image_names": [
+            "00460-0-a blue balloon , a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3734102249145508
+            ],
+            [
+                0.2340613603591919
+            ]
+        ]
+    },
+    "a blue balloon , a crown": {
+        "full_text": [
+            0.35308462381362915
+        ],
+        "image_names": [
+            "00406-0-a blue balloon , a crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3691897988319397
+            ],
+            [
+                0.24321144819259644
+            ]
+        ]
+    },
+    "a blue balloon , a dog": {
+        "full_text": [
+            0.2904666066169739
+        ],
+        "image_names": [
+            "00334-0-a blue balloon , a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3160209655761719
+            ],
+            [
+                0.18739748001098633
+            ]
+        ]
+    },
+    "a blue balloon , a elephant": {
+        "full_text": [
+            0.3398083448410034
+        ],
+        "image_names": [
+            "00478-0-a blue balloon , a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34268641471862793
+            ],
+            [
+                0.22036606073379517
+            ]
+        ]
+    },
+    "a blue balloon and a black apple": {
+        "full_text": [
+            0.33037593960762024
+        ],
+        "image_names": [
+            "00137-0-a blue balloon and a black apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35979023575782776
+            ],
+            [
+                0.20514798164367676
+            ]
+        ]
+    },
+    "a blue balloon and a blue bow": {
+        "full_text": [
+            0.33598995208740234
+        ],
+        "image_names": [
+            "00481-0-a blue balloon and a blue bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32747554779052734
+            ],
+            [
+                0.2770605981349945
+            ]
+        ]
+    },
+    "a blue bench , a black bowl": {
+        "full_text": [
+            0.33579277992248535
+        ],
+        "image_names": [
+            "00014-0-a blue bench , a black bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3120805621147156
+            ],
+            [
+                0.24937915802001953
+            ]
+        ]
+    },
+    "a blue bench , a red chair": {
+        "full_text": [
+            0.33215323090553284
+        ],
+        "image_names": [
+            "00176-0-a blue bench , a red chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3042156398296356
+            ],
+            [
+                0.2972598671913147
+            ]
+        ]
+    },
+    "a blue bench and a black bowl": {
+        "full_text": [
+            0.34554165601730347
+        ],
+        "image_names": [
+            "00155-0-a blue bench and a black bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3578680455684662
+            ],
+            [
+                0.21619534492492676
+            ]
+        ]
+    },
+    "a blue bench and a blue bench": {
+        "full_text": [
+            0.334133505821228
+        ],
+        "image_names": [
+            "00316-0-a blue bench and a blue bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3377948999404907
+            ],
+            [
+                0.3377948999404907
+            ]
+        ]
+    },
+    "a blue bench and a crown": {
+        "full_text": [
+            0.2978784441947937
+        ],
+        "image_names": [
+            "00003-0-a blue bench and a crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3173888921737671
+            ],
+            [
+                0.19052623212337494
+            ]
+        ]
+    },
+    "a blue bench with a frog": {
+        "full_text": [
+            0.31490543484687805
+        ],
+        "image_names": [
+            "00330-0-a blue bench with a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3518303334712982
+            ],
+            [
+                0.20096856355667114
+            ]
+        ]
+    },
+    "a blue bow , a horse": {
+        "full_text": [
+            0.376953125
+        ],
+        "image_names": [
+            "00043-0-a blue bow , a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33665844798088074
+            ],
+            [
+                0.2879123389720917
+            ]
+        ]
+    },
+    "a blue bow , a turtle": {
+        "full_text": [
+            0.3242878019809723
+        ],
+        "image_names": [
+            "00093-0-a blue bow , a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.36064040660858154
+            ],
+            [
+                0.17075636982917786
+            ]
+        ]
+    },
+    "a blue bow and a purple chair": {
+        "full_text": [
+            0.35820722579956055
+        ],
+        "image_names": [
+            "00185-0-a blue bow and a purple chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2674088478088379
+            ],
+            [
+                0.31182312965393066
+            ]
+        ]
+    },
+    "a blue bowl , a pink bowl": {
+        "full_text": [
+            0.28687649965286255
+        ],
+        "image_names": [
+            "00230-0-a blue bowl , a pink bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30948111414909363
+            ],
+            [
+                0.2556638717651367
+            ]
+        ]
+    },
+    "a blue bowl and a bird": {
+        "full_text": [
+            0.35148221254348755
+        ],
+        "image_names": [
+            "00001-0-a blue bowl and a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2966940402984619
+            ],
+            [
+                0.2507264018058777
+            ]
+        ]
+    },
+    "a blue bowl and a yellow apple": {
+        "full_text": [
+            0.350275456905365
+        ],
+        "image_names": [
+            "00484-0-a blue bowl and a yellow apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2836567759513855
+            ],
+            [
+                0.27518177032470703
+            ]
+        ]
+    },
+    "a blue bowl with a purple car": {
+        "full_text": [
+            0.3052600920200348
+        ],
+        "image_names": [
+            "00483-0-a blue bowl with a purple car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3277990221977234
+            ],
+            [
+                0.19595308601856232
+            ]
+        ]
+    },
+    "a blue chair and a purple bowl": {
+        "full_text": [
+            0.3137820065021515
+        ],
+        "image_names": [
+            "00211-0-a blue chair and a purple bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.24644015729427338
+            ],
+            [
+                0.3069109320640564
+            ]
+        ]
+    },
+    "a blue chair with a mouse": {
+        "full_text": [
+            0.3857436776161194
+        ],
+        "image_names": [
+            "00190-0-a blue chair with a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29291778802871704
+            ],
+            [
+                0.3116045892238617
+            ]
+        ]
+    },
+    "a blue chair with a purple crown": {
+        "full_text": [
+            0.3556966185569763
+        ],
+        "image_names": [
+            "00018-0-a blue chair with a purple crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30739593505859375
+            ],
+            [
+                0.2796666920185089
+            ]
+        ]
+    },
+    "a blue clock , a pink bench": {
+        "full_text": [
+            0.33939504623413086
+        ],
+        "image_names": [
+            "00022-0-a blue clock , a pink bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.18623171746730804
+            ],
+            [
+                0.36829301714897156
+            ]
+        ]
+    },
+    "a blue clock and a rabbit": {
+        "full_text": [
+            0.3741222321987152
+        ],
+        "image_names": [
+            "00265-0-a blue clock and a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3001982271671295
+            ],
+            [
+                0.27996575832366943
+            ]
+        ]
+    },
+    "a blue clock and a white bench": {
+        "full_text": [
+            0.33061137795448303
+        ],
+        "image_names": [
+            "00322-0-a blue clock and a white bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2452501356601715
+            ],
+            [
+                0.31755349040031433
+            ]
+        ]
+    },
+    "a blue crown , a bear": {
+        "full_text": [
+            0.3577539920806885
+        ],
+        "image_names": [
+            "00467-0-a blue crown , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27387315034866333
+            ],
+            [
+                0.288865864276886
+            ]
+        ]
+    },
+    "a blue crown , a purple bench": {
+        "full_text": [
+            0.37146151065826416
+        ],
+        "image_names": [
+            "00062-0-a blue crown , a purple bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.21482019126415253
+            ],
+            [
+                0.38381558656692505
+            ]
+        ]
+    },
+    "a blue crown and a brown balloon": {
+        "full_text": [
+            0.35369959473609924
+        ],
+        "image_names": [
+            "00482-0-a blue crown and a brown balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29466015100479126
+            ],
+            [
+                0.3143382668495178
+            ]
+        ]
+    },
+    "a blue crown with a red bench": {
+        "full_text": [
+            0.3276655673980713
+        ],
+        "image_names": [
+            "00307-0-a blue crown with a red bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2172042578458786
+            ],
+            [
+                0.3180943727493286
+            ]
+        ]
+    },
+    "a blue suitcase and a red backpack": {
+        "full_text": [
+            0.30598539113998413
+        ],
+        "image_names": [
+            "00007-0-a blue suitcase and a red backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2950645685195923
+            ],
+            [
+                0.25865891575813293
+            ]
+        ]
+    },
+    "a blue suitcase with a white clock": {
+        "full_text": [
+            0.3847498893737793
+        ],
+        "image_names": [
+            "00363-0-a blue suitcase with a white clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3554147481918335
+            ],
+            [
+                0.23650264739990234
+            ]
+        ]
+    },
+    "a brown backpack , a monkey": {
+        "full_text": [
+            0.3154855966567993
+        ],
+        "image_names": [
+            "00054-0-a brown backpack , a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3465039134025574
+            ],
+            [
+                0.1976260244846344
+            ]
+        ]
+    },
+    "a brown backpack with a elephant": {
+        "full_text": [
+            0.3027403950691223
+        ],
+        "image_names": [
+            "00175-0-a brown backpack with a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.334024041891098
+            ],
+            [
+                0.1761569082736969
+            ]
+        ]
+    },
+    "a brown backpack with a white car": {
+        "full_text": [
+            0.34047460556030273
+        ],
+        "image_names": [
+            "00216-0-a brown backpack with a white car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2770650088787079
+            ],
+            [
+                0.2512214481830597
+            ]
+        ]
+    },
+    "a brown balloon and a bird": {
+        "full_text": [
+            0.34511858224868774
+        ],
+        "image_names": [
+            "00450-0-a brown balloon and a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3693554997444153
+            ],
+            [
+                0.2309795618057251
+            ]
+        ]
+    },
+    "a brown balloon and a dog": {
+        "full_text": [
+            0.38657480478286743
+        ],
+        "image_names": [
+            "00120-0-a brown balloon and a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35115787386894226
+            ],
+            [
+                0.2599543631076813
+            ]
+        ]
+    },
+    "a brown bench , a bear": {
+        "full_text": [
+            0.29969924688339233
+        ],
+        "image_names": [
+            "00403-0-a brown bench , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33423739671707153
+            ],
+            [
+                0.20897617936134338
+            ]
+        ]
+    },
+    "a brown bench , a black bowl": {
+        "full_text": [
+            0.3209992051124573
+        ],
+        "image_names": [
+            "00289-0-a brown bench , a black bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30682915449142456
+            ],
+            [
+                0.23856481909751892
+            ]
+        ]
+    },
+    "a brown bench and a horse": {
+        "full_text": [
+            0.3664892911911011
+        ],
+        "image_names": [
+            "00367-0-a brown bench and a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3056113123893738
+            ],
+            [
+                0.27356231212615967
+            ]
+        ]
+    },
+    "a brown bench with a pink chair": {
+        "full_text": [
+            0.2846727669239044
+        ],
+        "image_names": [
+            "00264-0-a brown bench with a pink chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20308130979537964
+            ],
+            [
+                0.3052884638309479
+            ]
+        ]
+    },
+    "a brown bench with a yellow chair": {
+        "full_text": [
+            0.3633955121040344
+        ],
+        "image_names": [
+            "00405-0-a brown bench with a yellow chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3245983123779297
+            ],
+            [
+                0.3159736692905426
+            ]
+        ]
+    },
+    "a brown bow with a elephant": {
+        "full_text": [
+            0.30556440353393555
+        ],
+        "image_names": [
+            "00343-0-a brown bow with a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3510717749595642
+            ],
+            [
+                0.19459939002990723
+            ]
+        ]
+    },
+    "a brown bow with a white car": {
+        "full_text": [
+            0.27905213832855225
+        ],
+        "image_names": [
+            "00365-0-a brown bow with a white car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.22430312633514404
+            ],
+            [
+                0.2790259122848511
+            ]
+        ]
+    },
+    "a brown bowl , a black clock": {
+        "full_text": [
+            0.3081049621105194
+        ],
+        "image_names": [
+            "00092-0-a brown bowl , a black clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.21989598870277405
+            ],
+            [
+                0.3116724491119385
+            ]
+        ]
+    },
+    "a brown bowl , a brown suitcase": {
+        "full_text": [
+            0.32351675629615784
+        ],
+        "image_names": [
+            "00266-0-a brown bowl , a brown suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35996514558792114
+            ],
+            [
+                0.21717822551727295
+            ]
+        ]
+    },
+    "a brown bowl and a bird": {
+        "full_text": [
+            0.36446377635002136
+        ],
+        "image_names": [
+            "00400-0-a brown bowl and a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3020133972167969
+            ],
+            [
+                0.2865973114967346
+            ]
+        ]
+    },
+    "a brown bowl and a purple bowl": {
+        "full_text": [
+            0.3534916043281555
+        ],
+        "image_names": [
+            "00270-0-a brown bowl and a purple bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30153945088386536
+            ],
+            [
+                0.3565309941768646
+            ]
+        ]
+    },
+    "a brown car and a blue bowl": {
+        "full_text": [
+            0.3287137746810913
+        ],
+        "image_names": [
+            "00152-0-a brown car and a blue bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.22971022129058838
+            ],
+            [
+                0.303224116563797
+            ]
+        ]
+    },
+    "a brown car and a green bowl": {
+        "full_text": [
+            0.30530497431755066
+        ],
+        "image_names": [
+            "00454-0-a brown car and a green bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33432644605636597
+            ],
+            [
+                0.18400511145591736
+            ]
+        ]
+    },
+    "a brown car and a yellow balloon": {
+        "full_text": [
+            0.31818443536758423
+        ],
+        "image_names": [
+            "00106-0-a brown car and a yellow balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29019445180892944
+            ],
+            [
+                0.2522975206375122
+            ]
+        ]
+    },
+    "a brown car with a purple bow": {
+        "full_text": [
+            0.2961376905441284
+        ],
+        "image_names": [
+            "00325-0-a brown car with a purple bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.26393449306488037
+            ],
+            [
+                0.24880804121494293
+            ]
+        ]
+    },
+    "a brown chair with a brown bowl": {
+        "full_text": [
+            0.31882551312446594
+        ],
+        "image_names": [
+            "00457-0-a brown chair with a brown bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33411428332328796
+            ],
+            [
+                0.22415217757225037
+            ]
+        ]
+    },
+    "a brown suitcase , a lion": {
+        "full_text": [
+            0.3753415048122406
+        ],
+        "image_names": [
+            "00382-0-a brown suitcase , a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28789156675338745
+            ],
+            [
+                0.2978164553642273
+            ]
+        ]
+    },
+    "a brown suitcase with a bear": {
+        "full_text": [
+            0.31130802631378174
+        ],
+        "image_names": [
+            "00301-0-a brown suitcase with a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31839829683303833
+            ],
+            [
+                0.20173072814941406
+            ]
+        ]
+    },
+    "a brown suitcase with a gray chair": {
+        "full_text": [
+            0.30870306491851807
+        ],
+        "image_names": [
+            "00374-0-a brown suitcase with a gray chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2530674636363983
+            ],
+            [
+                0.32667532563209534
+            ]
+        ]
+    },
+    "a cat , a bear": {
+        "full_text": [
+            0.29796531796455383
+        ],
+        "image_names": [
+            "00173-0-a cat , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.21451222896575928
+            ],
+            [
+                0.32252180576324463
+            ]
+        ]
+    },
+    "a cat , a frog": {
+        "full_text": [
+            0.28950610756874084
+        ],
+        "image_names": [
+            "00303-0-a cat , a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30029141902923584
+            ],
+            [
+                0.20847196877002716
+            ]
+        ]
+    },
+    "a cat , a purple chair": {
+        "full_text": [
+            0.3720620274543762
+        ],
+        "image_names": [
+            "00061-0-a cat , a purple chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.23805341124534607
+            ],
+            [
+                0.34671828150749207
+            ]
+        ]
+    },
+    "a cat , a turtle": {
+        "full_text": [
+            0.3600934147834778
+        ],
+        "image_names": [
+            "00257-0-a cat , a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.282477468252182
+            ],
+            [
+                0.3208691477775574
+            ]
+        ]
+    },
+    "a cat and a bird": {
+        "full_text": [
+            0.26910319924354553
+        ],
+        "image_names": [
+            "00315-0-a cat and a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2958572208881378
+            ],
+            [
+                0.22236931324005127
+            ]
+        ]
+    },
+    "a cat with a brown bench": {
+        "full_text": [
+            0.34005534648895264
+        ],
+        "image_names": [
+            "00204-0-a cat with a brown bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.284985214471817
+            ],
+            [
+                0.266414999961853
+            ]
+        ]
+    },
+    "a cat with a brown bow": {
+        "full_text": [
+            0.28920045495033264
+        ],
+        "image_names": [
+            "00145-0-a cat with a brown bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29483067989349365
+            ],
+            [
+                0.23292836546897888
+            ]
+        ]
+    },
+    "a cat with a dog": {
+        "full_text": [
+            0.2896544933319092
+        ],
+        "image_names": [
+            "00124-0-a cat with a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2664710283279419
+            ],
+            [
+                0.19600193202495575
+            ]
+        ]
+    },
+    "a crown and a elephant": {
+        "full_text": [
+            0.31879591941833496
+        ],
+        "image_names": [
+            "00240-0-a crown and a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3329423666000366
+            ],
+            [
+                0.20396405458450317
+            ]
+        ]
+    },
+    "a crown and a pink balloon": {
+        "full_text": [
+            0.34425050020217896
+        ],
+        "image_names": [
+            "00209-0-a crown and a pink balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.23960618674755096
+            ],
+            [
+                0.3531568944454193
+            ]
+        ]
+    },
+    "a dog , a horse": {
+        "full_text": [
+            0.27731773257255554
+        ],
+        "image_names": [
+            "00258-0-a dog , a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.21422958374023438
+            ],
+            [
+                0.3007350564002991
+            ]
+        ]
+    },
+    "a dog , a lion": {
+        "full_text": [
+            0.2939721345901489
+        ],
+        "image_names": [
+            "00344-0-a dog , a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2155781239271164
+            ],
+            [
+                0.32602083683013916
+            ]
+        ]
+    },
+    "a dog , a white bench": {
+        "full_text": [
+            0.3410619795322418
+        ],
+        "image_names": [
+            "00169-0-a dog , a white bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.21817949414253235
+            ],
+            [
+                0.36642158031463623
+            ]
+        ]
+    },
+    "a dog and a bear": {
+        "full_text": [
+            0.35583677887916565
+        ],
+        "image_names": [
+            "00373-0-a dog and a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28504034876823425
+            ],
+            [
+                0.3106486201286316
+            ]
+        ]
+    },
+    "a dog and a elephant": {
+        "full_text": [
+            0.29355278611183167
+        ],
+        "image_names": [
+            "00452-0-a dog and a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2009022831916809
+            ],
+            [
+                0.3174772560596466
+            ]
+        ]
+    },
+    "a dog and a mouse": {
+        "full_text": [
+            0.34938162565231323
+        ],
+        "image_names": [
+            "00116-0-a dog and a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2521911859512329
+            ],
+            [
+                0.30231016874313354
+            ]
+        ]
+    },
+    "a dog and a purple bench": {
+        "full_text": [
+            0.40516918897628784
+        ],
+        "image_names": [
+            "00273-0-a dog and a purple bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2625163197517395
+            ],
+            [
+                0.35820797085762024
+            ]
+        ]
+    },
+    "a dog and a purple car": {
+        "full_text": [
+            0.39811742305755615
+        ],
+        "image_names": [
+            "00160-0-a dog and a purple car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2689541280269623
+            ],
+            [
+                0.323909729719162
+            ]
+        ]
+    },
+    "a dog and a purple crown": {
+        "full_text": [
+            0.3761625289916992
+        ],
+        "image_names": [
+            "00243-0-a dog and a purple crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27064990997314453
+            ],
+            [
+                0.32044655084609985
+            ]
+        ]
+    },
+    "a dog with a crown": {
+        "full_text": [
+            0.27081573009490967
+        ],
+        "image_names": [
+            "00466-0-a dog with a crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27789878845214844
+            ],
+            [
+                0.21357974410057068
+            ]
+        ]
+    },
+    "a dog with a dog": {
+        "full_text": [
+            0.2477806955575943
+        ],
+        "image_names": [
+            "00471-0-a dog with a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.22191625833511353
+            ],
+            [
+                0.22191625833511353
+            ]
+        ]
+    },
+    "a dog with a gray suitcase": {
+        "full_text": [
+            0.3251100778579712
+        ],
+        "image_names": [
+            "00028-0-a dog with a gray suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.23902884125709534
+            ],
+            [
+                0.27232247591018677
+            ]
+        ]
+    },
+    "a dog with a green clock": {
+        "full_text": [
+            0.3438754081726074
+        ],
+        "image_names": [
+            "00017-0-a dog with a green clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.24222561717033386
+            ],
+            [
+                0.28354552388191223
+            ]
+        ]
+    },
+    "a dog with a monkey": {
+        "full_text": [
+            0.2827169895172119
+        ],
+        "image_names": [
+            "00438-0-a dog with a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.16815489530563354
+            ],
+            [
+                0.2724868357181549
+            ]
+        ]
+    },
+    "a dog with a turtle": {
+        "full_text": [
+            0.29947608709335327
+        ],
+        "image_names": [
+            "00256-0-a dog with a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20669327676296234
+            ],
+            [
+                0.315705269575119
+            ]
+        ]
+    },
+    "a dog with a white bow": {
+        "full_text": [
+            0.29598408937454224
+        ],
+        "image_names": [
+            "00130-0-a dog with a white bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.26379698514938354
+            ],
+            [
+                0.2553480267524719
+            ]
+        ]
+    },
+    "a elephant , a bear": {
+        "full_text": [
+            0.28373318910598755
+        ],
+        "image_names": [
+            "00493-0-a elephant , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3084821105003357
+            ],
+            [
+                0.22117353975772858
+            ]
+        ]
+    },
+    "a elephant , a orange car": {
+        "full_text": [
+            0.402344286441803
+        ],
+        "image_names": [
+            "00047-0-a elephant , a orange car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30929574370384216
+            ],
+            [
+                0.3145012855529785
+            ]
+        ]
+    },
+    "a elephant , a red glasses": {
+        "full_text": [
+            0.391337126493454
+        ],
+        "image_names": [
+            "00150-0-a elephant , a red glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.300326406955719
+            ],
+            [
+                0.2958575487136841
+            ]
+        ]
+    },
+    "a elephant , a yellow suitcase": {
+        "full_text": [
+            0.38072365522384644
+        ],
+        "image_names": [
+            "00439-0-a elephant , a yellow suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29138824343681335
+            ],
+            [
+                0.3012423813343048
+            ]
+        ]
+    },
+    "a elephant and a black bowl": {
+        "full_text": [
+            0.3635066747665405
+        ],
+        "image_names": [
+            "00231-0-a elephant and a black bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30898651480674744
+            ],
+            [
+                0.24419714510440826
+            ]
+        ]
+    },
+    "a elephant and a brown bench": {
+        "full_text": [
+            0.28053584694862366
+        ],
+        "image_names": [
+            "00495-0-a elephant and a brown bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3109903633594513
+            ],
+            [
+                0.17637379467487335
+            ]
+        ]
+    },
+    "a elephant and a green bow": {
+        "full_text": [
+            0.33632102608680725
+        ],
+        "image_names": [
+            "00032-0-a elephant and a green bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.305830717086792
+            ],
+            [
+                0.24674344062805176
+            ]
+        ]
+    },
+    "a elephant and a horse": {
+        "full_text": [
+            0.3034665882587433
+        ],
+        "image_names": [
+            "00494-0-a elephant and a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3166121244430542
+            ],
+            [
+                0.22990122437477112
+            ]
+        ]
+    },
+    "a elephant and a monkey": {
+        "full_text": [
+            0.32150202989578247
+        ],
+        "image_names": [
+            "00005-0-a elephant and a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27429527044296265
+            ],
+            [
+                0.25788024067878723
+            ]
+        ]
+    },
+    "a elephant and a red bow": {
+        "full_text": [
+            0.39140504598617554
+        ],
+        "image_names": [
+            "00117-0-a elephant and a red bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29131078720092773
+            ],
+            [
+                0.3236813247203827
+            ]
+        ]
+    },
+    "a elephant with a brown car": {
+        "full_text": [
+            0.30321359634399414
+        ],
+        "image_names": [
+            "00149-0-a elephant with a brown car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.300763875246048
+            ],
+            [
+                0.2074653059244156
+            ]
+        ]
+    },
+    "a elephant with a elephant": {
+        "full_text": [
+            0.2990794777870178
+        ],
+        "image_names": [
+            "00236-0-a elephant with a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2865074872970581
+            ],
+            [
+                0.2865074872970581
+            ]
+        ]
+    },
+    "a elephant with a lion": {
+        "full_text": [
+            0.2728837728500366
+        ],
+        "image_names": [
+            "00387-0-a elephant with a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28815776109695435
+            ],
+            [
+                0.2084665596485138
+            ]
+        ]
+    },
+    "a elephant with a orange bowl": {
+        "full_text": [
+            0.3665979504585266
+        ],
+        "image_names": [
+            "00424-0-a elephant with a orange bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30598345398902893
+            ],
+            [
+                0.2735653817653656
+            ]
+        ]
+    },
+    "a elephant with a purple bowl": {
+        "full_text": [
+            0.3384106457233429
+        ],
+        "image_names": [
+            "00383-0-a elephant with a purple bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29329168796539307
+            ],
+            [
+                0.2401268482208252
+            ]
+        ]
+    },
+    "a elephant with a turtle": {
+        "full_text": [
+            0.3029055595397949
+        ],
+        "image_names": [
+            "00074-0-a elephant with a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30540040135383606
+            ],
+            [
+                0.18550187349319458
+            ]
+        ]
+    },
+    "a elephant with a yellow bowl": {
+        "full_text": [
+            0.3640294671058655
+        ],
+        "image_names": [
+            "00419-0-a elephant with a yellow bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29762712121009827
+            ],
+            [
+                0.24637901782989502
+            ]
+        ]
+    },
+    "a frog , a cat": {
+        "full_text": [
+            0.30887529253959656
+        ],
+        "image_names": [
+            "00170-0-a frog , a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32409122586250305
+            ],
+            [
+                0.20920827984809875
+            ]
+        ]
+    },
+    "a frog , a lion": {
+        "full_text": [
+            0.28164076805114746
+        ],
+        "image_names": [
+            "00090-0-a frog , a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.317330002784729
+            ],
+            [
+                0.1611996293067932
+            ]
+        ]
+    },
+    "a frog and a black chair": {
+        "full_text": [
+            0.38850492238998413
+        ],
+        "image_names": [
+            "00469-0-a frog and a black chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32332843542099
+            ],
+            [
+                0.27584776282310486
+            ]
+        ]
+    },
+    "a frog and a blue bowl": {
+        "full_text": [
+            0.3705037832260132
+        ],
+        "image_names": [
+            "00319-0-a frog and a blue bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2909311056137085
+            ],
+            [
+                0.2736022472381592
+            ]
+        ]
+    },
+    "a frog and a blue crown": {
+        "full_text": [
+            0.3565318286418915
+        ],
+        "image_names": [
+            "00279-0-a frog and a blue crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.26206278800964355
+            ],
+            [
+                0.2580104172229767
+            ]
+        ]
+    },
+    "a frog and a cat": {
+        "full_text": [
+            0.3129843771457672
+        ],
+        "image_names": [
+            "00420-0-a frog and a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2824466824531555
+            ],
+            [
+                0.16590610146522522
+            ]
+        ]
+    },
+    "a frog and a frog": {
+        "full_text": [
+            0.30308735370635986
+        ],
+        "image_names": [
+            "00456-0-a frog and a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3232614994049072
+            ],
+            [
+                0.3232614994049072
+            ]
+        ]
+    },
+    "a frog and a glasses": {
+        "full_text": [
+            0.36622944474220276
+        ],
+        "image_names": [
+            "00376-0-a frog and a glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3088439404964447
+            ],
+            [
+                0.28601154685020447
+            ]
+        ]
+    },
+    "a frog and a mouse": {
+        "full_text": [
+            0.34155163168907166
+        ],
+        "image_names": [
+            "00006-0-a frog and a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30578717589378357
+            ],
+            [
+                0.2705302834510803
+            ]
+        ]
+    },
+    "a frog and a purple bench": {
+        "full_text": [
+            0.34303173422813416
+        ],
+        "image_names": [
+            "00009-0-a frog and a purple bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20249147713184357
+            ],
+            [
+                0.38839879631996155
+            ]
+        ]
+    },
+    "a frog and a white glasses": {
+        "full_text": [
+            0.34735220670700073
+        ],
+        "image_names": [
+            "00418-0-a frog and a white glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28934645652770996
+            ],
+            [
+                0.24813619256019592
+            ]
+        ]
+    },
+    "a frog and a yellow apple": {
+        "full_text": [
+            0.28249087929725647
+        ],
+        "image_names": [
+            "00306-0-a frog and a yellow apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.1712091714143753
+            ],
+            [
+                0.28234660625457764
+            ]
+        ]
+    },
+    "a frog and a yellow car": {
+        "full_text": [
+            0.32860052585601807
+        ],
+        "image_names": [
+            "00445-0-a frog and a yellow car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.23048192262649536
+            ],
+            [
+                0.30870088934898376
+            ]
+        ]
+    },
+    "a frog with a elephant": {
+        "full_text": [
+            0.29553014039993286
+        ],
+        "image_names": [
+            "00291-0-a frog with a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.1848035752773285
+            ],
+            [
+                0.3110247850418091
+            ]
+        ]
+    },
+    "a frog with a red bow": {
+        "full_text": [
+            0.3605573773384094
+        ],
+        "image_names": [
+            "00069-0-a frog with a red bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30199140310287476
+            ],
+            [
+                0.271769642829895
+            ]
+        ]
+    },
+    "a frog with a yellow backpack": {
+        "full_text": [
+            0.30166712403297424
+        ],
+        "image_names": [
+            "00087-0-a frog with a yellow backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.19079264998435974
+            ],
+            [
+                0.35271841287612915
+            ]
+        ]
+    },
+    "a glasses and a red balloon": {
+        "full_text": [
+            0.33790695667266846
+        ],
+        "image_names": [
+            "00274-0-a glasses and a red balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20930776000022888
+            ],
+            [
+                0.3470538854598999
+            ]
+        ]
+    },
+    "a gray apple , a yellow clock": {
+        "full_text": [
+            0.30113545060157776
+        ],
+        "image_names": [
+            "00268-0-a gray apple , a yellow clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20467758178710938
+            ],
+            [
+                0.3079954981803894
+            ]
+        ]
+    },
+    "a gray apple and a bear": {
+        "full_text": [
+            0.3857685625553131
+        ],
+        "image_names": [
+            "00381-0-a gray apple and a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3147091865539551
+            ],
+            [
+                0.2737860083580017
+            ]
+        ]
+    },
+    "a gray apple and a black backpack": {
+        "full_text": [
+            0.37091919779777527
+        ],
+        "image_names": [
+            "00430-0-a gray apple and a black backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.26060763001441956
+            ],
+            [
+                0.3152284026145935
+            ]
+        ]
+    },
+    "a gray apple and a orange glasses": {
+        "full_text": [
+            0.329099178314209
+        ],
+        "image_names": [
+            "00011-0-a gray apple and a orange glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27309030294418335
+            ],
+            [
+                0.26248103380203247
+            ]
+        ]
+    },
+    "a gray apple and a purple chair": {
+        "full_text": [
+            0.36418676376342773
+        ],
+        "image_names": [
+            "00288-0-a gray apple and a purple chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.22459548711776733
+            ],
+            [
+                0.3701603412628174
+            ]
+        ]
+    },
+    "a gray apple with a bear": {
+        "full_text": [
+            0.2684522867202759
+        ],
+        "image_names": [
+            "00223-0-a gray apple with a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2931211292743683
+            ],
+            [
+                0.2040046900510788
+            ]
+        ]
+    },
+    "a gray apple with a elephant": {
+        "full_text": [
+            0.3246557116508484
+        ],
+        "image_names": [
+            "00395-0-a gray apple with a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2150440812110901
+            ],
+            [
+                0.3237573802471161
+            ]
+        ]
+    },
+    "a gray backpack , a elephant": {
+        "full_text": [
+            0.31100746989250183
+        ],
+        "image_names": [
+            "00198-0-a gray backpack , a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34495121240615845
+            ],
+            [
+                0.19110405445098877
+            ]
+        ]
+    },
+    "a gray backpack , a white clock": {
+        "full_text": [
+            0.32501891255378723
+        ],
+        "image_names": [
+            "00333-0-a gray backpack , a white clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3572534918785095
+            ],
+            [
+                0.19802409410476685
+            ]
+        ]
+    },
+    "a gray backpack and a black backpack": {
+        "full_text": [
+            0.31625479459762573
+        ],
+        "image_names": [
+            "00193-0-a gray backpack and a black backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31840184330940247
+            ],
+            [
+                0.3136695623397827
+            ]
+        ]
+    },
+    "a gray backpack with a black clock": {
+        "full_text": [
+            0.34301289916038513
+        ],
+        "image_names": [
+            "00248-0-a gray backpack with a black clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3610137104988098
+            ],
+            [
+                0.19358883798122406
+            ]
+        ]
+    },
+    "a gray backpack with a pink chair": {
+        "full_text": [
+            0.35011759400367737
+        ],
+        "image_names": [
+            "00192-0-a gray backpack with a pink chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3669847249984741
+            ],
+            [
+                0.22169193625450134
+            ]
+        ]
+    },
+    "a gray balloon and a bird": {
+        "full_text": [
+            0.3148020803928375
+        ],
+        "image_names": [
+            "00078-0-a gray balloon and a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3344830274581909
+            ],
+            [
+                0.22120755910873413
+            ]
+        ]
+    },
+    "a gray balloon and a blue clock": {
+        "full_text": [
+            0.3537698984146118
+        ],
+        "image_names": [
+            "00267-0-a gray balloon and a blue clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33985209465026855
+            ],
+            [
+                0.26208752393722534
+            ]
+        ]
+    },
+    "a gray balloon and a orange bench": {
+        "full_text": [
+            0.44131553173065186
+        ],
+        "image_names": [
+            "00310-0-a gray balloon and a orange bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3013608157634735
+            ],
+            [
+                0.3617042303085327
+            ]
+        ]
+    },
+    "a gray balloon with a orange backpack": {
+        "full_text": [
+            0.34704822301864624
+        ],
+        "image_names": [
+            "00370-0-a gray balloon with a orange backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3180830180644989
+            ],
+            [
+                0.2705422639846802
+            ]
+        ]
+    },
+    "a gray bowl , a black bench": {
+        "full_text": [
+            0.3476254940032959
+        ],
+        "image_names": [
+            "00275-0-a gray bowl , a black bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35274529457092285
+            ],
+            [
+                0.2604656219482422
+            ]
+        ]
+    },
+    "a gray bowl and a green suitcase": {
+        "full_text": [
+            0.30794617533683777
+        ],
+        "image_names": [
+            "00317-0-a gray bowl and a green suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3566925823688507
+            ],
+            [
+                0.17354753613471985
+            ]
+        ]
+    },
+    "a gray bowl and a orange apple": {
+        "full_text": [
+            0.32677698135375977
+        ],
+        "image_names": [
+            "00021-0-a gray bowl and a orange apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.24939122796058655
+            ],
+            [
+                0.26627111434936523
+            ]
+        ]
+    },
+    "a gray bowl with a cat": {
+        "full_text": [
+            0.3599269986152649
+        ],
+        "image_names": [
+            "00224-0-a gray bowl with a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3310757875442505
+            ],
+            [
+                0.3033674359321594
+            ]
+        ]
+    },
+    "a gray bowl with a white clock": {
+        "full_text": [
+            0.3296958804130554
+        ],
+        "image_names": [
+            "00023-0-a gray bowl with a white clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2505730986595154
+            ],
+            [
+                0.2979894280433655
+            ]
+        ]
+    },
+    "a gray chair and a brown bowl": {
+        "full_text": [
+            0.26494190096855164
+        ],
+        "image_names": [
+            "00008-0-a gray chair and a brown bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.281688928604126
+            ],
+            [
+                0.20600759983062744
+            ]
+        ]
+    },
+    "a gray chair with a purple balloon": {
+        "full_text": [
+            0.33708468079566956
+        ],
+        "image_names": [
+            "00050-0-a gray chair with a purple balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.259243369102478
+            ],
+            [
+                0.2682379484176636
+            ]
+        ]
+    },
+    "a gray chair with a yellow glasses": {
+        "full_text": [
+            0.36611613631248474
+        ],
+        "image_names": [
+            "00281-0-a gray chair with a yellow glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3074461817741394
+            ],
+            [
+                0.2713058888912201
+            ]
+        ]
+    },
+    "a gray clock , a green backpack": {
+        "full_text": [
+            0.33240780234336853
+        ],
+        "image_names": [
+            "00088-0-a gray clock , a green backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.18498243391513824
+            ],
+            [
+                0.3394815921783447
+            ]
+        ]
+    },
+    "a gray clock and a gray suitcase": {
+        "full_text": [
+            0.3221415877342224
+        ],
+        "image_names": [
+            "00332-0-a gray clock and a gray suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2969586253166199
+            ],
+            [
+                0.23010531067848206
+            ]
+        ]
+    },
+    "a gray clock with a cat": {
+        "full_text": [
+            0.27670639753341675
+        ],
+        "image_names": [
+            "00254-0-a gray clock with a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3118554949760437
+            ],
+            [
+                0.18859893083572388
+            ]
+        ]
+    },
+    "a gray suitcase , a frog": {
+        "full_text": [
+            0.30307263135910034
+        ],
+        "image_names": [
+            "00287-0-a gray suitcase , a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32603973150253296
+            ],
+            [
+                0.18159228563308716
+            ]
+        ]
+    },
+    "a gray suitcase with a bird": {
+        "full_text": [
+            0.299267441034317
+        ],
+        "image_names": [
+            "00045-0-a gray suitcase with a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3151211738586426
+            ],
+            [
+                0.1773962676525116
+            ]
+        ]
+    },
+    "a green apple , a elephant": {
+        "full_text": [
+            0.3682889938354492
+        ],
+        "image_names": [
+            "00407-0-a green apple , a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.256551057100296
+            ],
+            [
+                0.2963646948337555
+            ]
+        ]
+    },
+    "a green apple , a turtle": {
+        "full_text": [
+            0.3011445701122284
+        ],
+        "image_names": [
+            "00048-0-a green apple , a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3297860622406006
+            ],
+            [
+                0.20174390077590942
+            ]
+        ]
+    },
+    "a green apple with a horse": {
+        "full_text": [
+            0.3263193666934967
+        ],
+        "image_names": [
+            "00385-0-a green apple with a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35869449377059937
+            ],
+            [
+                0.2252459079027176
+            ]
+        ]
+    },
+    "a green backpack , a white car": {
+        "full_text": [
+            0.31393179297447205
+        ],
+        "image_names": [
+            "00356-0-a green backpack , a white car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32755109667778015
+            ],
+            [
+                0.16011688113212585
+            ]
+        ]
+    },
+    "a green backpack and a dog": {
+        "full_text": [
+            0.3469744920730591
+        ],
+        "image_names": [
+            "00222-0-a green backpack and a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31109675765037537
+            ],
+            [
+                0.2550005316734314
+            ]
+        ]
+    },
+    "a green balloon , a frog": {
+        "full_text": [
+            0.3760589361190796
+        ],
+        "image_names": [
+            "00162-0-a green balloon , a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3257727324962616
+            ],
+            [
+                0.2997646927833557
+            ]
+        ]
+    },
+    "a green balloon , a gray bench": {
+        "full_text": [
+            0.42936721444129944
+        ],
+        "image_names": [
+            "00298-0-a green balloon , a gray bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3612310588359833
+            ],
+            [
+                0.2699294984340668
+            ]
+        ]
+    },
+    "a green balloon , a turtle": {
+        "full_text": [
+            0.3397105038166046
+        ],
+        "image_names": [
+            "00451-0-a green balloon , a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3629258871078491
+            ],
+            [
+                0.22975613176822662
+            ]
+        ]
+    },
+    "a green balloon and a brown bench": {
+        "full_text": [
+            0.3567778766155243
+        ],
+        "image_names": [
+            "00229-0-a green balloon and a brown bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30979135632514954
+            ],
+            [
+                0.2487529069185257
+            ]
+        ]
+    },
+    "a green balloon and a lion": {
+        "full_text": [
+            0.41456475853919983
+        ],
+        "image_names": [
+            "00099-0-a green balloon and a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33770954608917236
+            ],
+            [
+                0.28994858264923096
+            ]
+        ]
+    },
+    "a green balloon with a bird": {
+        "full_text": [
+            0.35214439034461975
+        ],
+        "image_names": [
+            "00463-0-a green balloon with a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3141675591468811
+            ],
+            [
+                0.282132625579834
+            ]
+        ]
+    },
+    "a green balloon with a cat": {
+        "full_text": [
+            0.39592957496643066
+        ],
+        "image_names": [
+            "00079-0-a green balloon with a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33251988887786865
+            ],
+            [
+                0.2849023938179016
+            ]
+        ]
+    },
+    "a green balloon with a gray crown": {
+        "full_text": [
+            0.3734535574913025
+        ],
+        "image_names": [
+            "00475-0-a green balloon with a gray crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3682646155357361
+            ],
+            [
+                0.23522129654884338
+            ]
+        ]
+    },
+    "a green bench , a black backpack": {
+        "full_text": [
+            0.36406421661376953
+        ],
+        "image_names": [
+            "00386-0-a green bench , a black backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.38433659076690674
+            ],
+            [
+                0.21630483865737915
+            ]
+        ]
+    },
+    "a green bench , a gray bowl": {
+        "full_text": [
+            0.33949750661849976
+        ],
+        "image_names": [
+            "00205-0-a green bench , a gray bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.36760255694389343
+            ],
+            [
+                0.20644688606262207
+            ]
+        ]
+    },
+    "a green bench , a horse": {
+        "full_text": [
+            0.3146503269672394
+        ],
+        "image_names": [
+            "00081-0-a green bench , a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3488626480102539
+            ],
+            [
+                0.19984504580497742
+            ]
+        ]
+    },
+    "a green bench and a orange car": {
+        "full_text": [
+            0.3485276997089386
+        ],
+        "image_names": [
+            "00221-0-a green bench and a orange car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2567640244960785
+            ],
+            [
+                0.3059051036834717
+            ]
+        ]
+    },
+    "a green bench and a red chair": {
+        "full_text": [
+            0.3602556586265564
+        ],
+        "image_names": [
+            "00015-0-a green bench and a red chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3141140639781952
+            ],
+            [
+                0.3024408519268036
+            ]
+        ]
+    },
+    "a green bench with a white bench": {
+        "full_text": [
+            0.35745567083358765
+        ],
+        "image_names": [
+            "00252-0-a green bench with a white bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3424157202243805
+            ],
+            [
+                0.3351209759712219
+            ]
+        ]
+    },
+    "a green bow , a brown backpack": {
+        "full_text": [
+            0.3616829216480255
+        ],
+        "image_names": [
+            "00477-0-a green bow , a brown backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3653784692287445
+            ],
+            [
+                0.22250604629516602
+            ]
+        ]
+    },
+    "a green bow with a yellow bowl": {
+        "full_text": [
+            0.3479999303817749
+        ],
+        "image_names": [
+            "00417-0-a green bow with a yellow bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.38495343923568726
+            ],
+            [
+                0.18967634439468384
+            ]
+        ]
+    },
+    "a green bowl , a blue bench": {
+        "full_text": [
+            0.3498612940311432
+        ],
+        "image_names": [
+            "00187-0-a green bowl , a blue bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3151834309101105
+            ],
+            [
+                0.24340969324111938
+            ]
+        ]
+    },
+    "a green bowl and a horse": {
+        "full_text": [
+            0.3342801332473755
+        ],
+        "image_names": [
+            "00329-0-a green bowl and a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2381022870540619
+            ],
+            [
+                0.2812357544898987
+            ]
+        ]
+    },
+    "a green bowl with a elephant": {
+        "full_text": [
+            0.403623104095459
+        ],
+        "image_names": [
+            "00366-0-a green bowl with a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29610270261764526
+            ],
+            [
+                0.28336101770401
+            ]
+        ]
+    },
+    "a green chair , a crown": {
+        "full_text": [
+            0.34794244170188904
+        ],
+        "image_names": [
+            "00292-0-a green chair , a crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35395026206970215
+            ],
+            [
+                0.2264682948589325
+            ]
+        ]
+    },
+    "a green chair and a frog": {
+        "full_text": [
+            0.3073190152645111
+        ],
+        "image_names": [
+            "00168-0-a green chair and a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34180742502212524
+            ],
+            [
+                0.19749416410923004
+            ]
+        ]
+    },
+    "a green chair and a pink bench": {
+        "full_text": [
+            0.35821014642715454
+        ],
+        "image_names": [
+            "00462-0-a green chair and a pink bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2645500898361206
+            ],
+            [
+                0.3819293975830078
+            ]
+        ]
+    },
+    "a green chair with a black clock": {
+        "full_text": [
+            0.3388230502605438
+        ],
+        "image_names": [
+            "00127-0-a green chair with a black clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34049153327941895
+            ],
+            [
+                0.19755837321281433
+            ]
+        ]
+    },
+    "a green chair with a blue bow": {
+        "full_text": [
+            0.3514908254146576
+        ],
+        "image_names": [
+            "00123-0-a green chair with a blue bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3293312191963196
+            ],
+            [
+                0.21918967366218567
+            ]
+        ]
+    },
+    "a green chair with a monkey": {
+        "full_text": [
+            0.3862120509147644
+        ],
+        "image_names": [
+            "00029-0-a green chair with a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30038103461265564
+            ],
+            [
+                0.2863865792751312
+            ]
+        ]
+    },
+    "a green chair with a purple chair": {
+        "full_text": [
+            0.3771035075187683
+        ],
+        "image_names": [
+            "00413-0-a green chair with a purple chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3276880085468292
+            ],
+            [
+                0.3559439182281494
+            ]
+        ]
+    },
+    "a green clock , a gray chair": {
+        "full_text": [
+            0.3750128149986267
+        ],
+        "image_names": [
+            "00226-0-a green clock , a gray chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35214778780937195
+            ],
+            [
+                0.2523261308670044
+            ]
+        ]
+    },
+    "a green clock and a mouse": {
+        "full_text": [
+            0.4104059934616089
+        ],
+        "image_names": [
+            "00453-0-a green clock and a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3259289562702179
+            ],
+            [
+                0.2841148376464844
+            ]
+        ]
+    },
+    "a green clock with a brown chair": {
+        "full_text": [
+            0.33963626623153687
+        ],
+        "image_names": [
+            "00489-0-a green clock with a brown chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3399936854839325
+            ],
+            [
+                0.1996801793575287
+            ]
+        ]
+    },
+    "a green clock with a orange backpack": {
+        "full_text": [
+            0.3395543098449707
+        ],
+        "image_names": [
+            "00351-0-a green clock with a orange backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3233473002910614
+            ],
+            [
+                0.2293473780155182
+            ]
+        ]
+    },
+    "a green glasses , a white chair": {
+        "full_text": [
+            0.3263901472091675
+        ],
+        "image_names": [
+            "00490-0-a green glasses , a white chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.23489338159561157
+            ],
+            [
+                0.31514137983322144
+            ]
+        ]
+    },
+    "a horse , a bear": {
+        "full_text": [
+            0.31350579857826233
+        ],
+        "image_names": [
+            "00305-0-a horse , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2548995316028595
+            ],
+            [
+                0.3056304454803467
+            ]
+        ]
+    },
+    "a horse , a black clock": {
+        "full_text": [
+            0.3390040397644043
+        ],
+        "image_names": [
+            "00096-0-a horse , a black clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2269858419895172
+            ],
+            [
+                0.2851484417915344
+            ]
+        ]
+    },
+    "a horse , a orange glasses": {
+        "full_text": [
+            0.3236255645751953
+        ],
+        "image_names": [
+            "00076-0-a horse , a orange glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3183712661266327
+            ],
+            [
+                0.2322879135608673
+            ]
+        ]
+    },
+    "a horse , a pink balloon": {
+        "full_text": [
+            0.38051265478134155
+        ],
+        "image_names": [
+            "00218-0-a horse , a pink balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30071282386779785
+            ],
+            [
+                0.30053138732910156
+            ]
+        ]
+    },
+    "a horse , a purple bowl": {
+        "full_text": [
+            0.33622682094573975
+        ],
+        "image_names": [
+            "00431-0-a horse , a purple bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3024802505970001
+            ],
+            [
+                0.2326505482196808
+            ]
+        ]
+    },
+    "a horse , a white chair": {
+        "full_text": [
+            0.2984858751296997
+        ],
+        "image_names": [
+            "00196-0-a horse , a white chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3151698708534241
+            ],
+            [
+                0.2135305404663086
+            ]
+        ]
+    },
+    "a horse , a yellow clock": {
+        "full_text": [
+            0.3085209131240845
+        ],
+        "image_names": [
+            "00458-0-a horse , a yellow clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.1701197624206543
+            ],
+            [
+                0.34809669852256775
+            ]
+        ]
+    },
+    "a horse and a bear": {
+        "full_text": [
+            0.31122249364852905
+        ],
+        "image_names": [
+            "00235-0-a horse and a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2916397750377655
+            ],
+            [
+                0.2053263932466507
+            ]
+        ]
+    },
+    "a horse and a bird": {
+        "full_text": [
+            0.2719722390174866
+        ],
+        "image_names": [
+            "00184-0-a horse and a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2962767481803894
+            ],
+            [
+                0.19977113604545593
+            ]
+        ]
+    },
+    "a horse and a cat": {
+        "full_text": [
+            0.25832900404930115
+        ],
+        "image_names": [
+            "00201-0-a horse and a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2991304099559784
+            ],
+            [
+                0.1907338947057724
+            ]
+        ]
+    },
+    "a horse and a lion": {
+        "full_text": [
+            0.3321717381477356
+        ],
+        "image_names": [
+            "00212-0-a horse and a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.24931442737579346
+            ],
+            [
+                0.29562532901763916
+            ]
+        ]
+    },
+    "a horse with a brown balloon": {
+        "full_text": [
+            0.28817689418792725
+        ],
+        "image_names": [
+            "00177-0-a horse with a brown balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28779393434524536
+            ],
+            [
+                0.21389199793338776
+            ]
+        ]
+    },
+    "a horse with a elephant": {
+        "full_text": [
+            0.29036474227905273
+        ],
+        "image_names": [
+            "00049-0-a horse with a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.22970405220985413
+            ],
+            [
+                0.3190579414367676
+            ]
+        ]
+    },
+    "a horse with a monkey": {
+        "full_text": [
+            0.28406983613967896
+        ],
+        "image_names": [
+            "00396-0-a horse with a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2720673978328705
+            ],
+            [
+                0.202144593000412
+            ]
+        ]
+    },
+    "a lion , a black car": {
+        "full_text": [
+            0.361439049243927
+        ],
+        "image_names": [
+            "00034-0-a lion , a black car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3127330243587494
+            ],
+            [
+                0.2496405839920044
+            ]
+        ]
+    },
+    "a lion , a black suitcase": {
+        "full_text": [
+            0.29449552297592163
+        ],
+        "image_names": [
+            "00447-0-a lion , a black suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31809812784194946
+            ],
+            [
+                0.1777218133211136
+            ]
+        ]
+    },
+    "a lion , a elephant": {
+        "full_text": [
+            0.3141728639602661
+        ],
+        "image_names": [
+            "00476-0-a lion , a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2428470253944397
+            ],
+            [
+                0.31633466482162476
+            ]
+        ]
+    },
+    "a lion , a gray clock": {
+        "full_text": [
+            0.27117112278938293
+        ],
+        "image_names": [
+            "00324-0-a lion , a gray clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.17001239955425262
+            ],
+            [
+                0.2969582974910736
+            ]
+        ]
+    },
+    "a lion , a pink bench": {
+        "full_text": [
+            0.33063745498657227
+        ],
+        "image_names": [
+            "00109-0-a lion , a pink bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.15949514508247375
+            ],
+            [
+                0.3884868621826172
+            ]
+        ]
+    },
+    "a lion and a white balloon": {
+        "full_text": [
+            0.35303544998168945
+        ],
+        "image_names": [
+            "00172-0-a lion and a white balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2756367325782776
+            ],
+            [
+                0.25443965196609497
+            ]
+        ]
+    },
+    "a lion with a black bowl": {
+        "full_text": [
+            0.30905669927597046
+        ],
+        "image_names": [
+            "00163-0-a lion with a black bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3008129894733429
+            ],
+            [
+                0.18238085508346558
+            ]
+        ]
+    },
+    "a lion with a black car": {
+        "full_text": [
+            0.28241217136383057
+        ],
+        "image_names": [
+            "00455-0-a lion with a black car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30040767788887024
+            ],
+            [
+                0.15768244862556458
+            ]
+        ]
+    },
+    "a lion with a brown suitcase": {
+        "full_text": [
+            0.3567337989807129
+        ],
+        "image_names": [
+            "00480-0-a lion with a brown suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.26961201429367065
+            ],
+            [
+                0.2866469919681549
+            ]
+        ]
+    },
+    "a lion with a dog": {
+        "full_text": [
+            0.3154546022415161
+        ],
+        "image_names": [
+            "00025-0-a lion with a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2920384705066681
+            ],
+            [
+                0.20569577813148499
+            ]
+        ]
+    },
+    "a lion with a glasses": {
+        "full_text": [
+            0.3020390570163727
+        ],
+        "image_names": [
+            "00060-0-a lion with a glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2944813370704651
+            ],
+            [
+                0.22458618879318237
+            ]
+        ]
+    },
+    "a lion with a white bow": {
+        "full_text": [
+            0.3166842460632324
+        ],
+        "image_names": [
+            "00327-0-a lion with a white bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.318615585565567
+            ],
+            [
+                0.20929163694381714
+            ]
+        ]
+    },
+    "a monkey , a bear": {
+        "full_text": [
+            0.2710094451904297
+        ],
+        "image_names": [
+            "00401-0-a monkey , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27873358130455017
+            ],
+            [
+                0.16950221359729767
+            ]
+        ]
+    },
+    "a monkey , a gray apple": {
+        "full_text": [
+            0.28553149104118347
+        ],
+        "image_names": [
+            "00359-0-a monkey , a gray apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29694366455078125
+            ],
+            [
+                0.19812634587287903
+            ]
+        ]
+    },
+    "a monkey , a mouse": {
+        "full_text": [
+            0.2941693067550659
+        ],
+        "image_names": [
+            "00107-0-a monkey , a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3047466278076172
+            ],
+            [
+                0.22015297412872314
+            ]
+        ]
+    },
+    "a monkey , a purple chair": {
+        "full_text": [
+            0.3236503601074219
+        ],
+        "image_names": [
+            "00115-0-a monkey , a purple chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3169894814491272
+            ],
+            [
+                0.23610422015190125
+            ]
+        ]
+    },
+    "a monkey , a white suitcase": {
+        "full_text": [
+            0.3059898614883423
+        ],
+        "image_names": [
+            "00423-0-a monkey , a white suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29653266072273254
+            ],
+            [
+                0.2064402997493744
+            ]
+        ]
+    },
+    "a monkey and a black crown": {
+        "full_text": [
+            0.27278029918670654
+        ],
+        "image_names": [
+            "00337-0-a monkey and a black crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.271160364151001
+            ],
+            [
+                0.16813644766807556
+            ]
+        ]
+    },
+    "a monkey and a green apple": {
+        "full_text": [
+            0.3562181293964386
+        ],
+        "image_names": [
+            "00255-0-a monkey and a green apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30076244473457336
+            ],
+            [
+                0.2823152542114258
+            ]
+        ]
+    },
+    "a monkey and a purple balloon": {
+        "full_text": [
+            0.38824254274368286
+        ],
+        "image_names": [
+            "00488-0-a monkey and a purple balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28162097930908203
+            ],
+            [
+                0.3136616349220276
+            ]
+        ]
+    },
+    "a monkey and a rabbit": {
+        "full_text": [
+            0.3345620632171631
+        ],
+        "image_names": [
+            "00200-0-a monkey and a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.290177583694458
+            ],
+            [
+                0.2227190136909485
+            ]
+        ]
+    },
+    "a monkey and a turtle": {
+        "full_text": [
+            0.26735737919807434
+        ],
+        "image_names": [
+            "00318-0-a monkey and a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2994161546230316
+            ],
+            [
+                0.1692766547203064
+            ]
+        ]
+    },
+    "a monkey and a white balloon": {
+        "full_text": [
+            0.32879579067230225
+        ],
+        "image_names": [
+            "00217-0-a monkey and a white balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2827955484390259
+            ],
+            [
+                0.22200539708137512
+            ]
+        ]
+    },
+    "a monkey and a white chair": {
+        "full_text": [
+            0.3731619119644165
+        ],
+        "image_names": [
+            "00161-0-a monkey and a white chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2842101752758026
+            ],
+            [
+                0.28595924377441406
+            ]
+        ]
+    },
+    "a monkey and a yellow car": {
+        "full_text": [
+            0.4055180847644806
+        ],
+        "image_names": [
+            "00278-0-a monkey and a yellow car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30335044860839844
+            ],
+            [
+                0.3052433133125305
+            ]
+        ]
+    },
+    "a monkey with a blue clock": {
+        "full_text": [
+            0.410123735666275
+        ],
+        "image_names": [
+            "00352-0-a monkey with a blue clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.26128292083740234
+            ],
+            [
+                0.28279924392700195
+            ]
+        ]
+    },
+    "a monkey with a dog": {
+        "full_text": [
+            0.3282325863838196
+        ],
+        "image_names": [
+            "00179-0-a monkey with a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3060271441936493
+            ],
+            [
+                0.2101575881242752
+            ]
+        ]
+    },
+    "a monkey with a green glasses": {
+        "full_text": [
+            0.3643275499343872
+        ],
+        "image_names": [
+            "00290-0-a monkey with a green glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2785674035549164
+            ],
+            [
+                0.292591392993927
+            ]
+        ]
+    },
+    "a monkey with a monkey": {
+        "full_text": [
+            0.2777726352214813
+        ],
+        "image_names": [
+            "00331-0-a monkey with a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2903944253921509
+            ],
+            [
+                0.2903944253921509
+            ]
+        ]
+    },
+    "a mouse , a brown bowl": {
+        "full_text": [
+            0.3618142306804657
+        ],
+        "image_names": [
+            "00084-0-a mouse , a brown bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32054564356803894
+            ],
+            [
+                0.27510330080986023
+            ]
+        ]
+    },
+    "a mouse , a horse": {
+        "full_text": [
+            0.3080644905567169
+        ],
+        "image_names": [
+            "00361-0-a mouse , a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2687015235424042
+            ],
+            [
+                0.2747395932674408
+            ]
+        ]
+    },
+    "a mouse , a orange chair": {
+        "full_text": [
+            0.40171384811401367
+        ],
+        "image_names": [
+            "00414-0-a mouse , a orange chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.310259073972702
+            ],
+            [
+                0.2902270257472992
+            ]
+        ]
+    },
+    "a mouse and a bear": {
+        "full_text": [
+            0.2341042011976242
+        ],
+        "image_names": [
+            "00100-0-a mouse and a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2550598382949829
+            ],
+            [
+                0.24919922649860382
+            ]
+        ]
+    },
+    "a mouse and a gray apple": {
+        "full_text": [
+            0.3778141438961029
+        ],
+        "image_names": [
+            "00010-0-a mouse and a gray apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34108394384384155
+            ],
+            [
+                0.3053409457206726
+            ]
+        ]
+    },
+    "a mouse and a rabbit": {
+        "full_text": [
+            0.34597575664520264
+        ],
+        "image_names": [
+            "00126-0-a mouse and a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2869885265827179
+            ],
+            [
+                0.28721654415130615
+            ]
+        ]
+    },
+    "a mouse and a red bench": {
+        "full_text": [
+            0.3057331442832947
+        ],
+        "image_names": [
+            "00261-0-a mouse and a red bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.19507622718811035
+            ],
+            [
+                0.32821351289749146
+            ]
+        ]
+    },
+    "a mouse and a red bow": {
+        "full_text": [
+            0.37665796279907227
+        ],
+        "image_names": [
+            "00412-0-a mouse and a red bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33295997977256775
+            ],
+            [
+                0.2780681252479553
+            ]
+        ]
+    },
+    "a mouse and a yellow backpack": {
+        "full_text": [
+            0.3770626485347748
+        ],
+        "image_names": [
+            "00336-0-a mouse and a yellow backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.26270946860313416
+            ],
+            [
+                0.34724849462509155
+            ]
+        ]
+    },
+    "a mouse with a black backpack": {
+        "full_text": [
+            0.3025471568107605
+        ],
+        "image_names": [
+            "00026-0-a mouse with a black backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.222366601228714
+            ],
+            [
+                0.3536044955253601
+            ]
+        ]
+    },
+    "a mouse with a white chair": {
+        "full_text": [
+            0.3264189660549164
+        ],
+        "image_names": [
+            "00468-0-a mouse with a white chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2093770056962967
+            ],
+            [
+                0.3512329161167145
+            ]
+        ]
+    },
+    "a mouse with a yellow clock": {
+        "full_text": [
+            0.37840959429740906
+        ],
+        "image_names": [
+            "00443-0-a mouse with a yellow clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27353161573410034
+            ],
+            [
+                0.3204350769519806
+            ]
+        ]
+    },
+    "a orange apple , a glasses": {
+        "full_text": [
+            0.31224432587623596
+        ],
+        "image_names": [
+            "00038-0-a orange apple , a glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3176043629646301
+            ],
+            [
+                0.24703627824783325
+            ]
+        ]
+    },
+    "a orange apple , a white chair": {
+        "full_text": [
+            0.30170613527297974
+        ],
+        "image_names": [
+            "00299-0-a orange apple , a white chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28768330812454224
+            ],
+            [
+                0.19080114364624023
+            ]
+        ]
+    },
+    "a orange apple with a black balloon": {
+        "full_text": [
+            0.29010069370269775
+        ],
+        "image_names": [
+            "00052-0-a orange apple with a black balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3096909821033478
+            ],
+            [
+                0.18489891290664673
+            ]
+        ]
+    },
+    "a orange apple with a blue bowl": {
+        "full_text": [
+            0.2624111771583557
+        ],
+        "image_names": [
+            "00446-0-a orange apple with a blue bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2797132730484009
+            ],
+            [
+                0.20711013674736023
+            ]
+        ]
+    },
+    "a orange apple with a cat": {
+        "full_text": [
+            0.2854574918746948
+        ],
+        "image_names": [
+            "00072-0-a orange apple with a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3277628421783447
+            ],
+            [
+                0.21711784601211548
+            ]
+        ]
+    },
+    "a orange backpack , a pink bowl": {
+        "full_text": [
+            0.31029602885246277
+        ],
+        "image_names": [
+            "00491-0-a orange backpack , a pink bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30521252751350403
+            ],
+            [
+                0.20045283436775208
+            ]
+        ]
+    },
+    "a orange backpack , a purple bench": {
+        "full_text": [
+            0.39275625348091125
+        ],
+        "image_names": [
+            "00199-0-a orange backpack , a purple bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3282230496406555
+            ],
+            [
+                0.27148309350013733
+            ]
+        ]
+    },
+    "a orange backpack , a yellow apple": {
+        "full_text": [
+            0.30469807982444763
+        ],
+        "image_names": [
+            "00308-0-a orange backpack , a yellow apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2844478487968445
+            ],
+            [
+                0.26476728916168213
+            ]
+        ]
+    },
+    "a orange backpack and a rabbit": {
+        "full_text": [
+            0.3242369294166565
+        ],
+        "image_names": [
+            "00410-0-a orange backpack and a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3521246314048767
+            ],
+            [
+                0.19003385305404663
+            ]
+        ]
+    },
+    "a orange backpack and a turtle": {
+        "full_text": [
+            0.29447680711746216
+        ],
+        "image_names": [
+            "00246-0-a orange backpack and a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30302801728248596
+            ],
+            [
+                0.1962626874446869
+            ]
+        ]
+    },
+    "a orange backpack with a dog": {
+        "full_text": [
+            0.30000752210617065
+        ],
+        "image_names": [
+            "00377-0-a orange backpack with a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3345736861228943
+            ],
+            [
+                0.16663700342178345
+            ]
+        ]
+    },
+    "a orange balloon and a green bow": {
+        "full_text": [
+            0.35070452094078064
+        ],
+        "image_names": [
+            "00091-0-a orange balloon and a green bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3750782608985901
+            ],
+            [
+                0.24445787072181702
+            ]
+        ]
+    },
+    "a orange balloon and a lion": {
+        "full_text": [
+            0.3556611239910126
+        ],
+        "image_names": [
+            "00066-0-a orange balloon and a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2964304983615875
+            ],
+            [
+                0.25841471552848816
+            ]
+        ]
+    },
+    "a orange bench , a monkey": {
+        "full_text": [
+            0.327716201543808
+        ],
+        "image_names": [
+            "00360-0-a orange bench , a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.36945703625679016
+            ],
+            [
+                0.17181241512298584
+            ]
+        ]
+    },
+    "a orange bench , a turtle": {
+        "full_text": [
+            0.3305274546146393
+        ],
+        "image_names": [
+            "00436-0-a orange bench , a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.36869120597839355
+            ],
+            [
+                0.19753438234329224
+            ]
+        ]
+    },
+    "a orange bowl , a brown bowl": {
+        "full_text": [
+            0.30819591879844666
+        ],
+        "image_names": [
+            "00153-0-a orange bowl , a brown bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28939342498779297
+            ],
+            [
+                0.2784746289253235
+            ]
+        ]
+    },
+    "a orange car , a bear": {
+        "full_text": [
+            0.38584184646606445
+        ],
+        "image_names": [
+            "00064-0-a orange car , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3360876441001892
+            ],
+            [
+                0.27500784397125244
+            ]
+        ]
+    },
+    "a orange car and a dog": {
+        "full_text": [
+            0.31233733892440796
+        ],
+        "image_names": [
+            "00347-0-a orange car and a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3193857967853546
+            ],
+            [
+                0.1908016800880432
+            ]
+        ]
+    },
+    "a orange car and a monkey": {
+        "full_text": [
+            0.317709743976593
+        ],
+        "image_names": [
+            "00219-0-a orange car and a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2881085276603699
+            ],
+            [
+                0.2148766666650772
+            ]
+        ]
+    },
+    "a orange car and a purple car": {
+        "full_text": [
+            0.3413280248641968
+        ],
+        "image_names": [
+            "00228-0-a orange car and a purple car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34342092275619507
+            ],
+            [
+                0.25485605001449585
+            ]
+        ]
+    },
+    "a orange car with a crown": {
+        "full_text": [
+            0.3166287839412689
+        ],
+        "image_names": [
+            "00249-0-a orange car with a crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3305724263191223
+            ],
+            [
+                0.19207638502120972
+            ]
+        ]
+    },
+    "a orange car with a frog": {
+        "full_text": [
+            0.3575133681297302
+        ],
+        "image_names": [
+            "00138-0-a orange car with a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34262609481811523
+            ],
+            [
+                0.2151462733745575
+            ]
+        ]
+    },
+    "a orange car with a glasses": {
+        "full_text": [
+            0.30700400471687317
+        ],
+        "image_names": [
+            "00164-0-a orange car with a glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.30823659896850586
+            ],
+            [
+                0.18478593230247498
+            ]
+        ]
+    },
+    "a orange chair , a black car": {
+        "full_text": [
+            0.31706440448760986
+        ],
+        "image_names": [
+            "00404-0-a orange chair , a black car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2585698068141937
+            ],
+            [
+                0.2728429436683655
+            ]
+        ]
+    },
+    "a orange chair and a red suitcase": {
+        "full_text": [
+            0.33795687556266785
+        ],
+        "image_names": [
+            "00341-0-a orange chair and a red suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35631436109542847
+            ],
+            [
+                0.24553276598453522
+            ]
+        ]
+    },
+    "a orange chair with a yellow clock": {
+        "full_text": [
+            0.33917921781539917
+        ],
+        "image_names": [
+            "00364-0-a orange chair with a yellow clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29088646173477173
+            ],
+            [
+                0.2943533658981323
+            ]
+        ]
+    },
+    "a orange glasses , a green bowl": {
+        "full_text": [
+            0.3755072057247162
+        ],
+        "image_names": [
+            "00059-0-a orange glasses , a green bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31197524070739746
+            ],
+            [
+                0.3500537872314453
+            ]
+        ]
+    },
+    "a orange suitcase , a bird": {
+        "full_text": [
+            0.3520175516605377
+        ],
+        "image_names": [
+            "00244-0-a orange suitcase , a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.39646196365356445
+            ],
+            [
+                0.18618616461753845
+            ]
+        ]
+    },
+    "a orange suitcase and a green bow": {
+        "full_text": [
+            0.4596768021583557
+        ],
+        "image_names": [
+            "00440-0-a orange suitcase and a green bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35632386803627014
+            ],
+            [
+                0.3041805028915405
+            ]
+        ]
+    },
+    "a orange suitcase and a horse": {
+        "full_text": [
+            0.33442312479019165
+        ],
+        "image_names": [
+            "00180-0-a orange suitcase and a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35194194316864014
+            ],
+            [
+                0.19213411211967468
+            ]
+        ]
+    },
+    "a orange suitcase and a white chair": {
+        "full_text": [
+            0.36336469650268555
+        ],
+        "image_names": [
+            "00183-0-a orange suitcase and a white chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3760092258453369
+            ],
+            [
+                0.22188231348991394
+            ]
+        ]
+    },
+    "a orange suitcase with a lion": {
+        "full_text": [
+            0.31841522455215454
+        ],
+        "image_names": [
+            "00368-0-a orange suitcase with a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35535556077957153
+            ],
+            [
+                0.18710680305957794
+            ]
+        ]
+    },
+    "a orange suitcase with a red apple": {
+        "full_text": [
+            0.3314618170261383
+        ],
+        "image_names": [
+            "00346-0-a orange suitcase with a red apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34337809681892395
+            ],
+            [
+                0.19493716955184937
+            ]
+        ]
+    },
+    "a pink apple , a lion": {
+        "full_text": [
+            0.3246152400970459
+        ],
+        "image_names": [
+            "00384-0-a pink apple , a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3334401249885559
+            ],
+            [
+                0.2054203301668167
+            ]
+        ]
+    },
+    "a pink apple with a lion": {
+        "full_text": [
+            0.3873836100101471
+        ],
+        "image_names": [
+            "00030-0-a pink apple with a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28249096870422363
+            ],
+            [
+                0.2806437909603119
+            ]
+        ]
+    },
+    "a pink apple with a pink balloon": {
+        "full_text": [
+            0.33332231640815735
+        ],
+        "image_names": [
+            "00186-0-a pink apple with a pink balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3436352610588074
+            ],
+            [
+                0.2879315912723541
+            ]
+        ]
+    },
+    "a pink apple with a turtle": {
+        "full_text": [
+            0.30860424041748047
+        ],
+        "image_names": [
+            "00033-0-a pink apple with a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3317910432815552
+            ],
+            [
+                0.1964883804321289
+            ]
+        ]
+    },
+    "a pink balloon and a blue bench": {
+        "full_text": [
+            0.42857417464256287
+        ],
+        "image_names": [
+            "00154-0-a pink balloon and a blue bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3442034125328064
+            ],
+            [
+                0.3182792663574219
+            ]
+        ]
+    },
+    "a pink balloon and a red bow": {
+        "full_text": [
+            0.319396436214447
+        ],
+        "image_names": [
+            "00158-0-a pink balloon and a red bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31491994857788086
+            ],
+            [
+                0.2596037983894348
+            ]
+        ]
+    },
+    "a pink balloon and a yellow bowl": {
+        "full_text": [
+            0.3628440499305725
+        ],
+        "image_names": [
+            "00094-0-a pink balloon and a yellow bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35092693567276
+            ],
+            [
+                0.25920945405960083
+            ]
+        ]
+    },
+    "a pink bench with a cat": {
+        "full_text": [
+            0.39511868357658386
+        ],
+        "image_names": [
+            "00474-0-a pink bench with a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34409797191619873
+            ],
+            [
+                0.2728249132633209
+            ]
+        ]
+    },
+    "a pink bench with a dog": {
+        "full_text": [
+            0.34398964047431946
+        ],
+        "image_names": [
+            "00057-0-a pink bench with a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3669906556606293
+            ],
+            [
+                0.186354398727417
+            ]
+        ]
+    },
+    "a pink bowl , a pink chair": {
+        "full_text": [
+            0.343786358833313
+        ],
+        "image_names": [
+            "00135-0-a pink bowl , a pink chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32795268297195435
+            ],
+            [
+                0.3058851957321167
+            ]
+        ]
+    },
+    "a pink bowl with a monkey": {
+        "full_text": [
+            0.44738703966140747
+        ],
+        "image_names": [
+            "00251-0-a pink bowl with a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34732574224472046
+            ],
+            [
+                0.3193522095680237
+            ]
+        ]
+    },
+    "a pink car with a turtle": {
+        "full_text": [
+            0.32382652163505554
+        ],
+        "image_names": [
+            "00102-0-a pink car with a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3209860026836395
+            ],
+            [
+                0.17855721712112427
+            ]
+        ]
+    },
+    "a pink chair , a green apple": {
+        "full_text": [
+            0.3438100218772888
+        ],
+        "image_names": [
+            "00348-0-a pink chair , a green apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3021707236766815
+            ],
+            [
+                0.2226148247718811
+            ]
+        ]
+    },
+    "a pink chair , a yellow apple": {
+        "full_text": [
+            0.323384165763855
+        ],
+        "image_names": [
+            "00068-0-a pink chair , a yellow apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32658201456069946
+            ],
+            [
+                0.17673124372959137
+            ]
+        ]
+    },
+    "a pink chair and a cat": {
+        "full_text": [
+            0.28882044553756714
+        ],
+        "image_names": [
+            "00129-0-a pink chair and a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32366693019866943
+            ],
+            [
+                0.16939038038253784
+            ]
+        ]
+    },
+    "a pink chair with a red glasses": {
+        "full_text": [
+            0.3323087692260742
+        ],
+        "image_names": [
+            "00492-0-a pink chair with a red glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3679116368293762
+            ],
+            [
+                0.19681903719902039
+            ]
+        ]
+    },
+    "a pink clock , a black bench": {
+        "full_text": [
+            0.3784361779689789
+        ],
+        "image_names": [
+            "00429-0-a pink clock , a black bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35556256771087646
+            ],
+            [
+                0.2250310480594635
+            ]
+        ]
+    },
+    "a pink clock , a elephant": {
+        "full_text": [
+            0.3170108199119568
+        ],
+        "image_names": [
+            "00323-0-a pink clock , a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3446524143218994
+            ],
+            [
+                0.17846396565437317
+            ]
+        ]
+    },
+    "a pink crown , a bear": {
+        "full_text": [
+            0.37649068236351013
+        ],
+        "image_names": [
+            "00002-0-a pink crown , a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3143901228904724
+            ],
+            [
+                0.26735010743141174
+            ]
+        ]
+    },
+    "a pink crown , a white bench": {
+        "full_text": [
+            0.3196079730987549
+        ],
+        "image_names": [
+            "00042-0-a pink crown , a white bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20899824798107147
+            ],
+            [
+                0.3540538251399994
+            ]
+        ]
+    },
+    "a pink suitcase and a white clock": {
+        "full_text": [
+            0.38657671213150024
+        ],
+        "image_names": [
+            "00461-0-a pink suitcase and a white clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33736664056777954
+            ],
+            [
+                0.25596141815185547
+            ]
+        ]
+    },
+    "a purple apple and a dog": {
+        "full_text": [
+            0.3629721999168396
+        ],
+        "image_names": [
+            "00339-0-a purple apple and a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2936452627182007
+            ],
+            [
+                0.26189184188842773
+            ]
+        ]
+    },
+    "a purple apple and a orange suitcase": {
+        "full_text": [
+            0.42026233673095703
+        ],
+        "image_names": [
+            "00272-0-a purple apple and a orange suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2990315854549408
+            ],
+            [
+                0.3404145836830139
+            ]
+        ]
+    },
+    "a purple apple with a yellow balloon": {
+        "full_text": [
+            0.33732476830482483
+        ],
+        "image_names": [
+            "00434-0-a purple apple with a yellow balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.335538387298584
+            ],
+            [
+                0.21649733185768127
+            ]
+        ]
+    },
+    "a purple balloon , a green clock": {
+        "full_text": [
+            0.40260204672813416
+        ],
+        "image_names": [
+            "00485-0-a purple balloon , a green clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29184356331825256
+            ],
+            [
+                0.31959259510040283
+            ]
+        ]
+    },
+    "a purple balloon , a rabbit": {
+        "full_text": [
+            0.40684276819229126
+        ],
+        "image_names": [
+            "00277-0-a purple balloon , a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3578210473060608
+            ],
+            [
+                0.2603248357772827
+            ]
+        ]
+    },
+    "a purple balloon and a blue bow": {
+        "full_text": [
+            0.3530902564525604
+        ],
+        "image_names": [
+            "00389-0-a purple balloon and a blue bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.37621834874153137
+            ],
+            [
+                0.2414551079273224
+            ]
+        ]
+    },
+    "a purple balloon with a bear": {
+        "full_text": [
+            0.3391475975513458
+        ],
+        "image_names": [
+            "00067-0-a purple balloon with a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3700025677680969
+            ],
+            [
+                0.19085632264614105
+            ]
+        ]
+    },
+    "a purple balloon with a green chair": {
+        "full_text": [
+            0.3460153043270111
+        ],
+        "image_names": [
+            "00086-0-a purple balloon with a green chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3147515058517456
+            ],
+            [
+                0.2696461081504822
+            ]
+        ]
+    },
+    "a purple balloon with a orange chair": {
+        "full_text": [
+            0.4235136806964874
+        ],
+        "image_names": [
+            "00442-0-a purple balloon with a orange chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33913522958755493
+            ],
+            [
+                0.31492021679878235
+            ]
+        ]
+    },
+    "a purple bench , a horse": {
+        "full_text": [
+            0.3379976153373718
+        ],
+        "image_names": [
+            "00098-0-a purple bench , a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3651062250137329
+            ],
+            [
+                0.21478042006492615
+            ]
+        ]
+    },
+    "a purple bench , a purple balloon": {
+        "full_text": [
+            0.3315051794052124
+        ],
+        "image_names": [
+            "00208-0-a purple bench , a purple balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.36817044019699097
+            ],
+            [
+                0.233256995677948
+            ]
+        ]
+    },
+    "a purple bench , a red chair": {
+        "full_text": [
+            0.34395885467529297
+        ],
+        "image_names": [
+            "00320-0-a purple bench , a red chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34719932079315186
+            ],
+            [
+                0.25866982340812683
+            ]
+        ]
+    },
+    "a purple bench and a lion": {
+        "full_text": [
+            0.30538907647132874
+        ],
+        "image_names": [
+            "00238-0-a purple bench and a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.20699523389339447
+            ],
+            [
+                0.2803305387496948
+            ]
+        ]
+    },
+    "a purple bench and a white balloon": {
+        "full_text": [
+            0.42311832308769226
+        ],
+        "image_names": [
+            "00151-0-a purple bench and a white balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3635760545730591
+            ],
+            [
+                0.2920808792114258
+            ]
+        ]
+    },
+    "a purple bow with a black balloon": {
+        "full_text": [
+            0.3420065641403198
+        ],
+        "image_names": [
+            "00250-0-a purple bow with a black balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3401898741722107
+            ],
+            [
+                0.2548918128013611
+            ]
+        ]
+    },
+    "a purple bowl , a blue balloon": {
+        "full_text": [
+            0.294839084148407
+        ],
+        "image_names": [
+            "00242-0-a purple bowl , a blue balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27950239181518555
+            ],
+            [
+                0.2249739021062851
+            ]
+        ]
+    },
+    "a purple bowl , a gray apple": {
+        "full_text": [
+            0.3667793273925781
+        ],
+        "image_names": [
+            "00051-0-a purple bowl , a gray apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2957899868488312
+            ],
+            [
+                0.31845685839653015
+            ]
+        ]
+    },
+    "a purple bowl and a horse": {
+        "full_text": [
+            0.3371017575263977
+        ],
+        "image_names": [
+            "00070-0-a purple bowl and a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3679240942001343
+            ],
+            [
+                0.1669723391532898
+            ]
+        ]
+    },
+    "a purple bowl with a bear": {
+        "full_text": [
+            0.39874976873397827
+        ],
+        "image_names": [
+            "00136-0-a purple bowl with a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3061511218547821
+            ],
+            [
+                0.29619383811950684
+            ]
+        ]
+    },
+    "a purple bowl with a blue crown": {
+        "full_text": [
+            0.3709908425807953
+        ],
+        "image_names": [
+            "00105-0-a purple bowl with a blue crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.37574461102485657
+            ],
+            [
+                0.22133521735668182
+            ]
+        ]
+    },
+    "a purple car , a monkey": {
+        "full_text": [
+            0.3199092149734497
+        ],
+        "image_names": [
+            "00239-0-a purple car , a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3450273275375366
+            ],
+            [
+                0.16362906992435455
+            ]
+        ]
+    },
+    "a purple car and a gray balloon": {
+        "full_text": [
+            0.341281533241272
+        ],
+        "image_names": [
+            "00103-0-a purple car and a gray balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2706459164619446
+            ],
+            [
+                0.3076252341270447
+            ]
+        ]
+    },
+    "a purple car and a red bench": {
+        "full_text": [
+            0.36764436960220337
+        ],
+        "image_names": [
+            "00427-0-a purple car and a red bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3460575044155121
+            ],
+            [
+                0.24351626634597778
+            ]
+        ]
+    },
+    "a purple car with a horse": {
+        "full_text": [
+            0.34220564365386963
+        ],
+        "image_names": [
+            "00398-0-a purple car with a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35793599486351013
+            ],
+            [
+                0.20346972346305847
+            ]
+        ]
+    },
+    "a purple chair , a frog": {
+        "full_text": [
+            0.35281938314437866
+        ],
+        "image_names": [
+            "00040-0-a purple chair , a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3754487633705139
+            ],
+            [
+                0.1966336965560913
+            ]
+        ]
+    },
+    "a purple chair , a red apple": {
+        "full_text": [
+            0.3474048376083374
+        ],
+        "image_names": [
+            "00321-0-a purple chair , a red apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.37623101472854614
+            ],
+            [
+                0.18368448317050934
+            ]
+        ]
+    },
+    "a purple chair and a blue backpack": {
+        "full_text": [
+            0.31785476207733154
+        ],
+        "image_names": [
+            "00388-0-a purple chair and a blue backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27098241448402405
+            ],
+            [
+                0.3173123002052307
+            ]
+        ]
+    },
+    "a purple chair and a blue crown": {
+        "full_text": [
+            0.303565114736557
+        ],
+        "image_names": [
+            "00241-0-a purple chair and a blue crown.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32783979177474976
+            ],
+            [
+                0.16279813647270203
+            ]
+        ]
+    },
+    "a purple chair and a brown bowl": {
+        "full_text": [
+            0.3247792720794678
+        ],
+        "image_names": [
+            "00095-0-a purple chair and a brown bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3230791985988617
+            ],
+            [
+                0.20319515466690063
+            ]
+        ]
+    },
+    "a purple chair and a purple bow": {
+        "full_text": [
+            0.3749125003814697
+        ],
+        "image_names": [
+            "00328-0-a purple chair and a purple bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3474200367927551
+            ],
+            [
+                0.3030747175216675
+            ]
+        ]
+    },
+    "a purple chair and a purple car": {
+        "full_text": [
+            0.3300468921661377
+        ],
+        "image_names": [
+            "00085-0-a purple chair and a purple car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.36893150210380554
+            ],
+            [
+                0.2510969638824463
+            ]
+        ]
+    },
+    "a purple chair with a cat": {
+        "full_text": [
+            0.3398473262786865
+        ],
+        "image_names": [
+            "00044-0-a purple chair with a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3663722574710846
+            ],
+            [
+                0.19630545377731323
+            ]
+        ]
+    },
+    "a purple crown and a dog": {
+        "full_text": [
+            0.36069774627685547
+        ],
+        "image_names": [
+            "00357-0-a purple crown and a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31625741720199585
+            ],
+            [
+                0.24608387053012848
+            ]
+        ]
+    },
+    "a purple crown and a lion": {
+        "full_text": [
+            0.3338484466075897
+        ],
+        "image_names": [
+            "00338-0-a purple crown and a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.277997225522995
+            ],
+            [
+                0.2910924255847931
+            ]
+        ]
+    },
+    "a rabbit , a brown car": {
+        "full_text": [
+            0.2901473045349121
+        ],
+        "image_names": [
+            "00345-0-a rabbit , a brown car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3271401524543762
+            ],
+            [
+                0.1930694878101349
+            ]
+        ]
+    },
+    "a rabbit , a cat": {
+        "full_text": [
+            0.348653644323349
+        ],
+        "image_names": [
+            "00425-0-a rabbit , a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2989814281463623
+            ],
+            [
+                0.2608718276023865
+            ]
+        ]
+    },
+    "a rabbit , a dog": {
+        "full_text": [
+            0.29858577251434326
+        ],
+        "image_names": [
+            "00358-0-a rabbit , a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2889356315135956
+            ],
+            [
+                0.19248943030834198
+            ]
+        ]
+    },
+    "a rabbit , a gray bowl": {
+        "full_text": [
+            0.2853696048259735
+        ],
+        "image_names": [
+            "00335-0-a rabbit , a gray bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2987506687641144
+            ],
+            [
+                0.20550885796546936
+            ]
+        ]
+    },
+    "a rabbit , a orange suitcase": {
+        "full_text": [
+            0.3764256238937378
+        ],
+        "image_names": [
+            "00041-0-a rabbit , a orange suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27759605646133423
+            ],
+            [
+                0.3042045533657074
+            ]
+        ]
+    },
+    "a rabbit , a purple apple": {
+        "full_text": [
+            0.38004541397094727
+        ],
+        "image_names": [
+            "00276-0-a rabbit , a purple apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29244330525398254
+            ],
+            [
+                0.30167722702026367
+            ]
+        ]
+    },
+    "a rabbit and a horse": {
+        "full_text": [
+            0.2820866107940674
+        ],
+        "image_names": [
+            "00282-0-a rabbit and a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.271666556596756
+            ],
+            [
+                0.2665492296218872
+            ]
+        ]
+    },
+    "a rabbit and a monkey": {
+        "full_text": [
+            0.3540324568748474
+        ],
+        "image_names": [
+            "00311-0-a rabbit and a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.25125107169151306
+            ],
+            [
+                0.29218965768814087
+            ]
+        ]
+    },
+    "a rabbit and a turtle": {
+        "full_text": [
+            0.335229754447937
+        ],
+        "image_names": [
+            "00157-0-a rabbit and a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27953439950942993
+            ],
+            [
+                0.2912733256816864
+            ]
+        ]
+    },
+    "a rabbit with a bear": {
+        "full_text": [
+            0.3015378713607788
+        ],
+        "image_names": [
+            "00233-0-a rabbit with a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3006666898727417
+            ],
+            [
+                0.18243885040283203
+            ]
+        ]
+    },
+    "a rabbit with a elephant": {
+        "full_text": [
+            0.2934776842594147
+        ],
+        "image_names": [
+            "00133-0-a rabbit with a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.1676686555147171
+            ],
+            [
+                0.28515520691871643
+            ]
+        ]
+    },
+    "a rabbit with a green clock": {
+        "full_text": [
+            0.4063716530799866
+        ],
+        "image_names": [
+            "00354-0-a rabbit with a green clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27960044145584106
+            ],
+            [
+                0.3201838433742523
+            ]
+        ]
+    },
+    "a rabbit with a white bench": {
+        "full_text": [
+            0.3946968615055084
+        ],
+        "image_names": [
+            "00408-0-a rabbit with a white bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2863425016403198
+            ],
+            [
+                0.3325641453266144
+            ]
+        ]
+    },
+    "a red apple , a pink clock": {
+        "full_text": [
+            0.3132357895374298
+        ],
+        "image_names": [
+            "00118-0-a red apple , a pink clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.19295841455459595
+            ],
+            [
+                0.3325287401676178
+            ]
+        ]
+    },
+    "a red apple , a red glasses": {
+        "full_text": [
+            0.3456592261791229
+        ],
+        "image_names": [
+            "00065-0-a red apple , a red glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3530261814594269
+            ],
+            [
+                0.26326462626457214
+            ]
+        ]
+    },
+    "a red apple , a yellow car": {
+        "full_text": [
+            0.2841651439666748
+        ],
+        "image_names": [
+            "00075-0-a red apple , a yellow car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2366822063922882
+            ],
+            [
+                0.25476735830307007
+            ]
+        ]
+    },
+    "a red backpack , a monkey": {
+        "full_text": [
+            0.385438472032547
+        ],
+        "image_names": [
+            "00167-0-a red backpack , a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31963542103767395
+            ],
+            [
+                0.27946528792381287
+            ]
+        ]
+    },
+    "a red backpack and a elephant": {
+        "full_text": [
+            0.4043865203857422
+        ],
+        "image_names": [
+            "00459-0-a red backpack and a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3334544897079468
+            ],
+            [
+                0.2759324908256531
+            ]
+        ]
+    },
+    "a red balloon and a orange bench": {
+        "full_text": [
+            0.3458313047885895
+        ],
+        "image_names": [
+            "00113-0-a red balloon and a orange bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3413982391357422
+            ],
+            [
+                0.24456140398979187
+            ]
+        ]
+    },
+    "a red balloon with a bird": {
+        "full_text": [
+            0.3313823342323303
+        ],
+        "image_names": [
+            "00285-0-a red balloon with a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3549204170703888
+            ],
+            [
+                0.23433586955070496
+            ]
+        ]
+    },
+    "a red balloon with a green backpack": {
+        "full_text": [
+            0.31971579790115356
+        ],
+        "image_names": [
+            "00220-0-a red balloon with a green backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34049758315086365
+            ],
+            [
+                0.18286804854869843
+            ]
+        ]
+    },
+    "a red balloon with a lion": {
+        "full_text": [
+            0.31165772676467896
+        ],
+        "image_names": [
+            "00349-0-a red balloon with a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35229530930519104
+            ],
+            [
+                0.17479157447814941
+            ]
+        ]
+    },
+    "a red bench and a rabbit": {
+        "full_text": [
+            0.385267049074173
+        ],
+        "image_names": [
+            "00073-0-a red bench and a rabbit.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28964710235595703
+            ],
+            [
+                0.30578047037124634
+            ]
+        ]
+    },
+    "a red bow , a blue backpack": {
+        "full_text": [
+            0.3483998775482178
+        ],
+        "image_names": [
+            "00182-0-a red bow , a blue backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32998549938201904
+            ],
+            [
+                0.2183537632226944
+            ]
+        ]
+    },
+    "a red car and a green apple": {
+        "full_text": [
+            0.36835330724716187
+        ],
+        "image_names": [
+            "00143-0-a red car and a green apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2937467694282532
+            ],
+            [
+                0.2986662983894348
+            ]
+        ]
+    },
+    "a red car and a horse": {
+        "full_text": [
+            0.2748068571090698
+        ],
+        "image_names": [
+            "00496-0-a red car and a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28369563817977905
+            ],
+            [
+                0.18371406197547913
+            ]
+        ]
+    },
+    "a red car with a purple chair": {
+        "full_text": [
+            0.2533826231956482
+        ],
+        "image_names": [
+            "00000-0-a red car with a purple chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27258145809173584
+            ],
+            [
+                0.1632820963859558
+            ]
+        ]
+    },
+    "a red chair , a elephant": {
+        "full_text": [
+            0.35580793023109436
+        ],
+        "image_names": [
+            "00393-0-a red chair , a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33609241247177124
+            ],
+            [
+                0.23720474541187286
+            ]
+        ]
+    },
+    "a red chair and a brown bowl": {
+        "full_text": [
+            0.3050246834754944
+        ],
+        "image_names": [
+            "00146-0-a red chair and a brown bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32862937450408936
+            ],
+            [
+                0.20339548587799072
+            ]
+        ]
+    },
+    "a red crown and a dog": {
+        "full_text": [
+            0.2737801671028137
+        ],
+        "image_names": [
+            "00309-0-a red crown and a dog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2437414824962616
+            ],
+            [
+                0.26812830567359924
+            ]
+        ]
+    },
+    "a red crown with a bird": {
+        "full_text": [
+            0.31159067153930664
+        ],
+        "image_names": [
+            "00390-0-a red crown with a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.32697635889053345
+            ],
+            [
+                0.1861419975757599
+            ]
+        ]
+    },
+    "a red glasses , a blue suitcase": {
+        "full_text": [
+            0.3938857913017273
+        ],
+        "image_names": [
+            "00156-0-a red glasses , a blue suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2845863103866577
+            ],
+            [
+                0.30254724621772766
+            ]
+        ]
+    },
+    "a red suitcase , a frog": {
+        "full_text": [
+            0.3246394097805023
+        ],
+        "image_names": [
+            "00397-0-a red suitcase , a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3547467589378357
+            ],
+            [
+                0.2010951042175293
+            ]
+        ]
+    },
+    "a red suitcase and a lion": {
+        "full_text": [
+            0.37774521112442017
+        ],
+        "image_names": [
+            "00131-0-a red suitcase and a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2963064908981323
+            ],
+            [
+                0.2993406653404236
+            ]
+        ]
+    },
+    "a red suitcase and a pink balloon": {
+        "full_text": [
+            0.38846564292907715
+        ],
+        "image_names": [
+            "00189-0-a red suitcase and a pink balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3263358473777771
+            ],
+            [
+                0.2784661650657654
+            ]
+        ]
+    },
+    "a red suitcase and a white bench": {
+        "full_text": [
+            0.35575905442237854
+        ],
+        "image_names": [
+            "00039-0-a red suitcase and a white bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.35732343792915344
+            ],
+            [
+                0.237041175365448
+            ]
+        ]
+    },
+    "a red suitcase with a cat": {
+        "full_text": [
+            0.32889214158058167
+        ],
+        "image_names": [
+            "00227-0-a red suitcase with a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28517013788223267
+            ],
+            [
+                0.2556265592575073
+            ]
+        ]
+    },
+    "a turtle , a frog": {
+        "full_text": [
+            0.29647669196128845
+        ],
+        "image_names": [
+            "00053-0-a turtle , a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31055229902267456
+            ],
+            [
+                0.2319006621837616
+            ]
+        ]
+    },
+    "a turtle , a purple bench": {
+        "full_text": [
+            0.4179074764251709
+        ],
+        "image_names": [
+            "00399-0-a turtle , a purple bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28009313344955444
+            ],
+            [
+                0.3484436869621277
+            ]
+        ]
+    },
+    "a turtle and a bear": {
+        "full_text": [
+            0.3451845943927765
+        ],
+        "image_names": [
+            "00142-0-a turtle and a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2795678377151489
+            ],
+            [
+                0.2403866946697235
+            ]
+        ]
+    },
+    "a turtle and a cat": {
+        "full_text": [
+            0.32664695382118225
+        ],
+        "image_names": [
+            "00297-0-a turtle and a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3023660480976105
+            ],
+            [
+                0.24849125742912292
+            ]
+        ]
+    },
+    "a turtle and a lion": {
+        "full_text": [
+            0.36878544092178345
+        ],
+        "image_names": [
+            "00215-0-a turtle and a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.25605249404907227
+            ],
+            [
+                0.26154986023902893
+            ]
+        ]
+    },
+    "a turtle and a orange backpack": {
+        "full_text": [
+            0.33932414650917053
+        ],
+        "image_names": [
+            "00140-0-a turtle and a orange backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.22852322459220886
+            ],
+            [
+                0.3413603901863098
+            ]
+        ]
+    },
+    "a turtle and a pink clock": {
+        "full_text": [
+            0.340992271900177
+        ],
+        "image_names": [
+            "00433-0-a turtle and a pink clock.jpg"
+        ],
+        "partial_text": [
+            [
+                0.165551096200943
+            ],
+            [
+                0.3362354636192322
+            ]
+        ]
+    },
+    "a turtle and a purple bow": {
+        "full_text": [
+            0.37593331933021545
+        ],
+        "image_names": [
+            "00435-0-a turtle and a purple bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27401527762413025
+            ],
+            [
+                0.3187025189399719
+            ]
+        ]
+    },
+    "a turtle with a brown balloon": {
+        "full_text": [
+            0.3375450372695923
+        ],
+        "image_names": [
+            "00125-0-a turtle with a brown balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3209484815597534
+            ],
+            [
+                0.24380315840244293
+            ]
+        ]
+    },
+    "a turtle with a monkey": {
+        "full_text": [
+            0.2823585271835327
+        ],
+        "image_names": [
+            "00147-0-a turtle with a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31967562437057495
+            ],
+            [
+                0.19209742546081543
+            ]
+        ]
+    },
+    "a white apple and a mouse": {
+        "full_text": [
+            0.29575979709625244
+        ],
+        "image_names": [
+            "00300-0-a white apple and a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2836419343948364
+            ],
+            [
+                0.1994209587574005
+            ]
+        ]
+    },
+    "a white balloon , a bird": {
+        "full_text": [
+            0.34323668479919434
+        ],
+        "image_names": [
+            "00165-0-a white balloon , a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.37095755338668823
+            ],
+            [
+                0.22365161776542664
+            ]
+        ]
+    },
+    "a white balloon , a brown car": {
+        "full_text": [
+            0.28919464349746704
+        ],
+        "image_names": [
+            "00487-0-a white balloon , a brown car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.21716642379760742
+            ],
+            [
+                0.2799520492553711
+            ]
+        ]
+    },
+    "a white balloon and a bear": {
+        "full_text": [
+            0.2959638237953186
+        ],
+        "image_names": [
+            "00411-0-a white balloon and a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3270840346813202
+            ],
+            [
+                0.18733751773834229
+            ]
+        ]
+    },
+    "a white balloon and a monkey": {
+        "full_text": [
+            0.38543593883514404
+        ],
+        "image_names": [
+            "00379-0-a white balloon and a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29720744490623474
+            ],
+            [
+                0.30376559495925903
+            ]
+        ]
+    },
+    "a white balloon and a white chair": {
+        "full_text": [
+            0.3417556583881378
+        ],
+        "image_names": [
+            "00262-0-a white balloon and a white chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2787609398365021
+            ],
+            [
+                0.3091210722923279
+            ]
+        ]
+    },
+    "a white balloon with a horse": {
+        "full_text": [
+            0.32241636514663696
+        ],
+        "image_names": [
+            "00486-0-a white balloon with a horse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3551403284072876
+            ],
+            [
+                0.2098603993654251
+            ]
+        ]
+    },
+    "a white bench , a cat": {
+        "full_text": [
+            0.352729856967926
+        ],
+        "image_names": [
+            "00232-0-a white bench , a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2987961173057556
+            ],
+            [
+                0.2710157632827759
+            ]
+        ]
+    },
+    "a white bench and a black bowl": {
+        "full_text": [
+            0.3121066093444824
+        ],
+        "image_names": [
+            "00470-0-a white bench and a black bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3714674115180969
+            ],
+            [
+                0.19454526901245117
+            ]
+        ]
+    },
+    "a white bench and a cat": {
+        "full_text": [
+            0.32729172706604004
+        ],
+        "image_names": [
+            "00464-0-a white bench and a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.36144548654556274
+            ],
+            [
+                0.19386306405067444
+            ]
+        ]
+    },
+    "a white bow , a monkey": {
+        "full_text": [
+            0.3031667470932007
+        ],
+        "image_names": [
+            "00371-0-a white bow , a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3462468087673187
+            ],
+            [
+                0.17859241366386414
+            ]
+        ]
+    },
+    "a white bow with a green balloon": {
+        "full_text": [
+            0.3393140435218811
+        ],
+        "image_names": [
+            "00178-0-a white bow with a green balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3104480803012848
+            ],
+            [
+                0.2462533712387085
+            ]
+        ]
+    },
+    "a white bow with a purple balloon": {
+        "full_text": [
+            0.3650115132331848
+        ],
+        "image_names": [
+            "00259-0-a white bow with a purple balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3358454704284668
+            ],
+            [
+                0.28764647245407104
+            ]
+        ]
+    },
+    "a white car and a bear": {
+        "full_text": [
+            0.21106401085853577
+        ],
+        "image_names": [
+            "00037-0-a white car and a bear.jpg"
+        ],
+        "partial_text": [
+            [
+                0.25531935691833496
+            ],
+            [
+                0.11509712040424347
+            ]
+        ]
+    },
+    "a white chair , a black suitcase": {
+        "full_text": [
+            0.32995903491973877
+        ],
+        "image_names": [
+            "00263-0-a white chair , a black suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2720649242401123
+            ],
+            [
+                0.32408466935157776
+            ]
+        ]
+    },
+    "a white chair , a mouse": {
+        "full_text": [
+            0.29398414492607117
+        ],
+        "image_names": [
+            "00448-0-a white chair , a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31352898478507996
+            ],
+            [
+                0.18828442692756653
+            ]
+        ]
+    },
+    "a white clock , a gray backpack": {
+        "full_text": [
+            0.28430208563804626
+        ],
+        "image_names": [
+            "00293-0-a white clock , a gray backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2914982736110687
+            ],
+            [
+                0.1881103217601776
+            ]
+        ]
+    },
+    "a white clock and a frog": {
+        "full_text": [
+            0.35340893268585205
+        ],
+        "image_names": [
+            "00394-0-a white clock and a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29319697618484497
+            ],
+            [
+                0.26645222306251526
+            ]
+        ]
+    },
+    "a white clock and a lion": {
+        "full_text": [
+            0.349282830953598
+        ],
+        "image_names": [
+            "00441-0-a white clock and a lion.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28348076343536377
+            ],
+            [
+                0.20797193050384521
+            ]
+        ]
+    },
+    "a white clock and a white bench": {
+        "full_text": [
+            0.30587491393089294
+        ],
+        "image_names": [
+            "00313-0-a white clock and a white bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2340019941329956
+            ],
+            [
+                0.34966033697128296
+            ]
+        ]
+    },
+    "a white clock with a black bowl": {
+        "full_text": [
+            0.31460678577423096
+        ],
+        "image_names": [
+            "00159-0-a white clock with a black bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2967797815799713
+            ],
+            [
+                0.21996405720710754
+            ]
+        ]
+    },
+    "a white glasses with a pink bowl": {
+        "full_text": [
+            0.3310207724571228
+        ],
+        "image_names": [
+            "00197-0-a white glasses with a pink bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27708619832992554
+            ],
+            [
+                0.3136575222015381
+            ]
+        ]
+    },
+    "a yellow apple , a black bench": {
+        "full_text": [
+            0.309732049703598
+        ],
+        "image_names": [
+            "00294-0-a yellow apple , a black bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29380249977111816
+            ],
+            [
+                0.2350166141986847
+            ]
+        ]
+    },
+    "a yellow apple , a blue bench": {
+        "full_text": [
+            0.32392001152038574
+        ],
+        "image_names": [
+            "00111-0-a yellow apple , a blue bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28144919872283936
+            ],
+            [
+                0.2228592038154602
+            ]
+        ]
+    },
+    "a yellow apple , a monkey": {
+        "full_text": [
+            0.2826623320579529
+        ],
+        "image_names": [
+            "00063-0-a yellow apple , a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.298662006855011
+            ],
+            [
+                0.19969697296619415
+            ]
+        ]
+    },
+    "a yellow apple and a red bow": {
+        "full_text": [
+            0.37907809019088745
+        ],
+        "image_names": [
+            "00027-0-a yellow apple and a red bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27228885889053345
+            ],
+            [
+                0.3315841853618622
+            ]
+        ]
+    },
+    "a yellow backpack , a monkey": {
+        "full_text": [
+            0.3967359662055969
+        ],
+        "image_names": [
+            "00122-0-a yellow backpack , a monkey.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33324217796325684
+            ],
+            [
+                0.27874571084976196
+            ]
+        ]
+    },
+    "a yellow backpack , a turtle": {
+        "full_text": [
+            0.3196706473827362
+        ],
+        "image_names": [
+            "00402-0-a yellow backpack , a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.33725327253341675
+            ],
+            [
+                0.19902193546295166
+            ]
+        ]
+    },
+    "a yellow backpack with a bird": {
+        "full_text": [
+            0.38280802965164185
+        ],
+        "image_names": [
+            "00077-0-a yellow backpack with a bird.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3078405261039734
+            ],
+            [
+                0.25806209444999695
+            ]
+        ]
+    },
+    "a yellow backpack with a purple bench": {
+        "full_text": [
+            0.37521642446517944
+        ],
+        "image_names": [
+            "00296-0-a yellow backpack with a purple bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31460288166999817
+            ],
+            [
+                0.2711392045021057
+            ]
+        ]
+    },
+    "a yellow balloon , a green chair": {
+        "full_text": [
+            0.41518473625183105
+        ],
+        "image_names": [
+            "00128-0-a yellow balloon , a green chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3436684310436249
+            ],
+            [
+                0.3044418692588806
+            ]
+        ]
+    },
+    "a yellow balloon and a red balloon": {
+        "full_text": [
+            0.3306618332862854
+        ],
+        "image_names": [
+            "00080-0-a yellow balloon and a red balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31922638416290283
+            ],
+            [
+                0.2920617461204529
+            ]
+        ]
+    },
+    "a yellow balloon with a pink car": {
+        "full_text": [
+            0.38775449991226196
+        ],
+        "image_names": [
+            "00114-0-a yellow balloon with a pink car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.292359322309494
+            ],
+            [
+                0.3122505843639374
+            ]
+        ]
+    },
+    "a yellow balloon with a red glasses": {
+        "full_text": [
+            0.32690805196762085
+        ],
+        "image_names": [
+            "00195-0-a yellow balloon with a red glasses.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3141705393791199
+            ],
+            [
+                0.20697620511054993
+            ]
+        ]
+    },
+    "a yellow bow , a blue suitcase": {
+        "full_text": [
+            0.3973007798194885
+        ],
+        "image_names": [
+            "00391-0-a yellow bow , a blue suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29777681827545166
+            ],
+            [
+                0.3401971459388733
+            ]
+        ]
+    },
+    "a yellow bow , a elephant": {
+        "full_text": [
+            0.403359591960907
+        ],
+        "image_names": [
+            "00234-0-a yellow bow , a elephant.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3305109143257141
+            ],
+            [
+                0.30333366990089417
+            ]
+        ]
+    },
+    "a yellow bow , a red suitcase": {
+        "full_text": [
+            0.38624581694602966
+        ],
+        "image_names": [
+            "00132-0-a yellow bow , a red suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.2453988492488861
+            ],
+            [
+                0.33850473165512085
+            ]
+        ]
+    },
+    "a yellow bow and a purple bowl": {
+        "full_text": [
+            0.3747333288192749
+        ],
+        "image_names": [
+            "00202-0-a yellow bow and a purple bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3579511344432831
+            ],
+            [
+                0.26455679535865784
+            ]
+        ]
+    },
+    "a yellow bow with a green suitcase": {
+        "full_text": [
+            0.4301701784133911
+        ],
+        "image_names": [
+            "00247-0-a yellow bow with a green suitcase.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3132098913192749
+            ],
+            [
+                0.3476288914680481
+            ]
+        ]
+    },
+    "a yellow bow with a red apple": {
+        "full_text": [
+            0.39261576533317566
+        ],
+        "image_names": [
+            "00499-0-a yellow bow with a red apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.31569284200668335
+            ],
+            [
+                0.2982325553894043
+            ]
+        ]
+    },
+    "a yellow bowl , a red car": {
+        "full_text": [
+            0.32430046796798706
+        ],
+        "image_names": [
+            "00260-0-a yellow bowl , a red car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3116019368171692
+            ],
+            [
+                0.2069697380065918
+            ]
+        ]
+    },
+    "a yellow bowl and a gray apple": {
+        "full_text": [
+            0.3470112383365631
+        ],
+        "image_names": [
+            "00110-0-a yellow bowl and a gray apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.28229567408561707
+            ],
+            [
+                0.2828468978404999
+            ]
+        ]
+    },
+    "a yellow bowl with a blue balloon": {
+        "full_text": [
+            0.38830986618995667
+        ],
+        "image_names": [
+            "00237-0-a yellow bowl with a blue balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34855782985687256
+            ],
+            [
+                0.27502429485321045
+            ]
+        ]
+    },
+    "a yellow car , a purple bench": {
+        "full_text": [
+            0.3368176817893982
+        ],
+        "image_names": [
+            "00144-0-a yellow car , a purple bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.27503180503845215
+            ],
+            [
+                0.30234771966934204
+            ]
+        ]
+    },
+    "a yellow chair , a cat": {
+        "full_text": [
+            0.38407355546951294
+        ],
+        "image_names": [
+            "00271-0-a yellow chair , a cat.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3347283601760864
+            ],
+            [
+                0.2866922616958618
+            ]
+        ]
+    },
+    "a yellow chair , a white chair": {
+        "full_text": [
+            0.36042797565460205
+        ],
+        "image_names": [
+            "00380-0-a yellow chair , a white chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3645453453063965
+            ],
+            [
+                0.3132401704788208
+            ]
+        ]
+    },
+    "a yellow chair , a yellow backpack": {
+        "full_text": [
+            0.34094950556755066
+        ],
+        "image_names": [
+            "00101-0-a yellow chair , a yellow backpack.jpg"
+        ],
+        "partial_text": [
+            [
+                0.36223793029785156
+            ],
+            [
+                0.27880313992500305
+            ]
+        ]
+    },
+    "a yellow chair with a frog": {
+        "full_text": [
+            0.33017611503601074
+        ],
+        "image_names": [
+            "00141-0-a yellow chair with a frog.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3711738586425781
+            ],
+            [
+                0.18734210729599
+            ]
+        ]
+    },
+    "a yellow chair with a orange chair": {
+        "full_text": [
+            0.32644665241241455
+        ],
+        "image_names": [
+            "00019-0-a yellow chair with a orange chair.jpg"
+        ],
+        "partial_text": [
+            [
+                0.29516610503196716
+            ],
+            [
+                0.34157735109329224
+            ]
+        ]
+    },
+    "a yellow clock , a turtle": {
+        "full_text": [
+            0.3312138020992279
+        ],
+        "image_names": [
+            "00108-0-a yellow clock , a turtle.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34045127034187317
+            ],
+            [
+                0.1968318223953247
+            ]
+        ]
+    },
+    "a yellow clock and a bow": {
+        "full_text": [
+            0.30135977268218994
+        ],
+        "image_names": [
+            "00421-0-a yellow clock and a bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3211212158203125
+            ],
+            [
+                0.1655658483505249
+            ]
+        ]
+    },
+    "a yellow clock and a white bench": {
+        "full_text": [
+            0.37223345041275024
+        ],
+        "image_names": [
+            "00253-0-a yellow clock and a white bench.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3354382812976837
+            ],
+            [
+                0.23467868566513062
+            ]
+        ]
+    },
+    "a yellow clock with a orange bowl": {
+        "full_text": [
+            0.3458940386772156
+        ],
+        "image_names": [
+            "00097-0-a yellow clock with a orange bowl.jpg"
+        ],
+        "partial_text": [
+            [
+                0.34782034158706665
+            ],
+            [
+                0.2265668660402298
+            ]
+        ]
+    },
+    "a yellow clock with a pink bow": {
+        "full_text": [
+            0.34677937626838684
+        ],
+        "image_names": [
+            "00104-0-a yellow clock with a pink bow.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3377825617790222
+            ],
+            [
+                0.20543605089187622
+            ]
+        ]
+    },
+    "a yellow suitcase , a mouse": {
+        "full_text": [
+            0.3399741053581238
+        ],
+        "image_names": [
+            "00302-0-a yellow suitcase , a mouse.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3626386523246765
+            ],
+            [
+                0.22983145713806152
+            ]
+        ]
+    },
+    "a yellow suitcase , a orange apple": {
+        "full_text": [
+            0.3464444875717163
+        ],
+        "image_names": [
+            "00139-0-a yellow suitcase , a orange apple.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3366105854511261
+            ],
+            [
+                0.21027204394340515
+            ]
+        ]
+    },
+    "a yellow suitcase and a purple car": {
+        "full_text": [
+            0.3030530512332916
+        ],
+        "image_names": [
+            "00174-0-a yellow suitcase and a purple car.jpg"
+        ],
+        "partial_text": [
+            [
+                0.269288569688797
+            ],
+            [
+                0.2545962929725647
+            ]
+        ]
+    },
+    "a yellow suitcase with a blue balloon": {
+        "full_text": [
+            0.39895105361938477
+        ],
+        "image_names": [
+            "00171-0-a yellow suitcase with a blue balloon.jpg"
+        ],
+        "partial_text": [
+            [
+                0.3289168179035187
+            ],
+            [
+                0.28740227222442627
+            ]
+        ]
+    }
+}

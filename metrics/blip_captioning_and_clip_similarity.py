@@ -47,15 +47,11 @@ def run(config: EvalConfig):
     files = os.listdir(config.input_dir)
     print(f"Running on {len(files)} prompts...")
 
-    gt_prompts = list()
-    with open('/home/zhlu6105/Projects/decompose/Structured-Diffusion-Guidance/ABC-6K.txt', 'r') as f:
-       gt_prompts = f.read().splitlines()
 
     results_per_prompt = {}
     for img in track(files):
         prompt = img.replace('.jpg', '').split('-')[-1]
         prompt_idx = int(img.split('-')[0])
-        gt_prompt = gt_prompts[prompt_idx]
         if config.truncate:
             prompt = prompt.split('|')[0]
 
