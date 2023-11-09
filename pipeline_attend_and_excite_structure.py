@@ -11,10 +11,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+from codecs import encode
 import inspect
 import math
 from operator import is_
 from os import stat
+import os
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 import random
 from collections import defaultdict
@@ -160,8 +162,17 @@ class AttendExciteAttnProcessor:
         self.look_up_idxs = look_up_idxs
         self.attn_map = None
         self.enable = False
-        self.sub_feat= False
+        self.master_encoder_hidden_state= False
 
+
+        if look_up_idxs is not None:
+            self.noun_in_master = list() 
+            for master_idxs, _ in look_up_idxs:
+                for idx in master_idxs:
+                    self.noun_in_master.append(idx)
+
+        # experiment 1: passing master BOE token 
+        self.msater_feature=None
     def reset_attn(self):
         self.attn_map = None
 
@@ -176,6 +187,51 @@ class AttendExciteAttnProcessor:
 
     def disable_sub_feature(self):
         self.sub_feat = False
+
+    
+    def get_mask(self, attention_probs, idxs):
+
+        masks = list()
+        for idx in idxs:
+            mask = attention_probs[:, :, idx] 
+            # to evaluate if mean is needed
+            # mask = mask.mean(dim=0, keepdims=True)
+            mask = mask / mask.max(dim=0)[0]
+
+            masks.append(mask)
+
+        mask = torch.stack(masks) 
+        mask  = torch.max(mask, dim=0)[0]
+        return mask
+
+    def solve_mask_conflict(self, masks):
+        # keep the max
+        
+        masks_tensor = torch.stack(masks)
+        masks_tensor_max = torch.max(masks_tensor, dim=0)[1]
+
+        noun_mask = list()
+        for idx, mask in enumerate(masks):
+            mask = (mask >= 0.5) * (masks_tensor_max == idx)
+            # mask = (mask >= 0.5) 
+            mask = mask * 1.
+            # print(mask.sum(), mask.shape)
+            noun_mask.append(mask)
+
+
+        noun_mask_tensor = torch.stack(noun_mask).sum(dim=0) 
+        noun_mask_tensor = noun_mask_tensor >= 1. 
+
+        neg_mask = 1 - (noun_mask_tensor * 1.)
+
+
+        return noun_mask, neg_mask
+
+
+
+
+
+
 
     def __call__(self, attn: Attention, hidden_states, encoder_hidden_states=None, attention_mask=None):
         batch_size, sequence_length, _ = hidden_states.shape
@@ -192,43 +248,96 @@ class AttendExciteAttnProcessor:
         key = attn.head_to_batch_dim(key)
         value = attn.head_to_batch_dim(value)
 
+        default_value_shape = value.shape
+
         attention_probs = attn.get_attention_scores(query, key, attention_mask)
 
         if self.attn_map is None:
             if self.enable:
                 self.attn_map = attention_probs.detach()
+                self.master_encoder_hidden_state = encoder_hidden_states
         else:
             # attention_probs[-self.attn_map.shape[0]:] = self.attn_map
             attention_probs = self.attn_map
+            # if is_cross:
+            #     encoder_hidden_states[:, 0] = self.master_encoder_hidden_state[:, 0]
+            #     value = attn.to_v(self.master_encoder_hidden_state)
+            #     value = attn.head_to_batch_dim(value)
+            
+
 
         # only need to store attention maps during the Attend and Excite process
         if attention_probs.requires_grad:
             # print(self.name)
             self.attnstore(attention_probs, is_cross, self.place_in_unet)
 
+
+        masks = list() 
+        neg_mask = None
+        sub_bos = list()
+        # b = value.shape[0] // 2
+        b = 8
+        assert value.shape[0] == b or value.shape[0] == b*2
         if self.sub_feat:
             if self.sub_prompt_features is not None and self.look_up_idxs is not None and is_cross:
-                sub_v_heads = list()
-                for (master_idxs, sub_idxs), text_feat in zip(self.look_up_idxs, self.sub_prompt_features):
+
+                masks = list() 
+                for idx, ((master_idxs, sub_idxs), text_feat) in enumerate(zip(self.look_up_idxs, self.sub_prompt_features)):
                     text_feat = text_feat.unsqueeze(dim=0)
                     sub_v = attn.to_v(text_feat) 
                     sub_v = attn.head_to_batch_dim(sub_v)
-                    # print(value.shape, sub_v.shape, encoder_hidden_states.shape, text_feat.shape)
+                    sub_bos.append(sub_v[:, :1, :])
+                    # b = sub_v.shape[0]
+                    # print(idx, attention_probs.shape, value.shape, sub_v.shape, encoder_hidden_states.shape, text_feat.shape)
                     for master_idx, sub_idx in zip(master_idxs, sub_idxs):
-                        value[-1, master_idx, :] = sub_v[-1, sub_idx, :]
+                        value[-b:, master_idx, :] = sub_v[:, sub_idx, :]
 
-                # sub_v_heads.append(sub_v[-1, 0, :])
+                    mask = self.get_mask(attention_probs[-b:], master_idxs)
+                    masks.append(mask)
 
-            # sub_v_heads.append(value[-1, 0, :])
-            # head = torch.stack(sub_v_heads, dim=0) 
-            # head = head.mean(dim=0) 
-            # value[-1, 0, :] = head
+                # resolve mask conflict
+                masks, neg_mask = self.solve_mask_conflict(masks)
+
+                # value[-b:, 0] = value[-b:, 0] * neg_mask
 
 
+        
 
 
-        # accoding to the attention_probs to swap values
-        hidden_states = torch.bmm(attention_probs, value)
+        if self.sub_feat and is_cross:
+            
+            value_tails = value[-b:, 1:] 
+            attention_probs_tails = attention_probs[-b:, :, 1:] 
+
+            # heads 
+            value_heads = [value[-b:, :1]] #* (len(sub_bos)+1)
+            attention_probs_heads = [attention_probs[-b:, :, :1]] * (len(sub_bos)+1)
+            for bos_feat in sub_bos:
+                value_heads.append(bos_feat)
+
+            value_heads = torch.cat(value_heads, dim=1)
+
+            head_mask = torch.stack([neg_mask, *masks], dim=-1)
+            attention_probs_heads = torch.cat(attention_probs_heads, dim=-1) * head_mask
+            # print(head_mask.shape, attention_probs_heads.shape)
+
+            cond_value = torch.cat([value_heads, value_tails], dim=1)
+            cond_attention_probs = torch.cat([attention_probs_heads, attention_probs_tails], dim=-1)
+            # print(default_value_shape, value_tails.shape, attention_probs_tails.shape, value.shape, attention_probs.shape)
+
+            cond_hidden_states = torch.bmm(cond_attention_probs, cond_value) 
+            if default_value_shape[0] != b:
+                uncond_hidden_states = torch.bmm(attention_probs[:b], value[:b])
+                hidden_states = torch.cat([uncond_hidden_states, cond_hidden_states])
+            else:
+                hidden_states = cond_hidden_states
+                
+
+        else:
+            # accoding to the attention_probs to swap values
+            hidden_states = torch.bmm(attention_probs, value)
+
+            
         hidden_states = attn.batch_to_head_dim(hidden_states)
 
         # linear proj
@@ -770,6 +879,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
         latents = latents - step_size * grad_cond
         return latents
 
+
+
     def _perform_iterative_refinement_step(
         self,
         latents: torch.Tensor,
@@ -793,6 +904,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
             latents = latents.clone().detach().requires_grad_(True)
             self.reset_all_attn()
             self.disable_all_attn()
+            self.enable_sub_feature()
+            # self.disable_sub_feature()
             self.unet(latents, t, encoder_hidden_states=text_embeddings).sample
             self.unet.zero_grad()
 
@@ -1101,6 +1214,8 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
  
         assert num_images_per_prompt == 1
 
+        # print(self.tokenizer(prompt[0]).input_ids)
+
 
 
         # 7. Denoising loop
@@ -1137,6 +1252,7 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                         if is_master:
                             self.disable_all_attn()
                             self.reset_all_attn()
+                            # self.disable_sub_feature()
                             self.enable_sub_feature()
                             self.unet(
                                 latents_to_update,
@@ -1145,7 +1261,6 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                                 cross_attention_kwargs=cross_attention_kwargs,
                             ).sample
                             self.unet.zero_grad()
-
                             self.disable_sub_feature()
 
     
@@ -1234,6 +1349,9 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                     else:
                         self.disable_all_attn()
                         self.disable_sub_feature()
+                        # cond = torch.cat([negative_prompt_embeds[:1]]*2)
+                        # self.reset_all_attn()
+                    # print(f'----------{pidx}------------')
                     noise_pred = self.unet(
                         input_latent,
                         t,
@@ -1241,6 +1359,19 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                         cross_attention_kwargs=cross_attention_kwargs,
                     ).sample
                     all_noise_pred.append(noise_pred)
+
+                    os.makedirs(os.path.join('./attn_map', str(i)), exist_ok=True)
+
+                    # if pidx == 0:
+                    #     for k, v in self.attn_hocks.items():
+                    #         v = v.attn_map
+                    #         b = v.shape[0] //2 
+                    #         v = v[b:]
+                    #         if v.shape[-1] != 77:
+                    #             v = torch.nn.functional.interpolate(v.unsqueeze(dim=0), (64, 64))
+                    #         
+                    #         v = v.detach().cpu().numpy()
+                    #         np.save(os.path.join('./attn_map/', str(i), f"{k}.npy"), v)
 
 
                 all_noise_pred = torch.stack(all_noise_pred, dim=0)
@@ -1251,10 +1382,9 @@ class StableDiffusionAttendAndExcitePipeline(DiffusionPipeline, TextualInversion
                     # compose 
                     # avg_noise = all_noise_pred[1:, 0].mean(dim=0, keepdims=True) 
                     # compose = avg_noise + (weights * (all_noise_pred[1:, 1] - avg_noise)).sum(dim=0, keepdims=True)
-                    compose = all_noise_pred[0, 0] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
-                    # noise_pred = torch.cat([single_pred[:1], compose.repeat(len(prompt)-1, 1,1,1)])
-                    noise_pred = torch.cat([compose, single_pred[1:]])
-                    # noise_pred = single_pred
+                    # compose = all_noise_pred[0, 0] + (weights * (all_noise_pred[:, 1] - all_noise_pred[:, 0])).sum(dim=0, keepdims=True)
+                    # noise_pred = torch.cat([compose, single_pred[1:]])
+                    noise_pred = single_pred
 
             # compute the previous noisy sample x_t -> x_t-1
                 latents = self.scheduler.step(noise_pred, t, latents, **extra_step_kwargs).prev_sample
